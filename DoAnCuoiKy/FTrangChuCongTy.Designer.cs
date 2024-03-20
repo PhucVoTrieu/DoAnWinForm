@@ -51,10 +51,10 @@
             // pnlContent
             // 
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(146, 0);
-            this.pnlContent.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlContent.Location = new System.Drawing.Point(195, 0);
+            this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1021, 718);
+            this.pnlContent.Size = new System.Drawing.Size(1361, 884);
             this.pnlContent.TabIndex = 22;
             // 
             // guna2ShadowForm1
@@ -72,9 +72,9 @@
             this.guna2Panel2.Controls.Add(this.btnPostAJob);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(146, 718);
+            this.guna2Panel2.Size = new System.Drawing.Size(195, 884);
             this.guna2Panel2.TabIndex = 19;
             // 
             // guna2Button1
@@ -94,10 +94,10 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.Image = global::DoAnCuoiKy.Properties.Resources._15;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(0, 349);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 430);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(146, 50);
+            this.guna2Button1.Size = new System.Drawing.Size(195, 62);
             this.guna2Button1.TabIndex = 25;
             this.guna2Button1.Text = "Log out";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -121,10 +121,10 @@
             this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.Image = global::DoAnCuoiKy.Properties.Resources._18;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(0, 140);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Location = new System.Drawing.Point(0, 172);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(146, 50);
+            this.btnHome.Size = new System.Drawing.Size(195, 62);
             this.btnHome.TabIndex = 24;
             this.btnHome.Text = "Information";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -148,10 +148,10 @@
             this.guna2Button4.ForeColor = System.Drawing.Color.Black;
             this.guna2Button4.Image = global::DoAnCuoiKy.Properties.Resources._7;
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Location = new System.Drawing.Point(0, 303);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button4.Location = new System.Drawing.Point(0, 373);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(146, 50);
+            this.guna2Button4.Size = new System.Drawing.Size(195, 62);
             this.guna2Button4.TabIndex = 23;
             this.guna2Button4.Text = "Statistic";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -175,10 +175,10 @@
             this.btnApplicants.ForeColor = System.Drawing.Color.Black;
             this.btnApplicants.Image = global::DoAnCuoiKy.Properties.Resources._22;
             this.btnApplicants.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnApplicants.Location = new System.Drawing.Point(0, 249);
-            this.btnApplicants.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApplicants.Location = new System.Drawing.Point(0, 306);
+            this.btnApplicants.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApplicants.Name = "btnApplicants";
-            this.btnApplicants.Size = new System.Drawing.Size(146, 50);
+            this.btnApplicants.Size = new System.Drawing.Size(195, 62);
             this.btnApplicants.TabIndex = 22;
             this.btnApplicants.Text = "Applicants";
             this.btnApplicants.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -202,10 +202,10 @@
             this.btnJobs.ForeColor = System.Drawing.Color.Black;
             this.btnJobs.Image = global::DoAnCuoiKy.Properties.Resources._20;
             this.btnJobs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJobs.Location = new System.Drawing.Point(0, 194);
-            this.btnJobs.Margin = new System.Windows.Forms.Padding(2);
+            this.btnJobs.Location = new System.Drawing.Point(0, 239);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(146, 50);
+            this.btnJobs.Size = new System.Drawing.Size(195, 62);
             this.btnJobs.TabIndex = 21;
             this.btnJobs.Text = "Jobs";
             this.btnJobs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -215,7 +215,7 @@
             // 
             this.btnPostAJob.AutoRoundedCorners = true;
             this.btnPostAJob.BackColor = System.Drawing.Color.Transparent;
-            this.btnPostAJob.BorderRadius = 23;
+            this.btnPostAJob.BorderRadius = 28;
             this.btnPostAJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPostAJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPostAJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -226,29 +226,29 @@
             this.btnPostAJob.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPostAJob.ForeColor = System.Drawing.Color.White;
             this.btnPostAJob.Image = global::DoAnCuoiKy.Properties.Resources._17;
-            this.btnPostAJob.Location = new System.Drawing.Point(2, 50);
-            this.btnPostAJob.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPostAJob.Location = new System.Drawing.Point(3, 62);
+            this.btnPostAJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPostAJob.Name = "btnPostAJob";
             this.btnPostAJob.ShadowDecoration.BorderRadius = 15;
             this.btnPostAJob.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPostAJob.ShadowDecoration.Depth = 20;
             this.btnPostAJob.ShadowDecoration.Enabled = true;
             this.btnPostAJob.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2);
-            this.btnPostAJob.Size = new System.Drawing.Size(141, 48);
+            this.btnPostAJob.Size = new System.Drawing.Size(188, 59);
             this.btnPostAJob.TabIndex = 20;
             this.btnPostAJob.Text = "Post a job";
             this.btnPostAJob.Click += new System.EventHandler(this.btnPostAJob_Click);
             // 
             // FTrangChuCongTy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1167, 718);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FTrangChuCongTy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FTrangChuCongTy";
