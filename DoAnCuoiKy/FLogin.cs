@@ -34,10 +34,19 @@ namespace DoAnCuoiKy
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FTrangChuCongTy f1 = new FTrangChuCongTy();
-            f1.Show();
+            if(guna2CustomRadioButton1.Checked)
+            {
+                this.Hide();
+                FTrangChuCongTy f1 = new FTrangChuCongTy();
+                f1.Show();
+            }
+            else if(guna2CustomRadioButton2.Checked) {
+                this.Hide();
+                FCandidateHomePage f1 = new FCandidateHomePage();
+                f1.Show();
+            }
 
         }
+
     }
 }

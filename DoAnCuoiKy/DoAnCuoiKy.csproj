@@ -91,11 +91,29 @@
     <Compile Include="FApplicants.Designer.cs">
       <DependentUpon>FApplicants.cs</DependentUpon>
     </Compile>
+    <Compile Include="FCandidateHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidateHomePage.Designer.cs">
+      <DependentUpon>FCandidateHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFindingCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFindingCandidate.Designer.cs">
+      <DependentUpon>FFindingCandidate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FJobDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FJobDetails.Designer.cs">
+      <DependentUpon>FJobDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="FJobs.cs">
       <SubType>Form</SubType>
@@ -114,6 +132,12 @@
     </Compile>
     <Compile Include="FPostAJob.Designer.cs">
       <DependentUpon>FPostAJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FProfileApplicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProfileApplicant.Designer.cs">
+      <DependentUpon>FProfileApplicant.cs</DependentUpon>
     </Compile>
     <Compile Include="FStatistic.cs">
       <SubType>Form</SubType>
@@ -141,6 +165,12 @@
     <Compile Include="UCApplicants.Designer.cs">
       <DependentUpon>UCApplicants.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCJobThumbnail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCJobThumbnail.Designer.cs">
+      <DependentUpon>UCJobThumbnail.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCJobUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,8 +180,17 @@
     <EmbeddedResource Include="FApplicants.resx">
       <DependentUpon>FApplicants.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCandidateHomePage.resx">
+      <DependentUpon>FCandidateHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFindingCandidate.resx">
+      <DependentUpon>FFindingCandidate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FInformation.resx">
       <DependentUpon>FInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FJobDetails.resx">
+      <DependentUpon>FJobDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FJobs.resx">
       <DependentUpon>FJobs.cs</DependentUpon>
@@ -161,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FPostAJob.resx">
       <DependentUpon>FPostAJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProfileApplicant.resx">
+      <DependentUpon>FProfileApplicant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FStatistic.resx">
       <DependentUpon>FStatistic.cs</DependentUpon>
@@ -184,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCApplicants.resx">
       <DependentUpon>UCApplicants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCJobThumbnail.resx">
+      <DependentUpon>UCJobThumbnail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCJobUI.resx">
       <DependentUpon>UCJobUI.cs</DependentUpon>
@@ -303,6 +348,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
