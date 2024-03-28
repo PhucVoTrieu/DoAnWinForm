@@ -137,7 +137,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(501, 213);
+            this.label3.Location = new System.Drawing.Point(376, 213);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 32);
@@ -166,7 +166,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(376, 213);
+            this.label2.Location = new System.Drawing.Point(501, 213);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 32);
@@ -221,7 +221,7 @@
             this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._27;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(18, 28);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(287, 340);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

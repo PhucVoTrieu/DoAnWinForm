@@ -88,29 +88,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Candidate.cs" />
+    <Compile Include="CandidateDAO.cs" />
     <Compile Include="DBconnection.cs" />
-    <Compile Include="FApplicants.cs">
+    <Compile Include="DoAnCuoiKy2024DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAnCuoiKy2024DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Company\FApplicants.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FApplicants.Designer.cs">
+    <Compile Include="Company\FApplicants.Designer.cs">
       <DependentUpon>FApplicants.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCandidateHomePage.cs">
+    <Compile Include="Candidate\FCandidateHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCandidateHomePage.Designer.cs">
+    <Compile Include="Candidate\FCandidateHomePage.Designer.cs">
       <DependentUpon>FCandidateHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FFindingCandidate.cs">
+    <Compile Include="Candidate\FFindingCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FFindingCandidate.Designer.cs">
+    <Compile Include="Candidate\FFindingCandidate.Designer.cs">
       <DependentUpon>FFindingCandidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FInformation.cs">
+    <Compile Include="Company\FInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FInformation.Designer.cs">
+    <Compile Include="Company\FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="FJobDetails.cs">
@@ -119,10 +126,10 @@
     <Compile Include="FJobDetails.Designer.cs">
       <DependentUpon>FJobDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FJobs.cs">
+    <Compile Include="Company\FJobs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FJobs.Designer.cs">
+    <Compile Include="Company\FJobs.Designer.cs">
       <DependentUpon>FJobs.cs</DependentUpon>
     </Compile>
     <Compile Include="FLogin.cs">
@@ -131,88 +138,101 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPostAJob.cs">
+    <Compile Include="Candidate\FormFavoriteJobs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FPostAJob.Designer.cs">
+    <Compile Include="Candidate\FormFavoriteJobs.Designer.cs">
+      <DependentUpon>FormFavoriteJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\FPostAJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\FPostAJob.Designer.cs">
       <DependentUpon>FPostAJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="FProfileApplicant.cs">
+    <Compile Include="Candidate\FPostCV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FProfileApplicant.Designer.cs">
+    <Compile Include="Candidate\FPostCV.Designer.cs">
+      <DependentUpon>FPostCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\FProfileApplicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\FProfileApplicant.Designer.cs">
       <DependentUpon>FProfileApplicant.cs</DependentUpon>
     </Compile>
-    <Compile Include="FStatistic.cs">
+    <Compile Include="Company\FStatistic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FStatistic.Designer.cs">
+    <Compile Include="Company\FStatistic.Designer.cs">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTrangChuCongTy.cs">
+    <Compile Include="Company\FTrangChuCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FTrangChuCongTy.Designer.cs">
+    <Compile Include="Company\FTrangChuCongTy.Designer.cs">
       <DependentUpon>FTrangChuCongTy.cs</DependentUpon>
     </Compile>
     <Compile Include="JobDetails.cs" />
+    <Compile Include="JobDetailsDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCApplicantInformation.cs">
+    <Compile Include="UC\UCApplicantInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCApplicantInformation.Designer.cs">
+    <Compile Include="UC\UCApplicantInformation.Designer.cs">
       <DependentUpon>UCApplicantInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCApplicants.cs">
+    <Compile Include="UC\UCApplicants.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCApplicants.Designer.cs">
+    <Compile Include="UC\UCApplicants.Designer.cs">
       <DependentUpon>UCApplicants.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCJobThumbnail.cs">
+    <Compile Include="UC\UCJobUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCJobThumbnail.Designer.cs">
-      <DependentUpon>UCJobThumbnail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UCJobUI.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCJobUI.Designer.cs">
+    <Compile Include="UC\UCJobUI.Designer.cs">
       <DependentUpon>UCJobUI.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FApplicants.resx">
+    <EmbeddedResource Include="Company\FApplicants.resx">
       <DependentUpon>FApplicants.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCandidateHomePage.resx">
+    <EmbeddedResource Include="Candidate\FCandidateHomePage.resx">
       <DependentUpon>FCandidateHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FFindingCandidate.resx">
+    <EmbeddedResource Include="Candidate\FFindingCandidate.resx">
       <DependentUpon>FFindingCandidate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FInformation.resx">
+    <EmbeddedResource Include="Company\FInformation.resx">
       <DependentUpon>FInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FJobDetails.resx">
       <DependentUpon>FJobDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FJobs.resx">
+    <EmbeddedResource Include="Company\FJobs.resx">
       <DependentUpon>FJobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FPostAJob.resx">
+    <EmbeddedResource Include="Candidate\FormFavoriteJobs.resx">
+      <DependentUpon>FormFavoriteJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\FPostAJob.resx">
       <DependentUpon>FPostAJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FProfileApplicant.resx">
+    <EmbeddedResource Include="Candidate\FPostCV.resx">
+      <DependentUpon>FPostCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\FProfileApplicant.resx">
       <DependentUpon>FProfileApplicant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FStatistic.resx">
+    <EmbeddedResource Include="Company\FStatistic.resx">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FTrangChuCongTy.resx">
+    <EmbeddedResource Include="Company\FTrangChuCongTy.resx">
       <DependentUpon>FTrangChuCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -226,18 +246,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UCApplicantInformation.resx">
+    <EmbeddedResource Include="UC\UCApplicantInformation.resx">
       <DependentUpon>UCApplicantInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCApplicants.resx">
+    <EmbeddedResource Include="UC\UCApplicants.resx">
       <DependentUpon>UCApplicants.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCJobThumbnail.resx">
-      <DependentUpon>UCJobThumbnail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCJobUI.resx">
+    <EmbeddedResource Include="UC\UCJobUI.resx">
       <DependentUpon>UCJobUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DoAnCuoiKy2024DataSet.xsc">
+      <DependentUpon>DoAnCuoiKy2024DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DoAnCuoiKy2024DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DoAnCuoiKy2024DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DoAnCuoiKy2024DataSet.xss">
+      <DependentUpon>DoAnCuoiKy2024DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -411,5 +439,69 @@
   <ItemGroup>
     <None Include="Resources\43.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\79.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\84.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\86.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\88.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\89.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\92.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\95.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\97.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

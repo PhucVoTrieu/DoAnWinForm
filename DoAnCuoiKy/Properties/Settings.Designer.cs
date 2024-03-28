@@ -26,11 +26,22 @@ namespace DoAnCuoiKy.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=DoancuoiKy;Persist Security Info=True;User ID=sa;Pa" +
-            "ssword=***********;Trust Server Certificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=DoanCuoiKy;Integrated Security" +
+            "=True")]
         public string connStr {
             get {
                 return ((string)(this["connStr"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PHUC-PC\\SQLEXPRESS;Initial Catalog=DoAnCuoiKy2024;Integrated Security" +
+            "=True;Encrypt=True;TrustServerCertificate=True")]
+        public string DoAnCuoiKy2024ConnectionString {
+            get {
+                return ((string)(this["DoAnCuoiKy2024ConnectionString"]));
             }
         }
     }

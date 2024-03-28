@@ -5,12 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace DoAnCuoiKy
 {
     internal class DBconnection
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
+
+        public DataTable load(string sqlStr)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                connStr.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, connStr);
+                adapter.Fill(dataTable);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                connStr.Close();
+            }
+            return dataTable;
+        }
+
         public void thucthi(string sqlStr)
         {
             try
