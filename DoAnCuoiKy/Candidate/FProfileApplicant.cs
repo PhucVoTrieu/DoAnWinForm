@@ -18,15 +18,23 @@ namespace DoAnCuoiKy
         {
             InitializeComponent(); 
         }
-
-        private void button9_Click(object sender, EventArgs e)
+        public FProfileApplicant(Candidate candidate)
         {
-            Candidate candidate = new Candidate(txtID.Text, txtName.Text
-               , txtGender.Text, txtNationality.Text, txtAddress.Text
-               , txtDOB.Text, txtExpYears.Text, txtEmail.Text,txtPhone.Text,txtDescribe.Text);
-            candidateDAO.them(candidate);
+            InitializeComponent();
+            this.txtID.Text = candidate.ID;
+            this.txtExpYears.Text = candidate.ExpYears;
+            this.txtName.Text = candidate.Name;
+            this.txtNationality.Text = candidate.Nationality;
+            this.txtPhone.Text = candidate.Phone;
+            this.txtAddress.Text = candidate.Address;
+            this.txtDOB.Text = candidate.DOB;
+            this.txtEmail.Text = candidate.Email;
+            this.txtGender.Text = candidate.Gender;
+            this.txtApplyPos.Text = candidate.ApplyPosition;
+            this.txtSkill.Text = candidate.Skill;
+            this.txtDescribe.Text = candidate.Describe;
         }
-
+  
         private void btnEdit_Click(object sender, EventArgs e)
         {
             foreach (Control c in pnlBasicInfo.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
@@ -37,8 +45,16 @@ namespace DoAnCuoiKy
                 }
             }
         }
+        
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            Candidate candidate = new Candidate(txtID.Text, txtName.Text
+              , txtGender.Text, txtNationality.Text, txtAddress.Text
+              , txtDOB.Text, txtExpYears.Text, txtEmail.Text, txtPhone.Text, txtDescribe.Text, txtApplyPos.Text, txtSkill.Text);
+            candidateDAO.them(candidate);
+        }
 
-        private void btnApplyNow_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             foreach (Control c in pnlBasicInfo.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
             {

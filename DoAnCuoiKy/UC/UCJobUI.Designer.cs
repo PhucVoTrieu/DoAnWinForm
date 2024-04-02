@@ -43,6 +43,7 @@
             this.lblSalary = new System.Windows.Forms.Label();
             this.lblJobTitle = new System.Windows.Forms.Label();
             this.txtJobtype = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CBoxSelected = new Guna.UI2.WinForms.Guna2CheckBox();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -106,7 +107,7 @@
             this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnFavorite.ForeColor = System.Drawing.Color.White;
             this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._92;
-            this.btnFavorite.Location = new System.Drawing.Point(299, 57);
+            this.btnFavorite.Location = new System.Drawing.Point(294, 31);
             this.btnFavorite.Margin = new System.Windows.Forms.Padding(4);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.ShadowDecoration.BorderRadius = 15;
@@ -115,7 +116,7 @@
             this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.btnFavorite.Size = new System.Drawing.Size(77, 44);
             this.btnFavorite.TabIndex = 14;
-            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
+            this.btnFavorite.CheckedChanged += new System.EventHandler(this.btnFavorite_CheckedChanged);
             // 
             // btnDetails
             // 
@@ -274,11 +275,28 @@
             this.txtJobtype.TabIndex = 5;
             this.txtJobtype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // CBoxSelected
+            // 
+            this.CBoxSelected.AutoSize = true;
+            this.CBoxSelected.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBoxSelected.CheckedState.BorderRadius = 0;
+            this.CBoxSelected.CheckedState.BorderThickness = 0;
+            this.CBoxSelected.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBoxSelected.Location = new System.Drawing.Point(17, 4);
+            this.CBoxSelected.Name = "CBoxSelected";
+            this.CBoxSelected.Size = new System.Drawing.Size(18, 17);
+            this.CBoxSelected.TabIndex = 12;
+            this.CBoxSelected.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CBoxSelected.UncheckedState.BorderRadius = 0;
+            this.CBoxSelected.UncheckedState.BorderThickness = 0;
+            this.CBoxSelected.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
             // UCJobUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.Controls.Add(this.CBoxSelected);
             this.Controls.Add(this.bunifuPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -288,6 +306,7 @@
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -302,8 +321,9 @@
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public Guna.UI2.WinForms.Guna2Button btnApplyNow;
-        private Guna.UI2.WinForms.Guna2Button btnDetails;
-        private Guna.UI2.WinForms.Guna2Button btnFavorite;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        public Guna.UI2.WinForms.Guna2Button btnDetails;
+        public Guna.UI2.WinForms.Guna2Button btnFavorite;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        public Guna.UI2.WinForms.Guna2CheckBox CBoxSelected;
     }
 }

@@ -19,17 +19,11 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
         }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnPost_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
-        {
-            JobDetails jobDetails = new JobDetails(txtJobTitle.Text,txtJobPosition.Text
-                ,cbJobType.SelectedItem.ToString() , txtJobSalary.Text , txtRecruitmentQuota.Text
-                ,cbLocation.SelectedItem.ToString() ,txtJobExperiencesInYears.Text ,txtJobDescription.Text );
+            JobDetails jobDetails = new JobDetails(txtJobTitle.Text, txtJobPosition.Text
+                , cbJobType.SelectedItem.ToString(), txtJobSalary.Text, txtRecruitmentQuota.Text
+                , cbLocation.SelectedItem.ToString(), txtJobExperiencesInYears.Text, txtJobDescription.Text,txtCompanyName.Text, txtBenefit.Text );
             jobDetailsDAO.them(jobDetails);
             this.Close();
         }

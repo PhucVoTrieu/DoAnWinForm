@@ -77,7 +77,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1010, 211);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1067, 211);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
             // guna2PictureBox3
@@ -103,7 +103,7 @@
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(479, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 22);
+            this.label3.Size = new System.Drawing.Size(112, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "17 jobs opening";
             // 
@@ -130,7 +130,7 @@
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(270, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 22);
+            this.label2.Size = new System.Drawing.Size(121, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Đống Đa, Hà Nội";
             // 
@@ -142,10 +142,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(231, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(615, 76);
+            this.label1.Size = new System.Drawing.Size(483, 60);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mcredit - Công ty Tài chính TNHH MB Shinsei\r\n\r\n";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2PictureBox1
             // 
@@ -193,7 +192,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(659, 140);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(160, 28);
+            this.label9.Size = new System.Drawing.Size(128, 21);
             this.label9.TabIndex = 11;
             this.label9.Text = "Monday - Friday";
             // 
@@ -204,7 +203,7 @@
             this.label8.ForeColor = System.Drawing.Color.Gray;
             this.label8.Location = new System.Drawing.Point(661, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 23);
+            this.label8.Size = new System.Drawing.Size(103, 19);
             this.label8.TabIndex = 10;
             this.label8.Text = "Working Days";
             // 
@@ -215,7 +214,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(479, 140);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 28);
+            this.label12.Size = new System.Drawing.Size(70, 21);
             this.label12.TabIndex = 9;
             this.label12.Text = "Vietnam";
             // 
@@ -226,7 +225,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(251, 140);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(172, 28);
+            this.label11.Size = new System.Drawing.Size(138, 21);
             this.label11.TabIndex = 8;
             this.label11.Text = "1000+ employees";
             // 
@@ -237,7 +236,7 @@
             this.label10.ForeColor = System.Drawing.Color.Gray;
             this.label10.Location = new System.Drawing.Point(479, 105);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 23);
+            this.label10.Size = new System.Drawing.Size(63, 19);
             this.label10.TabIndex = 7;
             this.label10.Text = "Country";
             // 
@@ -248,7 +247,7 @@
             this.label7.ForeColor = System.Drawing.Color.Gray;
             this.label7.Location = new System.Drawing.Point(252, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 23);
+            this.label7.Size = new System.Drawing.Size(102, 19);
             this.label7.TabIndex = 4;
             this.label7.Text = "Company size";
             // 
@@ -259,7 +258,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(17, 140);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 28);
+            this.label6.Size = new System.Drawing.Size(86, 21);
             this.label6.TabIndex = 3;
             this.label6.Text = "IT Product";
             // 
@@ -270,7 +269,7 @@
             this.label5.ForeColor = System.Drawing.Color.Gray;
             this.label5.Location = new System.Drawing.Point(18, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 23);
+            this.label5.Size = new System.Drawing.Size(107, 19);
             this.label5.TabIndex = 2;
             this.label5.Text = "Company type";
             // 
@@ -280,7 +279,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(10, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(304, 41);
+            this.label4.Size = new System.Drawing.Size(247, 32);
             this.label4.TabIndex = 1;
             this.label4.Text = "General Information";
             // 
@@ -328,7 +327,7 @@
             this.label21.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(10, 15);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(292, 41);
+            this.label21.Size = new System.Drawing.Size(236, 32);
             this.label21.TabIndex = 1;
             this.label21.Text = "Company Overview";
             // 
@@ -354,7 +353,7 @@
             this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(166)))));
             this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(46, 947);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(15, 912);
             this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.Size = new System.Drawing.Size(180, 46);
@@ -363,10 +362,10 @@
             // 
             // FInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1021, 718);
+            this.ClientSize = new System.Drawing.Size(1084, 718);
             this.Controls.Add(this.guna2GradientButton3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);

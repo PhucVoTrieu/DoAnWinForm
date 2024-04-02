@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnCuoiKy.Company;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,14 +17,6 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
         }
-
-        private void FTrangChuCongTy_Load(object sender, EventArgs e)
-        {
-           //  this.Location = new Point(0, 0);
-           // this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             OpenForm(new FInformation());
@@ -56,22 +49,26 @@ namespace DoAnCuoiKy
             fp1.ShowDialog();
 
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FLogin f1 = new FLogin();
-            f1.Show();
-        }
-
         private void btnJobs_Click(object sender, EventArgs e)
         {
             OpenForm(new FJobs());
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void btnFavApplicants_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FFavoriteApplicants());
+        }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
         {
             OpenForm(new FStatistic());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FLogin f1 = new FLogin();
+            f1.Show();
         }
     }
 }

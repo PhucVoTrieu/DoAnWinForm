@@ -53,5 +53,12 @@ namespace DoAnCuoiKy
             OpenForm(new FPostCV());
 
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FLogin f1 = new FLogin();
+            f1.Show();
+        }
     }
 }

@@ -88,9 +88,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Candidate.cs" />
-    <Compile Include="CandidateDAO.cs" />
-    <Compile Include="DBconnection.cs" />
+    <Compile Include="Class\Candidate.cs" />
+    <Compile Include="ClassDAO\CandidateDAO.cs" />
+    <Compile Include="Company\Company.cs" />
+    <Compile Include="Company\CompanyDAO.cs" />
+    <Compile Include="Company\FCompanyRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\FCompanyRegistration.Designer.cs">
+      <DependentUpon>FCompanyRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\FFavApplicants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\FFavApplicants.Designer.cs">
+      <DependentUpon>FFavApplicants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\DBconnection.cs" />
     <Compile Include="DoAnCuoiKy2024DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +134,8 @@
     <Compile Include="Company\FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassDAO\FavApplicantDAO.cs" />
+    <Compile Include="ClassDAO\FavJobDAO.cs" />
     <Compile Include="FJobDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,8 +190,8 @@
     <Compile Include="Company\FTrangChuCongTy.Designer.cs">
       <DependentUpon>FTrangChuCongTy.cs</DependentUpon>
     </Compile>
-    <Compile Include="JobDetails.cs" />
-    <Compile Include="JobDetailsDAO.cs" />
+    <Compile Include="Class\JobDetails.cs" />
+    <Compile Include="ClassDAO\JobDetailsDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC\UCApplicantInformation.cs">
@@ -204,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\FFindingCandidate.resx">
       <DependentUpon>FFindingCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\FCompanyRegistration.resx">
+      <DependentUpon>FCompanyRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\FFavApplicants.resx">
+      <DependentUpon>FFavApplicants.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\FInformation.resx">
       <DependentUpon>FInformation.cs</DependentUpon>
@@ -502,6 +524,23 @@
   <ItemGroup>
     <None Include="Resources\97.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\99.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\98.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\981.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,56 +15,54 @@ namespace DoAnCuoiKy
     public partial class FormFavoriteJobs : Form
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-
+        FavJobDAO favoriteJobDAO = new FavJobDAO();
         public FormFavoriteJobs()
         {
             InitializeComponent();
-            LoadDanhSach();
+            favoriteJobDAO.LoadDanhSach(this);
+            this.btnCountFavJob.Text = CountFavoriteJob().ToString();
+
         }
-
-        public void LoadDanhSach()
+        public int CountFavoriteJob()
         {
-            List<JobDetails> list = new List<JobDetails>();
-            try
+            int count = 0;
+            foreach ( Control c in pnlFavJobs.Controls)
             {
-
-                string query = "SELECT * FROM FavoriteJob";
-                SqlCommand command = new SqlCommand(query, connStr);
-                connStr.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                if( c.GetType() == typeof(DoAnCuoiKy.UCJobUI))
                 {
-                    string title = reader["JobTitle"].ToString();
-                    string position = reader["JobPosition"].ToString();
-                    string type = reader["JobType"].ToString();
-                    string salary = reader["JobSalary"].ToString();
-                    string recruitmentQuota = reader["RecruitmentQuota"].ToString();
-                    string location = reader["Location"].ToString();
-                    string expYear = reader["ExpInYears"].ToString();
-                    string description = reader["JobDescription"].ToString();
-                    JobDetails jobdt1 = new JobDetails(title, position, type, salary, recruitmentQuota, location, expYear, description); jobdt1.JobTitle = title;
-                    list.Add(jobdt1);
+                    ++count;
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
-            }
-            finally
-            {
-                connStr.Close();
-            }
-
-
-            foreach (JobDetails jobDetail in list)
-            {
-                UCJobUI UCJob = new UCJobUI(jobDetail);
-                this.PnlRecommendJobs.Controls.Add(UCJob);
-            }
+            return count;
         }
+        
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List <UCJobUI> list = new List <UCJobUI>();
+            foreach (Control c in pnlFavJobs.Controls)
+            {
+                if (c.GetType() == typeof(UCJobUI))
+                {
+                    UCJobUI A = (UCJobUI)(c);
 
+                    if (A.CBoxSelected.Checked )
+                    {
+                        list.Add (A);
+                        
+                    }
+                }             
+              
+             }
+              foreach (UCJobUI c in list)
+            {
+                this.pnlFavJobs.Controls.Remove(c);
+                this.btnCountFavJob.Text = CountFavoriteJob().ToString();
+                favoriteJobDAO.xoaUC(c);
+            }
+           
+
+        }
     }
 }
 

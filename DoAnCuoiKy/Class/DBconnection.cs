@@ -32,7 +32,7 @@ namespace DoAnCuoiKy
             }
             return dataTable;
         }
-
+        private bool successMessageShown = false;
         public void thucthi(string sqlStr)
         {
             try
@@ -41,7 +41,14 @@ namespace DoAnCuoiKy
                 connStr.Open();
                 SqlCommand cmd = new SqlCommand(sqlStr, connStr);
                 if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                {
+                    if (!successMessageShown)
+                    {
+                        MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        successMessageShown = true;
+                    }
+                }
+                   
             }
             catch (Exception ex)
             {

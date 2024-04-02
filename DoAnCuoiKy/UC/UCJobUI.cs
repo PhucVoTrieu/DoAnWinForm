@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Guna.UI2.WinForms.Helpers.GraphicsHelper;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Runtime.CompilerServices;
 
 namespace DoAnCuoiKy
 {
@@ -18,7 +19,7 @@ namespace DoAnCuoiKy
         JobDetails jobDetails;
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
         DBconnection db = new DBconnection();
-        //JobDetailsDAO jobDetailsDAO = new JobDetailsDAO();
+        FavJobDAO favoriteJobDAO = new FavJobDAO();
         public UCJobUI()
         {
             InitializeComponent();
@@ -36,26 +37,32 @@ namespace DoAnCuoiKy
             this.txtExpYear.Text = j1.ExpInYears;
             
         }
-        
-
         private void btnDetails_Click_1(object sender, EventArgs e)
         {
             FJobDetails f1 = new FJobDetails(this.jobDetails);
-            f1.Show();
+            if(this.btnApplyNow.Visible == false)
+            {
+                f1.btnApplyNow.Hide();   
+            }
+            f1.ShowDialog();
         }
 
         private void btnApplyNow_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btnFavorite_Click(object sender, EventArgs e)
+        private void btnFavorite_CheckedChanged(object sender, EventArgs e)
         {
-            string SQL = string.Format("INSERT INTO FavoriteJob (JobTitle,JobPosition,JobType,JobSalary,RecruitmentQuota,Location,ExpInYears,JobDescription) VALUES ('{0}', '{1}' , '{2}','{3}','{4}','{5}','{6}','{7}')",
-               this.jobDetails.JobTitle, this.jobDetails.JobPosition, this.jobDetails.JobType,
-               this.jobDetails.JobSalary, this.jobDetails.RecruitmentQuota, this.jobDetails.Location, this.jobDetails.ExpInYears,
-               this.jobDetails.JobDescription);
-            db.thucthi(SQL);
+            if(this.btnFavorite.Checked)
+            {
+                favoriteJobDAO.them(this.jobDetails);
+            }
+            else
+            {
+                favoriteJobDAO.xoa(this.jobDetails);
+            }
+
+            
         }
     }
 }

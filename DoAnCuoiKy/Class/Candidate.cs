@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DoAnCuoiKy
 {
-    internal class Candidate
+    public class Candidate
     {
        
             private string _ID;
-            private string _Name;
+            private string _Name; 
             private string gender;
             private string nationality;
             private string address;
@@ -19,7 +19,10 @@ namespace DoAnCuoiKy
             private string email;
             private string phone;
             private string describe;
-        public Candidate(string ID, string Name, string gender, string nationality, string address, string DOB, string ExpYears, string email, string phone, string describe)
+             private string applyposition;
+              private string skill;
+
+        public Candidate(string ID, string Name, string gender, string nationality, string address, string DOB, string ExpYears, string email, string phone, string describe,string applyPosition,string skill)
         {
             this._ID = ID;
             this._Name = Name;
@@ -29,9 +32,20 @@ namespace DoAnCuoiKy
             this.DOB = DOB; 
             this.expYears = ExpYears;  
             this.describe = describe;
+            this.applyposition = applyPosition;
+            this.skill = skill;
         }
 
-       
+        public string ApplyPosition
+        {
+            get { return applyposition; }
+            set { applyposition = value; }
+        }
+        public string Skill
+        {
+            get { return skill; }
+            set { skill = value; }
+        }
         public string ID
         {
             get { return _ID; }

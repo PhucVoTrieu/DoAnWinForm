@@ -33,9 +33,9 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlContentCandidate = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnPostJobFinding = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnProfile = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnFavorite = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -74,9 +74,9 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.guna2Panel1.Controls.Add(this.btnLogOut);
             this.guna2Panel1.Controls.Add(this.btnPostJobFinding);
             this.guna2Panel1.Controls.Add(this.btnProfile);
-            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Controls.Add(this.guna2Separator1);
             this.guna2Panel1.Controls.Add(this.guna2CircleButton4);
             this.guna2Panel1.Controls.Add(this.btnFavorite);
@@ -84,8 +84,31 @@
             this.guna2Panel1.Location = new System.Drawing.Point(20, 22);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(103, 1009);
+            this.guna2Panel1.Size = new System.Drawing.Size(106, 1009);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Maiandra GD", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.btnLogOut.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._95;
+            this.btnLogOut.Image = global::DoAnCuoiKy.Properties.Resources.log_out__1_;
+            this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnLogOut.Location = new System.Drawing.Point(7, 613);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnLogOut.Size = new System.Drawing.Size(86, 62);
+            this.btnLogOut.TabIndex = 30;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnPostJobFinding
             // 
@@ -94,19 +117,19 @@
             this.btnPostJobFinding.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPostJobFinding.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPostJobFinding.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.btnPostJobFinding.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPostJobFinding.Font = new System.Drawing.Font("Maiandra GD", 7F);
             this.btnPostJobFinding.ForeColor = System.Drawing.Color.White;
             this.btnPostJobFinding.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnPostJobFinding.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._97;
             this.btnPostJobFinding.Image = global::DoAnCuoiKy.Properties.Resources._96;
             this.btnPostJobFinding.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPostJobFinding.Location = new System.Drawing.Point(16, 354);
+            this.btnPostJobFinding.Location = new System.Drawing.Point(17, 358);
             this.btnPostJobFinding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPostJobFinding.Name = "btnPostJobFinding";
             this.btnPostJobFinding.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnPostJobFinding.Size = new System.Drawing.Size(67, 62);
+            this.btnPostJobFinding.Size = new System.Drawing.Size(76, 76);
             this.btnPostJobFinding.TabIndex = 29;
-            this.btnPostJobFinding.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnPostJobFinding.Text = "Post CV";
             this.btnPostJobFinding.Click += new System.EventHandler(this.btnPostJobFinding_Click);
             // 
             // btnProfile
@@ -117,30 +140,20 @@
             this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnProfile.Font = new System.Drawing.Font("Maiandra GD", 7F);
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnProfile.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._95;
             this.btnProfile.Image = global::DoAnCuoiKy.Properties.Resources._94;
             this.btnProfile.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnProfile.Location = new System.Drawing.Point(16, 274);
+            this.btnProfile.Location = new System.Drawing.Point(17, 278);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnProfile.Size = new System.Drawing.Size(67, 62);
+            this.btnProfile.Size = new System.Drawing.Size(76, 76);
             this.btnProfile.TabIndex = 28;
+            this.btnProfile.Text = "Profile";
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(23, 609);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
-            this.guna2ControlBox1.TabIndex = 27;
             // 
             // guna2Separator1
             // 
@@ -178,18 +191,19 @@
             this.btnFavorite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnFavorite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnFavorite.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFavorite.Font = new System.Drawing.Font("Maiandra GD", 7F);
             this.btnFavorite.ForeColor = System.Drawing.Color.White;
             this.btnFavorite.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnFavorite.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._812;
             this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._821;
             this.btnFavorite.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnFavorite.Location = new System.Drawing.Point(15, 196);
+            this.btnFavorite.Location = new System.Drawing.Point(17, 198);
             this.btnFavorite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnFavorite.Size = new System.Drawing.Size(67, 62);
+            this.btnFavorite.Size = new System.Drawing.Size(76, 76);
             this.btnFavorite.TabIndex = 3;
+            this.btnFavorite.Text = "Favorite";
             this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
             // 
             // btnFindding
@@ -199,18 +213,19 @@
             this.btnFindding.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnFindding.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnFindding.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.btnFindding.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFindding.Font = new System.Drawing.Font("Maiandra GD", 7F);
             this.btnFindding.ForeColor = System.Drawing.Color.White;
             this.btnFindding.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnFindding.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._831;
             this.btnFindding.Image = global::DoAnCuoiKy.Properties.Resources._801;
             this.btnFindding.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnFindding.Location = new System.Drawing.Point(14, 121);
+            this.btnFindding.Location = new System.Drawing.Point(17, 110);
             this.btnFindding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFindding.Name = "btnFindding";
             this.btnFindding.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnFindding.Size = new System.Drawing.Size(67, 62);
+            this.btnFindding.Size = new System.Drawing.Size(76, 76);
             this.btnFindding.TabIndex = 2;
+            this.btnFindding.Text = "Finding";
             this.btnFindding.Click += new System.EventHandler(this.btnFindding_Click);
             // 
             // PanelToolElipse
@@ -260,9 +275,9 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton4;
         private Guna.UI2.WinForms.Guna2Panel pnlContentCandidate;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Elipse FormCandidateHomePageElipse;
         private Guna.UI2.WinForms.Guna2CircleButton btnProfile;
         private Guna.UI2.WinForms.Guna2CircleButton btnPostJobFinding;
+        private Guna.UI2.WinForms.Guna2CircleButton btnLogOut;
     }
 }

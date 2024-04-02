@@ -44,11 +44,14 @@
             this.txtJobExperiencesInYears = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtJobDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnPost = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtJobSalary = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCompanyName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBenefit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblBenefit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -90,7 +93,7 @@
             this.txtJobTitle.PasswordChar = '\0';
             this.txtJobTitle.PlaceholderText = "Enter job title";
             this.txtJobTitle.SelectedText = "";
-            this.txtJobTitle.Size = new System.Drawing.Size(691, 36);
+            this.txtJobTitle.Size = new System.Drawing.Size(323, 36);
             this.txtJobTitle.TabIndex = 3;
             // 
             // label3
@@ -143,7 +146,7 @@
             "Part-time",
             "Temporary"});
             this.cbJobType.ItemsAppearance.ForeColor = System.Drawing.Color.Transparent;
-            this.cbJobType.Location = new System.Drawing.Point(427, 270);
+            this.cbJobType.Location = new System.Drawing.Point(424, 162);
             this.cbJobType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbJobType.Name = "cbJobType";
             this.cbJobType.Size = new System.Drawing.Size(321, 36);
@@ -154,7 +157,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(423, 231);
+            this.label4.Location = new System.Drawing.Point(420, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 20);
             this.label4.TabIndex = 6;
@@ -174,7 +177,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(421, 337);
+            this.label6.Location = new System.Drawing.Point(418, 229);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(167, 20);
             this.label6.TabIndex = 8;
@@ -193,7 +196,7 @@
             this.txtRecruitmentQuota.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRecruitmentQuota.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRecruitmentQuota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRecruitmentQuota.Location = new System.Drawing.Point(427, 377);
+            this.txtRecruitmentQuota.Location = new System.Drawing.Point(424, 269);
             this.txtRecruitmentQuota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRecruitmentQuota.Name = "txtRecruitmentQuota";
             this.txtRecruitmentQuota.PasswordChar = '\0';
@@ -206,7 +209,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(421, 434);
+            this.label7.Location = new System.Drawing.Point(418, 326);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 20);
             this.label7.TabIndex = 14;
@@ -241,7 +244,7 @@
             this.cbLocation.Location = new System.Drawing.Point(56, 474);
             this.cbLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLocation.Name = "cbLocation";
-            this.cbLocation.Size = new System.Drawing.Size(321, 36);
+            this.cbLocation.Size = new System.Drawing.Size(693, 36);
             this.cbLocation.StartIndex = 0;
             this.cbLocation.TabIndex = 17;
             // 
@@ -258,7 +261,7 @@
             this.txtJobExperiencesInYears.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobExperiencesInYears.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtJobExperiencesInYears.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobExperiencesInYears.Location = new System.Drawing.Point(427, 474);
+            this.txtJobExperiencesInYears.Location = new System.Drawing.Point(424, 366);
             this.txtJobExperiencesInYears.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobExperiencesInYears.Name = "txtJobExperiencesInYears";
             this.txtJobExperiencesInYears.PasswordChar = '\0';
@@ -280,44 +283,44 @@
             this.txtJobDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtJobDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobDescription.Location = new System.Drawing.Point(56, 576);
+            this.txtJobDescription.Location = new System.Drawing.Point(56, 577);
             this.txtJobDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobDescription.Multiline = true;
             this.txtJobDescription.Name = "txtJobDescription";
             this.txtJobDescription.PasswordChar = '\0';
             this.txtJobDescription.PlaceholderText = "Enter job description";
             this.txtJobDescription.SelectedText = "";
-            this.txtJobDescription.Size = new System.Drawing.Size(691, 63);
+            this.txtJobDescription.Size = new System.Drawing.Size(321, 140);
             this.txtJobDescription.TabIndex = 25;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(52, 537);
+            this.label10.Location = new System.Drawing.Point(52, 538);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(142, 20);
             this.label10.TabIndex = 24;
             this.label10.Text = "Job Description";
             // 
-            // guna2GradientButton1
+            // btnPost
             // 
-            this.guna2GradientButton1.BorderRadius = 10;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Cyan;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(309, 656);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(180, 46);
-            this.guna2GradientButton1.TabIndex = 27;
-            this.guna2GradientButton1.Text = "Post";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            this.btnPost.BorderRadius = 10;
+            this.btnPost.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPost.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPost.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPost.FillColor2 = System.Drawing.Color.Cyan;
+            this.btnPost.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPost.ForeColor = System.Drawing.Color.White;
+            this.btnPost.Location = new System.Drawing.Point(309, 751);
+            this.btnPost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPost.Name = "btnPost";
+            this.btnPost.Size = new System.Drawing.Size(180, 46);
+            this.btnPost.TabIndex = 27;
+            this.btnPost.Text = "Post";
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // guna2ControlBox1
             // 
@@ -385,16 +388,74 @@
             this.txtJobSalary.Size = new System.Drawing.Size(321, 36);
             this.txtJobSalary.TabIndex = 31;
             // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.BorderRadius = 5;
+            this.txtCompanyName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCompanyName.DefaultText = "";
+            this.txtCompanyName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCompanyName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCompanyName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCompanyName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCompanyName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.txtCompanyName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCompanyName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCompanyName.Location = new System.Drawing.Point(422, 27);
+            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.PasswordChar = '\0';
+            this.txtCompanyName.PlaceholderText = "Enter company name";
+            this.txtCompanyName.SelectedText = "";
+            this.txtCompanyName.Size = new System.Drawing.Size(321, 61);
+            this.txtCompanyName.TabIndex = 33;
+            // 
+            // txtBenefit
+            // 
+            this.txtBenefit.BorderRadius = 5;
+            this.txtBenefit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBenefit.DefaultText = "";
+            this.txtBenefit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBenefit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBenefit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBenefit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBenefit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.txtBenefit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBenefit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBenefit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBenefit.Location = new System.Drawing.Point(428, 577);
+            this.txtBenefit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBenefit.Multiline = true;
+            this.txtBenefit.Name = "txtBenefit";
+            this.txtBenefit.PasswordChar = '\0';
+            this.txtBenefit.PlaceholderText = "Enter benefit";
+            this.txtBenefit.SelectedText = "";
+            this.txtBenefit.Size = new System.Drawing.Size(321, 140);
+            this.txtBenefit.TabIndex = 35;
+            // 
+            // lblBenefit
+            // 
+            this.lblBenefit.AutoSize = true;
+            this.lblBenefit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBenefit.Location = new System.Drawing.Point(436, 537);
+            this.lblBenefit.Name = "lblBenefit";
+            this.lblBenefit.Size = new System.Drawing.Size(69, 20);
+            this.lblBenefit.TabIndex = 34;
+            this.lblBenefit.Text = "Benefit";
+            // 
             // FPostAJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(799, 714);
+            this.ClientSize = new System.Drawing.Size(799, 812);
+            this.Controls.Add(this.txtBenefit);
+            this.Controls.Add(this.lblBenefit);
+            this.Controls.Add(this.txtCompanyName);
             this.Controls.Add(this.txtJobSalary);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.btnPost);
             this.Controls.Add(this.txtJobDescription);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtJobExperiencesInYears);
@@ -441,9 +502,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtJobExperiencesInYears;
         private Guna.UI2.WinForms.Guna2TextBox txtJobDescription;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnPost;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2TextBox txtJobSalary;
+        private Guna.UI2.WinForms.Guna2TextBox txtCompanyName;
+        private Guna.UI2.WinForms.Guna2TextBox txtBenefit;
+        private System.Windows.Forms.Label lblBenefit;
     }
 }

@@ -13,60 +13,53 @@ namespace DoAnCuoiKy
 {
     public partial class FJobs : Form
     {
-        List<UCJobUI> UcJobList = new List<UCJobUI>();
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-
+        JobDetailsDAO jobDetailsDAO = new JobDetailsDAO();
         public FJobs()
         {
             InitializeComponent();
-            LoadDanhSach();
+            jobDetailsDAO.LoadDanhSach1(this);
+            this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
         }
-        public void LoadDanhSach()
+        public int CountCreatedJob()
         {
-            List<JobDetails> list = new List<JobDetails>();
-            try
+            int count = 0;
+            foreach (Control c in pnlCreatedJob.Controls)
             {
-
-                string query = "SELECT * FROM Jobdetails";
-                SqlCommand command = new SqlCommand(query, connStr);
-                connStr.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                if (c.GetType() == typeof(DoAnCuoiKy.UCJobUI))
                 {
-
-                    // lấy dữ liệu từ các cột
-                    string title = reader["JobTitle"].ToString();
-                    string position = reader["JobPosition"].ToString();
-                    string type = reader["JobType"].ToString();
-                    string salary = reader["JobSalary"].ToString();
-                    string recruitmentQuota = reader["RecruitmentQuota"].ToString();
-                    string location = reader["Location"].ToString();
-                    string expYear = reader["ExpInYears"].ToString();
-                    string description = reader["JobDescription"].ToString();
-                    JobDetails jobdt1 = new JobDetails(title, position, type, salary, recruitmentQuota, location, expYear, description);
-                    // thêm jobd1 vào list
-                    list.Add(jobdt1);
+                    ++count;
                 }
             }
-
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
-            }
-            finally
-            {
-                connStr.Close();
-            }
-
-
-            foreach (JobDetails jobDetail in list)
-            {
-                UCJobUI UCJob = new UCJobUI(jobDetail);
-                UCJob.btnApplyNow.Hide();
-                this.pnlCreatedJob.Controls.Add(UCJob);
-            }
+            return count;
         }
-       
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<UCJobUI> list = new List<UCJobUI>();
+            foreach (Control c in pnlCreatedJob.Controls)
+            {
+                if (c.GetType() == typeof(UCJobUI))
+                {
+                    UCJobUI A = (UCJobUI)(c);
+
+                    if (A.CBoxSelected.Checked)
+                    {
+                        list.Add(A);
+
+                    }
+                }
+
+            }
+            foreach (UCJobUI c in list)
+            {
+                this.pnlCreatedJob.Controls.Remove(c);
+                this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
+                jobDetailsDAO.xoaUC(c);
+            }
+
+
+        }
+
+        
     }
 }

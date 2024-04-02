@@ -16,13 +16,14 @@ namespace DoAnCuoiKy
         private string location;
         private string expInYears;
         private string jobDescription;
-
+        private string companyName;
+        private string benefit;
         public JobDetails(   )
         {
           
         }
-        public JobDetails (string jobTitle,string jobPosition, string jobType , string jobSalary , string recruitmentQuota , string location , string expInYears , string jobDescription )
-        {
+        public JobDetails (string jobTitle,string jobPosition, string jobType , string jobSalary , string recruitmentQuota , string location , string expInYears , string jobDescription , string companyName, string benefit)
+        {                                                                                                                                                                                 
             this.jobTitle = jobTitle;
             this.jobPosition = jobPosition;
             this.jobType = jobType;
@@ -31,7 +32,19 @@ namespace DoAnCuoiKy
             this.location = location;
             this.expInYears = expInYears;
             this.jobDescription = jobDescription;
-           
+           this.companyName=companyName;
+            this.benefit=benefit;
+        }
+
+        public string CompanyName
+        {
+            get { return companyName; }
+            set { companyName = value; }
+        }
+        public string Benefit
+        {
+            get { return benefit; }
+            set { benefit = value; }
         }
         public string JobTitle
         { get { return jobTitle; }

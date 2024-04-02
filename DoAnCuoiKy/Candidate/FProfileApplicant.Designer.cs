@@ -40,8 +40,11 @@
             this.txtDescribe = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDOB = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlBasicInfo = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnApply = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSkill = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtApplyPos = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnApplyNow = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BasicInforElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label4 = new System.Windows.Forms.Label();
@@ -69,7 +72,7 @@
             this.txtName.PlaceholderText = "Name";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(248, 46);
-            this.txtName.TabIndex = 83;
+            this.txtName.TabIndex = 4;
             // 
             // txtGender
             // 
@@ -83,14 +86,14 @@
             this.txtGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGender.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGender.Location = new System.Drawing.Point(579, 100);
+            this.txtGender.Location = new System.Drawing.Point(549, 100);
             this.txtGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGender.Name = "txtGender";
             this.txtGender.PasswordChar = '\0';
             this.txtGender.PlaceholderText = "Gender";
             this.txtGender.SelectedText = "";
             this.txtGender.Size = new System.Drawing.Size(248, 46);
-            this.txtGender.TabIndex = 84;
+            this.txtGender.TabIndex = 5;
             // 
             // txtExpYears
             // 
@@ -104,14 +107,14 @@
             this.txtExpYears.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpYears.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtExpYears.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpYears.Location = new System.Drawing.Point(579, 32);
+            this.txtExpYears.Location = new System.Drawing.Point(549, 32);
             this.txtExpYears.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtExpYears.Name = "txtExpYears";
             this.txtExpYears.PasswordChar = '\0';
             this.txtExpYears.PlaceholderText = "Experience Years";
             this.txtExpYears.SelectedText = "";
             this.txtExpYears.Size = new System.Drawing.Size(248, 47);
-            this.txtExpYears.TabIndex = 85;
+            this.txtExpYears.TabIndex = 2;
             // 
             // txtAddress
             // 
@@ -132,7 +135,7 @@
             this.txtAddress.PlaceholderText = "Address";
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(248, 46);
-            this.txtAddress.TabIndex = 86;
+            this.txtAddress.TabIndex = 8;
             // 
             // txtNationality
             // 
@@ -153,7 +156,7 @@
             this.txtNationality.PlaceholderText = "Nationality";
             this.txtNationality.SelectedText = "";
             this.txtNationality.Size = new System.Drawing.Size(248, 46);
-            this.txtNationality.TabIndex = 87;
+            this.txtNationality.TabIndex = 6;
             // 
             // txtPhone
             // 
@@ -167,14 +170,14 @@
             this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(579, 172);
+            this.txtPhone.Location = new System.Drawing.Point(549, 172);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
             this.txtPhone.PlaceholderText = "Phone";
             this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(248, 46);
-            this.txtPhone.TabIndex = 88;
+            this.txtPhone.TabIndex = 7;
             // 
             // txtEmail
             // 
@@ -188,14 +191,14 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(859, 32);
+            this.txtEmail.Location = new System.Drawing.Point(279, 306);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "Email";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(336, 47);
-            this.txtEmail.TabIndex = 89;
+            this.txtEmail.Size = new System.Drawing.Size(248, 47);
+            this.txtEmail.TabIndex = 3;
             // 
             // txtID
             // 
@@ -216,7 +219,7 @@
             this.txtID.PlaceholderText = "ID";
             this.txtID.SelectedText = "";
             this.txtID.Size = new System.Drawing.Size(248, 47);
-            this.txtID.TabIndex = 90;
+            this.txtID.TabIndex = 1;
             // 
             // txtDescribe
             // 
@@ -230,15 +233,15 @@
             this.txtDescribe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescribe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescribe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescribe.Location = new System.Drawing.Point(859, 100);
+            this.txtDescribe.Location = new System.Drawing.Point(821, 100);
             this.txtDescribe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescribe.Multiline = true;
             this.txtDescribe.Name = "txtDescribe";
             this.txtDescribe.PasswordChar = '\0';
             this.txtDescribe.PlaceholderText = "Describe";
             this.txtDescribe.SelectedText = "";
-            this.txtDescribe.Size = new System.Drawing.Size(336, 118);
-            this.txtDescribe.TabIndex = 91;
+            this.txtDescribe.Size = new System.Drawing.Size(373, 182);
+            this.txtDescribe.TabIndex = 10;
             // 
             // txtDOB
             // 
@@ -252,20 +255,23 @@
             this.txtDOB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDOB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDOB.Location = new System.Drawing.Point(579, 236);
+            this.txtDOB.Location = new System.Drawing.Point(549, 236);
             this.txtDOB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDOB.Name = "txtDOB";
             this.txtDOB.PasswordChar = '\0';
             this.txtDOB.PlaceholderText = "DOB";
             this.txtDOB.SelectedText = "";
             this.txtDOB.Size = new System.Drawing.Size(248, 46);
-            this.txtDOB.TabIndex = 92;
+            this.txtDOB.TabIndex = 9;
             // 
             // pnlBasicInfo
             // 
             this.pnlBasicInfo.BackColor = System.Drawing.Color.White;
+            this.pnlBasicInfo.Controls.Add(this.btnApply);
+            this.pnlBasicInfo.Controls.Add(this.txtSkill);
+            this.pnlBasicInfo.Controls.Add(this.txtApplyPos);
             this.pnlBasicInfo.Controls.Add(this.btnEdit);
-            this.pnlBasicInfo.Controls.Add(this.btnApplyNow);
+            this.pnlBasicInfo.Controls.Add(this.btnSave);
             this.pnlBasicInfo.Controls.Add(this.pictureBox1);
             this.pnlBasicInfo.Controls.Add(this.txtDescribe);
             this.pnlBasicInfo.Controls.Add(this.txtName);
@@ -280,8 +286,70 @@
             this.pnlBasicInfo.Location = new System.Drawing.Point(32, 103);
             this.pnlBasicInfo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBasicInfo.Name = "pnlBasicInfo";
-            this.pnlBasicInfo.Size = new System.Drawing.Size(1223, 341);
+            this.pnlBasicInfo.Size = new System.Drawing.Size(1223, 412);
             this.pnlBasicInfo.TabIndex = 93;
+            // 
+            // btnApply
+            // 
+            this.btnApply.AutoRoundedCorners = true;
+            this.btnApply.BackColor = System.Drawing.Color.Transparent;
+            this.btnApply.BorderRadius = 22;
+            this.btnApply.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApply.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnApply.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.btnApply.Location = new System.Drawing.Point(821, 307);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(115, 46);
+            this.btnApply.TabIndex = 97;
+            this.btnApply.Text = "Apply";
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            // 
+            // txtSkill
+            // 
+            this.txtSkill.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSkill.DefaultText = "";
+            this.txtSkill.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSkill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSkill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSkill.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSkill.Enabled = false;
+            this.txtSkill.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSkill.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSkill.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSkill.Location = new System.Drawing.Point(821, 32);
+            this.txtSkill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSkill.Name = "txtSkill";
+            this.txtSkill.PasswordChar = '\0';
+            this.txtSkill.PlaceholderText = "Personal Skill";
+            this.txtSkill.SelectedText = "";
+            this.txtSkill.Size = new System.Drawing.Size(373, 47);
+            this.txtSkill.TabIndex = 96;
+            // 
+            // txtApplyPos
+            // 
+            this.txtApplyPos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtApplyPos.DefaultText = "";
+            this.txtApplyPos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtApplyPos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtApplyPos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtApplyPos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtApplyPos.Enabled = false;
+            this.txtApplyPos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtApplyPos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtApplyPos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtApplyPos.Location = new System.Drawing.Point(549, 306);
+            this.txtApplyPos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtApplyPos.Name = "txtApplyPos";
+            this.txtApplyPos.PasswordChar = '\0';
+            this.txtApplyPos.PlaceholderText = "Apply Positon";
+            this.txtApplyPos.SelectedText = "";
+            this.txtApplyPos.Size = new System.Drawing.Size(248, 46);
+            this.txtApplyPos.TabIndex = 95;
             // 
             // btnEdit
             // 
@@ -295,33 +363,33 @@
             this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.btnEdit.Location = new System.Drawing.Point(1041, 236);
+            this.btnEdit.Location = new System.Drawing.Point(952, 306);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(153, 46);
+            this.btnEdit.Size = new System.Drawing.Size(115, 46);
             this.btnEdit.TabIndex = 94;
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnApplyNow
+            // btnSave
             // 
-            this.btnApplyNow.AutoRoundedCorners = true;
-            this.btnApplyNow.BackColor = System.Drawing.Color.Transparent;
-            this.btnApplyNow.BorderRadius = 22;
-            this.btnApplyNow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnApplyNow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnApplyNow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnApplyNow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnApplyNow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.btnApplyNow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnApplyNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.btnApplyNow.Location = new System.Drawing.Point(859, 236);
-            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnApplyNow.Name = "btnApplyNow";
-            this.btnApplyNow.Size = new System.Drawing.Size(153, 46);
-            this.btnApplyNow.TabIndex = 93;
-            this.btnApplyNow.Text = "Save";
-            this.btnApplyNow.Click += new System.EventHandler(this.btnApplyNow_Click);
+            this.btnSave.AutoRoundedCorners = true;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderRadius = 22;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.btnSave.Location = new System.Drawing.Point(1079, 307);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(115, 46);
+            this.btnSave.TabIndex = 11;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // pictureBox1
             // 
@@ -329,7 +397,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(25, 32);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 321);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
@@ -368,7 +436,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.ClientSize = new System.Drawing.Size(1313, 475);
+            this.ClientSize = new System.Drawing.Size(1313, 615);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pnlBasicInfo);
@@ -384,22 +452,25 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private Guna.UI2.WinForms.Guna2TextBox txtGender;
-        private Guna.UI2.WinForms.Guna2TextBox txtExpYears;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
-        private Guna.UI2.WinForms.Guna2TextBox txtNationality;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtID;
-        private Guna.UI2.WinForms.Guna2TextBox txtDescribe;
-        private Guna.UI2.WinForms.Guna2TextBox txtDOB;
-        private Guna.UI2.WinForms.Guna2Panel pnlBasicInfo;
-        private Guna.UI2.WinForms.Guna2Elipse BasicInforElipse;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public  Guna.UI2.WinForms.Guna2TextBox txtName;
+        public  Guna.UI2.WinForms.Guna2TextBox txtGender;
+        public  Guna.UI2.WinForms.Guna2TextBox txtExpYears;
+        public  Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        public  Guna.UI2.WinForms.Guna2TextBox txtNationality;
+        public  Guna.UI2.WinForms.Guna2TextBox txtPhone;
+        public  Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        public  Guna.UI2.WinForms.Guna2TextBox txtID;
+        public  Guna.UI2.WinForms.Guna2TextBox txtDescribe;
+        public  Guna.UI2.WinForms.Guna2TextBox txtDOB;
+        public  Guna.UI2.WinForms.Guna2Panel pnlBasicInfo;
+        public  Guna.UI2.WinForms.Guna2Elipse BasicInforElipse;
         public Guna.UI2.WinForms.Guna2Button btnEdit;
-        public Guna.UI2.WinForms.Guna2Button btnApplyNow;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        public Guna.UI2.WinForms.Guna2Button btnSave;
+        public  System.Windows.Forms.Label label4;
+        public  Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        public Guna.UI2.WinForms.Guna2TextBox txtSkill;
+        public Guna.UI2.WinForms.Guna2TextBox txtApplyPos;
+        public Guna.UI2.WinForms.Guna2Button btnApply;
     }
 }

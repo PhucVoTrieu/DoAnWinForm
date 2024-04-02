@@ -31,6 +31,8 @@ namespace DoAnCuoiKy
             this.txtRecruitmentQuota.Text= j1.RecruitmentQuota.ToString();
             this.txtSalary.Text = j1.JobSalary.ToString();
             this.txtJobDescription.Text = j1.JobDescription.ToString();
+            this.txtBenefit.Text = j1.Benefit;
+            this.btnCompanyName.Text = j1.CompanyName;
 
             this.jobDetails = j1;
             
@@ -39,6 +41,17 @@ namespace DoAnCuoiKy
         private void btnApply_Click(object sender, EventArgs e)
         {
             FProfileApplicant f1 = new FProfileApplicant();f1.Show();
+        }
+
+        private void btnCompanyName_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnApplyNow_Click(object sender, EventArgs e)
+        {
+            FProfileApplicant f1 = new FProfileApplicant();
+            f1.Show();
         }
     }
 }

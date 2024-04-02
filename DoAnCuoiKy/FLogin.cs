@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnCuoiKy.Company;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,8 +38,9 @@ namespace DoAnCuoiKy
             if(guna2CustomRadioButton1.Checked)
             {
                 this.Hide();
-                FTrangChuCongTy f1 = new FTrangChuCongTy();
-                f1.Show();
+                FCompanyRegistration f1 = new FCompanyRegistration();
+           
+                f1.Show(); 
             }
             else if(guna2CustomRadioButton2.Checked) {
                 this.Hide();

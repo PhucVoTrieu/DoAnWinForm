@@ -33,9 +33,10 @@
             this.pnlContent = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStatistic = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFavApplicants = new Guna.UI2.WinForms.Guna2Button();
             this.btnApplicants = new Guna.UI2.WinForms.Guna2Button();
             this.btnJobs = new Guna.UI2.WinForms.Guna2Button();
             this.btnPostAJob = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -51,10 +52,10 @@
             // pnlContent
             // 
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(146, 0);
-            this.pnlContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContent.Location = new System.Drawing.Point(197, 0);
+            this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1021, 718);
+            this.pnlContent.Size = new System.Drawing.Size(1359, 884);
             this.pnlContent.TabIndex = 22;
             // 
             // guna2ShadowForm1
@@ -64,44 +65,72 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
-            this.guna2Panel2.Controls.Add(this.guna2Button1);
+            this.guna2Panel2.Controls.Add(this.btnStatistic);
+            this.guna2Panel2.Controls.Add(this.btnLogout);
             this.guna2Panel2.Controls.Add(this.btnHome);
-            this.guna2Panel2.Controls.Add(this.guna2Button4);
+            this.guna2Panel2.Controls.Add(this.btnFavApplicants);
             this.guna2Panel2.Controls.Add(this.btnApplicants);
             this.guna2Panel2.Controls.Add(this.btnJobs);
             this.guna2Panel2.Controls.Add(this.btnPostAJob);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(146, 718);
+            this.guna2Panel2.Size = new System.Drawing.Size(197, 884);
             this.guna2Panel2.TabIndex = 19;
             // 
-            // guna2Button1
+            // btnStatistic
             // 
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = global::DoAnCuoiKy.Properties.Resources._15;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(0, 357);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(146, 50);
-            this.guna2Button1.TabIndex = 25;
-            this.guna2Button1.Text = "Log out";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnStatistic.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnStatistic.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnStatistic.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnStatistic.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnStatistic.CheckedState.Image = global::DoAnCuoiKy.Properties.Resources._24;
+            this.btnStatistic.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnStatistic.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnStatistic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatistic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatistic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStatistic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStatistic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.btnStatistic.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnStatistic.ForeColor = System.Drawing.Color.Black;
+            this.btnStatistic.Image = global::DoAnCuoiKy.Properties.Resources._7;
+            this.btnStatistic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.Location = new System.Drawing.Point(0, 438);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(195, 62);
+            this.btnStatistic.TabIndex = 26;
+            this.btnStatistic.Text = "Statistic";
+            this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnLogout.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLogout.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLogout.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnLogout.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Image = global::DoAnCuoiKy.Properties.Resources._15;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Location = new System.Drawing.Point(0, 622);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(195, 62);
+            this.btnLogout.TabIndex = 25;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnHome
             // 
@@ -121,41 +150,41 @@
             this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.Image = global::DoAnCuoiKy.Properties.Resources._18;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(0, 140);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Location = new System.Drawing.Point(0, 172);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(146, 50);
+            this.btnHome.Size = new System.Drawing.Size(195, 62);
             this.btnHome.TabIndex = 24;
             this.btnHome.Text = "Information";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // guna2Button4
+            // btnFavApplicants
             // 
-            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button4.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Button4.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.CheckedState.Image = global::DoAnCuoiKy.Properties.Resources._24;
-            this.guna2Button4.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Image = global::DoAnCuoiKy.Properties.Resources._7;
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Location = new System.Drawing.Point(0, 303);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(146, 50);
-            this.guna2Button4.TabIndex = 23;
-            this.guna2Button4.Text = "Statistic";
-            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.btnFavApplicants.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnFavApplicants.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFavApplicants.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFavApplicants.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnFavApplicants.CheckedState.Image = global::DoAnCuoiKy.Properties.Resources._981;
+            this.btnFavApplicants.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnFavApplicants.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnFavApplicants.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFavApplicants.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFavApplicants.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFavApplicants.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFavApplicants.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.btnFavApplicants.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFavApplicants.ForeColor = System.Drawing.Color.Black;
+            this.btnFavApplicants.Image = global::DoAnCuoiKy.Properties.Resources._991;
+            this.btnFavApplicants.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFavApplicants.Location = new System.Drawing.Point(0, 372);
+            this.btnFavApplicants.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFavApplicants.Name = "btnFavApplicants";
+            this.btnFavApplicants.Size = new System.Drawing.Size(195, 62);
+            this.btnFavApplicants.TabIndex = 23;
+            this.btnFavApplicants.Text = "Favorite Applicants";
+            this.btnFavApplicants.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFavApplicants.Click += new System.EventHandler(this.btnFavApplicants_Click);
             // 
             // btnApplicants
             // 
@@ -175,10 +204,10 @@
             this.btnApplicants.ForeColor = System.Drawing.Color.Black;
             this.btnApplicants.Image = global::DoAnCuoiKy.Properties.Resources._22;
             this.btnApplicants.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnApplicants.Location = new System.Drawing.Point(0, 249);
-            this.btnApplicants.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApplicants.Location = new System.Drawing.Point(0, 306);
+            this.btnApplicants.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApplicants.Name = "btnApplicants";
-            this.btnApplicants.Size = new System.Drawing.Size(146, 50);
+            this.btnApplicants.Size = new System.Drawing.Size(195, 62);
             this.btnApplicants.TabIndex = 22;
             this.btnApplicants.Text = "Applicants";
             this.btnApplicants.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -202,10 +231,10 @@
             this.btnJobs.ForeColor = System.Drawing.Color.Black;
             this.btnJobs.Image = global::DoAnCuoiKy.Properties.Resources._20;
             this.btnJobs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJobs.Location = new System.Drawing.Point(0, 194);
-            this.btnJobs.Margin = new System.Windows.Forms.Padding(2);
+            this.btnJobs.Location = new System.Drawing.Point(0, 239);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(146, 50);
+            this.btnJobs.Size = new System.Drawing.Size(195, 62);
             this.btnJobs.TabIndex = 21;
             this.btnJobs.Text = "Jobs";
             this.btnJobs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -215,7 +244,7 @@
             // 
             this.btnPostAJob.AutoRoundedCorners = true;
             this.btnPostAJob.BackColor = System.Drawing.Color.Transparent;
-            this.btnPostAJob.BorderRadius = 23;
+            this.btnPostAJob.BorderRadius = 28;
             this.btnPostAJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPostAJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPostAJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -226,33 +255,32 @@
             this.btnPostAJob.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPostAJob.ForeColor = System.Drawing.Color.White;
             this.btnPostAJob.Image = global::DoAnCuoiKy.Properties.Resources._17;
-            this.btnPostAJob.Location = new System.Drawing.Point(2, 50);
-            this.btnPostAJob.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPostAJob.Location = new System.Drawing.Point(3, 62);
+            this.btnPostAJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPostAJob.Name = "btnPostAJob";
             this.btnPostAJob.ShadowDecoration.BorderRadius = 15;
             this.btnPostAJob.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPostAJob.ShadowDecoration.Depth = 20;
             this.btnPostAJob.ShadowDecoration.Enabled = true;
             this.btnPostAJob.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2);
-            this.btnPostAJob.Size = new System.Drawing.Size(141, 48);
+            this.btnPostAJob.Size = new System.Drawing.Size(188, 59);
             this.btnPostAJob.TabIndex = 20;
             this.btnPostAJob.Text = "Post a job";
             this.btnPostAJob.Click += new System.EventHandler(this.btnPostAJob_Click);
             // 
             // FTrangChuCongTy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1167, 718);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FTrangChuCongTy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FTrangChuCongTy";
-            this.Load += new System.EventHandler(this.FTrangChuCongTy_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -263,12 +291,13 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2GradientButton btnPostAJob;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnFavApplicants;
         private Guna.UI2.WinForms.Guna2Button btnApplicants;
         private Guna.UI2.WinForms.Guna2Button btnJobs;
         private Guna.UI2.WinForms.Guna2Panel pnlContent;
         private Guna.UI2.WinForms.Guna2Button btnHome;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Button btnStatistic;
     }
 }
