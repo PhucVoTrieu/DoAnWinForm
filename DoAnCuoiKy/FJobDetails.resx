@@ -117,7 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="guna2ShadowForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Triển khai, quản trị, giám sát, vận hành hệ thống mạng của tổ chức bao gồm hệ thống mạng tại Trung tâm dữ liệu và các chi nhánh: Cisco ACI; Firewall Checkpoint/ Palo Alto/ Fortinet; Wifi; NAC…
+Triển khai, vận hành, giám sát hệ thống mạng kết nối đến đối tác ngân hàng và tổ chức tài chính trong và ngoài nước nhu Internet/ P2P/ MPLS/….
+Xây dựng các tài liệu, hướng dẫn, quy trình đảm bảo kết nối hệ thống thông tin ổn định, an toàn
+Tham gia phối hợp xây dựng, triển khai áp dụng/ ứng dụng các tiêu chuẩn kết nối hệ thống thông tin ổn định, đảm bảo tuân thủ thông lệ quốc tế yêu cầu trong các tiêu chuẩn như ISO27001, PCI DSS, NIST …
+Giám sát, phân tích và giải quyết các sự cố về hạ tầng mạng/ bảo mật/ ứng dụng liên quan
+Tìm hiểu công nghệ mới/ tư vấn/ đề xuất các giải pháp công nghệ mang lại lợi ích và hiệu quả cho tổ chức
+Các công việc khác được phân công</value>
+  </data>
+  <metadata name="guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>582, 17</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>740, 17</value>
+  </metadata>
+  <metadata name="JobDetailsElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>863, 17</value>
+  </metadata>
+  <metadata name="CompanyInforElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1000, 17</value>
+  </metadata>
+  <metadata name="guna2DragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <data name="textBox3.Text" xml:space="preserve">
+    <value>Tốt nghiệp Đại học/ Thạc sỹ các Chuyên ngành: khoa học máy tính, hệ thống thông tin hoặc công nghệ thông tin/ Điện tử viễn thông
+CCNA, CCNP, CCSA, PCNSA (có CCIE hoặc tương đương là một lợi thế)
+Toeic 500 trở lên hoặc chứng chỉ tương đương
+Có kinh nghiệm vận hành thực tế các hệ thống mạng SDN như Cisco ACI, SDWAN,...
+Có kinh nghiệm vận hành thực tế các thiết bị Firewall, Load Balancing như Checkpoint Maestro, Palo Alto, F5,…
+Có kinh nghiệm, kiến thức về các mảng liên quan tại Ngân hàng, Tổ chức Tài chính về CNTT là một lợi thế
+Có kinh nghiệm theo đúng mô tả công việc là một lợi thế</value>
+  </data>
+  <data name="textBox4.Text" xml:space="preserve">
+    <value>Mức lương cạnh tranh, hấp dẫn (Thưởng xếp loại thực hiện công việc 6 tháng/lần, thưởng sinh nhật ngân hàng, thưởng các ngày lễ tết trong năm…).
+Chế độ phúc lợi cạnh tranh: Du lịch hàng năm, Khám sức khỏe định kì hàng năm; Gói bảo hiểm sức khỏe; Các hoạt động tri ân, chăm lo đời sống tinh thần CBNV và Thân nhân...
+Môi trường làm việc chuyên nghiệp, thân thiện, cởi mở.
+Được làm việc với các hệ thống hiện đại, tiên tiến nhất thị trường, áp dụng các công nghệ hàng đầu về an ninh bảo mật để đảm bảo an toàn cho người sử dụng.
+Cơ hội học hỏi nghiệp vụ ngân hàng.</value>
+  </data>
 </root>

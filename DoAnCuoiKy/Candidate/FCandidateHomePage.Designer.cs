@@ -49,7 +49,7 @@
             // 
             // FormElipse
             // 
-            this.FormElipse.BorderRadius = 70;
+            this.FormElipse.BorderRadius = 50;
             this.FormElipse.TargetControl = this.guna2Panel2;
             // 
             // guna2Panel2
@@ -57,18 +57,17 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.guna2Panel2.Controls.Add(this.pnlContentCandidate);
             this.guna2Panel2.Controls.Add(this.guna2Panel1);
-            this.guna2Panel2.Location = new System.Drawing.Point(16, 15);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Location = new System.Drawing.Point(15, 24);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1747, 1055);
+            this.guna2Panel2.Size = new System.Drawing.Size(1312, 783);
             this.guna2Panel2.TabIndex = 1;
             // 
             // pnlContentCandidate
             // 
-            this.pnlContentCandidate.Location = new System.Drawing.Point(147, 22);
-            this.pnlContentCandidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlContentCandidate.Location = new System.Drawing.Point(99, 23);
+            this.pnlContentCandidate.Margin = new System.Windows.Forms.Padding(2);
             this.pnlContentCandidate.Name = "pnlContentCandidate";
-            this.pnlContentCandidate.Size = new System.Drawing.Size(1597, 999);
+            this.pnlContentCandidate.Size = new System.Drawing.Size(1208, 736);
             this.pnlContentCandidate.TabIndex = 1;
             // 
             // guna2Panel1
@@ -81,10 +80,10 @@
             this.guna2Panel1.Controls.Add(this.guna2CircleButton4);
             this.guna2Panel1.Controls.Add(this.btnFavorite);
             this.guna2Panel1.Controls.Add(this.btnFindding);
-            this.guna2Panel1.Location = new System.Drawing.Point(20, 22);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(15, 23);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(106, 1009);
+            this.guna2Panel1.Size = new System.Drawing.Size(80, 736);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnLogOut
@@ -95,19 +94,17 @@
             this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.btnLogOut.Font = new System.Drawing.Font("Maiandra GD", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Font = new System.Drawing.Font("Maiandra GD", 7.8F);
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.btnLogOut.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._95;
             this.btnLogOut.Image = global::DoAnCuoiKy.Properties.Resources.log_out__1_;
             this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLogOut.Location = new System.Drawing.Point(7, 613);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.Location = new System.Drawing.Point(8, 498);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnLogOut.Size = new System.Drawing.Size(86, 62);
+            this.btnLogOut.Size = new System.Drawing.Size(64, 50);
             this.btnLogOut.TabIndex = 30;
-            this.btnLogOut.Text = "Log Out";
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnPostJobFinding
@@ -123,13 +120,12 @@
             this.btnPostJobFinding.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._97;
             this.btnPostJobFinding.Image = global::DoAnCuoiKy.Properties.Resources._96;
             this.btnPostJobFinding.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPostJobFinding.Location = new System.Drawing.Point(17, 358);
-            this.btnPostJobFinding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPostJobFinding.Location = new System.Drawing.Point(12, 290);
+            this.btnPostJobFinding.Margin = new System.Windows.Forms.Padding(2);
             this.btnPostJobFinding.Name = "btnPostJobFinding";
             this.btnPostJobFinding.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnPostJobFinding.Size = new System.Drawing.Size(76, 76);
+            this.btnPostJobFinding.Size = new System.Drawing.Size(57, 57);
             this.btnPostJobFinding.TabIndex = 29;
-            this.btnPostJobFinding.Text = "Post CV";
             this.btnPostJobFinding.Click += new System.EventHandler(this.btnPostJobFinding_Click);
             // 
             // btnProfile
@@ -146,22 +142,20 @@
             this.btnProfile.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._95;
             this.btnProfile.Image = global::DoAnCuoiKy.Properties.Resources._94;
             this.btnProfile.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnProfile.Location = new System.Drawing.Point(17, 278);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProfile.Location = new System.Drawing.Point(12, 223);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnProfile.Size = new System.Drawing.Size(76, 76);
+            this.btnProfile.Size = new System.Drawing.Size(57, 57);
             this.btnProfile.TabIndex = 28;
-            this.btnProfile.Text = "Profile";
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.guna2Separator1.Location = new System.Drawing.Point(21, 82);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Separator1.Location = new System.Drawing.Point(19, 67);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(59, 12);
+            this.guna2Separator1.Size = new System.Drawing.Size(44, 10);
             this.guna2Separator1.TabIndex = 4;
             // 
             // guna2CircleButton4
@@ -177,11 +171,11 @@
             this.guna2CircleButton4.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._831;
             this.guna2CircleButton4.Image = global::DoAnCuoiKy.Properties.Resources._851;
             this.guna2CircleButton4.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton4.Location = new System.Drawing.Point(20, 18);
-            this.guna2CircleButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CircleButton4.Location = new System.Drawing.Point(17, 15);
+            this.guna2CircleButton4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CircleButton4.Name = "guna2CircleButton4";
             this.guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton4.Size = new System.Drawing.Size(63, 58);
+            this.guna2CircleButton4.Size = new System.Drawing.Size(47, 47);
             this.guna2CircleButton4.TabIndex = 3;
             // 
             // btnFavorite
@@ -197,13 +191,12 @@
             this.btnFavorite.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._812;
             this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._821;
             this.btnFavorite.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnFavorite.Location = new System.Drawing.Point(17, 198);
-            this.btnFavorite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFavorite.Location = new System.Drawing.Point(12, 156);
+            this.btnFavorite.Margin = new System.Windows.Forms.Padding(2);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnFavorite.Size = new System.Drawing.Size(76, 76);
+            this.btnFavorite.Size = new System.Drawing.Size(57, 57);
             this.btnFavorite.TabIndex = 3;
-            this.btnFavorite.Text = "Favorite";
             this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
             // 
             // btnFindding
@@ -219,13 +212,12 @@
             this.btnFindding.HoverState.Image = global::DoAnCuoiKy.Properties.Resources._831;
             this.btnFindding.Image = global::DoAnCuoiKy.Properties.Resources._801;
             this.btnFindding.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnFindding.Location = new System.Drawing.Point(17, 110);
-            this.btnFindding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFindding.Location = new System.Drawing.Point(12, 89);
+            this.btnFindding.Margin = new System.Windows.Forms.Padding(2);
             this.btnFindding.Name = "btnFindding";
             this.btnFindding.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnFindding.Size = new System.Drawing.Size(76, 76);
+            this.btnFindding.Size = new System.Drawing.Size(57, 57);
             this.btnFindding.TabIndex = 2;
-            this.btnFindding.Text = "Finding";
             this.btnFindding.Click += new System.EventHandler(this.btnFindding_Click);
             // 
             // PanelToolElipse
@@ -241,22 +233,21 @@
             // 
             // FormCandidateHomePageElipse
             // 
-            this.FormCandidateHomePageElipse.BorderRadius = 10;
+            this.FormCandidateHomePageElipse.BorderRadius = 20;
             this.FormCandidateHomePageElipse.TargetControl = this;
             // 
             // FCandidateHomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.ClientSize = new System.Drawing.Size(1808, 1088);
+            this.ClientSize = new System.Drawing.Size(1343, 831);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FCandidateHomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidateHomePage";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);

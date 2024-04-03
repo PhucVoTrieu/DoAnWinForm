@@ -40,10 +40,7 @@ namespace DoAnCuoiKy
         private void btnDetails_Click_1(object sender, EventArgs e)
         {
             FJobDetails f1 = new FJobDetails(this.jobDetails);
-            if(this.btnApplyNow.Visible == false)
-            {
-                f1.btnApplyNow.Hide();   
-            }
+       
             f1.ShowDialog();
         }
 

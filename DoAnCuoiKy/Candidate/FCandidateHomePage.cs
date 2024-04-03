@@ -15,6 +15,7 @@ namespace DoAnCuoiKy
         public FCandidateHomePage()
         {
             InitializeComponent();
+            OpenForm(new FFindingCandidate());
         }
         private Form currentFormChild;
         private void OpenForm(Form form)
