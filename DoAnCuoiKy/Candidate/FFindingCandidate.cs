@@ -23,6 +23,7 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             jobDetailsDAO.LoadDanhSach(this);
+            
 
         }
         private void btnViewProfile_Click(object sender, EventArgs e)
@@ -33,18 +34,44 @@ namespace DoAnCuoiKy
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            List<JobDetails> list = new List<JobDetails>();
-            this.PnlRecommendJobs.Controls.Clear();
-            string selectedLocation = this.txtLocation.Text;
-            jobDetailsDAO.laydulieuCoDieuKien(list, selectedLocation);
-            foreach (JobDetails jobDetail in list)
-            {
-                UCJobUI uCJob = new UCJobUI(jobDetail);
-                uCJob.CBoxSelected.Hide();
-                this.PnlRecommendJobs.Controls.Add(uCJob);
-            }
+            //List<JobDetails> list = new List<JobDetails>();
+            //this.PnlRecommendJobs.Controls.Clear();
+            //string selectedLocation = this.txtLocation.Text;
+            //jobDetailsDAO.laydulieuCoDieuKien(list, selectedLocation);
+            //foreach (JobDetails jobDetail in list)
+            //{
+            //    UCJobUI uCJob = new UCJobUI(jobDetail);
+            //    uCJob.CBoxSelected.Hide();
+            //    this.PnlRecommendJobs.Controls.Add(uCJob);
+            //}
         }
+
+        private void PnlRecommendJobs_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.ScrollBar1.Focus();
+        }
+
       
+
+        private void PnlRecommendJobs_MouseEnter(object sender, EventArgs e)
+        {
+            this.PnlRecommendJobs.Focus();
+        }
+
+        private void txtJobName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FFindingCandidate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
    }
 
