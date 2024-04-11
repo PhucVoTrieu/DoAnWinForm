@@ -35,7 +35,6 @@ namespace DoAnCuoiKy
             //this.btnCompanyName.Text = j1.CompanyName;
 
             //this.jobDetails = j1; 
-          
 
         }
 

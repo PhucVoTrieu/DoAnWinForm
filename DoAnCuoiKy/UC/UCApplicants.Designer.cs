@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCApplicants));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.CBoxSelected = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.pnlCandidate = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlUCJob = new Guna.UI2.WinForms.Guna2Panel();
             this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnCandidateDetails = new Guna.UI2.WinForms.Guna2Button();
@@ -43,7 +42,7 @@
             this.txtSkill = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCandidateName = new System.Windows.Forms.Label();
             this.lblCandidateApplyPos = new System.Windows.Forms.Label();
-            this.pnlCandidate.SuspendLayout();
+            this.pnlUCJob.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,30 +71,25 @@
             this.CBoxSelected.UncheckedState.BorderThickness = 0;
             this.CBoxSelected.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
-            // pnlCandidate
+            // pnlUCJob
             // 
-            this.pnlCandidate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.pnlCandidate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCandidate.BackgroundImage")));
-            this.pnlCandidate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCandidate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.pnlCandidate.BorderRadius = 60;
-            this.pnlCandidate.BorderThickness = 1;
-            this.pnlCandidate.Controls.Add(this.btnFavorite);
-            this.pnlCandidate.Controls.Add(this.guna2Separator1);
-            this.pnlCandidate.Controls.Add(this.btnCandidateDetails);
-            this.pnlCandidate.Controls.Add(this.guna2PictureBox1);
-            this.pnlCandidate.Controls.Add(this.btnInviteCanidate);
-            this.pnlCandidate.Controls.Add(this.txtExpYears);
-            this.pnlCandidate.Controls.Add(this.txtSkill);
-            this.pnlCandidate.Controls.Add(this.lblCandidateName);
-            this.pnlCandidate.Controls.Add(this.lblCandidateApplyPos);
-            this.pnlCandidate.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlCandidate.Location = new System.Drawing.Point(16, 15);
-            this.pnlCandidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlCandidate.Name = "pnlCandidate";
-            this.pnlCandidate.ShowBorders = true;
-            this.pnlCandidate.Size = new System.Drawing.Size(371, 334);
-            this.pnlCandidate.TabIndex = 19;
+            this.pnlUCJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.pnlUCJob.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.pnlUCJob.BorderRadius = 30;
+            this.pnlUCJob.BorderThickness = 1;
+            this.pnlUCJob.Controls.Add(this.btnFavorite);
+            this.pnlUCJob.Controls.Add(this.guna2Separator1);
+            this.pnlUCJob.Controls.Add(this.btnCandidateDetails);
+            this.pnlUCJob.Controls.Add(this.guna2PictureBox1);
+            this.pnlUCJob.Controls.Add(this.btnInviteCanidate);
+            this.pnlUCJob.Controls.Add(this.txtExpYears);
+            this.pnlUCJob.Controls.Add(this.txtSkill);
+            this.pnlUCJob.Controls.Add(this.lblCandidateName);
+            this.pnlUCJob.Controls.Add(this.lblCandidateApplyPos);
+            this.pnlUCJob.Location = new System.Drawing.Point(17, 26);
+            this.pnlUCJob.Name = "pnlUCJob";
+            this.pnlUCJob.Size = new System.Drawing.Size(371, 316);
+            this.pnlUCJob.TabIndex = 21;
             // 
             // btnFavorite
             // 
@@ -116,7 +110,7 @@
             this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnFavorite.ForeColor = System.Drawing.Color.White;
             this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._92;
-            this.btnFavorite.Location = new System.Drawing.Point(294, 29);
+            this.btnFavorite.Location = new System.Drawing.Point(294, 28);
             this.btnFavorite.Margin = new System.Windows.Forms.Padding(4);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.ShadowDecoration.BorderRadius = 15;
@@ -124,16 +118,15 @@
             this.btnFavorite.ShadowDecoration.Enabled = true;
             this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.btnFavorite.Size = new System.Drawing.Size(77, 44);
-            this.btnFavorite.TabIndex = 27;
-            this.btnFavorite.CheckedChanged += new System.EventHandler(this.btnFavorite_CheckedChanged);
+            this.btnFavorite.TabIndex = 36;
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(37, 229);
+            this.guna2Separator1.Location = new System.Drawing.Point(19, 224);
             this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(301, 12);
-            this.guna2Separator1.TabIndex = 15;
+            this.guna2Separator1.TabIndex = 30;
             // 
             // btnCandidateDetails
             // 
@@ -148,25 +141,25 @@
             this.btnCandidateDetails.FillColor = System.Drawing.Color.Transparent;
             this.btnCandidateDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnCandidateDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.btnCandidateDetails.Location = new System.Drawing.Point(197, 252);
+            this.btnCandidateDetails.Location = new System.Drawing.Point(179, 247);
             this.btnCandidateDetails.Margin = new System.Windows.Forms.Padding(4);
             this.btnCandidateDetails.Name = "btnCandidateDetails";
             this.btnCandidateDetails.Size = new System.Drawing.Size(153, 46);
-            this.btnCandidateDetails.TabIndex = 13;
+            this.btnCandidateDetails.TabIndex = 29;
             this.btnCandidateDetails.Text = "Details";
-            this.btnCandidateDetails.Click += new System.EventHandler(this.btnCandidateDetails_Click_1);
+            this.btnCandidateDetails.Click += new System.EventHandler(this.btnCandidateDetails_Click);
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._29;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(36, 43);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(18, 38);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(91, 121);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 23;
+            this.guna2PictureBox1.TabIndex = 35;
             this.guna2PictureBox1.TabStop = false;
             // 
             // btnInviteCanidate
@@ -181,11 +174,11 @@
             this.btnInviteCanidate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnInviteCanidate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInviteCanidate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.btnInviteCanidate.Location = new System.Drawing.Point(37, 252);
+            this.btnInviteCanidate.Location = new System.Drawing.Point(19, 247);
             this.btnInviteCanidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInviteCanidate.Name = "btnInviteCanidate";
             this.btnInviteCanidate.Size = new System.Drawing.Size(153, 46);
-            this.btnInviteCanidate.TabIndex = 12;
+            this.btnInviteCanidate.TabIndex = 28;
             this.btnInviteCanidate.Text = "Invite";
             // 
             // txtExpYears
@@ -206,14 +199,14 @@
             this.txtExpYears.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             this.txtExpYears.ForeColor = System.Drawing.Color.Black;
             this.txtExpYears.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpYears.Location = new System.Drawing.Point(37, 189);
+            this.txtExpYears.Location = new System.Drawing.Point(19, 184);
             this.txtExpYears.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtExpYears.Name = "txtExpYears";
             this.txtExpYears.PasswordChar = '\0';
             this.txtExpYears.PlaceholderText = "";
             this.txtExpYears.SelectedText = "";
             this.txtExpYears.Size = new System.Drawing.Size(139, 34);
-            this.txtExpYears.TabIndex = 20;
+            this.txtExpYears.TabIndex = 32;
             this.txtExpYears.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSkill
@@ -234,14 +227,14 @@
             this.txtSkill.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSkill.ForeColor = System.Drawing.Color.Black;
             this.txtSkill.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSkill.Location = new System.Drawing.Point(182, 189);
+            this.txtSkill.Location = new System.Drawing.Point(164, 184);
             this.txtSkill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSkill.Name = "txtSkill";
             this.txtSkill.PasswordChar = '\0';
             this.txtSkill.PlaceholderText = "";
             this.txtSkill.SelectedText = "";
             this.txtSkill.Size = new System.Drawing.Size(105, 34);
-            this.txtSkill.TabIndex = 21;
+            this.txtSkill.TabIndex = 33;
             this.txtSkill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblCandidateName
@@ -249,10 +242,10 @@
             this.lblCandidateName.AutoSize = true;
             this.lblCandidateName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.lblCandidateName.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCandidateName.Location = new System.Drawing.Point(135, 76);
+            this.lblCandidateName.Location = new System.Drawing.Point(117, 71);
             this.lblCandidateName.Name = "lblCandidateName";
             this.lblCandidateName.Size = new System.Drawing.Size(154, 37);
-            this.lblCandidateName.TabIndex = 22;
+            this.lblCandidateName.TabIndex = 34;
             this.lblCandidateName.Text = "J. Maddison";
             // 
             // lblCandidateApplyPos
@@ -260,10 +253,10 @@
             this.lblCandidateApplyPos.AutoSize = true;
             this.lblCandidateApplyPos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.lblCandidateApplyPos.Font = new System.Drawing.Font("Sans Serif Collection", 11.8F, System.Drawing.FontStyle.Bold);
-            this.lblCandidateApplyPos.Location = new System.Drawing.Point(133, 124);
+            this.lblCandidateApplyPos.Location = new System.Drawing.Point(115, 119);
             this.lblCandidateApplyPos.Name = "lblCandidateApplyPos";
             this.lblCandidateApplyPos.Size = new System.Drawing.Size(157, 49);
-            this.lblCandidateApplyPos.TabIndex = 19;
+            this.lblCandidateApplyPos.TabIndex = 31;
             this.lblCandidateApplyPos.Text = "Designer";
             // 
             // UCApplicants
@@ -271,13 +264,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.Controls.Add(this.pnlUCJob);
             this.Controls.Add(this.CBoxSelected);
-            this.Controls.Add(this.pnlCandidate);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCApplicants";
             this.Size = new System.Drawing.Size(405, 368);
-            this.pnlCandidate.ResumeLayout(false);
-            this.pnlCandidate.PerformLayout();
+            this.pnlUCJob.ResumeLayout(false);
+            this.pnlUCJob.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,16 +280,16 @@
         #endregion
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        public Guna.UI2.WinForms.Guna2CheckBox CBoxSelected;
+        private Guna.UI2.WinForms.Guna2Panel pnlUCJob;
         public Guna.UI2.WinForms.Guna2Button btnFavorite;
-        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        public System.Windows.Forms.Label lblCandidateName;
-        public System.Windows.Forms.Label lblCandidateApplyPos;
-        public Guna.UI2.WinForms.Guna2TextBox txtSkill;
-        public Guna.UI2.WinForms.Guna2TextBox txtExpYears;
-        public Bunifu.UI.WinForms.BunifuPanel pnlCandidate;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         public Guna.UI2.WinForms.Guna2Button btnCandidateDetails;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         public Guna.UI2.WinForms.Guna2Button btnInviteCanidate;
-        public Guna.UI2.WinForms.Guna2CheckBox CBoxSelected;
+        public Guna.UI2.WinForms.Guna2TextBox txtExpYears;
+        public Guna.UI2.WinForms.Guna2TextBox txtSkill;
+        public System.Windows.Forms.Label lblCandidateName;
+        public System.Windows.Forms.Label lblCandidateApplyPos;
     }
 }

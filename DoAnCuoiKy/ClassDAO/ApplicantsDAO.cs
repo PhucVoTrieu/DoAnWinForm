@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DoAnCuoiKy
 {
-    internal class CandidateDAO
+    internal class ApplicantsDAO
     {
         DBconnection db = new DBconnection();
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);

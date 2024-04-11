@@ -18,7 +18,7 @@ namespace DoAnCuoiKy
     public partial class FFindingCandidate : Form
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        JobDetailsDAO jobDetailsDAO = new JobDetailsDAO();
+        JobsDAO jobDetailsDAO = new JobsDAO();
         public FFindingCandidate()
         {
             InitializeComponent();

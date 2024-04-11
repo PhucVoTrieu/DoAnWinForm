@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnCuoiKy.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,11 @@ namespace DoAnCuoiKy.Company
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
         FavApplicantDAO favApplicantDao = new FavApplicantDAO();
-        public FFavoriteApplicants()
+        Employer employerInfor;
+        public FFavoriteApplicants(Employer e1)
         {
             InitializeComponent();
+            this.employerInfor = e1;
             favApplicantDao.LoadDanhSach(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }

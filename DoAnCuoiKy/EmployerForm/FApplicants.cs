@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnCuoiKy.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +15,13 @@ namespace DoAnCuoiKy
 {
     public partial class FApplicants : Form
     {
-        CandidateDAO candidateDAO = new CandidateDAO();
+        ApplicantsDAO candidateDAO = new ApplicantsDAO();
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        public FApplicants()
+        Employer Employer;
+        public FApplicants(Employer e1)
         {
             InitializeComponent();
+            this.Employer = e1;
             candidateDAO.LoadDanhSach(this);
         }
         private void btnDelete_Click(object sender, EventArgs e)

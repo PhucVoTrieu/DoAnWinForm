@@ -52,5 +52,10 @@ namespace DoAnCuoiKy
             }
 
         }
+
+        private void btnCandidateDetails_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

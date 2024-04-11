@@ -61,5 +61,16 @@ namespace DoAnCuoiKy
 
             
         }
+
+        private void btnFavorite_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            FJobDetails f1 = new FJobDetails(this.jobDetails);
+            f1.Show();
+        }
     }
 }

@@ -26,8 +26,8 @@ namespace DoAnCuoiKy.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PHUC-PC\\SQLEXPRESS;Initial Catalog=DoAnCuoiKy2024;Integrated Security" +
-            "=True;Encrypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PHUC-PC\\SQLEXPRESS;Initial Catalog=DoAnCuoiKy;Integrated Security=Tru" +
+            "e")]
         public string connStr {
             get {
                 return ((string)(this["connStr"]));
