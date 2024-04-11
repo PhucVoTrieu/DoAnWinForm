@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoAnCuoiKy.Company
+namespace DoAnCuoiKy
 {
     internal class CompanyDAO
     {

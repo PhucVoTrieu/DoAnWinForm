@@ -20,8 +20,8 @@ namespace DoAnCuoiKy.Company
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FTrangChuCongTy f1 = new FTrangChuCongTy();
-            f1.Show();
+           // FTrangChuCongTy f1 = new FTrangChuCongTy();
+          //  f1.Show();
         }
 
         private void btnAddHeaderImage_Click(object sender, EventArgs e)

@@ -89,19 +89,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Candidate.cs" />
-    <Compile Include="ClassDAO\CandidateDAO.cs" />
-    <Compile Include="Company\Company.cs" />
-    <Compile Include="Company\CompanyDAO.cs" />
-    <Compile Include="Company\FCompanyRegistration.cs">
+    <Compile Include="ClassDAO\ApplicantsDAO.cs" />
+    <Compile Include="ClassDAO\CompanyDAO.cs" />
+    <Compile Include="Class\Employer.cs" />
+    <Compile Include="EmployerForm\FCompanyRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FCompanyRegistration.Designer.cs">
+    <Compile Include="EmployerForm\FCompanyRegistration.Designer.cs">
       <DependentUpon>FCompanyRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\FFavApplicants.cs">
+    <Compile Include="EmployerForm\FFavApplicants.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FFavApplicants.Designer.cs">
+    <Compile Include="EmployerForm\FFavApplicants.Designer.cs">
       <DependentUpon>FFavApplicants.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\DBconnection.cs" />
@@ -110,10 +110,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAnCuoiKy2024DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Company\FApplicants.cs">
+    <Compile Include="EmployerForm\FApplicants.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FApplicants.Designer.cs">
+    <Compile Include="EmployerForm\FApplicants.Designer.cs">
       <DependentUpon>FApplicants.cs</DependentUpon>
     </Compile>
     <Compile Include="Candidate\FCandidateHomePage.cs">
@@ -128,10 +128,10 @@
     <Compile Include="Candidate\FFindingCandidate.Designer.cs">
       <DependentUpon>FFindingCandidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\FInformation.cs">
+    <Compile Include="EmployerForm\FInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FInformation.Designer.cs">
+    <Compile Include="EmployerForm\FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassDAO\FavApplicantDAO.cs" />
@@ -142,10 +142,10 @@
     <Compile Include="FJobDetails.Designer.cs">
       <DependentUpon>FJobDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\FJobs.cs">
+    <Compile Include="EmployerForm\FJobs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FJobs.Designer.cs">
+    <Compile Include="EmployerForm\FJobs.Designer.cs">
       <DependentUpon>FJobs.cs</DependentUpon>
     </Compile>
     <Compile Include="FLogin.cs">
@@ -160,10 +160,10 @@
     <Compile Include="Candidate\FormFavoriteJobs.Designer.cs">
       <DependentUpon>FormFavoriteJobs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\FPostAJob.cs">
+    <Compile Include="EmployerForm\FPostAJob.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FPostAJob.Designer.cs">
+    <Compile Include="EmployerForm\FPostAJob.Designer.cs">
       <DependentUpon>FPostAJob.cs</DependentUpon>
     </Compile>
     <Compile Include="Candidate\FPostCV.cs">
@@ -178,20 +178,20 @@
     <Compile Include="Candidate\FProfileApplicant.Designer.cs">
       <DependentUpon>FProfileApplicant.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\FStatistic.cs">
+    <Compile Include="EmployerForm\FStatistic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FStatistic.Designer.cs">
+    <Compile Include="EmployerForm\FStatistic.Designer.cs">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\FTrangChuCongTy.cs">
+    <Compile Include="EmployerForm\FTrangChuCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FTrangChuCongTy.Designer.cs">
+    <Compile Include="EmployerForm\FTrangChuCongTy.Designer.cs">
       <DependentUpon>FTrangChuCongTy.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\JobDetails.cs" />
-    <Compile Include="ClassDAO\JobDetailsDAO.cs" />
+    <Compile Include="ClassDAO\JobsDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC\UCApplicantInformation.cs">
@@ -212,7 +212,7 @@
     <Compile Include="UC\UCJobUI.Designer.cs">
       <DependentUpon>UCJobUI.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Company\FApplicants.resx">
+    <EmbeddedResource Include="EmployerForm\FApplicants.resx">
       <DependentUpon>FApplicants.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\FCandidateHomePage.resx">
@@ -221,19 +221,19 @@
     <EmbeddedResource Include="Candidate\FFindingCandidate.resx">
       <DependentUpon>FFindingCandidate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\FCompanyRegistration.resx">
+    <EmbeddedResource Include="EmployerForm\FCompanyRegistration.resx">
       <DependentUpon>FCompanyRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\FFavApplicants.resx">
+    <EmbeddedResource Include="EmployerForm\FFavApplicants.resx">
       <DependentUpon>FFavApplicants.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\FInformation.resx">
+    <EmbeddedResource Include="EmployerForm\FInformation.resx">
       <DependentUpon>FInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FJobDetails.resx">
       <DependentUpon>FJobDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\FJobs.resx">
+    <EmbeddedResource Include="EmployerForm\FJobs.resx">
       <DependentUpon>FJobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
@@ -242,7 +242,7 @@
     <EmbeddedResource Include="Candidate\FormFavoriteJobs.resx">
       <DependentUpon>FormFavoriteJobs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\FPostAJob.resx">
+    <EmbeddedResource Include="EmployerForm\FPostAJob.resx">
       <DependentUpon>FPostAJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\FPostCV.resx">
@@ -251,10 +251,10 @@
     <EmbeddedResource Include="Candidate\FProfileApplicant.resx">
       <DependentUpon>FProfileApplicant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\FStatistic.resx">
+    <EmbeddedResource Include="EmployerForm\FStatistic.resx">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\FTrangChuCongTy.resx">
+    <EmbeddedResource Include="EmployerForm\FTrangChuCongTy.resx">
       <DependentUpon>FTrangChuCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />

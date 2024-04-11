@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DoAnCuoiKy
 {
-    internal class JobDetailsDAO
+    internal class JobsDAO
     {
         DBconnection db = new DBconnection();
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);

@@ -13,7 +13,7 @@ namespace DoAnCuoiKy
 {
     public partial class FProfileApplicant : Form
     {
-        CandidateDAO candidateDAO = new CandidateDAO();
+        ApplicantsDAO candidateDAO = new ApplicantsDAO();
         public FProfileApplicant()
         {
             InitializeComponent(); 

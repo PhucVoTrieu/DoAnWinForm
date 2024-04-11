@@ -1,4 +1,5 @@
-﻿using DoAnCuoiKy.Company;
+﻿using DoAnCuoiKy.Class;
+using DoAnCuoiKy.Company;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,11 @@ namespace DoAnCuoiKy
 {
     public partial class FTrangChuCongTy : Form
     {
-        public FTrangChuCongTy()
+        private Employer CompanyInformation;
+        public FTrangChuCongTy(Employer e1)
         {
+            this.CompanyInformation = e1;
             InitializeComponent();
-        }
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FInformation());
         }
         private Form currentFormChild;
         private void OpenForm(Form form)
@@ -37,26 +36,30 @@ namespace DoAnCuoiKy
             form.BringToFront();
             form.Show();
         }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FInformation(CompanyInformation));
+        }
         private void btnApplicants_Click(object sender, EventArgs e)
         {
-            OpenForm(new FApplicants());
+            OpenForm(new FApplicants(CompanyInformation));
 
         }
 
         private void btnPostAJob_Click(object sender, EventArgs e)
         {
-            FPostAJob fp1 = new FPostAJob();
+            FPostAJob fp1 = new FPostAJob(CompanyInformation);
             fp1.ShowDialog();
 
         }
         private void btnJobs_Click(object sender, EventArgs e)
         {
-            OpenForm(new FJobs());
+            OpenForm(new FJobs(CompanyInformation));
         }
 
         private void btnFavApplicants_Click(object sender, EventArgs e)
         {
-            OpenForm(new FFavoriteApplicants());
+            OpenForm(new FFavoriteApplicants(CompanyInformation));
         }
 
         private void btnStatistic_Click(object sender, EventArgs e)

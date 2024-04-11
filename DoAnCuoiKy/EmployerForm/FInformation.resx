@@ -123,7 +123,18 @@
   <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
   </metadata>
-  <data name="textBox1.Text" xml:space="preserve">
+  <data name="txtBenefit.Text" xml:space="preserve">
+    <value>Overview about Mcredit - Công ty Tài chính TNHH MB Shinsei
+Được thành lập từ năm 2016, Công Ty Tài Chính Trách Nhiệm Hữu Hạn MB Shinsei (Mcredit) là công ty tài chính liên doanh giữa Ngân hàng TMCP Quân đội (thuộc MB Group) và Ngân hàng SBI Shinsei (Nhật Bản).
+Trong giai đoạn chuyển đổi số mạnh mẽ, Mcredit tập trung phát triển các sản phẩm: Core banking, Core card, Bot, Mobile banking… bằng nền tảng công nghệ: Cloud, Mobile (Flutter) và tối ưu các công nghệ Java, .Net, Python (AI, ML), Flutter cùng sự đồng hành của đối tác hàng đầu: Amazon Web Services, T24…
+Mcredit hướng tới việc xây dựng môi trường làm việc tốt nhất cho nhân viên bằng chế độ làm việc linh hoạt (Agile), chuyên nghiệp, có máy tập thể hình, bàn bi-a, khu pantry riêng và các hoạt động giải trí đa dạng sau mỗi giờ làm việc. Mcredit còn thường xuyên tổ chức các cuộc thi dành riêng cho khối IT về game cũng như tổ chức các khóa học, buổi chia sẻ về nghiệp vụ và công nghệ.
+
+ 
+
+
+</value>
+  </data>
+  <data name="txtCompanyOverview.Text" xml:space="preserve">
     <value>Overview about Mcredit - Công ty Tài chính TNHH MB Shinsei
 Được thành lập từ năm 2016, Công Ty Tài Chính Trách Nhiệm Hữu Hạn MB Shinsei (Mcredit) là công ty tài chính liên doanh giữa Ngân hàng TMCP Quân đội (thuộc MB Group) và Ngân hàng SBI Shinsei (Nhật Bản).
 Trong giai đoạn chuyển đổi số mạnh mẽ, Mcredit tập trung phát triển các sản phẩm: Core banking, Core card, Bot, Mobile banking… bằng nền tảng công nghệ: Cloud, Mobile (Flutter) và tối ưu các công nghệ Java, .Net, Python (AI, ML), Flutter cùng sự đồng hành của đối tác hàng đầu: Amazon Web Services, T24…

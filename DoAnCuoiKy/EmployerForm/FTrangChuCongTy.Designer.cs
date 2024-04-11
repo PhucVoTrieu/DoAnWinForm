@@ -55,7 +55,7 @@
             this.pnlContent.Location = new System.Drawing.Point(197, 0);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1359, 884);
+            this.pnlContent.Size = new System.Drawing.Size(1475, 884);
             this.pnlContent.TabIndex = 22;
             // 
             // guna2ShadowForm1
@@ -273,7 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.ClientSize = new System.Drawing.Size(1672, 884);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnCuoiKy.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,12 @@ namespace DoAnCuoiKy
     public partial class FJobs : Form
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        JobDetailsDAO jobDetailsDAO = new JobDetailsDAO();
-        public FJobs()
+        JobsDAO jobDetailsDAO = new JobsDAO();
+        Employer employerInfor;
+        public FJobs(Employer e1)
         {
             InitializeComponent();
+            this.employerInfor = e1;
             jobDetailsDAO.LoadDanhSach1(this);
             this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
         }
