@@ -129,7 +129,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(307, 46);
-            this.btnLogin.TabIndex = 9;
+            this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Log in";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -155,7 +155,7 @@
             this.rbtnApplicant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnApplicant.Name = "rbtnApplicant";
             this.rbtnApplicant.Size = new System.Drawing.Size(20, 20);
-            this.rbtnApplicant.TabIndex = 12;
+            this.rbtnApplicant.TabIndex = 5;
             this.rbtnApplicant.Text = "guna2CustomRadioButton2";
             this.rbtnApplicant.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rbtnApplicant.UncheckedState.BorderThickness = 2;
@@ -183,7 +183,7 @@
             this.rbtnEmployer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnEmployer.Name = "rbtnEmployer";
             this.rbtnEmployer.Size = new System.Drawing.Size(20, 20);
-            this.rbtnEmployer.TabIndex = 14;
+            this.rbtnEmployer.TabIndex = 4;
             this.rbtnEmployer.Text = "guna2CustomRadioButton1";
             this.rbtnEmployer.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rbtnEmployer.UncheckedState.BorderThickness = 2;
@@ -198,7 +198,7 @@
             this.btnRegister.Location = new System.Drawing.Point(693, 388);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(81, 25);
-            this.btnRegister.TabIndex = 16;
+            this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "Register";
             // 
             // label5

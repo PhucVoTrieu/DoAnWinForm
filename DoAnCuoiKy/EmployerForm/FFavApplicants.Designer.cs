@@ -1,4 +1,4 @@
-﻿namespace DoAnCuoiKy.Company
+﻿namespace DoAnCuoiKy
 {
     partial class FFavoriteApplicants
     {

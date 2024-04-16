@@ -15,19 +15,29 @@ namespace DoAnCuoiKy
         
     public partial class FPostAJob : Form
     {
-        JobsDAO jobDetailsDAO = new JobsDAO();
-        Employer employerInfor;
-        public FPostAJob(Employer e1)
+       
+        Company employerInfor;
+        public FPostAJob(Company e1)
         {
             InitializeComponent();
             this.employerInfor = e1;
         }
         private void btnPost_Click(object sender, EventArgs e)
         {
-            JobDetails jobDetails = new JobDetails(txtJobTitle.Text, txtJobPosition.Text
-                , cbJobType.SelectedItem.ToString(), txtJobSalary.Text, txtRecruitmentQuota.Text
-                , cbLocation.SelectedItem.ToString(), txtJobExperiencesInYears.Text, txtJobDescription.Text,txtCompanyName.Text, txtBenefit.Text );
-            jobDetailsDAO.them(jobDetails);
+            try { 
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            db.Jobs.Add(new Job { JobTitle=this.txtJobTitle.Text, JobType=this.cbJobType.SelectedItem.ToString(),JobSalary =this.txtJobSalary.Text
+            , RecruitmentQuota = this.txtRecruitmentQuota.Text, Location = this.cbLocation.SelectedItem.ToString(), ExpInYears = this.txtJobExperiencesInYears.Text
+            , JobRequirement = this.txtJobrequirement.Text,JobDescription= this.txtJobDescription.Text,CompanyID = this.employerInfor.CompanyID,
+            JobBenefit = this.txtBenefit.Text});
+                db.SaveChanges();
+                MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+            //  jobDetailsDAO.them(Job);
             this.Close();
         }
     }

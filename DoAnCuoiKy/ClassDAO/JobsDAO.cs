@@ -146,9 +146,16 @@ namespace DoAnCuoiKy
         }
         public void xoaUC(UCJobUI uCJobUI)
         {
-            string SQL = string.Format("DELETE FROM JobDetails WHERE  JobTitle = '{0}' ",
-                uCJobUI.lblJobTitle.Text);
-            db.thucthi(SQL);
+            
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            //var deleteUCJobUI = from UCJob in db.Jobs where UCJob.JobID == uCJobUI.job.JobID select UCJob;
+            //db.Jobs.Remove(deleteUCJobUI.SingleOrDefault());
+            var deleteUCJobUI = db.Jobs.Find(uCJobUI.job.JobID);
+            if ( deleteUCJobUI != null )
+            {
+                db.Jobs.Remove(deleteUCJobUI);
+            }
+            db.SaveChanges();
         }
     } 
 }

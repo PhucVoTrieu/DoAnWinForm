@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtJobTitle = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,9 +50,11 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtJobSalary = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCompanyName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBenefit = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblBenefit = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtJobrequirement = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -86,6 +89,7 @@
             this.txtJobTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.txtJobTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtJobTitle.ForeColor = System.Drawing.Color.Black;
             this.txtJobTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobTitle.Location = new System.Drawing.Point(56, 169);
             this.txtJobTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -151,7 +155,7 @@
             this.cbJobType.Name = "cbJobType";
             this.cbJobType.Size = new System.Drawing.Size(321, 36);
             this.cbJobType.StartIndex = 0;
-            this.cbJobType.TabIndex = 7;
+            this.cbJobType.TabIndex = 4;
             // 
             // label4
             // 
@@ -195,6 +199,7 @@
             this.txtRecruitmentQuota.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.txtRecruitmentQuota.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRecruitmentQuota.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRecruitmentQuota.ForeColor = System.Drawing.Color.Black;
             this.txtRecruitmentQuota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRecruitmentQuota.Location = new System.Drawing.Point(424, 269);
             this.txtRecruitmentQuota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -203,7 +208,7 @@
             this.txtRecruitmentQuota.PlaceholderText = "Enter recruitment quota";
             this.txtRecruitmentQuota.SelectedText = "";
             this.txtRecruitmentQuota.Size = new System.Drawing.Size(321, 36);
-            this.txtRecruitmentQuota.TabIndex = 12;
+            this.txtRecruitmentQuota.TabIndex = 6;
             // 
             // label7
             // 
@@ -246,7 +251,7 @@
             this.cbLocation.Name = "cbLocation";
             this.cbLocation.Size = new System.Drawing.Size(693, 36);
             this.cbLocation.StartIndex = 0;
-            this.cbLocation.TabIndex = 17;
+            this.cbLocation.TabIndex = 9;
             // 
             // txtJobExperiencesInYears
             // 
@@ -260,15 +265,16 @@
             this.txtJobExperiencesInYears.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.txtJobExperiencesInYears.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobExperiencesInYears.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtJobExperiencesInYears.ForeColor = System.Drawing.Color.Black;
             this.txtJobExperiencesInYears.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobExperiencesInYears.Location = new System.Drawing.Point(424, 366);
+            this.txtJobExperiencesInYears.Location = new System.Drawing.Point(424, 377);
             this.txtJobExperiencesInYears.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobExperiencesInYears.Name = "txtJobExperiencesInYears";
             this.txtJobExperiencesInYears.PasswordChar = '\0';
             this.txtJobExperiencesInYears.PlaceholderText = "Enter experiences in years";
             this.txtJobExperiencesInYears.SelectedText = "";
             this.txtJobExperiencesInYears.Size = new System.Drawing.Size(321, 36);
-            this.txtJobExperiencesInYears.TabIndex = 18;
+            this.txtJobExperiencesInYears.TabIndex = 8;
             // 
             // txtJobDescription
             // 
@@ -282,6 +288,7 @@
             this.txtJobDescription.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.txtJobDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtJobDescription.ForeColor = System.Drawing.Color.Black;
             this.txtJobDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobDescription.Location = new System.Drawing.Point(56, 577);
             this.txtJobDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -291,7 +298,7 @@
             this.txtJobDescription.PlaceholderText = "Enter job description";
             this.txtJobDescription.SelectedText = "";
             this.txtJobDescription.Size = new System.Drawing.Size(321, 140);
-            this.txtJobDescription.TabIndex = 25;
+            this.txtJobDescription.TabIndex = 10;
             // 
             // label10
             // 
@@ -314,7 +321,7 @@
             this.btnPost.FillColor2 = System.Drawing.Color.Cyan;
             this.btnPost.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPost.ForeColor = System.Drawing.Color.White;
-            this.btnPost.Location = new System.Drawing.Point(309, 751);
+            this.btnPost.Location = new System.Drawing.Point(299, 973);
             this.btnPost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPost.Name = "btnPost";
             this.btnPost.Size = new System.Drawing.Size(180, 46);
@@ -378,6 +385,7 @@
             this.txtJobSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.txtJobSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtJobSalary.ForeColor = System.Drawing.Color.Black;
             this.txtJobSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobSalary.Location = new System.Drawing.Point(56, 377);
             this.txtJobSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -386,29 +394,7 @@
             this.txtJobSalary.PlaceholderText = "Enter expected salary";
             this.txtJobSalary.SelectedText = "";
             this.txtJobSalary.Size = new System.Drawing.Size(321, 36);
-            this.txtJobSalary.TabIndex = 31;
-            // 
-            // txtCompanyName
-            // 
-            this.txtCompanyName.BorderRadius = 5;
-            this.txtCompanyName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCompanyName.DefaultText = "";
-            this.txtCompanyName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCompanyName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCompanyName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCompanyName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCompanyName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.txtCompanyName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCompanyName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCompanyName.Location = new System.Drawing.Point(422, 27);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.PasswordChar = '\0';
-            this.txtCompanyName.PlaceholderText = "Enter company name";
-            this.txtCompanyName.SelectedText = "";
-            this.txtCompanyName.Size = new System.Drawing.Size(321, 61);
-            this.txtCompanyName.TabIndex = 33;
+            this.txtJobSalary.TabIndex = 7;
             // 
             // txtBenefit
             // 
@@ -422,6 +408,7 @@
             this.txtBenefit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.txtBenefit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBenefit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBenefit.ForeColor = System.Drawing.Color.Black;
             this.txtBenefit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBenefit.Location = new System.Drawing.Point(428, 577);
             this.txtBenefit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -431,7 +418,7 @@
             this.txtBenefit.PlaceholderText = "Enter benefit";
             this.txtBenefit.SelectedText = "";
             this.txtBenefit.Size = new System.Drawing.Size(321, 140);
-            this.txtBenefit.TabIndex = 35;
+            this.txtBenefit.TabIndex = 11;
             // 
             // lblBenefit
             // 
@@ -443,15 +430,57 @@
             this.lblBenefit.TabIndex = 34;
             this.lblBenefit.Text = "Benefit";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(52, 761);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(151, 20);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Job Requirement";
+            // 
+            // txtJobrequirement
+            // 
+            this.txtJobrequirement.BorderRadius = 5;
+            this.txtJobrequirement.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtJobrequirement.DefaultText = "";
+            this.txtJobrequirement.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtJobrequirement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtJobrequirement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtJobrequirement.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtJobrequirement.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.txtJobrequirement.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtJobrequirement.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtJobrequirement.ForeColor = System.Drawing.Color.Black;
+            this.txtJobrequirement.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtJobrequirement.Location = new System.Drawing.Point(56, 804);
+            this.txtJobrequirement.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtJobrequirement.Multiline = true;
+            this.txtJobrequirement.Name = "txtJobrequirement";
+            this.txtJobrequirement.PasswordChar = '\0';
+            this.txtJobrequirement.PlaceholderText = "Enter job requirement";
+            this.txtJobrequirement.SelectedText = "";
+            this.txtJobrequirement.Size = new System.Drawing.Size(687, 140);
+            this.txtJobrequirement.TabIndex = 12;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // FPostAJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(799, 812);
+            this.ClientSize = new System.Drawing.Size(799, 1057);
+            this.Controls.Add(this.txtJobrequirement);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtBenefit);
             this.Controls.Add(this.lblBenefit);
-            this.Controls.Add(this.txtCompanyName);
             this.Controls.Add(this.txtJobSalary);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
@@ -506,8 +535,10 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2TextBox txtJobSalary;
-        private Guna.UI2.WinForms.Guna2TextBox txtCompanyName;
         private Guna.UI2.WinForms.Guna2TextBox txtBenefit;
         private System.Windows.Forms.Label lblBenefit;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox txtJobrequirement;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

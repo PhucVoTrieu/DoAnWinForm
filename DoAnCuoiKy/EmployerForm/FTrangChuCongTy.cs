@@ -1,5 +1,4 @@
 ﻿using DoAnCuoiKy.Class;
-using DoAnCuoiKy.Company;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +13,9 @@ namespace DoAnCuoiKy
 {
     public partial class FTrangChuCongTy : Form
     {
-        private Employer CompanyInformation;
-        public FTrangChuCongTy(Employer e1)
+       
+        private Company CompanyInformation;
+        public FTrangChuCongTy(Company e1)
         {
             this.CompanyInformation = e1;
             InitializeComponent();

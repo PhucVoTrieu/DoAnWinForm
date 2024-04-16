@@ -52,10 +52,10 @@
             // pnlContent
             // 
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(197, 0);
-            this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlContent.Location = new System.Drawing.Point(148, 0);
+            this.pnlContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1475, 884);
+            this.pnlContent.Size = new System.Drawing.Size(1195, 831);
             this.pnlContent.TabIndex = 22;
             // 
             // guna2ShadowForm1
@@ -74,9 +74,9 @@
             this.guna2Panel2.Controls.Add(this.btnPostAJob);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(197, 884);
+            this.guna2Panel2.Size = new System.Drawing.Size(148, 831);
             this.guna2Panel2.TabIndex = 19;
             // 
             // btnStatistic
@@ -97,10 +97,10 @@
             this.btnStatistic.ForeColor = System.Drawing.Color.Black;
             this.btnStatistic.Image = global::DoAnCuoiKy.Properties.Resources._7;
             this.btnStatistic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStatistic.Location = new System.Drawing.Point(0, 438);
-            this.btnStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStatistic.Location = new System.Drawing.Point(0, 356);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(195, 62);
+            this.btnStatistic.Size = new System.Drawing.Size(146, 50);
             this.btnStatistic.TabIndex = 26;
             this.btnStatistic.Text = "Statistic";
             this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -123,10 +123,10 @@
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
             this.btnLogout.Image = global::DoAnCuoiKy.Properties.Resources._15;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.Location = new System.Drawing.Point(0, 622);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Location = new System.Drawing.Point(0, 505);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(195, 62);
+            this.btnLogout.Size = new System.Drawing.Size(146, 50);
             this.btnLogout.TabIndex = 25;
             this.btnLogout.Text = "Log out";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -150,10 +150,10 @@
             this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.Image = global::DoAnCuoiKy.Properties.Resources._18;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(0, 172);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome.Location = new System.Drawing.Point(0, 140);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(195, 62);
+            this.btnHome.Size = new System.Drawing.Size(146, 50);
             this.btnHome.TabIndex = 24;
             this.btnHome.Text = "Information";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -177,10 +177,10 @@
             this.btnFavApplicants.ForeColor = System.Drawing.Color.Black;
             this.btnFavApplicants.Image = global::DoAnCuoiKy.Properties.Resources._991;
             this.btnFavApplicants.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFavApplicants.Location = new System.Drawing.Point(0, 372);
-            this.btnFavApplicants.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFavApplicants.Location = new System.Drawing.Point(0, 302);
+            this.btnFavApplicants.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFavApplicants.Name = "btnFavApplicants";
-            this.btnFavApplicants.Size = new System.Drawing.Size(195, 62);
+            this.btnFavApplicants.Size = new System.Drawing.Size(146, 50);
             this.btnFavApplicants.TabIndex = 23;
             this.btnFavApplicants.Text = "Favorite Applicants";
             this.btnFavApplicants.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -204,10 +204,10 @@
             this.btnApplicants.ForeColor = System.Drawing.Color.Black;
             this.btnApplicants.Image = global::DoAnCuoiKy.Properties.Resources._22;
             this.btnApplicants.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnApplicants.Location = new System.Drawing.Point(0, 306);
-            this.btnApplicants.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnApplicants.Location = new System.Drawing.Point(0, 249);
+            this.btnApplicants.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnApplicants.Name = "btnApplicants";
-            this.btnApplicants.Size = new System.Drawing.Size(195, 62);
+            this.btnApplicants.Size = new System.Drawing.Size(146, 50);
             this.btnApplicants.TabIndex = 22;
             this.btnApplicants.Text = "Applicants";
             this.btnApplicants.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -231,10 +231,10 @@
             this.btnJobs.ForeColor = System.Drawing.Color.Black;
             this.btnJobs.Image = global::DoAnCuoiKy.Properties.Resources._20;
             this.btnJobs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJobs.Location = new System.Drawing.Point(0, 239);
-            this.btnJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJobs.Location = new System.Drawing.Point(0, 194);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(195, 62);
+            this.btnJobs.Size = new System.Drawing.Size(146, 50);
             this.btnJobs.TabIndex = 21;
             this.btnJobs.Text = "Jobs";
             this.btnJobs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -244,7 +244,7 @@
             // 
             this.btnPostAJob.AutoRoundedCorners = true;
             this.btnPostAJob.BackColor = System.Drawing.Color.Transparent;
-            this.btnPostAJob.BorderRadius = 28;
+            this.btnPostAJob.BorderRadius = 23;
             this.btnPostAJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPostAJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPostAJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -255,29 +255,29 @@
             this.btnPostAJob.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPostAJob.ForeColor = System.Drawing.Color.White;
             this.btnPostAJob.Image = global::DoAnCuoiKy.Properties.Resources._17;
-            this.btnPostAJob.Location = new System.Drawing.Point(3, 62);
-            this.btnPostAJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPostAJob.Location = new System.Drawing.Point(2, 50);
+            this.btnPostAJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPostAJob.Name = "btnPostAJob";
             this.btnPostAJob.ShadowDecoration.BorderRadius = 15;
             this.btnPostAJob.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPostAJob.ShadowDecoration.Depth = 20;
             this.btnPostAJob.ShadowDecoration.Enabled = true;
             this.btnPostAJob.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2);
-            this.btnPostAJob.Size = new System.Drawing.Size(188, 59);
+            this.btnPostAJob.Size = new System.Drawing.Size(141, 48);
             this.btnPostAJob.TabIndex = 20;
             this.btnPostAJob.Text = "Post a job";
             this.btnPostAJob.Click += new System.EventHandler(this.btnPostAJob_Click);
             // 
             // FTrangChuCongTy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1672, 884);
+            this.ClientSize = new System.Drawing.Size(1343, 831);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FTrangChuCongTy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FTrangChuCongTy";
