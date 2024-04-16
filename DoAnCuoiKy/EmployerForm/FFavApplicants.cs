@@ -10,18 +10,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAnCuoiKy.Company
+
+namespace DoAnCuoiKy
 {
     public partial class FFavoriteApplicants : Form
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
         FavApplicantDAO favApplicantDao = new FavApplicantDAO();
-        Employer employerInfor;
-        public FFavoriteApplicants(Employer e1)
+        Company employerInfor;
+        public FFavoriteApplicants(Company e1)
         {
             InitializeComponent();
             this.employerInfor = e1;
-            favApplicantDao.LoadDanhSach(this);
+           // favApplicantDao.LoadDanhSach(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }
         

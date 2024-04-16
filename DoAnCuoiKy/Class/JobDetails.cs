@@ -8,7 +8,9 @@ namespace DoAnCuoiKy
 {
     public  class JobDetails
     {
+        private string jobID;
         private string jobTitle;
+        
         private string jobPosition;
         private string jobType;
         private string jobSalary;

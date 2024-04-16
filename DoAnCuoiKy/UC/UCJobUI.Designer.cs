@@ -32,7 +32,6 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.CBoxSelected = new Guna.UI2.WinForms.Guna2CheckBox();
             this.pnlUCJob = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
             this.btnDetails = new Guna.UI2.WinForms.Guna2Button();
@@ -40,10 +39,10 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtExpYear = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLocation = new System.Windows.Forms.Label();
-            this.lblJobPosition = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
             this.lblJobTitle = new System.Windows.Forms.Label();
             this.txtJobtype = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlUCJob.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +81,6 @@
             this.pnlUCJob.Controls.Add(this.guna2PictureBox1);
             this.pnlUCJob.Controls.Add(this.txtExpYear);
             this.pnlUCJob.Controls.Add(this.lblLocation);
-            this.pnlUCJob.Controls.Add(this.lblJobPosition);
             this.pnlUCJob.Controls.Add(this.lblSalary);
             this.pnlUCJob.Controls.Add(this.lblJobTitle);
             this.pnlUCJob.Controls.Add(this.txtJobtype);
@@ -90,10 +88,6 @@
             this.pnlUCJob.Name = "pnlUCJob";
             this.pnlUCJob.Size = new System.Drawing.Size(371, 316);
             this.pnlUCJob.TabIndex = 13;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 15;
             // 
             // guna2Separator1
             // 
@@ -224,18 +218,6 @@
             this.lblLocation.TabIndex = 18;
             this.lblLocation.Text = "District 9, Ho Chi Minh";
             // 
-            // lblJobPosition
-            // 
-            this.lblJobPosition.AutoSize = true;
-            this.lblJobPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.lblJobPosition.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobPosition.ForeColor = System.Drawing.Color.White;
-            this.lblJobPosition.Location = new System.Drawing.Point(123, 59);
-            this.lblJobPosition.Name = "lblJobPosition";
-            this.lblJobPosition.Size = new System.Drawing.Size(123, 37);
-            this.lblJobPosition.TabIndex = 19;
-            this.lblJobPosition.Text = "Designer";
-            // 
             // lblSalary
             // 
             this.lblSalary.AutoSize = true;
@@ -254,11 +236,11 @@
             this.lblJobTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.lblJobTitle.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobTitle.ForeColor = System.Drawing.Color.White;
-            this.lblJobTitle.Location = new System.Drawing.Point(121, 25);
+            this.lblJobTitle.Location = new System.Drawing.Point(130, 25);
             this.lblJobTitle.Name = "lblJobTitle";
-            this.lblJobTitle.Size = new System.Drawing.Size(172, 37);
+            this.lblJobTitle.Size = new System.Drawing.Size(167, 74);
             this.lblJobTitle.TabIndex = 16;
-            this.lblJobTitle.Text = "Senior UI/UX ";
+            this.lblJobTitle.Text = "Senior UI/UX\r\nDesigner";
             // 
             // txtJobtype
             // 
@@ -287,6 +269,10 @@
             this.txtJobtype.Size = new System.Drawing.Size(83, 34);
             this.txtJobtype.TabIndex = 20;
             this.txtJobtype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 15;
             // 
             // UCJobUI
             // 
@@ -319,7 +305,6 @@
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         public Guna.UI2.WinForms.Guna2TextBox txtExpYear;
         public System.Windows.Forms.Label lblLocation;
-        public System.Windows.Forms.Label lblJobPosition;
         public System.Windows.Forms.Label lblSalary;
         public System.Windows.Forms.Label lblJobTitle;
         public Guna.UI2.WinForms.Guna2TextBox txtJobtype;

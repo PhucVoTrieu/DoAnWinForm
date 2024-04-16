@@ -16,13 +16,34 @@ namespace DoAnCuoiKy
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
         JobsDAO jobDetailsDAO = new JobsDAO();
-        Employer employerInfor;
-        public FJobs(Employer e1)
+        Company employerInfor;
+        public FJobs(Company e1)
         {
             InitializeComponent();
             this.employerInfor = e1;
-            jobDetailsDAO.LoadDanhSach1(this);
+            LoadDanhSach();
             this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
+        }
+        public void LoadDanhSach()
+        {
+
+            try
+            {
+                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                var jobsOfCompany = from c in db.Jobs where c.CompanyID == this.employerInfor.CompanyID select c;
+
+                foreach (var job in jobsOfCompany)
+                {
+                    UCJobUI uCJob = new UCJobUI(job);
+                   
+                    this.pnlCreatedJob.Controls.Add(uCJob);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+
         }
         public int CountCreatedJob()
         {
@@ -48,7 +69,7 @@ namespace DoAnCuoiKy
                     if (A.CBoxSelected.Checked)
                     {
                         list.Add(A);
-
+                        
                     }
                 }
 

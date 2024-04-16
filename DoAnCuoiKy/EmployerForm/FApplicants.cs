@@ -17,11 +17,11 @@ namespace DoAnCuoiKy
     {
         ApplicantsDAO candidateDAO = new ApplicantsDAO();
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        Employer Employer;
-        public FApplicants(Employer e1)
+        Company companyInfo;
+        public FApplicants(Company e1)
         {
             InitializeComponent();
-            this.Employer = e1;
+            this.companyInfo = e1;
             candidateDAO.LoadDanhSach(this);
         }
         private void btnDelete_Click(object sender, EventArgs e)

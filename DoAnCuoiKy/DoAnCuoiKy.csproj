@@ -64,10 +64,17 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
       <HintPath>D:\Downloads\Programs\BunifuCrack\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
@@ -75,6 +82,8 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -88,10 +97,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applicant.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class\Candidate.cs" />
     <Compile Include="ClassDAO\ApplicantsDAO.cs" />
     <Compile Include="ClassDAO\CompanyDAO.cs" />
     <Compile Include="Class\Employer.cs" />
+    <Compile Include="Company.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoAnCuoiKyModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAnCuoiKyModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoAnCuoiKyModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoAnCuoiKyModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="EmployerForm\FCompanyRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +135,6 @@
       <DependentUpon>FFavApplicants.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\DBconnection.cs" />
-    <Compile Include="DoAnCuoiKy2024DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DoAnCuoiKy2024DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="EmployerForm\FApplicants.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +217,9 @@
     </Compile>
     <Compile Include="Class\JobDetails.cs" />
     <Compile Include="ClassDAO\JobsDAO.cs" />
+    <Compile Include="Job.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC\UCApplicantInformation.cs">
@@ -277,16 +305,12 @@
     <EmbeddedResource Include="UC\UCJobUI.resx">
       <DependentUpon>UCJobUI.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DoAnCuoiKy2024DataSet.xsc">
-      <DependentUpon>DoAnCuoiKy2024DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DoAnCuoiKy2024DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DoAnCuoiKy2024DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DoAnCuoiKy2024DataSet.xss">
-      <DependentUpon>DoAnCuoiKy2024DataSet.xsd</DependentUpon>
+    <EntityDeploy Include="DoAnCuoiKyModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DoAnCuoiKyModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DoAnCuoiKyModel.edmx.diagram">
+      <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -550,6 +574,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DoAnCuoiKyModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
+      <LastGenOutput>DoAnCuoiKyModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DoAnCuoiKyModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
+      <LastGenOutput>DoAnCuoiKyModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

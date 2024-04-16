@@ -1,6 +1,5 @@
 ﻿
 using DoAnCuoiKy.Class;
-using DoAnCuoiKy.Company;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -47,13 +46,14 @@ namespace DoAnCuoiKy
                           reader["CompanyName"].ToString(),
                           reader["CompanyType"].ToString(),
                           reader["CompanyAddress"].ToString(),
-                          reader["ComapnyOverview"].ToString(),
+                          reader["CompanyOverview"].ToString(),
                           reader["CompanyBenefit"].ToString(),
                           reader["CompanyWorkingDays"].ToString(),
                           reader["CompanySize"].ToString(),
                           reader["CompanyCountry"].ToString()
                         );
-                    list.Add(employer);          
+                    list.Add(employer);   
+              
             }
         }
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -70,16 +70,15 @@ namespace DoAnCuoiKy
                 this.Hide();           
                 try
                 {
-                   foreach (Employer employer in this.list)
-                    {
-
-                        if (employer.CompanyEmail == this.txtEmail.Text && employer.CompanyPassword == this.txtPassword.Text)
-                        {
-                            fTrang = new FTrangChuCongTy(employer);
-                            fTrang.Show();
-                            break;
-                        }                            
-                    }
+                    DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                    var employerAccount = from account in db.Companies where account.CompanyEmail == this.txtEmail.Text 
+                                              && account.CompanyPassword == this.txtPassword.Text select account;
+                   
+                    fTrang = new FTrangChuCongTy(employerAccount.SingleOrDefault());
+                       fTrang.Show();
+                            
+                                                   
+                    
                 }
                 catch (Exception ex)
                 {

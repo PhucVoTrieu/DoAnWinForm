@@ -16,6 +16,7 @@ namespace DoAnCuoiKy
 {
     public partial class UCJobUI : UserControl
     {
+        public Job job;
         JobDetails jobDetails;
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
         DBconnection db = new DBconnection();
@@ -24,13 +25,24 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
         }
+        public UCJobUI(Job j1)
+        {
+            InitializeComponent();
+            this.job = j1;
+            this.lblJobTitle.Text = j1.JobTitle;
+            this.txtJobtype.Text = j1.JobType;
+            this.lblSalary.Text = j1.JobSalary;
+            this.lblLocation.Text = j1.Location;
+            this.txtExpYear.Text = j1.ExpInYears;
+
+        }
         public UCJobUI(JobDetails j1)
         {
             InitializeComponent();
             this.jobDetails = j1;
 
             this.lblJobTitle.Text = j1.JobTitle;
-            this.lblJobPosition.Text = j1.JobPosition;
+           
             this.txtJobtype.Text = j1.JobType;
             this.lblSalary.Text = j1.JobSalary;
             this.lblLocation.Text = j1.Location;

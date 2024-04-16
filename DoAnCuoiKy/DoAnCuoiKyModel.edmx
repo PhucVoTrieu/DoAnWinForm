@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DoAnCuoiKyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Applicant">
+          <Key>
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="ApplicantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicantEmail" Type="varchar" MaxLength="200" />
+          <Property Name="ApplicantPassword" Type="varchar" MaxLength="200" />
+          <Property Name="ApplicantName" Type="varchar" MaxLength="200" />
+          <Property Name="ApplicantExpYears" Type="varchar" MaxLength="200" />
+          <Property Name="ApplicantNationality" Type="varchar" MaxLength="200" />
+          <Property Name="ApplicantAddress" Type="varchar" MaxLength="200" />
+          <Property Name="ApplicantGender" Type="varchar" MaxLength="200" />
+          <Property Name="ApplicantPhonenumber" Type="varchar" MaxLength="200" />
+          <Property Name="ApplicantDOB" Type="date" />
+          <Property Name="ApplicantDescription" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CompanyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyEmail" Type="varchar(max)" />
+          <Property Name="CompanyPassword" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="200" />
+          <Property Name="CompanyType" Type="varchar" MaxLength="200" />
+          <Property Name="CompanyAddress" Type="varchar" MaxLength="200" />
+          <Property Name="CompanyOverview" Type="varchar(max)" />
+          <Property Name="CompanyBenefit" Type="varchar(max)" />
+          <Property Name="CompanyWorkingDays" Type="varchar" MaxLength="50" />
+          <Property Name="CompanySize" Type="varchar" MaxLength="100" />
+          <Property Name="CompanyCountry" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="FavoriteApplicants">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="CompanyID" Type="int" Nullable="false" />
+          <Property Name="ApplicantID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FavoriteJobs">
+          <Key>
+            <PropertyRef Name="JobID" />
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="JobID" Type="int" Nullable="false" />
+          <Property Name="ApplicantID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobTitle" Type="varchar" MaxLength="200" />
+          <Property Name="JobType" Type="varchar" MaxLength="200" />
+          <Property Name="JobSalary" Type="varchar" MaxLength="200" />
+          <Property Name="RecruitmentQuota" Type="varchar" MaxLength="200" />
+          <Property Name="Location" Type="varchar" MaxLength="200" />
+          <Property Name="ExpInYears" Type="varchar" MaxLength="200" />
+          <Property Name="JobRequirement" Type="varchar(max)" />
+          <Property Name="JobDescription" Type="varchar(max)" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="JobBenefit" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK__FavoriteA__Appli__4D94879B">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
+          <End Role="FavoriteApplicants" Type="Self.FavoriteApplicants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="FavoriteApplicants">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FavoriteA__Compa__4CA06362">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="FavoriteApplicants" Type="Self.FavoriteApplicants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="FavoriteApplicants">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FavoriteJ__Appli__49C3F6B7">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
+          <End Role="FavoriteJobs" Type="Self.FavoriteJobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="FavoriteJobs">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FavoriteJ__JobID__48CFD27E">
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
+          <End Role="FavoriteJobs" Type="Self.FavoriteJobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="FavoriteJobs">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Jobs__CompanyID__440B1D61">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DoAnCuoiKyModelStoreContainer">
+          <EntitySet Name="Applicant" EntityType="Self.Applicant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FavoriteApplicants" EntityType="Self.FavoriteApplicants" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FavoriteJobs" EntityType="Self.FavoriteJobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__FavoriteA__Appli__4D94879B" Association="Self.FK__FavoriteA__Appli__4D94879B">
+            <End Role="Applicant" EntitySet="Applicant" />
+            <End Role="FavoriteApplicants" EntitySet="FavoriteApplicants" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FavoriteA__Compa__4CA06362" Association="Self.FK__FavoriteA__Compa__4CA06362">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="FavoriteApplicants" EntitySet="FavoriteApplicants" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FavoriteJ__Appli__49C3F6B7" Association="Self.FK__FavoriteJ__Appli__49C3F6B7">
+            <End Role="Applicant" EntitySet="Applicant" />
+            <End Role="FavoriteJobs" EntitySet="FavoriteJobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FavoriteJ__JobID__48CFD27E" Association="Self.FK__FavoriteJ__JobID__48CFD27E">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="FavoriteJobs" EntitySet="FavoriteJobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Jobs__CompanyID__440B1D61" Association="Self.FK__Jobs__CompanyID__440B1D61">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DoAnCuoiKyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Applicant">
+          <Key>
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="ApplicantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicantEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantExpYears" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantNationality" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantGender" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantPhonenumber" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantDOB" Type="DateTime" Precision="0" />
+          <Property Name="ApplicantDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Companies" Relationship="Self.FavoriteApplicants" FromRole="Applicant" ToRole="Company" />
+          <NavigationProperty Name="Jobs" Relationship="Self.FavoriteJobs" FromRole="Applicant" ToRole="Jobs" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyOverview" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyBenefit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyWorkingDays" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompanySize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Jobs" Relationship="Self.FK__Jobs__CompanyID__440B1D61" FromRole="Company" ToRole="Jobs" />
+          <NavigationProperty Name="Applicants" Relationship="Self.FavoriteApplicants" FromRole="Company" ToRole="Applicant" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="JobType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="JobSalary" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="RecruitmentQuota" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ExpInYears" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="JobRequirement" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="JobDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="JobBenefit" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Company" Relationship="Self.FK__Jobs__CompanyID__440B1D61" FromRole="Jobs" ToRole="Company" />
+          <NavigationProperty Name="Applicants" Relationship="Self.FavoriteJobs" FromRole="Jobs" ToRole="Applicant" />
+        </EntityType>
+        <Association Name="FK__Jobs__CompanyID__440B1D61">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="Jobs" Type="Self.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FavoriteApplicants">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
+          <End Role="Company" Type="Self.Company" Multiplicity="*" />
+        </Association>
+        <Association Name="FavoriteJobs">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
+          <End Role="Jobs" Type="Self.Job" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="DoAnCuoiKyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Applicants" EntityType="Self.Applicant" />
+          <EntitySet Name="Companies" EntityType="Self.Company" />
+          <EntitySet Name="Jobs" EntityType="Self.Job" />
+          <AssociationSet Name="FK__Jobs__CompanyID__440B1D61" Association="Self.FK__Jobs__CompanyID__440B1D61">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FavoriteApplicants" Association="Self.FavoriteApplicants">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FavoriteJobs" Association="Self.FavoriteJobs">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DoAnCuoiKyModelStoreContainer" CdmEntityContainer="DoAnCuoiKyEntities">
+          <EntitySetMapping Name="Applicants">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.Applicant">
+              <MappingFragment StoreEntitySet="Applicant">
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+                <ScalarProperty Name="ApplicantEmail" ColumnName="ApplicantEmail" />
+                <ScalarProperty Name="ApplicantPassword" ColumnName="ApplicantPassword" />
+                <ScalarProperty Name="ApplicantName" ColumnName="ApplicantName" />
+                <ScalarProperty Name="ApplicantExpYears" ColumnName="ApplicantExpYears" />
+                <ScalarProperty Name="ApplicantNationality" ColumnName="ApplicantNationality" />
+                <ScalarProperty Name="ApplicantAddress" ColumnName="ApplicantAddress" />
+                <ScalarProperty Name="ApplicantGender" ColumnName="ApplicantGender" />
+                <ScalarProperty Name="ApplicantPhonenumber" ColumnName="ApplicantPhonenumber" />
+                <ScalarProperty Name="ApplicantDOB" ColumnName="ApplicantDOB" />
+                <ScalarProperty Name="ApplicantDescription" ColumnName="ApplicantDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="CompanyEmail" ColumnName="CompanyEmail" />
+                <ScalarProperty Name="CompanyPassword" ColumnName="CompanyPassword" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyType" ColumnName="CompanyType" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="CompanyOverview" ColumnName="CompanyOverview" />
+                <ScalarProperty Name="CompanyBenefit" ColumnName="CompanyBenefit" />
+                <ScalarProperty Name="CompanyWorkingDays" ColumnName="CompanyWorkingDays" />
+                <ScalarProperty Name="CompanySize" ColumnName="CompanySize" />
+                <ScalarProperty Name="CompanyCountry" ColumnName="CompanyCountry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.Job">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="JobType" ColumnName="JobType" />
+                <ScalarProperty Name="JobSalary" ColumnName="JobSalary" />
+                <ScalarProperty Name="RecruitmentQuota" ColumnName="RecruitmentQuota" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ExpInYears" ColumnName="ExpInYears" />
+                <ScalarProperty Name="JobRequirement" ColumnName="JobRequirement" />
+                <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="JobBenefit" ColumnName="JobBenefit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FavoriteApplicants" TypeName="DoAnCuoiKyModel.FavoriteApplicants" StoreEntitySet="FavoriteApplicants">
+            <EndProperty Name="Applicant">
+              <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+            </EndProperty>
+            <EndProperty Name="Company">
+              <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FavoriteJobs" TypeName="DoAnCuoiKyModel.FavoriteJobs" StoreEntitySet="FavoriteJobs">
+            <EndProperty Name="Applicant">
+              <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+            </EndProperty>
+            <EndProperty Name="Jobs">
+              <ScalarProperty Name="JobID" ColumnName="JobID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
