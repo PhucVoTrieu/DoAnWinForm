@@ -14,7 +14,6 @@ namespace DoAnCuoiKy
     {
         DBconnection db = new DBconnection();
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        FFindingCandidate FFindingCandidate = new FFindingCandidate();
         public void them(Candidate candidate)
         {
             string SQL = string.Format("INSERT INTO Profile ( ID,  Name,  gender,  nationality,  address,  DOB,  ExpYears,  email,  phone,  describe, ApplyPosition, Skill) VALUES ('{0}', '{1}' , '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')",

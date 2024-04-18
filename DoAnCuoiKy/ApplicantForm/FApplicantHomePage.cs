@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnCuoiKy
 {
-    public partial class FCandidateHomePage : Form
+    public partial class FApplicantHomePage : Form
     {
-        public FCandidateHomePage()
+        public FApplicantHomePage()
         {
             InitializeComponent();
             OpenForm(new FFindingCandidate());
