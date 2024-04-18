@@ -141,17 +141,17 @@
     <Compile Include="EmployerForm\FApplicants.Designer.cs">
       <DependentUpon>FApplicants.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\FCandidateHomePage.cs">
+    <Compile Include="ApplicantForm\FApplicantHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\FCandidateHomePage.Designer.cs">
-      <DependentUpon>FCandidateHomePage.cs</DependentUpon>
+    <Compile Include="ApplicantForm\FApplicantHomePage.Designer.cs">
+      <DependentUpon>FApplicantHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\FFindingCandidate.cs">
+    <Compile Include="ApplicantForm\FApplicantFinding.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\FFindingCandidate.Designer.cs">
-      <DependentUpon>FFindingCandidate.cs</DependentUpon>
+    <Compile Include="ApplicantForm\FFindingCandidate.Designer.cs">
+      <DependentUpon>FApplicantFinding.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployerForm\FInformation.cs">
       <SubType>Form</SubType>
@@ -179,10 +179,10 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\FormFavoriteJobs.cs">
+    <Compile Include="ApplicantForm\FormFavoriteJobs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\FormFavoriteJobs.Designer.cs">
+    <Compile Include="ApplicantForm\FormFavoriteJobs.Designer.cs">
       <DependentUpon>FormFavoriteJobs.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployerForm\FPostAJob.cs">
@@ -191,17 +191,17 @@
     <Compile Include="EmployerForm\FPostAJob.Designer.cs">
       <DependentUpon>FPostAJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\FPostCV.cs">
+    <Compile Include="ApplicantForm\FPostCV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\FPostCV.Designer.cs">
+    <Compile Include="ApplicantForm\FPostCV.Designer.cs">
       <DependentUpon>FPostCV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\FProfileApplicant.cs">
+    <Compile Include="ApplicantForm\FApplicantProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\FProfileApplicant.Designer.cs">
-      <DependentUpon>FProfileApplicant.cs</DependentUpon>
+    <Compile Include="ApplicantForm\FApplicantProfile.Designer.cs">
+      <DependentUpon>FApplicantProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployerForm\FStatistic.cs">
       <SubType>Form</SubType>
@@ -243,11 +243,11 @@
     <EmbeddedResource Include="EmployerForm\FApplicants.resx">
       <DependentUpon>FApplicants.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\FCandidateHomePage.resx">
-      <DependentUpon>FCandidateHomePage.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicantForm\FApplicantHomePage.resx">
+      <DependentUpon>FApplicantHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\FFindingCandidate.resx">
-      <DependentUpon>FFindingCandidate.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicantForm\FFindingCandidate.resx">
+      <DependentUpon>FApplicantFinding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployerForm\FCompanyRegistration.resx">
       <DependentUpon>FCompanyRegistration.cs</DependentUpon>
@@ -267,17 +267,17 @@
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\FormFavoriteJobs.resx">
+    <EmbeddedResource Include="ApplicantForm\FormFavoriteJobs.resx">
       <DependentUpon>FormFavoriteJobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployerForm\FPostAJob.resx">
       <DependentUpon>FPostAJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\FPostCV.resx">
+    <EmbeddedResource Include="ApplicantForm\FPostCV.resx">
       <DependentUpon>FPostCV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\FProfileApplicant.resx">
-      <DependentUpon>FProfileApplicant.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicantForm\FApplicantProfile.resx">
+      <DependentUpon>FApplicantProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployerForm\FStatistic.resx">
       <DependentUpon>FStatistic.cs</DependentUpon>
@@ -589,6 +589,15 @@
       <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
       <LastGenOutput>DoAnCuoiKyModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\add.png" />
+    <None Include="Resources\editing.png" />
+    <None Include="Resources\telephone.png" />
+    <None Include="Resources\pin.png" />
+    <None Include="Resources\globe.png" />
+    <None Include="Resources\gender.png" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\birthday.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

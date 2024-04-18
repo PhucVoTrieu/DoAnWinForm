@@ -96,7 +96,7 @@ namespace DoAnCuoiKy
             else if (rbtnApplicant.Checked)
             {
                 this.Hide();
-                FCandidateHomePage f1 = new FCandidateHomePage();
+                FApplicantHomePage f1 = new FApplicantHomePage();
                 f1.Show();
             }
         }

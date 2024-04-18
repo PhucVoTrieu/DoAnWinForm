@@ -40,7 +40,8 @@ namespace DoAnCuoiKy
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            FProfileApplicant f1 = new FProfileApplicant();f1.Show();
+            FProfileApplicant f1 = new FProfileApplicant();
+            f1.Show();
         }
 
         private void btnCompanyName_Click(object sender, EventArgs e)

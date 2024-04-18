@@ -33,7 +33,8 @@ namespace DoAnCuoiKy
         }
         private void btnCandidateDetails_Click_1(object sender, EventArgs e)
         {
-            FProfileApplicant f1 = new FProfileApplicant(this.candidate);
+            //FProfileApplicant f1 = new FProfileApplicant(this.candidate);
+            FProfileApplicant f1 = new FProfileApplicant();
             f1.Show();
 
         }

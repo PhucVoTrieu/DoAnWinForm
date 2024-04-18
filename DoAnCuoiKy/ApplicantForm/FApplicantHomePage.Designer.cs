@@ -1,6 +1,6 @@
 ﻿namespace DoAnCuoiKy
 {
-    partial class FCandidateHomePage
+    partial class FApplicantHomePage
     {
         /// <summary>
         /// Required designer variable.
