@@ -16,16 +16,19 @@ namespace DoAnCuoiKy
     public partial class FFavoriteApplicants : Form
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        FavApplicantDAO favApplicantDao = new FavApplicantDAO();
-        Company employerInfor;
+       ApplicantsDAO applicantsDAO = new ApplicantsDAO();
+        public Company employerInfor;
         public FFavoriteApplicants(Company e1)
         {
             InitializeComponent();
             this.employerInfor = e1;
-           // favApplicantDao.LoadDanhSach(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
+            LoadDanhSach();
         }
-        
+        private void LoadDanhSach()
+        {
+            applicantsDAO.LoadDanhSachYeuThich(this);
+        }
         public int CountFavoriteApplicants()
         {
             int count = 0;
@@ -61,7 +64,7 @@ namespace DoAnCuoiKy
             {
                 this.pnlFavApplicants.Controls.Remove(c);
                 this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
-                favApplicantDao.xoaUC(c);
+                //favApplicantDao.xoaUC(c);
             }
 
         }

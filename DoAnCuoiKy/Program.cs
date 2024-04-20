@@ -16,7 +16,7 @@ namespace DoAnCuoiKy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FProfileApplicant());
+            Application.Run(new FLogin());
             
         }
     }

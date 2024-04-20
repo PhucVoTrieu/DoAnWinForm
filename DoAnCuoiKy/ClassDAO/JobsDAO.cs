@@ -10,138 +10,80 @@ namespace DoAnCuoiKy
 {
     internal class JobsDAO
     {
-        DBconnection db = new DBconnection();
+        DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        public void them(JobDetails jobDetails)
+        public void them(FPostAJob f)
         {
-            string SQL = string.Format("INSERT INTO Jobdetails (JobTitle,JobPosition,JobType,JobSalary,RecruitmentQuota,Location,ExpInYears,JobDescription,CompanyName,Benefit) VALUES ('{0}', '{1}' , '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')",
-                jobDetails.JobTitle, jobDetails.JobPosition, jobDetails.JobType,
-                jobDetails.JobSalary, jobDetails.RecruitmentQuota, jobDetails.Location, jobDetails.ExpInYears,
-                jobDetails.JobDescription, jobDetails.CompanyName,jobDetails.Benefit);
-            db.thucthi(SQL);
+            db.Jobs.Add(new Job
+            {
+                JobTitle = f.txtJobTitle.Text,
+                JobType = f.cbJobType.SelectedItem.ToString(),
+                JobSalary = f.txtJobSalary.Text
+            ,
+                RecruitmentQuota = f.txtRecruitmentQuota.Text,
+                Location = f.cbLocation.SelectedItem.ToString(),
+                ExpInYears = f.txtJobExperiencesInYears.Text
+            ,
+                JobRequirement = f.txtJobrequirement.Text,
+                JobDescription = f.txtJobDescription.Text,
+                CompanyID = f.employerInfor.CompanyID,
+                JobBenefit = f.txtBenefit.Text
+            });
+           
+            db.SaveChanges();
         }
         public void laydulieuCoDieuKien(List<JobDetails> list, string conditionText)
         {
-            try
-            {
-
-                connStr.Open();
-                //
-                //string selectedLocation = this.txtLocation.Text;
-
-                string query = "SELECT  * from JobDetails WHERE Location = @Location";
-                SqlCommand sqlCommand = new SqlCommand(query, connStr);
-                sqlCommand.Parameters.AddWithValue("@Location", conditionText);
-                SqlDataReader reader = sqlCommand.ExecuteReader();
-                while (reader.Read())
-                {
-                    string title = reader["JobTitle"].ToString();
-                    string position = reader["JobPosition"].ToString();
-                    string type = reader["JobType"].ToString();
-                    string salary = reader["JobSalary"].ToString();
-                    string recruitmentQuota = reader["RecruitmentQuota"].ToString();
-                    string location = reader["Location"].ToString();
-                    string expYear = reader["ExpInYears"].ToString();
-                    string description = reader["JobDescription"].ToString();
-                    string companyName = reader["CompanyName"].ToString();
-                    string benefit = reader["Benefit"].ToString();
-                    JobDetails jobdt1 = new JobDetails(title, position, type, salary, recruitmentQuota, location, expYear, description, companyName, benefit);
-                    list.Add(jobdt1);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
-            }
-            finally
-            {
-                connStr.Close();
-            }
+          
         
         }
             public void LoadDanhSach(FFindingCandidate f)
         {
-            List<JobDetails> list = new List<JobDetails>();
-            try
-            {
 
-                string query = "SELECT * FROM Jobdetails";
-                SqlCommand command = new SqlCommand(query, connStr);
-                connStr.Open();
-                SqlDataReader reader = command.ExecuteReader();
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            var allJob = from c in db.Jobs select c;
 
-                while (reader.Read())
-                {
-                    string title = reader["JobTitle"].ToString();
-                    string position = reader["JobPosition"].ToString();
-                    string type = reader["JobType"].ToString();
-                    string salary = reader["JobSalary"].ToString();
-                    string recruitmentQuota = reader["RecruitmentQuota"].ToString();
-                    string location = reader["Location"].ToString();
-                    string expYear = reader["ExpInYears"].ToString();
-                    string description = reader["JobDescription"].ToString();
-                    string companyName = reader["CompanyName"].ToString();
-                    string benefit = reader["Benefit"].ToString();
-                    JobDetails jobdt1 = new JobDetails(title, position, type, salary, recruitmentQuota, location, expYear, description, companyName, benefit);
-                    list.Add(jobdt1);
-                }
-            }
-            catch (Exception ex)
+            foreach (var job in allJob)
             {
-                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
-            }
-            finally
-            {
-                connStr.Close();
-            }
-            foreach (JobDetails jobDetail in list)
-            {
-                UCJobUI uCJob = new UCJobUI(jobDetail);
-                uCJob.CBoxSelected.Hide();
+                UCJobUI uCJob = new UCJobUI(job);
+                uCJob.CBoxSelected.Visible = false;
                 f.PnlRecommendJobs.Controls.Add(uCJob);
             }
+          
         }
-        public void LoadDanhSach1(FJobs f)
+        public void them(Job job)
         {
-            List<JobDetails> list = new List<JobDetails>();
+            db.Jobs.Add(job);
+
+            db.SaveChanges();
+
+        }
+        public void xoa(Job job)
+        {
+            var applicant = db.Jobs.Find(job.JobID);
+            if (applicant != null)
+            {
+                db.Jobs.Remove(applicant);
+                db.SaveChanges();
+            }
+        }
+        public void LoadDanhSach(FormFavoriteJobs f)
+        {
             try
             {
+                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                var job = from c in db.Jobs select c;
 
-                string query = "SELECT * FROM Jobdetails";
-                SqlCommand command = new SqlCommand(query, connStr);
-                connStr.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                foreach (var c in job)
                 {
-                    string title = reader["JobTitle"].ToString();
-                    string position = reader["JobPosition"].ToString();
-                    string type = reader["JobType"].ToString();
-                    string salary = reader["JobSalary"].ToString();
-                    string recruitmentQuota = reader["RecruitmentQuota"].ToString();
-                    string location = reader["Location"].ToString();
-                    string expYear = reader["ExpInYears"].ToString();
-                    string description = reader["JobDescription"].ToString();
-                    string companyName = reader["CompanyName"].ToString();
-                    string benefit = reader["Benefit"].ToString();
-                    JobDetails jobdt1 = new JobDetails(title, position, type, salary, recruitmentQuota, location, expYear, description, companyName, benefit);
-                    list.Add(jobdt1);
+                    UCJobUI uCApplicants = new UCJobUI(c);
+
+                    f.pnlFavJobs.Controls.Add(uCApplicants);
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Lỗi truy vấn: " + ex.Message);
-            }
-            finally
-            {
-                connStr.Close();
-            }
-            foreach (JobDetails jobDetail in list)
-            {
-                UCJobUI uCJob = new UCJobUI(jobDetail);
-                uCJob.btnApplyNow.Hide();
-                uCJob.btnFavorite.Hide();
-                f.pnlCreatedJob.Controls.Add(uCJob);
             }
         }
         public void xoaUC(UCJobUI uCJobUI)

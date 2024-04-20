@@ -20,7 +20,7 @@ namespace DoAnCuoiKy
         JobDetails jobDetails;
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
         DBconnection db = new DBconnection();
-        FavJobDAO favoriteJobDAO = new FavJobDAO();
+      
         public UCJobUI()
         {
             InitializeComponent();
@@ -64,11 +64,11 @@ namespace DoAnCuoiKy
         {
             if(this.btnFavorite.Checked)
             {
-                favoriteJobDAO.them(this.jobDetails);
+              //  favoriteJobDAO.them(this.job);
             }
             else
             {
-                favoriteJobDAO.xoa(this.jobDetails);
+               // favoriteJobDAO.xoa(this.job);
             }
 
             

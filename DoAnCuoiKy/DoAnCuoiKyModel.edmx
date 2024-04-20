@@ -21,6 +21,14 @@
           <Property Name="ApplicantDOB" Type="date" />
           <Property Name="ApplicantDescription" Type="varchar(max)" />
         </EntityType>
+        <EntityType Name="ApplicantsOfCompany">
+          <Key>
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="ApplicantID" Type="int" Nullable="false" />
+          <Property Name="IsFavorite" Type="bit" />
+        </EntityType>
         <EntityType Name="Company">
           <Key>
             <PropertyRef Name="CompanyID" />
@@ -36,14 +44,6 @@
           <Property Name="CompanyWorkingDays" Type="varchar" MaxLength="50" />
           <Property Name="CompanySize" Type="varchar" MaxLength="100" />
           <Property Name="CompanyCountry" Type="varchar" MaxLength="100" />
-        </EntityType>
-        <EntityType Name="FavoriteApplicants">
-          <Key>
-            <PropertyRef Name="CompanyID" />
-            <PropertyRef Name="ApplicantID" />
-          </Key>
-          <Property Name="CompanyID" Type="int" Nullable="false" />
-          <Property Name="ApplicantID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="FavoriteJobs">
           <Key>
@@ -69,31 +69,31 @@
           <Property Name="CompanyID" Type="int" />
           <Property Name="JobBenefit" Type="varchar" MaxLength="200" />
         </EntityType>
-        <Association Name="FK__FavoriteA__Appli__4D94879B">
+        <Association Name="FK__Applicant__Appli__3F466844">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
-          <End Role="FavoriteApplicants" Type="Self.FavoriteApplicants" Multiplicity="*" />
+          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Applicant">
               <PropertyRef Name="ApplicantID" />
             </Principal>
-            <Dependent Role="FavoriteApplicants">
+            <Dependent Role="ApplicantsOfCompany">
               <PropertyRef Name="ApplicantID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FavoriteA__Compa__4CA06362">
-          <End Role="Company" Type="Self.Company" Multiplicity="1" />
-          <End Role="FavoriteApplicants" Type="Self.FavoriteApplicants" Multiplicity="*" />
+        <Association Name="FK__Applicant__Compa__3E52440B">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Company">
               <PropertyRef Name="CompanyID" />
             </Principal>
-            <Dependent Role="FavoriteApplicants">
+            <Dependent Role="ApplicantsOfCompany">
               <PropertyRef Name="CompanyID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FavoriteJ__Appli__49C3F6B7">
+        <Association Name="FK__FavoriteJ__Appli__2C3393D0">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
           <End Role="FavoriteJobs" Type="Self.FavoriteJobs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -105,7 +105,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FavoriteJ__JobID__48CFD27E">
+        <Association Name="FK__FavoriteJ__JobID__2B3F6F97">
           <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
           <End Role="FavoriteJobs" Type="Self.FavoriteJobs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -117,7 +117,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Jobs__CompanyID__440B1D61">
+        <Association Name="FK__Jobs__CompanyID__267ABA7A">
           <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
           <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -131,27 +131,27 @@
         </Association>
         <EntityContainer Name="DoAnCuoiKyModelStoreContainer">
           <EntitySet Name="Applicant" EntityType="Self.Applicant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicantsOfCompany" EntityType="Self.ApplicantsOfCompany" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="FavoriteApplicants" EntityType="Self.FavoriteApplicants" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FavoriteJobs" EntityType="Self.FavoriteJobs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__FavoriteA__Appli__4D94879B" Association="Self.FK__FavoriteA__Appli__4D94879B">
+          <AssociationSet Name="FK__Applicant__Appli__3F466844" Association="Self.FK__Applicant__Appli__3F466844">
             <End Role="Applicant" EntitySet="Applicant" />
-            <End Role="FavoriteApplicants" EntitySet="FavoriteApplicants" />
+            <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompany" />
           </AssociationSet>
-          <AssociationSet Name="FK__FavoriteA__Compa__4CA06362" Association="Self.FK__FavoriteA__Compa__4CA06362">
+          <AssociationSet Name="FK__Applicant__Compa__3E52440B" Association="Self.FK__Applicant__Compa__3E52440B">
             <End Role="Company" EntitySet="Company" />
-            <End Role="FavoriteApplicants" EntitySet="FavoriteApplicants" />
+            <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompany" />
           </AssociationSet>
-          <AssociationSet Name="FK__FavoriteJ__Appli__49C3F6B7" Association="Self.FK__FavoriteJ__Appli__49C3F6B7">
+          <AssociationSet Name="FK__FavoriteJ__Appli__2C3393D0" Association="Self.FK__FavoriteJ__Appli__2C3393D0">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="FavoriteJobs" EntitySet="FavoriteJobs" />
           </AssociationSet>
-          <AssociationSet Name="FK__FavoriteJ__JobID__48CFD27E" Association="Self.FK__FavoriteJ__JobID__48CFD27E">
+          <AssociationSet Name="FK__FavoriteJ__JobID__2B3F6F97" Association="Self.FK__FavoriteJ__JobID__2B3F6F97">
             <End Role="Jobs" EntitySet="Jobs" />
             <End Role="FavoriteJobs" EntitySet="FavoriteJobs" />
           </AssociationSet>
-          <AssociationSet Name="FK__Jobs__CompanyID__440B1D61" Association="Self.FK__Jobs__CompanyID__440B1D61">
+          <AssociationSet Name="FK__Jobs__CompanyID__267ABA7A" Association="Self.FK__Jobs__CompanyID__267ABA7A">
             <End Role="Company" EntitySet="Company" />
             <End Role="Jobs" EntitySet="Jobs" />
           </AssociationSet>
@@ -176,8 +176,18 @@
           <Property Name="ApplicantPhonenumber" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="ApplicantDOB" Type="DateTime" Precision="0" />
           <Property Name="ApplicantDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Companies" Relationship="Self.FavoriteApplicants" FromRole="Applicant" ToRole="Company" />
+          <NavigationProperty Name="ApplicantsOfCompany" Relationship="Self.FK__Applicant__Appli__3F466844" FromRole="Applicant" ToRole="ApplicantsOfCompany" />
           <NavigationProperty Name="Jobs" Relationship="Self.FavoriteJobs" FromRole="Applicant" ToRole="Jobs" />
+        </EntityType>
+        <EntityType Name="ApplicantsOfCompany">
+          <Key>
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="ApplicantID" Type="Int32" Nullable="false" />
+          <Property Name="IsFavorite" Type="Boolean" />
+          <NavigationProperty Name="Applicant" Relationship="Self.FK__Applicant__Appli__3F466844" FromRole="ApplicantsOfCompany" ToRole="Applicant" />
+          <NavigationProperty Name="Company" Relationship="Self.FK__Applicant__Compa__3E52440B" FromRole="ApplicantsOfCompany" ToRole="Company" />
         </EntityType>
         <EntityType Name="Company">
           <Key>
@@ -194,8 +204,8 @@
           <Property Name="CompanyWorkingDays" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CompanySize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="CompanyCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Jobs" Relationship="Self.FK__Jobs__CompanyID__440B1D61" FromRole="Company" ToRole="Jobs" />
-          <NavigationProperty Name="Applicants" Relationship="Self.FavoriteApplicants" FromRole="Company" ToRole="Applicant" />
+          <NavigationProperty Name="ApplicantsOfCompanies" Relationship="Self.FK__Applicant__Compa__3E52440B" FromRole="Company" ToRole="ApplicantsOfCompany" />
+          <NavigationProperty Name="Jobs" Relationship="Self.FK__Jobs__CompanyID__267ABA7A" FromRole="Company" ToRole="Jobs" />
         </EntityType>
         <EntityType Name="Job">
           <Key>
@@ -212,10 +222,34 @@
           <Property Name="JobDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CompanyID" Type="Int32" />
           <Property Name="JobBenefit" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Company" Relationship="Self.FK__Jobs__CompanyID__440B1D61" FromRole="Jobs" ToRole="Company" />
+          <NavigationProperty Name="Company" Relationship="Self.FK__Jobs__CompanyID__267ABA7A" FromRole="Jobs" ToRole="Company" />
           <NavigationProperty Name="Applicants" Relationship="Self.FavoriteJobs" FromRole="Jobs" ToRole="Applicant" />
         </EntityType>
-        <Association Name="FK__Jobs__CompanyID__440B1D61">
+        <Association Name="FK__Applicant__Appli__3F466844">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
+          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="ApplicantsOfCompany">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Applicant__Compa__3E52440B">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="ApplicantsOfCompany">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Jobs__CompanyID__267ABA7A">
           <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
           <End Role="Jobs" Type="Self.Job" Multiplicity="*" />
           <ReferentialConstraint>
@@ -227,25 +261,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FavoriteApplicants">
-          <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
-          <End Role="Company" Type="Self.Company" Multiplicity="*" />
-        </Association>
         <Association Name="FavoriteJobs">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
           <End Role="Jobs" Type="Self.Job" Multiplicity="*" />
         </Association>
         <EntityContainer Name="DoAnCuoiKyEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Applicants" EntityType="Self.Applicant" />
+          <EntitySet Name="ApplicantsOfCompanies" EntityType="Self.ApplicantsOfCompany" />
           <EntitySet Name="Companies" EntityType="Self.Company" />
           <EntitySet Name="Jobs" EntityType="Self.Job" />
-          <AssociationSet Name="FK__Jobs__CompanyID__440B1D61" Association="Self.FK__Jobs__CompanyID__440B1D61">
+          <AssociationSet Name="FK__Applicant__Appli__3F466844" Association="Self.FK__Applicant__Appli__3F466844">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompanies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicant__Compa__3E52440B" Association="Self.FK__Applicant__Compa__3E52440B">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompanies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Jobs__CompanyID__267ABA7A" Association="Self.FK__Jobs__CompanyID__267ABA7A">
             <End Role="Company" EntitySet="Companies" />
             <End Role="Jobs" EntitySet="Jobs" />
-          </AssociationSet>
-          <AssociationSet Name="FavoriteApplicants" Association="Self.FavoriteApplicants">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="Company" EntitySet="Companies" />
           </AssociationSet>
           <AssociationSet Name="FavoriteJobs" Association="Self.FavoriteJobs">
             <End Role="Applicant" EntitySet="Applicants" />
@@ -272,6 +307,15 @@
                 <ScalarProperty Name="ApplicantPhonenumber" ColumnName="ApplicantPhonenumber" />
                 <ScalarProperty Name="ApplicantDOB" ColumnName="ApplicantDOB" />
                 <ScalarProperty Name="ApplicantDescription" ColumnName="ApplicantDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicantsOfCompanies">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.ApplicantsOfCompany">
+              <MappingFragment StoreEntitySet="ApplicantsOfCompany">
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+                <ScalarProperty Name="IsFavorite" ColumnName="IsFavorite" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -309,14 +353,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="FavoriteApplicants" TypeName="DoAnCuoiKyModel.FavoriteApplicants" StoreEntitySet="FavoriteApplicants">
-            <EndProperty Name="Applicant">
-              <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
-            </EndProperty>
-            <EndProperty Name="Company">
-              <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
-            </EndProperty>
-          </AssociationSetMapping>
           <AssociationSetMapping Name="FavoriteJobs" TypeName="DoAnCuoiKyModel.FavoriteJobs" StoreEntitySet="FavoriteJobs">
             <EndProperty Name="Applicant">
               <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />

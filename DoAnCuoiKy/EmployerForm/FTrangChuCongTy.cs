@@ -19,8 +19,10 @@ namespace DoAnCuoiKy
         {
             this.CompanyInformation = e1;
             InitializeComponent();
+            OpenForm(new FInformation(e1));
         }
         private Form currentFormChild;
+
         private void OpenForm(Form form)
         {
             if (currentFormChild != null)

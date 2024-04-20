@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnCuoiKy.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +13,27 @@ namespace DoAnCuoiKy
 {
     public partial class UCApplicants : UserControl
     {
-        Candidate candidate;
-        FavApplicantDAO favoriteApplicantDAO = new FavApplicantDAO();
+        Applicant applicantInfo;
+        ApplicantsDAO applicantsDAO = new ApplicantsDAO();
         public UCApplicants()
         {
             InitializeComponent();
         }
-        public UCApplicants(Candidate candidate1)
+
+        public UCApplicants(Applicant applicant)
         {
             InitializeComponent();
-            this.candidate = candidate1;
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+         
+            this.applicantInfo = applicant;
 
-            this.lblCandidateName.Text = candidate1.Name;
-            this.lblCandidateApplyPos.Text = candidate1.ApplyPosition;
-            this.txtExpYears.Text = candidate1.ExpYears;
-            this.txtSkill.Text = candidate1.Skill;
-           
+            this.lblCandidateName.Text = applicant.ApplicantName;
+            //this.lblCandidateApplyPos.Text = applicant.appli;
+            this.txtExpYears.Text = applicant.ApplicantExpYears;
+            //this.txtSkill.Text = applicant.appli;
 
-            
+
+
         }
         private void btnCandidateDetails_Click_1(object sender, EventArgs e)
         {
@@ -43,20 +47,19 @@ namespace DoAnCuoiKy
 
         private void btnFavorite_CheckedChanged(object sender, EventArgs e)
         {
+            
+
+        }
+        private void btnFavorite_Click(object sender, EventArgs e)
+        {
             if (this.btnFavorite.Checked)
             {
-                favoriteApplicantDAO.them(this.candidate);
+                applicantsDAO.YeuThich(this.applicantInfo);
             }
             else
             {
-                favoriteApplicantDAO.xoa(this.candidate);
+                applicantsDAO.HuyYeuThich(this.applicantInfo);
             }
-
-        }
-
-        private void btnCandidateDetails_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

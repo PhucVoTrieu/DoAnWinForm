@@ -69,9 +69,13 @@
     <Compile Include="Applicant.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ApplicantsOfCompany.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class\Candidate.cs" />
     <Compile Include="ClassDAO\ApplicantsDAO.cs" />
     <Compile Include="ClassDAO\CompanyDAO.cs" />
+    <Compile Include="Class\Constant.cs" />
     <Compile Include="Class\Employer.cs" />
     <Compile Include="Company.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
@@ -128,8 +132,6 @@
     <Compile Include="EmployerForm\FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassDAO\FavApplicantDAO.cs" />
-    <Compile Include="ClassDAO\FavJobDAO.cs" />
     <Compile Include="FJobDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,7 +256,6 @@
     <EmbeddedResource Include="EmployerForm\FTrangChuCongTy.resx">
       <DependentUpon>FTrangChuCongTy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -548,6 +549,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\add.png" />
+    <None Include="Resources\editing.png" />
+    <None Include="Resources\telephone.png" />
+    <None Include="Resources\pin.png" />
+    <None Include="Resources\globe.png" />
+    <None Include="Resources\gender.png" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\birthday.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DoAnCuoiKyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
@@ -558,15 +570,6 @@
       <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
       <LastGenOutput>DoAnCuoiKyModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\add.png" />
-    <None Include="Resources\editing.png" />
-    <None Include="Resources\telephone.png" />
-    <None Include="Resources\pin.png" />
-    <None Include="Resources\globe.png" />
-    <None Include="Resources\gender.png" />
-    <None Include="Resources\location.png" />
-    <None Include="Resources\mail.png" />
-    <None Include="Resources\birthday.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

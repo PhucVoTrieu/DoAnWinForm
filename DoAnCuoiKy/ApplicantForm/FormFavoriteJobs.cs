@@ -15,11 +15,11 @@ namespace DoAnCuoiKy
     public partial class FormFavoriteJobs : Form
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        FavJobDAO favoriteJobDAO = new FavJobDAO();
+        
         public FormFavoriteJobs()
         {
             InitializeComponent();
-            favoriteJobDAO.LoadDanhSach(this);
+            //favoriteJobDAO.LoadDanhSach(this);
             this.btnCountFavJob.Text = CountFavoriteJob().ToString();
 
         }
@@ -58,7 +58,7 @@ namespace DoAnCuoiKy
             {
                 this.pnlFavJobs.Controls.Remove(c);
                 this.btnCountFavJob.Text = CountFavoriteJob().ToString();
-                favoriteJobDAO.xoaUC(c);
+                //favoriteJobDAO.xoaUC(c);
             }
            
 

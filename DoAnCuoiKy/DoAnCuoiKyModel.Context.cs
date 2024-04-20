@@ -26,6 +26,7 @@ namespace DoAnCuoiKy
         }
     
         public virtual DbSet<Applicant> Applicants { get; set; }
+        public virtual DbSet<ApplicantsOfCompany> ApplicantsOfCompanies { get; set; }
         public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<Job> Jobs { get; set; }
     }

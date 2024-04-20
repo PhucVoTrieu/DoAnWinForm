@@ -4,12 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1eebb364d98e43aea60889c9ae8350ce" Name="Diagram1">
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.Applicant" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.Company" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.Job" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__Jobs__CompanyID__440B1D61" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FavoriteApplicants" ManuallyRouted="false" />
+      <Diagram DiagramId="99728c83950d4c018a20fd3711b162e5" Name="Diagram1">
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Applicant" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ApplicantsOfCompany" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Company" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Job" Width="1.5" PointX="6" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__Applicant__Appli__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__Applicant__Compa__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__Jobs__CompanyID__267ABA7A" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FavoriteJobs" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

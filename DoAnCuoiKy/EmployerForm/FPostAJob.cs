@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Metadata.Edm;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -16,7 +17,8 @@ namespace DoAnCuoiKy
     public partial class FPostAJob : Form
     {
        
-        Company employerInfor;
+        public Company employerInfor;
+        JobsDAO jobsDAO = new JobsDAO();
         public FPostAJob(Company e1)
         {
             InitializeComponent();
@@ -24,12 +26,13 @@ namespace DoAnCuoiKy
         }
         private void btnPost_Click(object sender, EventArgs e)
         {
-            try { 
+            try {
+               
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            db.Jobs.Add(new Job { JobTitle=this.txtJobTitle.Text, JobType=this.cbJobType.SelectedItem.ToString(),JobSalary =this.txtJobSalary.Text
-            , RecruitmentQuota = this.txtRecruitmentQuota.Text, Location = this.cbLocation.SelectedItem.ToString(), ExpInYears = this.txtJobExperiencesInYears.Text
-            , JobRequirement = this.txtJobrequirement.Text,JobDescription= this.txtJobDescription.Text,CompanyID = this.employerInfor.CompanyID,
-            JobBenefit = this.txtBenefit.Text});
+              
+
+                jobsDAO.them(this);
+              
                 db.SaveChanges();
                 MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             }
