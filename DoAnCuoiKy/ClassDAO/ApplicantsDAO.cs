@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnCuoiKy.Class;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -12,68 +13,122 @@ namespace DoAnCuoiKy
 {
     internal class ApplicantsDAO
     {
-        DBconnection db = new DBconnection();
-        SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        public void them(Candidate candidate)
-        {
-            string SQL = string.Format("INSERT INTO Profile ( ID,  Name,  gender,  nationality,  address,  DOB,  ExpYears,  email,  phone,  describe, ApplyPosition, Skill) VALUES ('{0}', '{1}' , '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')",
-                candidate.ID, candidate.Name, candidate.Gender,
-                candidate.Nationality, candidate.Address, candidate.DOB, candidate.ExpYears,
-                candidate.Email,candidate.Phone,candidate.Describe,candidate.ApplyPosition,candidate.Skill);
-            db.thucthi(SQL);
-            
 
-        }
-        public void LoadDanhSach(FApplicants f) 
+        DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+        public void LoadDanhSachYeuThich(FFavoriteApplicants f)
         {
-            List<Candidate> list = new List<Candidate>();
+
             try
             {
-                string query = "SELECT * FROM Profile";
-                SqlCommand command = new SqlCommand(query, connStr);
-                connStr.Open();
-                SqlDataReader reader = command.ExecuteReader();
 
-                while (reader.Read())
+                var favoriteApplicant = from c in db.ApplicantsOfCompanies
+                                        where c.CompanyID == Constant.CompanyID && c.IsFavorite == true
+                                        from a in db.Applicants
+                                        where a.ApplicantID == c.ApplicantID
+                                        select a;
+
+                foreach (var c in favoriteApplicant)
                 {
-                    string ID = reader["ID"].ToString();
-                    string Name = reader["Name"].ToString();
-                    string gender = reader["Gender"].ToString();
-                    string nationality = reader["Nationality"].ToString();
-                    string address = reader["Address"].ToString();
-                    string DOB = reader["DOB"].ToString();
-                    string expYears = reader["ExpYears"].ToString();
-                    string email = reader["Email"].ToString();
-                    string phone = reader["Phone"].ToString();
-                    string describe = reader["Describe"].ToString();
-                    string applyPos = reader["ApplyPosition"].ToString();
-                    string skill = reader["Skill"].ToString();
-                    Candidate candidate = new Candidate(ID, Name, gender, nationality, address, DOB, expYears, email, phone, describe, applyPos, skill);
-
-                    list.Add(candidate);
+                    UCApplicants uCApplicants = new UCApplicants(c);
+                    uCApplicants.btnFavorite.Hide();
+                        f.pnlFavApplicants.Controls.Add(uCApplicants);
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Lỗi truy vấn: " + ex.Message);
             }
-            finally
+
+        }
+        public void LoadDanhSach(FApplicants f)
+        {
+
+            try
             {
-                connStr.Close();
+
+                var candidate = from c in db.Applicants select c;
+
+                foreach (var c in candidate)
+                {
+
+                    UCApplicants uCApplicants = new UCApplicants(c);
+                    if(checkYeuThich(c))
+                    {
+                        uCApplicants.btnFavorite.Checked = true;
+                    }
+                    f.pnlAllCandidate.Controls.Add(uCApplicants);
+                }
             }
-            foreach (Candidate candidate1 in list)
+            catch (Exception ex)
             {
-                UCApplicants uCApplicants = new UCApplicants(candidate1);
-                uCApplicants.btnFavorite.Hide();
-                f.pnlAllCandidate.Controls.Add(uCApplicants);
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
             }
 
         }
+        public bool checkYeuThich(Applicant app1)
+        {
+            var query = from c in db.ApplicantsOfCompanies where c.ApplicantID == app1.ApplicantID select c;
+            return query.SingleOrDefault().IsFavorite == true;
+        }
         public void xoaUC(UCApplicants uCApplicants)
         {
-            string SQL = string.Format("DELETE FROM Profile WHERE  ApplyPosition = '{0}' ",
-             uCApplicants.lblCandidateApplyPos.Text);
-            db.thucthi(SQL);
+            //string SQL = string.Format("DELETE FROM Profile WHERE  ApplyPosition = '{0}' ",
+            // uCApplicants.lblCandidateApplyPos.Text);
+            //db.thucthi(SQL);
+        }
+        public void HuyYeuThich(Applicant applicant)
+        {
+
+
+            var entity = from a in db.ApplicantsOfCompanies where a.ApplicantID == applicant.ApplicantID select a;
+            entity.SingleOrDefault().IsFavorite = false;
+
+            db.SaveChanges();
+
+        }
+
+        public void YeuThich(Applicant applicant)
+        {
+
+
+            var entity = from a in db.ApplicantsOfCompanies where a.ApplicantID == applicant.ApplicantID select a;
+            entity.SingleOrDefault().IsFavorite = true;
+
+            db.SaveChanges();
+
+        }
+
+        public void xoa(Applicant applicant)
+        {
+            var applicant1 = db.Applicants.Find(applicant.ApplicantID);
+            if (applicant1 != null)
+            {
+                db.Applicants.Remove(applicant1);
+                db.SaveChanges();
+            }
+        }
+        public void LoadDanhSach(FFavoriteApplicants f)
+        {
+            try
+            {
+                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                var query = (from a in db.Applicants select a);
+
+                foreach (var applicant in query)
+                {
+
+                    UCApplicants uCApplicants = new UCApplicants(applicant);
+
+                    f.pnlFavApplicants.Controls.Add(uCApplicants);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+
+
         }
     }
 }

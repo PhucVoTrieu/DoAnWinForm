@@ -35,7 +35,7 @@
             this.pnlUCJob = new Guna.UI2.WinForms.Guna2Panel();
             this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnCandidateDetails = new Guna.UI2.WinForms.Guna2Button();
+            this.btnApplicantDetails = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnInviteCanidate = new Guna.UI2.WinForms.Guna2Button();
             this.txtExpYears = new Guna.UI2.WinForms.Guna2TextBox();
@@ -79,7 +79,7 @@
             this.pnlUCJob.BorderThickness = 1;
             this.pnlUCJob.Controls.Add(this.btnFavorite);
             this.pnlUCJob.Controls.Add(this.guna2Separator1);
-            this.pnlUCJob.Controls.Add(this.btnCandidateDetails);
+            this.pnlUCJob.Controls.Add(this.btnApplicantDetails);
             this.pnlUCJob.Controls.Add(this.guna2PictureBox1);
             this.pnlUCJob.Controls.Add(this.btnInviteCanidate);
             this.pnlUCJob.Controls.Add(this.txtExpYears);
@@ -119,6 +119,7 @@
             this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.btnFavorite.Size = new System.Drawing.Size(77, 44);
             this.btnFavorite.TabIndex = 36;
+            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
             // 
             // guna2Separator1
             // 
@@ -128,26 +129,25 @@
             this.guna2Separator1.Size = new System.Drawing.Size(301, 12);
             this.guna2Separator1.TabIndex = 30;
             // 
-            // btnCandidateDetails
+            // btnApplicantDetails
             // 
-            this.btnCandidateDetails.AutoRoundedCorners = true;
-            this.btnCandidateDetails.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.btnCandidateDetails.BorderRadius = 22;
-            this.btnCandidateDetails.BorderThickness = 1;
-            this.btnCandidateDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCandidateDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCandidateDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCandidateDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCandidateDetails.FillColor = System.Drawing.Color.Transparent;
-            this.btnCandidateDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnCandidateDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.btnCandidateDetails.Location = new System.Drawing.Point(179, 247);
-            this.btnCandidateDetails.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCandidateDetails.Name = "btnCandidateDetails";
-            this.btnCandidateDetails.Size = new System.Drawing.Size(153, 46);
-            this.btnCandidateDetails.TabIndex = 29;
-            this.btnCandidateDetails.Text = "Details";
-            this.btnCandidateDetails.Click += new System.EventHandler(this.btnCandidateDetails_Click);
+            this.btnApplicantDetails.AutoRoundedCorners = true;
+            this.btnApplicantDetails.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.btnApplicantDetails.BorderRadius = 22;
+            this.btnApplicantDetails.BorderThickness = 1;
+            this.btnApplicantDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApplicantDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApplicantDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApplicantDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApplicantDetails.FillColor = System.Drawing.Color.Transparent;
+            this.btnApplicantDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnApplicantDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.btnApplicantDetails.Location = new System.Drawing.Point(179, 247);
+            this.btnApplicantDetails.Margin = new System.Windows.Forms.Padding(4);
+            this.btnApplicantDetails.Name = "btnApplicantDetails";
+            this.btnApplicantDetails.Size = new System.Drawing.Size(153, 46);
+            this.btnApplicantDetails.TabIndex = 29;
+            this.btnApplicantDetails.Text = "Details";
             // 
             // guna2PictureBox1
             // 
@@ -284,7 +284,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnlUCJob;
         public Guna.UI2.WinForms.Guna2Button btnFavorite;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        public Guna.UI2.WinForms.Guna2Button btnCandidateDetails;
+        public Guna.UI2.WinForms.Guna2Button btnApplicantDetails;
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         public Guna.UI2.WinForms.Guna2Button btnInviteCanidate;
         public Guna.UI2.WinForms.Guna2TextBox txtExpYears;

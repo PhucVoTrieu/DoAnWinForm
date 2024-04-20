@@ -163,14 +163,14 @@
         #endregion
 
         public System.Windows.Forms.FlowLayoutPanel pnlFavApplicants;
-        private Guna.UI2.WinForms.Guna2Elipse RecommendJobsElipse;
-        private Guna.UI2.WinForms.Guna2Elipse ViewProfileElipse;
-        private Guna.UI2.WinForms.Guna2Elipse FindingBoxElipse;
-        private Guna.UI2.WinForms.Guna2Elipse FormFindingCandidateElipse;
-        private Guna.UI2.WinForms.Guna2Elipse JobFilterElipse;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnCountFavApplicants;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        private System.Windows.Forms.Label lblFavApplicants;
+        public Guna.UI2.WinForms.Guna2Elipse RecommendJobsElipse;
+        public Guna.UI2.WinForms.Guna2Elipse ViewProfileElipse;
+        public Guna.UI2.WinForms.Guna2Elipse FindingBoxElipse;
+        public Guna.UI2.WinForms.Guna2Elipse FormFindingCandidateElipse;
+        public Guna.UI2.WinForms.Guna2Elipse JobFilterElipse;
+        public Guna.UI2.WinForms.Guna2Button btnDelete;
+        public Guna.UI2.WinForms.Guna2Button btnCountFavApplicants;
+        public Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        public System.Windows.Forms.Label lblFavApplicants;
     }
 }

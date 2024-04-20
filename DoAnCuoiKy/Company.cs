@@ -17,8 +17,8 @@ namespace DoAnCuoiKy
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Company()
         {
+            this.ApplicantsOfCompanies = new HashSet<ApplicantsOfCompany>();
             this.Jobs = new HashSet<Job>();
-            this.Applicants = new HashSet<Applicant>();
         }
     
         public int CompanyID { get; set; }
@@ -34,8 +34,8 @@ namespace DoAnCuoiKy
         public string CompanyCountry { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Job> Jobs { get; set; }
+        public virtual ICollection<ApplicantsOfCompany> ApplicantsOfCompanies { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Applicant> Applicants { get; set; }
+        public virtual ICollection<Job> Jobs { get; set; }
     }
 }

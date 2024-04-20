@@ -73,12 +73,14 @@ namespace DoAnCuoiKy
                     DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
                     var employerAccount = from account in db.Companies where account.CompanyEmail == this.txtEmail.Text 
                                               && account.CompanyPassword == this.txtPassword.Text select account;
-                   
+                    Constant.CompanyID = employerAccount.SingleOrDefault().CompanyID;
+
                     fTrang = new FTrangChuCongTy(employerAccount.SingleOrDefault());
                        fTrang.Show();
-                            
-                                                   
                     
+                  
+
+
                 }
                 catch (Exception ex)
                 {

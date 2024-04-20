@@ -17,7 +17,6 @@ namespace DoAnCuoiKy
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Applicant()
         {
-            this.Companies = new HashSet<Company>();
             this.Jobs = new HashSet<Job>();
         }
     
@@ -33,8 +32,7 @@ namespace DoAnCuoiKy
         public Nullable<System.DateTime> ApplicantDOB { get; set; }
         public string ApplicantDescription { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Company> Companies { get; set; }
+        public virtual ApplicantsOfCompany ApplicantsOfCompany { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Job> Jobs { get; set; }
     }
