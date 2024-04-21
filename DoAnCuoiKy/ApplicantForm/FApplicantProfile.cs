@@ -22,7 +22,7 @@ namespace DoAnCuoiKy
             lblPlaceHolderAboutMe.ForeColor = System.Drawing.Color.Gray;
             lblPlaceHolderAboutMe.Location = new Point(lblAboutMe.Location.X, lblAboutMe.Location.Y+20);
             lblPlaceHolderAboutMe.AutoSize = true;
-            this.pnlAboutMe.Controls.Add(lblPlaceHolderAboutMe);
+            this.pnlListOfAboutMe.Controls.Add(lblPlaceHolderAboutMe);
         }
         public FProfileApplicant(Applicant applicant)
         {
@@ -33,7 +33,7 @@ namespace DoAnCuoiKy
   
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            foreach (Control c in pnlWorkExp.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
+            foreach (Control c in pnlAboutMe.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
             {
                 if(c.GetType()==typeof(Guna.UI2.WinForms.Guna2TextBox))
                 {
@@ -46,7 +46,7 @@ namespace DoAnCuoiKy
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            foreach (Control c in pnlWorkExp.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
+            foreach (Control c in pnlAboutMe.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
             {
                 if (c.GetType() == typeof(Guna.UI2.WinForms.Guna2TextBox))
                 {
@@ -57,29 +57,7 @@ namespace DoAnCuoiKy
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            UCApplicantInformation uc1 = new UCApplicantInformation();
-            foreach (Control panel1 in this.pnlMain.Controls)
-            {
-                if (panel1 is Panel && panel1 != this.pnlWorkExp){
-                    Panel panel = panel1 as Panel;
-
-                    if (panel.Location.Y > pnlWorkExp.Location.Y)
-                    {                
-                        panel.Location = new Point(panel.Location.X, panel.Location.Y + uc1.Height);
-                        this.pnlMain.Size = new Size(this.pnlMain.Size.Width,this.pnlMain.Size.Height + uc1.Height);
-                    }
-                }
-            }
-            if (pnlAboutMe.Controls.Count == 0)
-            {
-                pnlAboutMe.Controls.Add(uc1);
-            }
-            else
-            {
-                this.pnlWorkExp.Size = new Size(this.pnlWorkExp.Size.Width, this.pnlWorkExp.Size.Height + uc1.Height);
-                this.pnlAboutMe.Size = new Size(this.pnlAboutMe.Size.Width, this.pnlAboutMe.Size.Height + uc1.Height);
-                pnlAboutMe.Controls.Add(uc1);
-            }
+            
             
         }
 
@@ -91,30 +69,31 @@ namespace DoAnCuoiKy
 
         private void btnAddAboutMe_Click(object sender, EventArgs e)
         {
-            if(this.pnlAboutMe.Controls.Count > 0)
+            UCApplicantInformation uc1 = new UCApplicantInformation();
+            foreach (Control panel1 in this.pnlMain.Controls)
             {
-                this.pnlAboutMe.Controls.Add(new UCApplicantInformation());
-                foreach (Control C in this.pnlAboutMe.Controls)
+                if (panel1 is Panel && panel1 != this.pnlAboutMe)
                 {
-                    if (C is Label)
+                    Panel panel = panel1 as Panel;
+
+                    if (panel.Location.Y > pnlAboutMe.Location.Y)
                     {
-                       // this.pnlAboutMe.Controls.Remove(C);
-                       C.Visible = false;
-                    }
-                }
-                if (this.pnlAboutMe.Controls.Count > 2)
-                {
-                    this.pnlAboutMe.Controls.Remove(new UCApplicantInformation());
-                    foreach (Control C in this.pnlAboutMe.Controls)
-                    {
-                        if (C is Label)
-                        {
-                            // this.pnlAboutMe.Controls.Remove(C);
-                            C.Visible = true;
-                        }
+                        panel.Location = new Point(panel.Location.X, panel.Location.Y + uc1.Height);
+                        this.pnlMain.Size = new Size(this.pnlMain.Size.Width, this.pnlMain.Size.Height + uc1.Height);
                     }
                 }
             }
+            if (pnlListOfAboutMe.Controls.Count == 0)
+            {
+                pnlListOfAboutMe.Controls.Add(uc1);
+            }
+            else
+            {
+                this.pnlAboutMe.Size = new Size(this.pnlAboutMe.Size.Width, this.pnlAboutMe.Size.Height + uc1.Height);
+                this.pnlListOfAboutMe.Size = new Size(this.pnlListOfAboutMe.Size.Width, this.pnlListOfAboutMe.Size.Height + uc1.Height);
+                pnlListOfAboutMe.Controls.Add(uc1);
+            }
+        
             
         }
     }

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pnlWorkExp = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlAboutMe = new Guna.UI2.WinForms.Guna2Panel();
             this.btnAddAboutMe = new Guna.UI2.WinForms.Guna2Button();
             this.lblAboutMe = new System.Windows.Forms.Label();
-            this.pnlAboutMe = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlListOfAboutMe = new System.Windows.Forms.FlowLayoutPanel();
             this.BasicInforElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlBasicInfo = new Guna.UI2.WinForms.Guna2Panel();
             this.btnEditBasicInfo = new Guna.UI2.WinForms.Guna2Button();
@@ -58,13 +58,20 @@
             this.lblYourName = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlWorkExp = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlEducation = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlListOfEducation = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pnlWorkExp.SuspendLayout();
+            this.pnlSkill = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlListOfWorkExp = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlAboutMe.SuspendLayout();
             this.pnlBasicInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
@@ -79,19 +86,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.pnlMain.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.pnlWorkExp.SuspendLayout();
+            this.pnlEducation.SuspendLayout();
+            this.pnlSkill.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlWorkExp
+            // pnlAboutMe
             // 
-            this.pnlWorkExp.BackColor = System.Drawing.Color.White;
-            this.pnlWorkExp.Controls.Add(this.btnAddAboutMe);
-            this.pnlWorkExp.Controls.Add(this.lblAboutMe);
-            this.pnlWorkExp.Controls.Add(this.pnlAboutMe);
-            this.pnlWorkExp.Location = new System.Drawing.Point(18, 298);
-            this.pnlWorkExp.Name = "pnlWorkExp";
-            this.pnlWorkExp.Size = new System.Drawing.Size(1095, 193);
-            this.pnlWorkExp.TabIndex = 93;
+            this.pnlAboutMe.BackColor = System.Drawing.Color.White;
+            this.pnlAboutMe.Controls.Add(this.btnAddAboutMe);
+            this.pnlAboutMe.Controls.Add(this.lblAboutMe);
+            this.pnlAboutMe.Controls.Add(this.pnlListOfAboutMe);
+            this.pnlAboutMe.Location = new System.Drawing.Point(18, 298);
+            this.pnlAboutMe.Name = "pnlAboutMe";
+            this.pnlAboutMe.Size = new System.Drawing.Size(1095, 193);
+            this.pnlAboutMe.TabIndex = 93;
             // 
             // btnAddAboutMe
             // 
@@ -122,16 +131,16 @@
             this.lblAboutMe.TabIndex = 99;
             this.lblAboutMe.Text = "About me";
             // 
-            // pnlAboutMe
+            // pnlListOfAboutMe
             // 
-            this.pnlAboutMe.BackColor = System.Drawing.Color.White;
-            this.pnlAboutMe.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAboutMe.Location = new System.Drawing.Point(0, 58);
-            this.pnlAboutMe.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlAboutMe.Name = "pnlAboutMe";
-            this.pnlAboutMe.Size = new System.Drawing.Size(1095, 135);
-            this.pnlAboutMe.TabIndex = 97;
-            this.pnlAboutMe.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnlAboutMe_ControlAdded);
+            this.pnlListOfAboutMe.BackColor = System.Drawing.Color.White;
+            this.pnlListOfAboutMe.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlListOfAboutMe.Location = new System.Drawing.Point(0, 58);
+            this.pnlListOfAboutMe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlListOfAboutMe.Name = "pnlListOfAboutMe";
+            this.pnlListOfAboutMe.Size = new System.Drawing.Size(1095, 135);
+            this.pnlListOfAboutMe.TabIndex = 97;
+            this.pnlListOfAboutMe.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.pnlAboutMe_ControlAdded);
             // 
             // BasicInforElipse
             // 
@@ -405,33 +414,73 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1083, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1002, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 95;
             // 
             // pnlMain
             // 
-            this.pnlMain.AutoScroll = true;
-            this.pnlMain.Controls.Add(this.guna2Panel1);
-            this.pnlMain.Controls.Add(this.pnlBasicInfo);
+            this.pnlMain.Controls.Add(this.pnlSkill);
             this.pnlMain.Controls.Add(this.pnlWorkExp);
+            this.pnlMain.Controls.Add(this.pnlEducation);
+            this.pnlMain.Controls.Add(this.pnlBasicInfo);
+            this.pnlMain.Controls.Add(this.pnlAboutMe);
             this.pnlMain.Location = new System.Drawing.Point(12, 34);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1135, 873);
+            this.pnlMain.Size = new System.Drawing.Size(1135, 1224);
             this.pnlMain.TabIndex = 97;
             // 
-            // guna2Panel1
+            // pnlWorkExp
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel2);
-            this.guna2Panel1.Location = new System.Drawing.Point(18, 514);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1095, 193);
-            this.guna2Panel1.TabIndex = 97;
+            this.pnlWorkExp.BackColor = System.Drawing.Color.White;
+            this.pnlWorkExp.Controls.Add(this.pnlListOfWorkExp);
+            this.pnlWorkExp.Controls.Add(this.guna2Button1);
+            this.pnlWorkExp.Controls.Add(this.label1);
+            this.pnlWorkExp.Location = new System.Drawing.Point(18, 730);
+            this.pnlWorkExp.Name = "pnlWorkExp";
+            this.pnlWorkExp.Size = new System.Drawing.Size(1095, 193);
+            this.pnlWorkExp.TabIndex = 98;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::DoAnCuoiKy.Properties.Resources.add;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2Button1.Location = new System.Drawing.Point(1012, 13);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(44, 40);
+            this.guna2Button1.TabIndex = 131;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 40);
+            this.label1.TabIndex = 99;
+            this.label1.Text = "Work Experience";
+            // 
+            // pnlEducation
+            // 
+            this.pnlEducation.BackColor = System.Drawing.Color.White;
+            this.pnlEducation.Controls.Add(this.guna2Button2);
+            this.pnlEducation.Controls.Add(this.label2);
+            this.pnlEducation.Controls.Add(this.pnlListOfEducation);
+            this.pnlEducation.Location = new System.Drawing.Point(18, 514);
+            this.pnlEducation.Name = "pnlEducation";
+            this.pnlEducation.Size = new System.Drawing.Size(1095, 193);
+            this.pnlEducation.TabIndex = 97;
             // 
             // guna2Button2
             // 
@@ -457,19 +506,19 @@
             this.label2.Location = new System.Drawing.Point(13, 13);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 40);
+            this.label2.Size = new System.Drawing.Size(161, 40);
             this.label2.TabIndex = 99;
-            this.label2.Text = "About me";
+            this.label2.Text = "Education ";
             // 
-            // flowLayoutPanel2
+            // pnlListOfEducation
             // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 58);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1095, 135);
-            this.flowLayoutPanel2.TabIndex = 97;
+            this.pnlListOfEducation.BackColor = System.Drawing.Color.White;
+            this.pnlListOfEducation.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlListOfEducation.Location = new System.Drawing.Point(0, 58);
+            this.pnlListOfEducation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlListOfEducation.Name = "pnlListOfEducation";
+            this.pnlListOfEducation.Size = new System.Drawing.Size(1095, 135);
+            this.pnlListOfEducation.TabIndex = 97;
             // 
             // guna2DragControl1
             // 
@@ -482,21 +531,69 @@
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this.pboxAvatar;
             // 
+            // pnlSkill
+            // 
+            this.pnlSkill.BackColor = System.Drawing.Color.White;
+            this.pnlSkill.Controls.Add(this.guna2Button3);
+            this.pnlSkill.Controls.Add(this.label3);
+            this.pnlSkill.Location = new System.Drawing.Point(18, 948);
+            this.pnlSkill.Name = "pnlSkill";
+            this.pnlSkill.Size = new System.Drawing.Size(1095, 193);
+            this.pnlSkill.TabIndex = 99;
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Image = global::DoAnCuoiKy.Properties.Resources.add;
+            this.guna2Button3.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2Button3.Location = new System.Drawing.Point(1012, 13);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(44, 40);
+            this.guna2Button3.TabIndex = 131;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 13);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 40);
+            this.label3.TabIndex = 99;
+            this.label3.Text = "Skills";
+            // 
+            // pnlListOfWorkExp
+            // 
+            this.pnlListOfWorkExp.BackColor = System.Drawing.Color.White;
+            this.pnlListOfWorkExp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlListOfWorkExp.Location = new System.Drawing.Point(0, 58);
+            this.pnlListOfWorkExp.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlListOfWorkExp.Name = "pnlListOfWorkExp";
+            this.pnlListOfWorkExp.Size = new System.Drawing.Size(1095, 135);
+            this.pnlListOfWorkExp.TabIndex = 132;
+            // 
             // FProfileApplicant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.ClientSize = new System.Drawing.Size(1192, 500);
+            this.ClientSize = new System.Drawing.Size(1167, 619);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FProfileApplicant";
             this.Text = "FProfileApplicant";
-            this.pnlWorkExp.ResumeLayout(false);
-            this.pnlWorkExp.PerformLayout();
+            this.pnlAboutMe.ResumeLayout(false);
+            this.pnlAboutMe.PerformLayout();
             this.pnlBasicInfo.ResumeLayout(false);
             this.pnlBasicInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAvatar)).EndInit();
@@ -512,17 +609,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.pnlMain.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.pnlWorkExp.ResumeLayout(false);
+            this.pnlWorkExp.PerformLayout();
+            this.pnlEducation.ResumeLayout(false);
+            this.pnlEducation.PerformLayout();
+            this.pnlSkill.ResumeLayout(false);
+            this.pnlSkill.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        public Guna.UI2.WinForms.Guna2Panel pnlWorkExp;
+        public Guna.UI2.WinForms.Guna2Panel pnlAboutMe;
         public Guna.UI2.WinForms.Guna2Elipse BasicInforElipse;
         public Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private System.Windows.Forms.FlowLayoutPanel pnlAboutMe;
+        private System.Windows.Forms.FlowLayoutPanel pnlListOfAboutMe;
         public Guna.UI2.WinForms.Guna2Panel pnlBasicInfo;
         private System.Windows.Forms.Label lblYourName;
         private Guna.UI2.WinForms.Guna2Panel pnlMain;
@@ -550,9 +651,16 @@
         private Guna.UI2.WinForms.Guna2Button btnEditBasicInfo;
         private System.Windows.Forms.Label lblAboutMe;
         private Guna.UI2.WinForms.Guna2Button btnAddAboutMe;
-        public Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        public Guna.UI2.WinForms.Guna2Panel pnlEducation;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel pnlListOfEducation;
+        public Guna.UI2.WinForms.Guna2Panel pnlWorkExp;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2Panel pnlSkill;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel pnlListOfWorkExp;
     }
 }
