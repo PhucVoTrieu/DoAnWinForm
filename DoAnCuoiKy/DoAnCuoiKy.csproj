@@ -81,6 +81,12 @@
     <Compile Include="ApplicantForm\FAddEducation.Designer.cs">
       <DependentUpon>FAddEducation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicantForm\FPersonalDetais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicantForm\FPersonalDetais.Designer.cs">
+      <DependentUpon>FPersonalDetais.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicantForm\FPersonalSkills.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FAddEducation.resx">
       <DependentUpon>FAddEducation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicantForm\FPersonalDetais.resx">
+      <DependentUpon>FPersonalDetais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FPersonalSkills.resx">
       <DependentUpon>FPersonalSkills.cs</DependentUpon>
