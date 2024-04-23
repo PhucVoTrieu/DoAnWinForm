@@ -64,7 +64,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1025, 74);
+            this.panel2.Size = new System.Drawing.Size(1021, 74);
             this.panel2.TabIndex = 4;
             // 
             // label1
@@ -74,7 +74,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 39);
+            this.label1.Size = new System.Drawing.Size(366, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "Work Experience";
             // 
@@ -102,7 +102,7 @@
             this.panel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1025, 721);
+            this.panel3.Size = new System.Drawing.Size(1021, 721);
             this.panel3.TabIndex = 6;
             // 
             // panel1
@@ -112,7 +112,7 @@
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1025, 1);
+            this.panel1.Size = new System.Drawing.Size(1021, 1);
             this.panel1.TabIndex = 25;
             // 
             // txtProjectAddDetails
@@ -146,7 +146,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(15, 558);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(469, 16);
+            this.label6.Size = new System.Drawing.Size(574, 20);
             this.label6.TabIndex = 23;
             this.label6.Text = "Tips: Include project details, your role, technologies and team size.";
             // 
@@ -157,7 +157,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(15, 522);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.Size = new System.Drawing.Size(79, 25);
             this.label7.TabIndex = 22;
             this.label7.Text = "Project";
             // 
@@ -168,7 +168,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(15, 373);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(919, 16);
+            this.label5.Size = new System.Drawing.Size(1134, 20);
             this.label5.TabIndex = 21;
             this.label5.Text = "Tips: Brief the company\'s industry, then detail your responsibilities and achieve" +
     "ments. For projects, write on the \"Project\" field below.";
@@ -180,7 +180,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(15, 337);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.Size = new System.Drawing.Size(120, 25);
             this.label4.TabIndex = 20;
             this.label4.Text = "Description";
             // 
@@ -191,7 +191,7 @@
             this.panel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.Location = new System.Drawing.Point(0, 720);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1025, 1);
+            this.panel4.Size = new System.Drawing.Size(1021, 1);
             this.panel4.TabIndex = 19;
             // 
             // cbWorkYearTo
@@ -403,7 +403,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(549, 237);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
+            this.label3.Size = new System.Drawing.Size(37, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "To*";
             // 
@@ -414,7 +414,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(16, 237);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "From*";
             // 
@@ -430,7 +430,7 @@
             this.CheckWork.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CheckWork.Location = new System.Drawing.Point(19, 191);
             this.CheckWork.Name = "CheckWork";
-            this.CheckWork.Size = new System.Drawing.Size(249, 22);
+            this.CheckWork.Size = new System.Drawing.Size(316, 27);
             this.CheckWork.TabIndex = 6;
             this.CheckWork.Text = "I am currently working here";
             this.CheckWork.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -493,7 +493,7 @@
             this.panel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel5.Location = new System.Drawing.Point(0, 795);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1025, 68);
+            this.panel5.Size = new System.Drawing.Size(1021, 68);
             this.panel5.TabIndex = 19;
             // 
             // btnSave
