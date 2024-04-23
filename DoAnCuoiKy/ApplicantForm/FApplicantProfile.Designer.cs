@@ -110,7 +110,7 @@
             this.lblAboutMe.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAboutMe.Location = new System.Drawing.Point(17, 16);
             this.lblAboutMe.Name = "lblAboutMe";
-            this.lblAboutMe.Size = new System.Drawing.Size(153, 40);
+            this.lblAboutMe.Size = new System.Drawing.Size(194, 50);
             this.lblAboutMe.TabIndex = 99;
             this.lblAboutMe.Text = "About me";
             // 
@@ -167,7 +167,7 @@
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(893, 247);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 21);
+            this.label8.Size = new System.Drawing.Size(167, 28);
             this.label8.TabIndex = 122;
             this.label8.Text = "Your personal link";
             // 
@@ -177,7 +177,7 @@
             this.lblAddress.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(499, 247);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(154, 21);
+            this.lblAddress.Size = new System.Drawing.Size(190, 28);
             this.lblAddress.TabIndex = 120;
             this.lblAddress.Text = "Your current address";
             // 
@@ -187,7 +187,7 @@
             this.lblGender.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.Location = new System.Drawing.Point(893, 199);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(95, 21);
+            this.lblGender.Size = new System.Drawing.Size(118, 28);
             this.lblGender.TabIndex = 118;
             this.lblGender.Text = "Your gender";
             // 
@@ -197,7 +197,7 @@
             this.lblPhoneNum.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNum.Location = new System.Drawing.Point(893, 155);
             this.lblPhoneNum.Name = "lblPhoneNum";
-            this.lblPhoneNum.Size = new System.Drawing.Size(149, 21);
+            this.lblPhoneNum.Size = new System.Drawing.Size(185, 28);
             this.lblPhoneNum.TabIndex = 116;
             this.lblPhoneNum.Text = "Your phone number";
             // 
@@ -207,7 +207,7 @@
             this.lblDOB.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDOB.Location = new System.Drawing.Point(499, 199);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(131, 21);
+            this.lblDOB.Size = new System.Drawing.Size(166, 28);
             this.lblDOB.TabIndex = 114;
             this.lblDOB.Text = "Your date of birth";
             // 
@@ -218,7 +218,7 @@
             this.lblYourTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblYourTitle.Location = new System.Drawing.Point(463, 87);
             this.lblYourTitle.Name = "lblYourTitle";
-            this.lblYourTitle.Size = new System.Drawing.Size(107, 30);
+            this.lblYourTitle.Size = new System.Drawing.Size(140, 37);
             this.lblYourTitle.TabIndex = 112;
             this.lblYourTitle.Text = "Your Title";
             // 
@@ -228,7 +228,7 @@
             this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(499, 155);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(84, 21);
+            this.lblEmail.Size = new System.Drawing.Size(103, 28);
             this.lblEmail.TabIndex = 111;
             this.lblEmail.Text = "Your Email";
             // 
@@ -238,7 +238,7 @@
             this.lblYourName.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYourName.Location = new System.Drawing.Point(459, 18);
             this.lblYourName.Name = "lblYourName";
-            this.lblYourName.Size = new System.Drawing.Size(202, 47);
+            this.lblYourName.Size = new System.Drawing.Size(255, 60);
             this.lblYourName.TabIndex = 98;
             this.lblYourName.Text = "Your Name";
             // 
@@ -247,7 +247,7 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1285, 620);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1243, 620);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
@@ -284,7 +284,7 @@
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(17, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 40);
+            this.label3.Size = new System.Drawing.Size(113, 50);
             this.label3.TabIndex = 99;
             this.label3.Text = "Skills";
             // 
@@ -317,7 +317,7 @@
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 40);
+            this.label1.Size = new System.Drawing.Size(316, 50);
             this.label1.TabIndex = 99;
             this.label1.Text = "Work Experience";
             // 
@@ -340,7 +340,7 @@
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(17, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 40);
+            this.label2.Size = new System.Drawing.Size(205, 50);
             this.label2.TabIndex = 99;
             this.label2.Text = "Education ";
             // 

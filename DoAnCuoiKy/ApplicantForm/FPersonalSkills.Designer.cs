@@ -32,6 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtShortDes = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtProjectURL = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,12 +48,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CheckWork = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtShortDes = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1058, 74);
+            this.panel2.Size = new System.Drawing.Size(1054, 74);
             this.panel2.TabIndex = 4;
             // 
             // label1
@@ -74,7 +74,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 39);
+            this.label1.Size = new System.Drawing.Size(355, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "Personal Project";
             // 
@@ -85,7 +85,7 @@
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.panel1.Location = new System.Drawing.Point(0, 74);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1058, 1);
+            this.panel1.Size = new System.Drawing.Size(1054, 1);
             this.panel1.TabIndex = 5;
             // 
             // panel3
@@ -111,8 +111,53 @@
             this.panel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Location = new System.Drawing.Point(0, 75);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1058, 705);
+            this.panel3.Size = new System.Drawing.Size(1054, 705);
             this.panel3.TabIndex = 7;
+            // 
+            // txtShortDes
+            // 
+            this.txtShortDes.BorderRadius = 5;
+            this.txtShortDes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtShortDes.DefaultText = "";
+            this.txtShortDes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtShortDes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtShortDes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtShortDes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtShortDes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.txtShortDes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtShortDes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtShortDes.ForeColor = System.Drawing.Color.Black;
+            this.txtShortDes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtShortDes.Location = new System.Drawing.Point(19, 372);
+            this.txtShortDes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtShortDes.Multiline = true;
+            this.txtShortDes.Name = "txtShortDes";
+            this.txtShortDes.PasswordChar = '\0';
+            this.txtShortDes.PlaceholderText = "Additional Details";
+            this.txtShortDes.SelectedText = "";
+            this.txtShortDes.Size = new System.Drawing.Size(1011, 140);
+            this.txtShortDes.TabIndex = 28;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(15, 337);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(178, 25);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Short Description";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel6.Location = new System.Drawing.Point(0, 703);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1054, 1);
+            this.panel6.TabIndex = 26;
             // 
             // panel4
             // 
@@ -121,7 +166,7 @@
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1058, 1);
+            this.panel4.Size = new System.Drawing.Size(1054, 1);
             this.panel4.TabIndex = 25;
             // 
             // txtProjectURL
@@ -155,7 +200,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(15, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(451, 16);
+            this.label5.Size = new System.Drawing.Size(556, 20);
             this.label5.TabIndex = 21;
             this.label5.Text = "Tips: Share the project that relates to your skills and capabilities";
             // 
@@ -166,7 +211,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(15, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.Size = new System.Drawing.Size(120, 25);
             this.label4.TabIndex = 20;
             this.label4.Text = "Description";
             // 
@@ -177,7 +222,7 @@
             this.panel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel5.Location = new System.Drawing.Point(0, 704);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1058, 1);
+            this.panel5.Size = new System.Drawing.Size(1054, 1);
             this.panel5.TabIndex = 19;
             // 
             // cbWorkYearTo
@@ -389,7 +434,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(549, 244);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
+            this.label3.Size = new System.Drawing.Size(37, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "To*";
             // 
@@ -400,7 +445,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(16, 244);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "From*";
             // 
@@ -416,23 +461,13 @@
             this.CheckWork.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CheckWork.Location = new System.Drawing.Point(19, 198);
             this.CheckWork.Name = "CheckWork";
-            this.CheckWork.Size = new System.Drawing.Size(252, 22);
+            this.CheckWork.Size = new System.Drawing.Size(318, 27);
             this.CheckWork.TabIndex = 6;
             this.CheckWork.Text = "I am working on this project";
             this.CheckWork.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.CheckWork.UncheckedState.BorderRadius = 0;
             this.CheckWork.UncheckedState.BorderThickness = 0;
             this.CheckWork.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel6.Location = new System.Drawing.Point(0, 703);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1058, 1);
-            this.panel6.TabIndex = 26;
             // 
             // panel7
             // 
@@ -443,7 +478,7 @@
             this.panel7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel7.Location = new System.Drawing.Point(0, 780);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1058, 68);
+            this.panel7.Size = new System.Drawing.Size(1054, 68);
             this.panel7.TabIndex = 19;
             // 
             // btnSave
@@ -482,41 +517,6 @@
             this.btnCancel.Size = new System.Drawing.Size(107, 46);
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Cancel";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(15, 337);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(149, 20);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Short Description";
-            // 
-            // txtShortDes
-            // 
-            this.txtShortDes.BorderRadius = 5;
-            this.txtShortDes.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtShortDes.DefaultText = "";
-            this.txtShortDes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtShortDes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtShortDes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtShortDes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtShortDes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.txtShortDes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtShortDes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtShortDes.ForeColor = System.Drawing.Color.Black;
-            this.txtShortDes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtShortDes.Location = new System.Drawing.Point(19, 372);
-            this.txtShortDes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtShortDes.Multiline = true;
-            this.txtShortDes.Name = "txtShortDes";
-            this.txtShortDes.PasswordChar = '\0';
-            this.txtShortDes.PlaceholderText = "Additional Details";
-            this.txtShortDes.SelectedText = "";
-            this.txtShortDes.Size = new System.Drawing.Size(1011, 140);
-            this.txtShortDes.TabIndex = 28;
             // 
             // FPersonalSkills
             // 
