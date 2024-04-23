@@ -18,6 +18,7 @@ namespace DoAnCuoiKy
         public Skill()
         {
             this.ApplicantSkills = new HashSet<ApplicantSkill>();
+            this.JobSkills = new HashSet<JobSkill>();
         }
     
         public int SkillID { get; set; }
@@ -25,5 +26,7 @@ namespace DoAnCuoiKy
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ApplicantSkill> ApplicantSkills { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<JobSkill> JobSkills { get; set; }
     }
 }

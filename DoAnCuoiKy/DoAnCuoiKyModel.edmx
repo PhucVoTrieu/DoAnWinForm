@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DoAnCuoiKyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DoAnCuoiKyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Aboutme">
           <Key>
             <PropertyRef Name="AboutmeID" />
@@ -18,6 +18,7 @@
             <PropertyRef Name="ApplicantID" />
           </Key>
           <Property Name="ApplicantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicantTitle" Type="varchar" MaxLength="200" />
           <Property Name="ApplicantEmail" Type="varchar" MaxLength="200" />
           <Property Name="ApplicantPassword" Type="varchar" MaxLength="200" />
           <Property Name="ApplicantName" Type="varchar" MaxLength="200" />
@@ -27,7 +28,7 @@
           <Property Name="ApplicantGender" Type="varchar" MaxLength="200" />
           <Property Name="ApplicantPhonenumber" Type="varchar" MaxLength="200" />
           <Property Name="ApplicantDOB" Type="date" />
-          <Property Name="ApplicantDescription" Type="varchar(max)" />
+          <Property Name="ApplicantPersonalLink" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="ApplicantSkill">
           <Key>
@@ -40,11 +41,13 @@
         </EntityType>
         <EntityType Name="ApplicantsOfCompany">
           <Key>
+            <PropertyRef Name="CompanyID" />
             <PropertyRef Name="ApplicantID" />
           </Key>
-          <Property Name="CompanyID" Type="int" />
+          <Property Name="CompanyID" Type="int" Nullable="false" />
           <Property Name="ApplicantID" Type="int" Nullable="false" />
           <Property Name="IsFavorite" Type="bit" />
+          <Property Name="IsAccepted" Type="bit" />
         </EntityType>
         <EntityType Name="Company">
           <Key>
@@ -74,14 +77,6 @@
           <Property Name="AddDetails" Type="nvarchar" MaxLength="2000" />
           <Property Name="ApplicantID" Type="int" />
         </EntityType>
-        <EntityType Name="FavoriteJobs">
-          <Key>
-            <PropertyRef Name="JobID" />
-            <PropertyRef Name="ApplicantID" />
-          </Key>
-          <Property Name="JobID" Type="int" Nullable="false" />
-          <Property Name="ApplicantID" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="Jobs">
           <Key>
             <PropertyRef Name="JobID" />
@@ -97,6 +92,25 @@
           <Property Name="JobDescription" Type="varchar(max)" />
           <Property Name="CompanyID" Type="int" />
           <Property Name="JobBenefit" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="JobSkill">
+          <Key>
+            <PropertyRef Name="SkillID" />
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobSkillID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SkillID" Type="int" Nullable="false" />
+          <Property Name="JobID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JobStatus">
+          <Key>
+            <PropertyRef Name="JobID" />
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="JobID" Type="int" Nullable="false" />
+          <Property Name="ApplicantID" Type="int" Nullable="false" />
+          <Property Name="IsFavorite" Type="bit" />
+          <Property Name="IsApplied" Type="bit" />
         </EntityType>
         <EntityType Name="PersonalProject">
           <Key>
@@ -130,7 +144,7 @@
           <Property Name="ProjectDetails" Type="nvarchar" MaxLength="2000" />
           <Property Name="ApplicantID" Type="int" />
         </EntityType>
-        <Association Name="FK__Aboutme__Applica__4AB81AF0">
+        <Association Name="FK__Aboutme__Applica__75A278F5">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="Aboutme" Type="Self.Aboutme" Multiplicity="*" />
           <ReferentialConstraint>
@@ -142,9 +156,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Appli__3F466844">
+        <Association Name="FK__Applicant__Appli__70DDC3D8">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
-          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="0..1" />
+          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Applicant">
               <PropertyRef Name="ApplicantID" />
@@ -154,7 +168,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Appli__5070F446">
+        <Association Name="FK__Applicant__Appli__797309D9">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
           <End Role="ApplicantSkill" Type="Self.ApplicantSkill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -166,8 +180,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Compa__3E52440B">
-          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+        <Association Name="FK__Applicant__Compa__6FE99F9F">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
           <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Company">
@@ -178,7 +192,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Skill__4F7CD00D">
+        <Association Name="FK__Applicant__Skill__787EE5A0">
           <End Role="Skills" Type="Self.Skills" Multiplicity="1" />
           <End Role="ApplicantSkill" Type="Self.ApplicantSkill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -190,7 +204,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Education__Appli__534D60F1">
+        <Association Name="FK__Education__Appli__7C4F7684">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="Education" Type="Self.Education" Multiplicity="*" />
           <ReferentialConstraint>
@@ -202,31 +216,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FavoriteJ__Appli__2C3393D0">
-          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
-          <End Role="FavoriteJobs" Type="Self.FavoriteJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Applicant">
-              <PropertyRef Name="ApplicantID" />
-            </Principal>
-            <Dependent Role="FavoriteJobs">
-              <PropertyRef Name="ApplicantID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__FavoriteJ__JobID__2B3F6F97">
-          <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
-          <End Role="FavoriteJobs" Type="Self.FavoriteJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Jobs">
-              <PropertyRef Name="JobID" />
-            </Principal>
-            <Dependent Role="FavoriteJobs">
-              <PropertyRef Name="JobID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Jobs__CompanyID__267ABA7A">
+        <Association Name="FK__Jobs__CompanyID__60A75C0F">
           <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
           <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -238,7 +228,55 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PersonalP__Appli__59063A47">
+        <Association Name="FK__JobSkill__JobID__656C112C">
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
+          <End Role="JobSkill" Type="Self.JobSkill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="JobSkill">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JobSkill__SkillI__6477ECF3">
+          <End Role="Skills" Type="Self.Skills" Multiplicity="1" />
+          <End Role="JobSkill" Type="Self.JobSkill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Skills">
+              <PropertyRef Name="SkillID" />
+            </Principal>
+            <Dependent Role="JobSkill">
+              <PropertyRef Name="SkillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JobStatus__Appli__6B24EA82">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
+          <End Role="JobStatus" Type="Self.JobStatus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="JobStatus">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JobStatus__JobID__6A30C649">
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
+          <End Role="JobStatus" Type="Self.JobStatus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="JobStatus">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonalP__Appli__02084FDA">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="PersonalProject" Type="Self.PersonalProject" Multiplicity="*" />
           <ReferentialConstraint>
@@ -250,7 +288,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__WorkExper__Appli__5629CD9C">
+        <Association Name="FK__WorkExper__Appli__7F2BE32F">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="WorkExperience" Type="Self.WorkExperience" Multiplicity="*" />
           <ReferentialConstraint>
@@ -269,65 +307,85 @@
           <EntitySet Name="ApplicantsOfCompany" EntityType="Self.ApplicantsOfCompany" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Education" EntityType="Self.Education" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="FavoriteJobs" EntityType="Self.FavoriteJobs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JobSkill" EntityType="Self.JobSkill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JobStatus" EntityType="Self.JobStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PersonalProject" EntityType="Self.PersonalProject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Skills" EntityType="Self.Skills" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WorkExperience" EntityType="Self.WorkExperience" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Aboutme__Applica__4AB81AF0" Association="Self.FK__Aboutme__Applica__4AB81AF0">
+          <AssociationSet Name="FK__Aboutme__Applica__75A278F5" Association="Self.FK__Aboutme__Applica__75A278F5">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="Aboutme" EntitySet="Aboutme" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Appli__3F466844" Association="Self.FK__Applicant__Appli__3F466844">
+          <AssociationSet Name="FK__Applicant__Appli__70DDC3D8" Association="Self.FK__Applicant__Appli__70DDC3D8">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompany" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Appli__5070F446" Association="Self.FK__Applicant__Appli__5070F446">
+          <AssociationSet Name="FK__Applicant__Appli__797309D9" Association="Self.FK__Applicant__Appli__797309D9">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="ApplicantSkill" EntitySet="ApplicantSkill" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Compa__3E52440B" Association="Self.FK__Applicant__Compa__3E52440B">
+          <AssociationSet Name="FK__Applicant__Compa__6FE99F9F" Association="Self.FK__Applicant__Compa__6FE99F9F">
             <End Role="Company" EntitySet="Company" />
             <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompany" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Skill__4F7CD00D" Association="Self.FK__Applicant__Skill__4F7CD00D">
+          <AssociationSet Name="FK__Applicant__Skill__787EE5A0" Association="Self.FK__Applicant__Skill__787EE5A0">
             <End Role="Skills" EntitySet="Skills" />
             <End Role="ApplicantSkill" EntitySet="ApplicantSkill" />
           </AssociationSet>
-          <AssociationSet Name="FK__Education__Appli__534D60F1" Association="Self.FK__Education__Appli__534D60F1">
+          <AssociationSet Name="FK__Education__Appli__7C4F7684" Association="Self.FK__Education__Appli__7C4F7684">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="Education" EntitySet="Education" />
           </AssociationSet>
-          <AssociationSet Name="FK__FavoriteJ__Appli__2C3393D0" Association="Self.FK__FavoriteJ__Appli__2C3393D0">
-            <End Role="Applicant" EntitySet="Applicant" />
-            <End Role="FavoriteJobs" EntitySet="FavoriteJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__FavoriteJ__JobID__2B3F6F97" Association="Self.FK__FavoriteJ__JobID__2B3F6F97">
-            <End Role="Jobs" EntitySet="Jobs" />
-            <End Role="FavoriteJobs" EntitySet="FavoriteJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Jobs__CompanyID__267ABA7A" Association="Self.FK__Jobs__CompanyID__267ABA7A">
+          <AssociationSet Name="FK__Jobs__CompanyID__60A75C0F" Association="Self.FK__Jobs__CompanyID__60A75C0F">
             <End Role="Company" EntitySet="Company" />
             <End Role="Jobs" EntitySet="Jobs" />
           </AssociationSet>
-          <AssociationSet Name="FK__PersonalP__Appli__59063A47" Association="Self.FK__PersonalP__Appli__59063A47">
+          <AssociationSet Name="FK__JobSkill__JobID__656C112C" Association="Self.FK__JobSkill__JobID__656C112C">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="JobSkill" EntitySet="JobSkill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JobSkill__SkillI__6477ECF3" Association="Self.FK__JobSkill__SkillI__6477ECF3">
+            <End Role="Skills" EntitySet="Skills" />
+            <End Role="JobSkill" EntitySet="JobSkill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JobStatus__Appli__6B24EA82" Association="Self.FK__JobStatus__Appli__6B24EA82">
+            <End Role="Applicant" EntitySet="Applicant" />
+            <End Role="JobStatus" EntitySet="JobStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JobStatus__JobID__6A30C649" Association="Self.FK__JobStatus__JobID__6A30C649">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="JobStatus" EntitySet="JobStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonalP__Appli__02084FDA" Association="Self.FK__PersonalP__Appli__02084FDA">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="PersonalProject" EntitySet="PersonalProject" />
           </AssociationSet>
-          <AssociationSet Name="FK__WorkExper__Appli__5629CD9C" Association="Self.FK__WorkExper__Appli__5629CD9C">
+          <AssociationSet Name="FK__WorkExper__Appli__7F2BE32F" Association="Self.FK__WorkExper__Appli__7F2BE32F">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="WorkExperience" EntitySet="WorkExperience" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DoAnCuoiKyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Aboutme">
+          <Key>
+            <PropertyRef Name="AboutmeID" />
+          </Key>
+          <Property Name="AboutmeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AboutmeDetails" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicantID" Type="Int32" />
+          <NavigationProperty Name="Applicant" Relationship="Self.FK__Aboutme__Applica__75A278F5" FromRole="Aboutme" ToRole="Applicant" />
+        </EntityType>
         <EntityType Name="Applicant">
           <Key>
             <PropertyRef Name="ApplicantID" />
           </Key>
           <Property Name="ApplicantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicantTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="ApplicantEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="ApplicantPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="ApplicantName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
@@ -337,24 +395,37 @@
           <Property Name="ApplicantGender" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="ApplicantPhonenumber" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="ApplicantDOB" Type="DateTime" Precision="0" />
-          <Property Name="ApplicantDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="ApplicantsOfCompany" Relationship="Self.FK__Applicant__Appli__3F466844" FromRole="Applicant" ToRole="ApplicantsOfCompany" />
-          <NavigationProperty Name="Jobs" Relationship="Self.FavoriteJobs" FromRole="Applicant" ToRole="Jobs" />
-          <NavigationProperty Name="Aboutmes" Relationship="DoAnCuoiKyModel.FK__Aboutme__Applica__4AB81AF0" FromRole="Applicant" ToRole="Aboutme" />
-          <NavigationProperty Name="ApplicantSkills" Relationship="DoAnCuoiKyModel.FK__Applicant__Appli__5070F446" FromRole="Applicant" ToRole="ApplicantSkill" />
-          <NavigationProperty Name="Educations" Relationship="DoAnCuoiKyModel.FK__Education__Appli__534D60F1" FromRole="Applicant" ToRole="Education" />
-          <NavigationProperty Name="PersonalProjects" Relationship="DoAnCuoiKyModel.FK__PersonalP__Appli__59063A47" FromRole="Applicant" ToRole="PersonalProject" />
-          <NavigationProperty Name="WorkExperiences" Relationship="DoAnCuoiKyModel.FK__WorkExper__Appli__5629CD9C" FromRole="Applicant" ToRole="WorkExperience" />
+          <Property Name="ApplicantPersonalLink" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Aboutmes" Relationship="Self.FK__Aboutme__Applica__75A278F5" FromRole="Applicant" ToRole="Aboutme" />
+          <NavigationProperty Name="ApplicantsOfCompanies" Relationship="Self.FK__Applicant__Appli__70DDC3D8" FromRole="Applicant" ToRole="ApplicantsOfCompany" />
+          <NavigationProperty Name="ApplicantSkills" Relationship="Self.FK__Applicant__Appli__797309D9" FromRole="Applicant" ToRole="ApplicantSkill" />
+          <NavigationProperty Name="Educations" Relationship="Self.FK__Education__Appli__7C4F7684" FromRole="Applicant" ToRole="Education" />
+          <NavigationProperty Name="JobStatus" Relationship="Self.FK__JobStatus__Appli__6B24EA82" FromRole="Applicant" ToRole="JobStatus" />
+          <NavigationProperty Name="PersonalProjects" Relationship="Self.FK__PersonalP__Appli__02084FDA" FromRole="Applicant" ToRole="PersonalProject" />
+          <NavigationProperty Name="WorkExperiences" Relationship="Self.FK__WorkExper__Appli__7F2BE32F" FromRole="Applicant" ToRole="WorkExperience" />
+        </EntityType>
+        <EntityType Name="ApplicantSkill">
+          <Key>
+            <PropertyRef Name="SkillID" />
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="ApplicantSkillID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SkillID" Type="Int32" Nullable="false" />
+          <Property Name="ApplicantID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Applicant" Relationship="Self.FK__Applicant__Appli__797309D9" FromRole="ApplicantSkill" ToRole="Applicant" />
+          <NavigationProperty Name="Skill" Relationship="Self.FK__Applicant__Skill__787EE5A0" FromRole="ApplicantSkill" ToRole="Skills" />
         </EntityType>
         <EntityType Name="ApplicantsOfCompany">
           <Key>
+            <PropertyRef Name="CompanyID" />
             <PropertyRef Name="ApplicantID" />
           </Key>
-          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="CompanyID" Type="Int32" Nullable="false" />
           <Property Name="ApplicantID" Type="Int32" Nullable="false" />
           <Property Name="IsFavorite" Type="Boolean" />
-          <NavigationProperty Name="Applicant" Relationship="Self.FK__Applicant__Appli__3F466844" FromRole="ApplicantsOfCompany" ToRole="Applicant" />
-          <NavigationProperty Name="Company" Relationship="Self.FK__Applicant__Compa__3E52440B" FromRole="ApplicantsOfCompany" ToRole="Company" />
+          <Property Name="IsAccepted" Type="Boolean" />
+          <NavigationProperty Name="Applicant" Relationship="Self.FK__Applicant__Appli__70DDC3D8" FromRole="ApplicantsOfCompany" ToRole="Applicant" />
+          <NavigationProperty Name="Company" Relationship="Self.FK__Applicant__Compa__6FE99F9F" FromRole="ApplicantsOfCompany" ToRole="Company" />
         </EntityType>
         <EntityType Name="Company">
           <Key>
@@ -371,8 +442,21 @@
           <Property Name="CompanyWorkingDays" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CompanySize" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="CompanyCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="ApplicantsOfCompanies" Relationship="Self.FK__Applicant__Compa__3E52440B" FromRole="Company" ToRole="ApplicantsOfCompany" />
-          <NavigationProperty Name="Jobs" Relationship="Self.FK__Jobs__CompanyID__267ABA7A" FromRole="Company" ToRole="Jobs" />
+          <NavigationProperty Name="ApplicantsOfCompanies" Relationship="Self.FK__Applicant__Compa__6FE99F9F" FromRole="Company" ToRole="ApplicantsOfCompany" />
+          <NavigationProperty Name="Jobs" Relationship="Self.FK__Jobs__CompanyID__60A75C0F" FromRole="Company" ToRole="Jobs" />
+        </EntityType>
+        <EntityType Name="Education">
+          <Key>
+            <PropertyRef Name="EducationID" />
+          </Key>
+          <Property Name="EducationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="School" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Major" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FromDate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ToDate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AddDetails" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicantID" Type="Int32" />
+          <NavigationProperty Name="Applicant" Relationship="Self.FK__Education__Appli__7C4F7684" FromRole="Education" ToRole="Applicant" />
         </EntityType>
         <EntityType Name="Job">
           <Key>
@@ -389,133 +473,32 @@
           <Property Name="JobDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CompanyID" Type="Int32" />
           <Property Name="JobBenefit" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Company" Relationship="Self.FK__Jobs__CompanyID__267ABA7A" FromRole="Jobs" ToRole="Company" />
-          <NavigationProperty Name="Applicants" Relationship="Self.FavoriteJobs" FromRole="Jobs" ToRole="Applicant" />
+          <NavigationProperty Name="Company" Relationship="Self.FK__Jobs__CompanyID__60A75C0F" FromRole="Jobs" ToRole="Company" />
+          <NavigationProperty Name="JobSkills" Relationship="Self.FK__JobSkill__JobID__656C112C" FromRole="Jobs" ToRole="JobSkill" />
+          <NavigationProperty Name="JobStatus" Relationship="Self.FK__JobStatus__JobID__6A30C649" FromRole="Jobs" ToRole="JobStatus" />
         </EntityType>
-        <Association Name="FK__Applicant__Appli__3F466844">
-          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
-          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Applicant">
-              <PropertyRef Name="ApplicantID" />
-            </Principal>
-            <Dependent Role="ApplicantsOfCompany">
-              <PropertyRef Name="ApplicantID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Applicant__Compa__3E52440B">
-          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
-          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Company">
-              <PropertyRef Name="CompanyID" />
-            </Principal>
-            <Dependent Role="ApplicantsOfCompany">
-              <PropertyRef Name="CompanyID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Jobs__CompanyID__267ABA7A">
-          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
-          <End Role="Jobs" Type="Self.Job" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Company">
-              <PropertyRef Name="CompanyID" />
-            </Principal>
-            <Dependent Role="Jobs">
-              <PropertyRef Name="CompanyID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FavoriteJobs">
-          <End Role="Applicant" Type="Self.Applicant" Multiplicity="*" />
-          <End Role="Jobs" Type="Self.Job" Multiplicity="*" />
-        </Association>
-        <EntityContainer Name="DoAnCuoiKyEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Applicants" EntityType="Self.Applicant" />
-          <EntitySet Name="ApplicantsOfCompanies" EntityType="Self.ApplicantsOfCompany" />
-          <EntitySet Name="Companies" EntityType="Self.Company" />
-          <EntitySet Name="Jobs" EntityType="Self.Job" />
-          <AssociationSet Name="FK__Applicant__Appli__3F466844" Association="Self.FK__Applicant__Appli__3F466844">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompanies" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Compa__3E52440B" Association="Self.FK__Applicant__Compa__3E52440B">
-            <End Role="Company" EntitySet="Companies" />
-            <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompanies" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Jobs__CompanyID__267ABA7A" Association="Self.FK__Jobs__CompanyID__267ABA7A">
-            <End Role="Company" EntitySet="Companies" />
-            <End Role="Jobs" EntitySet="Jobs" />
-          </AssociationSet>
-          <AssociationSet Name="FavoriteJobs" Association="Self.FavoriteJobs">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="Jobs" EntitySet="Jobs" />
-          </AssociationSet>
-          <EntitySet Name="Aboutmes" EntityType="DoAnCuoiKyModel.Aboutme" />
-          <EntitySet Name="ApplicantSkills" EntityType="DoAnCuoiKyModel.ApplicantSkill" />
-          <EntitySet Name="Educations" EntityType="DoAnCuoiKyModel.Education" />
-          <EntitySet Name="PersonalProjects" EntityType="DoAnCuoiKyModel.PersonalProject" />
-          <EntitySet Name="Skills" EntityType="DoAnCuoiKyModel.Skill" />
-          <EntitySet Name="WorkExperiences" EntityType="DoAnCuoiKyModel.WorkExperience" />
-          <AssociationSet Name="FK__Aboutme__Applica__4AB81AF0" Association="DoAnCuoiKyModel.FK__Aboutme__Applica__4AB81AF0">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="Aboutme" EntitySet="Aboutmes" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Appli__5070F446" Association="DoAnCuoiKyModel.FK__Applicant__Appli__5070F446">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="ApplicantSkill" EntitySet="ApplicantSkills" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Education__Appli__534D60F1" Association="DoAnCuoiKyModel.FK__Education__Appli__534D60F1">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="Education" EntitySet="Educations" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PersonalP__Appli__59063A47" Association="DoAnCuoiKyModel.FK__PersonalP__Appli__59063A47">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="PersonalProject" EntitySet="PersonalProjects" />
-          </AssociationSet>
-          <AssociationSet Name="FK__WorkExper__Appli__5629CD9C" Association="DoAnCuoiKyModel.FK__WorkExper__Appli__5629CD9C">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="WorkExperience" EntitySet="WorkExperiences" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Skill__4F7CD00D" Association="DoAnCuoiKyModel.FK__Applicant__Skill__4F7CD00D">
-            <End Role="Skill" EntitySet="Skills" />
-            <End Role="ApplicantSkill" EntitySet="ApplicantSkills" />
-          </AssociationSet>
-        </EntityContainer>
-        <EntityType Name="Aboutme">
-          <Key>
-            <PropertyRef Name="AboutmeID" />
-          </Key>
-          <Property Name="AboutmeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AboutmeDetails" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-          <Property Name="ApplicantID" Type="Int32" />
-          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__Aboutme__Applica__4AB81AF0" FromRole="Aboutme" ToRole="Applicant" />
-        </EntityType>
-        <EntityType Name="ApplicantSkill">
+        <EntityType Name="JobSkill">
           <Key>
             <PropertyRef Name="SkillID" />
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobSkillID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SkillID" Type="Int32" Nullable="false" />
+          <Property Name="JobID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Job" Relationship="Self.FK__JobSkill__JobID__656C112C" FromRole="JobSkill" ToRole="Jobs" />
+          <NavigationProperty Name="Skill" Relationship="Self.FK__JobSkill__SkillI__6477ECF3" FromRole="JobSkill" ToRole="Skills" />
+        </EntityType>
+        <EntityType Name="JobStatu">
+          <Key>
+            <PropertyRef Name="JobID" />
             <PropertyRef Name="ApplicantID" />
           </Key>
-          <Property Name="ApplicantSkillID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SkillID" Type="Int32" Nullable="false" />
+          <Property Name="JobID" Type="Int32" Nullable="false" />
           <Property Name="ApplicantID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__Applicant__Appli__5070F446" FromRole="ApplicantSkill" ToRole="Applicant" />
-          <NavigationProperty Name="Skill" Relationship="DoAnCuoiKyModel.FK__Applicant__Skill__4F7CD00D" FromRole="ApplicantSkill" ToRole="Skill" />
-        </EntityType>
-        <EntityType Name="Education">
-          <Key>
-            <PropertyRef Name="EducationID" />
-          </Key>
-          <Property Name="EducationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="School" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Major" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="FromDate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="ToDate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="AddDetails" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-          <Property Name="ApplicantID" Type="Int32" />
-          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__Education__Appli__534D60F1" FromRole="Education" ToRole="Applicant" />
+          <Property Name="IsFavorite" Type="Boolean" />
+          <Property Name="IsApplied" Type="Boolean" />
+          <NavigationProperty Name="Applicant" Relationship="Self.FK__JobStatus__Appli__6B24EA82" FromRole="JobStatus" ToRole="Applicant" />
+          <NavigationProperty Name="Job" Relationship="Self.FK__JobStatus__JobID__6A30C649" FromRole="JobStatus" ToRole="Jobs" />
         </EntityType>
         <EntityType Name="PersonalProject">
           <Key>
@@ -528,7 +511,7 @@
           <Property Name="ShortDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
           <Property Name="ProjectURL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="ApplicantID" Type="Int32" />
-          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__PersonalP__Appli__59063A47" FromRole="PersonalProject" ToRole="Applicant" />
+          <NavigationProperty Name="Applicant" Relationship="Self.FK__PersonalP__Appli__02084FDA" FromRole="PersonalProject" ToRole="Applicant" />
         </EntityType>
         <EntityType Name="Skill">
           <Key>
@@ -536,7 +519,8 @@
           </Key>
           <Property Name="SkillID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SkillName" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ApplicantSkills" Relationship="DoAnCuoiKyModel.FK__Applicant__Skill__4F7CD00D" FromRole="Skill" ToRole="ApplicantSkill" />
+          <NavigationProperty Name="ApplicantSkills" Relationship="Self.FK__Applicant__Skill__787EE5A0" FromRole="Skills" ToRole="ApplicantSkill" />
+          <NavigationProperty Name="JobSkills" Relationship="Self.FK__JobSkill__SkillI__6477ECF3" FromRole="Skills" ToRole="JobSkill" />
         </EntityType>
         <EntityType Name="WorkExperience">
           <Key>
@@ -550,11 +534,11 @@
           <Property Name="WorkDetails" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
           <Property Name="ProjectDetails" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
           <Property Name="ApplicantID" Type="Int32" />
-          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__WorkExper__Appli__5629CD9C" FromRole="WorkExperience" ToRole="Applicant" />
+          <NavigationProperty Name="Applicant" Relationship="Self.FK__WorkExper__Appli__7F2BE32F" FromRole="WorkExperience" ToRole="Applicant" />
         </EntityType>
-        <Association Name="FK__Aboutme__Applica__4AB81AF0">
-          <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="0..1" />
-          <End Type="DoAnCuoiKyModel.Aboutme" Role="Aboutme" Multiplicity="*" />
+        <Association Name="FK__Aboutme__Applica__75A278F5">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
+          <End Role="Aboutme" Type="Self.Aboutme" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Applicant">
               <PropertyRef Name="ApplicantID" />
@@ -564,9 +548,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Appli__5070F446">
-          <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="1" />
-          <End Type="DoAnCuoiKyModel.ApplicantSkill" Role="ApplicantSkill" Multiplicity="*" />
+        <Association Name="FK__Applicant__Appli__70DDC3D8">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
+          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="ApplicantsOfCompany">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Applicant__Appli__797309D9">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
+          <End Role="ApplicantSkill" Type="Self.ApplicantSkill" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Applicant">
               <PropertyRef Name="ApplicantID" />
@@ -576,9 +572,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Education__Appli__534D60F1">
-          <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="0..1" />
-          <End Type="DoAnCuoiKyModel.Education" Role="Education" Multiplicity="*" />
+        <Association Name="FK__Education__Appli__7C4F7684">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
+          <End Role="Education" Type="Self.Education" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Applicant">
               <PropertyRef Name="ApplicantID" />
@@ -588,9 +584,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PersonalP__Appli__59063A47">
-          <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="0..1" />
-          <End Type="DoAnCuoiKyModel.PersonalProject" Role="PersonalProject" Multiplicity="*" />
+        <Association Name="FK__JobStatus__Appli__6B24EA82">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
+          <End Role="JobStatus" Type="Self.JobStatu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="JobStatus">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonalP__Appli__02084FDA">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
+          <End Role="PersonalProject" Type="Self.PersonalProject" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Applicant">
               <PropertyRef Name="ApplicantID" />
@@ -600,9 +608,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__WorkExper__Appli__5629CD9C">
-          <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="0..1" />
-          <End Type="DoAnCuoiKyModel.WorkExperience" Role="WorkExperience" Multiplicity="*" />
+        <Association Name="FK__WorkExper__Appli__7F2BE32F">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
+          <End Role="WorkExperience" Type="Self.WorkExperience" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Applicant">
               <PropertyRef Name="ApplicantID" />
@@ -612,11 +620,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Skill__4F7CD00D">
-          <End Type="DoAnCuoiKyModel.Skill" Role="Skill" Multiplicity="1" />
-          <End Type="DoAnCuoiKyModel.ApplicantSkill" Role="ApplicantSkill" Multiplicity="*" />
+        <Association Name="FK__Applicant__Skill__787EE5A0">
+          <End Role="Skills" Type="Self.Skill" Multiplicity="1" />
+          <End Role="ApplicantSkill" Type="Self.ApplicantSkill" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Skill">
+            <Principal Role="Skills">
               <PropertyRef Name="SkillID" />
             </Principal>
             <Dependent Role="ApplicantSkill">
@@ -624,16 +632,152 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Applicant__Compa__6FE99F9F">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="ApplicantsOfCompany">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Jobs__CompanyID__60A75C0F">
+          <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+          <End Role="Jobs" Type="Self.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JobSkill__JobID__656C112C">
+          <End Role="Jobs" Type="Self.Job" Multiplicity="1" />
+          <End Role="JobSkill" Type="Self.JobSkill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="JobSkill">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JobStatus__JobID__6A30C649">
+          <End Role="Jobs" Type="Self.Job" Multiplicity="1" />
+          <End Role="JobStatus" Type="Self.JobStatu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="JobStatus">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JobSkill__SkillI__6477ECF3">
+          <End Role="Skills" Type="Self.Skill" Multiplicity="1" />
+          <End Role="JobSkill" Type="Self.JobSkill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Skills">
+              <PropertyRef Name="SkillID" />
+            </Principal>
+            <Dependent Role="JobSkill">
+              <PropertyRef Name="SkillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DoAnCuoiKyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aboutmes" EntityType="Self.Aboutme" />
+          <EntitySet Name="Applicants" EntityType="Self.Applicant" />
+          <EntitySet Name="ApplicantSkills" EntityType="Self.ApplicantSkill" />
+          <EntitySet Name="ApplicantsOfCompanies" EntityType="Self.ApplicantsOfCompany" />
+          <EntitySet Name="Companies" EntityType="Self.Company" />
+          <EntitySet Name="Educations" EntityType="Self.Education" />
+          <EntitySet Name="Jobs" EntityType="Self.Job" />
+          <EntitySet Name="JobSkills" EntityType="Self.JobSkill" />
+          <EntitySet Name="JobStatus" EntityType="Self.JobStatu" />
+          <EntitySet Name="PersonalProjects" EntityType="Self.PersonalProject" />
+          <EntitySet Name="Skills" EntityType="Self.Skill" />
+          <EntitySet Name="WorkExperiences" EntityType="Self.WorkExperience" />
+          <AssociationSet Name="FK__Aboutme__Applica__75A278F5" Association="Self.FK__Aboutme__Applica__75A278F5">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="Aboutme" EntitySet="Aboutmes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicant__Appli__70DDC3D8" Association="Self.FK__Applicant__Appli__70DDC3D8">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompanies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicant__Appli__797309D9" Association="Self.FK__Applicant__Appli__797309D9">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="ApplicantSkill" EntitySet="ApplicantSkills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Education__Appli__7C4F7684" Association="Self.FK__Education__Appli__7C4F7684">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="Education" EntitySet="Educations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JobStatus__Appli__6B24EA82" Association="Self.FK__JobStatus__Appli__6B24EA82">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="JobStatus" EntitySet="JobStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonalP__Appli__02084FDA" Association="Self.FK__PersonalP__Appli__02084FDA">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="PersonalProject" EntitySet="PersonalProjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK__WorkExper__Appli__7F2BE32F" Association="Self.FK__WorkExper__Appli__7F2BE32F">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="WorkExperience" EntitySet="WorkExperiences" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicant__Skill__787EE5A0" Association="Self.FK__Applicant__Skill__787EE5A0">
+            <End Role="Skills" EntitySet="Skills" />
+            <End Role="ApplicantSkill" EntitySet="ApplicantSkills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Applicant__Compa__6FE99F9F" Association="Self.FK__Applicant__Compa__6FE99F9F">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompanies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Jobs__CompanyID__60A75C0F" Association="Self.FK__Jobs__CompanyID__60A75C0F">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JobSkill__JobID__656C112C" Association="Self.FK__JobSkill__JobID__656C112C">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="JobSkill" EntitySet="JobSkills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JobStatus__JobID__6A30C649" Association="Self.FK__JobStatus__JobID__6A30C649">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="JobStatus" EntitySet="JobStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JobSkill__SkillI__6477ECF3" Association="Self.FK__JobSkill__SkillI__6477ECF3">
+            <End Role="Skills" EntitySet="Skills" />
+            <End Role="JobSkill" EntitySet="JobSkills" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DoAnCuoiKyModelStoreContainer" CdmEntityContainer="DoAnCuoiKyEntities">
+          <EntitySetMapping Name="Aboutmes">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.Aboutme">
+              <MappingFragment StoreEntitySet="Aboutme">
+                <ScalarProperty Name="AboutmeID" ColumnName="AboutmeID" />
+                <ScalarProperty Name="AboutmeDetails" ColumnName="AboutmeDetails" />
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Applicants">
             <EntityTypeMapping TypeName="DoAnCuoiKyModel.Applicant">
               <MappingFragment StoreEntitySet="Applicant">
                 <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+                <ScalarProperty Name="ApplicantTitle" ColumnName="ApplicantTitle" />
                 <ScalarProperty Name="ApplicantEmail" ColumnName="ApplicantEmail" />
                 <ScalarProperty Name="ApplicantPassword" ColumnName="ApplicantPassword" />
                 <ScalarProperty Name="ApplicantName" ColumnName="ApplicantName" />
@@ -643,7 +787,16 @@
                 <ScalarProperty Name="ApplicantGender" ColumnName="ApplicantGender" />
                 <ScalarProperty Name="ApplicantPhonenumber" ColumnName="ApplicantPhonenumber" />
                 <ScalarProperty Name="ApplicantDOB" ColumnName="ApplicantDOB" />
-                <ScalarProperty Name="ApplicantDescription" ColumnName="ApplicantDescription" />
+                <ScalarProperty Name="ApplicantPersonalLink" ColumnName="ApplicantPersonalLink" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicantSkills">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.ApplicantSkill">
+              <MappingFragment StoreEntitySet="ApplicantSkill">
+                <ScalarProperty Name="ApplicantSkillID" ColumnName="ApplicantSkillID" />
+                <ScalarProperty Name="SkillID" ColumnName="SkillID" />
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -653,6 +806,7 @@
                 <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
                 <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
                 <ScalarProperty Name="IsFavorite" ColumnName="IsFavorite" />
+                <ScalarProperty Name="IsAccepted" ColumnName="IsAccepted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -673,6 +827,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Educations">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.Education">
+              <MappingFragment StoreEntitySet="Education">
+                <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+                <ScalarProperty Name="School" ColumnName="School" />
+                <ScalarProperty Name="Major" ColumnName="Major" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="AddDetails" ColumnName="AddDetails" />
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Jobs">
             <EntityTypeMapping TypeName="DoAnCuoiKyModel.Job">
               <MappingFragment StoreEntitySet="Jobs">
@@ -690,77 +857,57 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="FavoriteJobs" TypeName="DoAnCuoiKyModel.FavoriteJobs" StoreEntitySet="FavoriteJobs">
-            <EndProperty Name="Applicant">
-              <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
-            </EndProperty>
-            <EndProperty Name="Jobs">
-              <ScalarProperty Name="JobID" ColumnName="JobID" />
-            </EndProperty>
-          </AssociationSetMapping>
-          <EntitySetMapping Name="Aboutmes">
-            <EntityTypeMapping TypeName="DoAnCuoiKyModel.Aboutme">
-              <MappingFragment StoreEntitySet="Aboutme">
-                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
-                <ScalarProperty Name="AboutmeDetails" ColumnName="AboutmeDetails" />
-                <ScalarProperty Name="AboutmeID" ColumnName="AboutmeID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ApplicantSkills">
-            <EntityTypeMapping TypeName="DoAnCuoiKyModel.ApplicantSkill">
-              <MappingFragment StoreEntitySet="ApplicantSkill">
-                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <EntitySetMapping Name="JobSkills">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.JobSkill">
+              <MappingFragment StoreEntitySet="JobSkill">
+                <ScalarProperty Name="JobSkillID" ColumnName="JobSkillID" />
                 <ScalarProperty Name="SkillID" ColumnName="SkillID" />
-                <ScalarProperty Name="ApplicantSkillID" ColumnName="ApplicantSkillID" />
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Educations">
-            <EntityTypeMapping TypeName="DoAnCuoiKyModel.Education">
-              <MappingFragment StoreEntitySet="Education">
+          <EntitySetMapping Name="JobStatus">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.JobStatu">
+              <MappingFragment StoreEntitySet="JobStatus">
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
                 <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
-                <ScalarProperty Name="AddDetails" ColumnName="AddDetails" />
-                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
-                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
-                <ScalarProperty Name="Major" ColumnName="Major" />
-                <ScalarProperty Name="School" ColumnName="School" />
-                <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+                <ScalarProperty Name="IsFavorite" ColumnName="IsFavorite" />
+                <ScalarProperty Name="IsApplied" ColumnName="IsApplied" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PersonalProjects">
             <EntityTypeMapping TypeName="DoAnCuoiKyModel.PersonalProject">
               <MappingFragment StoreEntitySet="PersonalProject">
-                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
-                <ScalarProperty Name="ProjectURL" ColumnName="ProjectURL" />
-                <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
-                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
-                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
-                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
                 <ScalarProperty Name="PersonalProjectID" ColumnName="PersonalProjectID" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+                <ScalarProperty Name="ProjectURL" ColumnName="ProjectURL" />
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Skills">
             <EntityTypeMapping TypeName="DoAnCuoiKyModel.Skill">
               <MappingFragment StoreEntitySet="Skills">
-                <ScalarProperty Name="SkillName" ColumnName="SkillName" />
                 <ScalarProperty Name="SkillID" ColumnName="SkillID" />
+                <ScalarProperty Name="SkillName" ColumnName="SkillName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="WorkExperiences">
             <EntityTypeMapping TypeName="DoAnCuoiKyModel.WorkExperience">
               <MappingFragment StoreEntitySet="WorkExperience">
-                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
-                <ScalarProperty Name="ProjectDetails" ColumnName="ProjectDetails" />
-                <ScalarProperty Name="WorkDetails" ColumnName="WorkDetails" />
-                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
-                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
-                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
-                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
                 <ScalarProperty Name="WorkExperienceID" ColumnName="WorkExperienceID" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="WorkDetails" ColumnName="WorkDetails" />
+                <ScalarProperty Name="ProjectDetails" ColumnName="ProjectDetails" />
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAboutMe = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 39);
+            this.label1.Size = new System.Drawing.Size(214, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "About Me";
             // 
@@ -100,25 +100,6 @@
             this.panel5.Size = new System.Drawing.Size(1042, 68);
             this.panel5.TabIndex = 18;
             // 
-            // btnCancel
-            // 
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.Red;
-            this.btnCancel.FillColor2 = System.Drawing.Color.Coral;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(790, 11);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(107, 46);
-            this.btnCancel.TabIndex = 28;
-            this.btnCancel.Text = "Cancel";
-            // 
             // btnSave
             // 
             this.btnSave.BorderRadius = 10;
@@ -127,15 +108,36 @@
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor2 = System.Drawing.Color.Cyan;
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(920, 11);
+            this.btnSave.Location = new System.Drawing.Point(852, 11);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(107, 46);
+            this.btnSave.Size = new System.Drawing.Size(175, 46);
             this.btnSave.TabIndex = 29;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.Location = new System.Drawing.Point(660, 11);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(175, 46);
+            this.btnCancel.TabIndex = 28;
+            this.btnCancel.Text = "Cancel";
             // 
             // panel4
             // 
@@ -168,7 +170,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(15, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(609, 20);
+            this.label2.Size = new System.Drawing.Size(757, 25);
             this.label2.TabIndex = 20;
             this.label2.Text = "Tips: Summarize your professional experience, highlight your skills and your stre" +
     "ngths.";
@@ -193,14 +195,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2TextBox txtAboutMe;
-        private System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Panel panel5;
         public Guna.UI2.WinForms.Guna2GradientButton btnSave;
         public Guna.UI2.WinForms.Guna2GradientButton btnCancel;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label label2;
     }
 }

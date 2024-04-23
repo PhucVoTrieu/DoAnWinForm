@@ -248,6 +248,12 @@
     <Compile Include="Job.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="JobSkill.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobStatu.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="PersonalProject.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
@@ -675,6 +681,12 @@
     <None Include="Resources\location.png" />
     <None Include="Resources\mail.png" />
     <None Include="Resources\birthday.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic2.png" />
+    <None Include="Resources\trash2.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\pic.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DoAnCuoiKyModel.Context.tt">

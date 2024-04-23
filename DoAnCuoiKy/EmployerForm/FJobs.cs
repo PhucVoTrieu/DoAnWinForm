@@ -30,7 +30,7 @@ namespace DoAnCuoiKy
             try
             {
                 DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-                var jobsOfCompany = from c in db.Jobs where c.CompanyID == this.employerInfor.CompanyID select c;
+                var jobsOfCompany = from c in db.Jobs where c.CompanyID == Constant.CompanyID select c;
 
                 foreach (var job in jobsOfCompany)
                 {

@@ -22,7 +22,7 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.companyInfo = e1;
-            applicantsDAO.LoadDanhSach(this);
+            applicantsDAO.LoadDanhSachUngVien(this);
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {

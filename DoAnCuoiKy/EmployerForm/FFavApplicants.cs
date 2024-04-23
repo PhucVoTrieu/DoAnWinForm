@@ -27,7 +27,7 @@ namespace DoAnCuoiKy
         }
         private void LoadDanhSach()
         {
-            applicantsDAO.LoadDanhSachYeuThich(this);
+            applicantsDAO.LoadDanhSachUngVienYeuThich(this);
         }
         public int CountFavoriteApplicants()
         {
