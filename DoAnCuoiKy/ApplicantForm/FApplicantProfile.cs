@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using DoAnCuoiKy.ApplicantForm;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,12 +18,7 @@ namespace DoAnCuoiKy
         public FProfileApplicant()
         {
             InitializeComponent();
-            Label lblPlaceHolderAboutMe = new Label();
-            lblPlaceHolderAboutMe.Text = "Introduce your strengths and years of experience";
-            lblPlaceHolderAboutMe.ForeColor = System.Drawing.Color.Gray;
-            lblPlaceHolderAboutMe.Location = new Point(lblAboutMe.Location.X, lblAboutMe.Location.Y+20);
-            lblPlaceHolderAboutMe.AutoSize = true;
-            this.pnlListOfAboutMe.Controls.Add(lblPlaceHolderAboutMe);
+            LoadDanhSach();
         }
         public FProfileApplicant(Applicant applicant)
         {
@@ -30,7 +26,10 @@ namespace DoAnCuoiKy
             this.applicantInfor = applicant;
          
         }
-  
+        public void LoadDanhSach()
+        {
+
+        }
         private void btnEdit_Click(object sender, EventArgs e)
         {
             foreach (Control c in pnlAboutMe.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
@@ -69,6 +68,8 @@ namespace DoAnCuoiKy
 
         private void btnAddAboutMe_Click(object sender, EventArgs e)
         {
+            FAboutMe f1 = new FAboutMe();
+            f1.Show();
             UCApplicantInformation uc1 = new UCApplicantInformation();
             foreach (Control panel1 in this.pnlMain.Controls)
             {
@@ -95,6 +96,12 @@ namespace DoAnCuoiKy
             }
         
             
+        }
+
+        private void btnEditBasicInfo_Click(object sender, EventArgs e)
+        {
+            FPersonalDetais f1 = new FPersonalDetais();
+            f1.Show();
         }
     }
 }

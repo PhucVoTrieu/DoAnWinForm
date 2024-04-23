@@ -12,9 +12,11 @@ namespace DoAnCuoiKy.ApplicantForm
 {
     public partial class FAboutMe : Form
     {
+        
         public FAboutMe()
         {
             InitializeComponent();
         }
+        
     }
 }

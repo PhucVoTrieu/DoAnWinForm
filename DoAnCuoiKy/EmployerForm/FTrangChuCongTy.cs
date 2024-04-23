@@ -17,7 +17,7 @@ namespace DoAnCuoiKy
         private Company CompanyInformation;
         public FTrangChuCongTy(Company e1)
         {
-            this.CompanyInformation = e1;
+           
             InitializeComponent();
             OpenForm(new FInformation(e1));
         }

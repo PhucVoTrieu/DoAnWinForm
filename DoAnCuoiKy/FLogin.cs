@@ -17,45 +17,11 @@ namespace DoAnCuoiKy
 {
     public partial class FLogin : Form
     {
-        private string email;
-        private string password;
-        DBconnection db = new DBconnection();
-        SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        List<Employer> list = new List<Employer>();
         public FLogin()
         {
             InitializeComponent();
-            this.email = this.txtEmail.Text;
-            this.password = this.txtPassword.Text;
-           //loadDanhSachTaiKhoan(this.list);
-            
         }
-        //public void loadDanhSachTaiKhoan(List<Employer> list)
-        //{
-           
-        //    string query = "SELECT * FROM Company";
-        //    SqlCommand command = new SqlCommand(query, connStr);
-        //    connStr.Open();
-        //    SqlDataReader reader = command.ExecuteReader();
-        //    while (reader.Read())
-        //    {              
-        //            Employer employer = new Employer(
-        //                  int.Parse(reader["CompanyID"].ToString()),
-        //                  reader["CompanyEmail"].ToString(),
-        //                  reader["CompanyPassword"].ToString(),
-        //                  reader["CompanyName"].ToString(),
-        //                  reader["CompanyType"].ToString(),
-        //                  reader["CompanyAddress"].ToString(),
-        //                  reader["CompanyOverview"].ToString(),
-        //                  reader["CompanyBenefit"].ToString(),
-        //                  reader["CompanyWorkingDays"].ToString(),
-        //                  reader["CompanySize"].ToString(),
-        //                  reader["CompanyCountry"].ToString()
-        //                );
-        //            list.Add(employer);   
-              
-        //    }
-        //}
+        
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -66,7 +32,7 @@ namespace DoAnCuoiKy
            
             if (rbtnEmployer.Checked)
             {
-                FTrangChuCongTy fTrang=null;
+               
                 this.Hide();           
                 try
                 {
@@ -75,7 +41,7 @@ namespace DoAnCuoiKy
                                               && account.CompanyPassword == this.txtPassword.Text select account;
                     Constant.CompanyID = employerAccount.SingleOrDefault().CompanyID;
 
-                    fTrang = new FTrangChuCongTy(employerAccount.SingleOrDefault());
+                    FTrangChuCongTy fTrang = new FTrangChuCongTy(employerAccount.SingleOrDefault());
                        fTrang.Show();
                     
                   
@@ -86,10 +52,7 @@ namespace DoAnCuoiKy
                 {
                     Console.WriteLine("Lỗi truy vấn: " + ex.Message);
                 }
-                finally
-                {
-                    connStr.Close();
-                }
+            
                 
 
               
@@ -98,8 +61,27 @@ namespace DoAnCuoiKy
             else if (rbtnApplicant.Checked)
             {
                 this.Hide();
-                FApplicantHomePage f1 = new FApplicantHomePage();
-                f1.Show();
+                try
+                {
+                    DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                    var applicantAccount = from account in db.Applicants
+                                          where account.ApplicantEmail == this.txtEmail.Text
+                                              && account.ApplicantPassword == this.txtPassword.Text
+                                          select account;
+                    Constant.ApplicantID = applicantAccount.SingleOrDefault().ApplicantID;
+
+                    FApplicantHomePage fTrang = new FApplicantHomePage();
+                    fTrang.Show();
+
+
+
+                    
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+                }
+
             }
         }
     }

@@ -66,6 +66,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aboutme.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Applicant.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
@@ -99,6 +102,9 @@
     <Compile Include="ApplicantForm\FWorkExperience.Designer.cs">
       <DependentUpon>FWorkExperience.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicantSkill.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ApplicantsOfCompany.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
@@ -124,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Education.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EmployerForm\FCompanyRegistration.cs">
       <SubType>Form</SubType>
@@ -221,8 +230,14 @@
     <Compile Include="Job.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PersonalProject.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skill.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCApplicantEducation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -258,6 +273,9 @@
     </Compile>
     <Compile Include="UC\UCJobUI.Designer.cs">
       <DependentUpon>UCJobUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkExperience.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ApplicantForm\FAboutMe.resx">
       <DependentUpon>FAboutMe.cs</DependentUpon>

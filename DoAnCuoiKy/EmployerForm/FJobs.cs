@@ -22,7 +22,7 @@ namespace DoAnCuoiKy
             InitializeComponent();
             this.employerInfor = e1;
             LoadDanhSach();
-            this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
+         //   this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
         }
         public void LoadDanhSach()
         {
@@ -77,7 +77,7 @@ namespace DoAnCuoiKy
             foreach (UCJobUI c in list)
             {
                 this.pnlCreatedJob.Controls.Remove(c);
-                this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
+             //   this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
                 jobDetailsDAO.xoaUC(c);
             }
 

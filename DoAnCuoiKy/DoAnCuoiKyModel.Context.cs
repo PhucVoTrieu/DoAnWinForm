@@ -29,5 +29,11 @@ namespace DoAnCuoiKy
         public virtual DbSet<ApplicantsOfCompany> ApplicantsOfCompanies { get; set; }
         public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<Job> Jobs { get; set; }
+        public virtual DbSet<Aboutme> Aboutmes { get; set; }
+        public virtual DbSet<ApplicantSkill> ApplicantSkills { get; set; }
+        public virtual DbSet<Education> Educations { get; set; }
+        public virtual DbSet<PersonalProject> PersonalProjects { get; set; }
+        public virtual DbSet<Skill> Skills { get; set; }
+        public virtual DbSet<WorkExperience> WorkExperiences { get; set; }
     }
 }

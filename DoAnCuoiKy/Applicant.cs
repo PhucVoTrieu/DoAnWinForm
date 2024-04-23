@@ -18,6 +18,11 @@ namespace DoAnCuoiKy
         public Applicant()
         {
             this.Jobs = new HashSet<Job>();
+            this.Aboutmes = new HashSet<Aboutme>();
+            this.ApplicantSkills = new HashSet<ApplicantSkill>();
+            this.Educations = new HashSet<Education>();
+            this.PersonalProjects = new HashSet<PersonalProject>();
+            this.WorkExperiences = new HashSet<WorkExperience>();
         }
     
         public int ApplicantID { get; set; }
@@ -35,5 +40,15 @@ namespace DoAnCuoiKy
         public virtual ApplicantsOfCompany ApplicantsOfCompany { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Job> Jobs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Aboutme> Aboutmes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ApplicantSkill> ApplicantSkills { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Education> Educations { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PersonalProject> PersonalProjects { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WorkExperience> WorkExperiences { get; set; }
     }
 }
