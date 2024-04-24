@@ -182,6 +182,7 @@
             this.ClientSize = new System.Drawing.Size(1042, 574);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FAboutMe";
             this.Text = "FAboutMe";
             this.panel2.ResumeLayout(false);

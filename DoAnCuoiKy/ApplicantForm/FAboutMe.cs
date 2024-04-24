@@ -29,6 +29,7 @@ namespace DoAnCuoiKy.ApplicantForm
             
             ApplicantsDAO applicantsDAO = new ApplicantsDAO();
             applicantsDAO.SuaThongTinAboutMe(this);
+            applicantsDAO.LoadThongTinAboutMe(this.profileApplicantInfo);
             this.Close();
         }
     }

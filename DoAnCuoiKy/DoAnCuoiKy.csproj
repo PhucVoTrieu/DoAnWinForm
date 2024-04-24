@@ -689,6 +689,9 @@
     <None Include="Resources\pic.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\editing24.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DoAnCuoiKyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>

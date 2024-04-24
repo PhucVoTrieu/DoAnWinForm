@@ -152,6 +152,7 @@
             this.btnApplyNow.AutoRoundedCorners = true;
             this.btnApplyNow.BackColor = System.Drawing.Color.Transparent;
             this.btnApplyNow.BorderRadius = 22;
+            this.btnApplyNow.Checked = true;
             this.btnApplyNow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnApplyNow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnApplyNow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

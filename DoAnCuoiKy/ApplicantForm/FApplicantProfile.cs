@@ -16,7 +16,6 @@ namespace DoAnCuoiKy
     public partial class FProfileApplicant : Form
     {
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
-        Applicant applicantInfor;
         public FProfileApplicant()
         {
             InitializeComponent();
@@ -25,8 +24,7 @@ namespace DoAnCuoiKy
         public FProfileApplicant(Applicant applicant)
         {
             InitializeComponent();
-            this.applicantInfor = applicant;
-         
+            LoadDanhSach();
         }
         public void LoadDanhSach()
         {
@@ -42,7 +40,9 @@ namespace DoAnCuoiKy
             this.lblYourTitle.Text = query.Single().ApplicantTitle;
             this.lblGender.Text = query.Single().ApplicantGender;
             this.lblPersonalPink.Text = query.Single().ApplicantPersonalLink;
+
             applicantsDAO.LoadThongTinAboutMe(this);
+            applicantsDAO.LoadThongTinWorkExp(this);
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -69,33 +69,7 @@ namespace DoAnCuoiKy
         }
         private void btnAddAboutMe_Click(object sender, EventArgs e)
         {
-            
-            //UCApplicantInformation uc1 = new UCApplicantInformation();
-            //foreach (Control panel1 in this.pnlMain.Controls)
-            //{
-            //    if (panel1 is Panel && panel1 != this.pnlAboutMe)
-            //    {
-            //        Panel panel = panel1 as Panel;
 
-            //        if (panel.Location.Y > pnlAboutMe.Location.Y)
-            //        {
-            //            panel.Location = new Point(panel.Location.X, panel.Location.Y + uc1.Height);
-            //            this.pnlMain.Size = new Size(this.pnlMain.Size.Width, this.pnlMain.Size.Height + uc1.Height);
-            //        }
-            //    }
-            //}
-            //if (pnlListOfAboutMe.Controls.Count == 0)
-            //{
-            //    pnlListOfAboutMe.Controls.Add(uc1);
-            //}
-            //else
-            //{
-            //    this.pnlAboutMe.Size = new Size(this.pnlAboutMe.Size.Width, this.pnlAboutMe.Size.Height + uc1.Height);
-            //    this.pnlListOfAboutMe.Size = new Size(this.pnlListOfAboutMe.Size.Width, this.pnlListOfAboutMe.Size.Height + uc1.Height);
-            //    pnlListOfAboutMe.Controls.Add(uc1);
-            //}
-        
-            
         }
 
         private void btnEditBasicInfo_Click(object sender, EventArgs e)
@@ -113,15 +87,14 @@ namespace DoAnCuoiKy
         {
             FAboutMe f1 = new FAboutMe(this);
             f1.Show();
-
             applicantsDAO.LoadThongTinAboutMe(this);
         }
 
         private void btnaAddWorkExp_Click(object sender, EventArgs e)
         {
-            FWorkExperience f1 = new FWorkExperience();
+            FWorkExperience f1 = new FWorkExperience(null,this);
             f1.Show();
-
+          //  applicantsDAO.LoadThongTinWorkExp(this);
         }
     }
 }
