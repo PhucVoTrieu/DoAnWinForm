@@ -25,7 +25,6 @@ namespace DoAnCuoiKy.UC
         {
             InitializeComponent();
             this.workExperienceDetail = workExperienceDetail;
-            
             this.fProfile = f1;
             LoadUC();
         }
@@ -40,7 +39,7 @@ namespace DoAnCuoiKy.UC
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //FWorkExperience f1 = new FWorkExperience(new FProfileApplicant());
+                //FWorkExperience f1 = new FWorkExperience(new FProfileApplicant());
             //f1.txtCompany.Text = workExperienceDetail.CompanyName;
             //f1.txtJobTitle.Text = workExperienceDetail.JobTitle;
             //f1.txtProjectAddDetails.Text = workExperienceDetail.ProjectDetails;

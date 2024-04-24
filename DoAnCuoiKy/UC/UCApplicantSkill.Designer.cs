@@ -1,6 +1,6 @@
 ﻿namespace DoAnCuoiKy.UC
 {
-    partial class UCApplicantEducation
+    partial class UCApplicantSkill
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,10 +31,7 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.lblFromToDate = new System.Windows.Forms.Label();
-            this.lblDetails = new System.Windows.Forms.Label();
-            this.lblMajor = new System.Windows.Forms.Label();
-            this.lblSchool = new System.Windows.Forms.Label();
+            this.lblSkills = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2Separator1
@@ -59,7 +56,6 @@
             this.btnDelete.Size = new System.Drawing.Size(61, 54);
             this.btnDelete.TabIndex = 140;
             this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -75,65 +71,28 @@
             this.btnEdit.Size = new System.Drawing.Size(48, 46);
             this.btnEdit.TabIndex = 139;
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // lblFromToDate
+            // lblSkills
             // 
-            this.lblFromToDate.AutoSize = true;
-            this.lblFromToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblFromToDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFromToDate.Location = new System.Drawing.Point(26, 160);
-            this.lblFromToDate.Name = "lblFromToDate";
-            this.lblFromToDate.Size = new System.Drawing.Size(121, 25);
-            this.lblFromToDate.TabIndex = 137;
-            this.lblFromToDate.Text = "From-toDate";
+            this.lblSkills.AutoSize = true;
+            this.lblSkills.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblSkills.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSkills.Location = new System.Drawing.Point(26, 55);
+            this.lblSkills.Name = "lblSkills";
+            this.lblSkills.Size = new System.Drawing.Size(77, 29);
+            this.lblSkills.TabIndex = 134;
+            this.lblSkills.Text = "Skills";
             // 
-            // lblDetails
-            // 
-            this.lblDetails.AutoSize = true;
-            this.lblDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDetails.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDetails.Location = new System.Drawing.Point(26, 210);
-            this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(78, 25);
-            this.lblDetails.TabIndex = 136;
-            this.lblDetails.Text = "Details";
-            // 
-            // lblMajor
-            // 
-            this.lblMajor.AutoSize = true;
-            this.lblMajor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMajor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblMajor.Location = new System.Drawing.Point(26, 110);
-            this.lblMajor.Name = "lblMajor";
-            this.lblMajor.Size = new System.Drawing.Size(61, 25);
-            this.lblMajor.TabIndex = 135;
-            this.lblMajor.Text = "Major";
-            // 
-            // lblSchool
-            // 
-            this.lblSchool.AutoSize = true;
-            this.lblSchool.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblSchool.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSchool.Location = new System.Drawing.Point(26, 56);
-            this.lblSchool.Name = "lblSchool";
-            this.lblSchool.Size = new System.Drawing.Size(94, 29);
-            this.lblSchool.TabIndex = 134;
-            this.lblSchool.Text = "School";
-            // 
-            // UCApplicantEducation
+            // UCApplicantSkill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.lblFromToDate);
-            this.Controls.Add(this.lblDetails);
-            this.Controls.Add(this.lblMajor);
-            this.Controls.Add(this.lblSchool);
-            this.Name = "UCApplicantEducation";
-            this.Size = new System.Drawing.Size(1460, 255);
+            this.Controls.Add(this.lblSkills);
+            this.Name = "UCApplicantSkill";
+            this.Size = new System.Drawing.Size(1460, 156);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,9 +103,6 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         public System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnEdit;
-        public System.Windows.Forms.Label lblFromToDate;
-        public System.Windows.Forms.Label lblDetails;
-        public System.Windows.Forms.Label lblMajor;
-        public System.Windows.Forms.Label lblSchool;
+        public System.Windows.Forms.Label lblSkills;
     }
 }

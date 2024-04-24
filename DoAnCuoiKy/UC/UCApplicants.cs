@@ -61,5 +61,6 @@ namespace DoAnCuoiKy
                 applicantsDAO.HuyYeuThich(this.applicantInfo);
             }
         }
+
     }
 }

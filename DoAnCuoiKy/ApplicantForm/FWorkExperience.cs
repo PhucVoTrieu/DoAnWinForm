@@ -33,8 +33,6 @@ namespace DoAnCuoiKy.ApplicantForm
                 this.cbWorkYearFrom.Text = workExperienceDetail.FromYear;
                 this.cbWorkYearTo.Text = workExperienceDetail.ToYear;
             }
-           
-
             this.fProfile = f1;
         }
         private void btnSave_Click(object sender, EventArgs e)

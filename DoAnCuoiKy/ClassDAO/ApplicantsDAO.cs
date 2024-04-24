@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace DoAnCuoiKy
     {
 
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-        public void XoaThongTinWorkExp(WorkExperience workExperience,FProfileApplicant f1)
+        public void XoaThongTinWorkExp(WorkExperience workExperience, FProfileApplicant f1)
         {
             using (DoAnCuoiKyEntities db = new DoAnCuoiKyEntities())
             {
@@ -26,7 +27,7 @@ namespace DoAnCuoiKy
             }
             LoadThongTinWorkExp(f1);
         }
-        
+
         public void ThemThongTinWorkExp(FWorkExperience f1)  //thieu check null
         {
             db.WorkExperiences.Add(new WorkExperience
@@ -49,7 +50,7 @@ namespace DoAnCuoiKy
         }
         public void SuaThongTinWorkExp(FWorkExperience f1)
         {
-            
+
 
             if (f1.WorkExperience != null)
             {
@@ -245,7 +246,93 @@ namespace DoAnCuoiKy
             }
         }
 
+        public void SuaThongTinEducation(FAddEducation f1)
+        {
+            if (f1.Education != null)
+            {
+                var query = from c in db.Educations
+                            where c.EducationID == f1.Education.EducationID
+                            select c;
+                query.First().School = f1.txtSchoolApplicant.Text;
+                query.First().Major = f1.txtMajorApplicant.Text;
+                query.First().AddDetails = f1.txtEducationAdd.Text;
+                query.First().FromMonth = f1.cbEducationMonthFrom.Text;
+                query.First().ToMonth = f1.cbEducationMonthTo.Text;
+                query.First().FromYear = f1.cbEducationYearFrom.Text;
+                query.First().ToYear = f1.cbEducationYearTo.Text;
+                db.SaveChanges();
 
+            }
+            else if (f1.Education == null)
+            {
+                ThemThongTinEducation(f1);
+            }
+            LoadThongTinEducation(f1.fProfile);
+        }
+        public void ThemThongTinEducation(FAddEducation f1)
+        {
+            db.Educations.Add(new Education
+            {
+                School = f1.txtSchoolApplicant.Text,
+                Major = f1.txtMajorApplicant.Text,
+                AddDetails = f1.txtEducationAdd.Text,
+                
+                FromMonth = f1.cbEducationMonthFrom.Text,
+                ToMonth = f1.cbEducationMonthTo.Text,
+                FromYear = f1.cbEducationYearFrom.Text,
+                ToYear = f1.cbEducationYearTo.Text,
+                ApplicantID = Constant.ApplicantID
+            });
+            db.SaveChanges();
+            LoadThongTinEducation(f1.fProfile);
+
+        }
+        public void LoadThongTinEducation(FProfileApplicant f1)
+        {
+            try
+            {
+                var query = from c in db.Educations
+                            where c.ApplicantID == Constant.ApplicantID
+                            select c;
+                if (query.Any()) 
+                {
+                    f1.pnlEducation.Size = new System.Drawing.Size(f1.pnlEducation.Size.Width, 100);
+                    f1.pnlListOfEducation.Controls.Clear();
+                    foreach (var education in query)
+                    {
+                        UCApplicantEducation uc1 = new UCApplicantEducation(education, f1);
+
+                        f1.pnlListOfEducation.Controls.Add(uc1);
+                        f1.pnlEducation.Size = new System.Drawing.Size(f1.pnlEducation.Size.Width, f1.pnlEducation.Size.Height + uc1.Size.Height);
+                    }
+                }
+                else
+                {
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+        }
+        public void XoaThongTinEducation(Education education, FProfileApplicant f1)
+        {
+            using (DoAnCuoiKyEntities db = new DoAnCuoiKyEntities())
+            {
+                var result = db.Educations.Find(education.EducationID);
+                if (result != null) 
+                {
+                    db.Educations.Remove(result);
+                }
+                db.SaveChanges();
+            }
+            LoadThongTinEducation(f1);
+        }
 
     }
+
+
 }
+

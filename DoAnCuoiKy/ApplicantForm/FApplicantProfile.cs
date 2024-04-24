@@ -1,5 +1,6 @@
 ﻿using DoAnCuoiKy.ApplicantForm;
 using DoAnCuoiKy.Class;
+using DoAnCuoiKy.UC;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace DoAnCuoiKy
     public partial class FProfileApplicant : Form
     {
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
+
         public FProfileApplicant()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace DoAnCuoiKy
         }
         public void LoadDanhSach()
         {
-           DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             var query = from applicant in db.Applicants where Constant.ApplicantID == applicant.ApplicantID select applicant;
 
             this.lblEmail.Text = query.Single().ApplicantEmail;
@@ -43,6 +45,7 @@ namespace DoAnCuoiKy
 
             applicantsDAO.LoadThongTinAboutMe(this);
             applicantsDAO.LoadThongTinWorkExp(this);
+            applicantsDAO.LoadThongTinEducation(this);
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -100,6 +103,31 @@ namespace DoAnCuoiKy
         private void pnlMain_MouseEnter(object sender, EventArgs e)
         {
             this.pnlMain.Focus();
+        }
+
+        private void btnAddEducation_Click(object sender, EventArgs e)
+        {
+            FAddEducation f1 = new FAddEducation(null,this);
+            f1.Show();
+        }
+
+        private void btnAddSkill_Click(object sender, EventArgs e)
+        {
+            FAddSkill f1 = new FAddSkill(null,this);
+            f1.Show();
+        }
+
+        private void btnEditBasicInfo_Click_1(object sender, EventArgs e)
+        {
+            //DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            //var query = from applicant in db.Applicants where Constant.ApplicantID == applicant.ApplicantID select applicant;
+            //var result = query.First();
+            //UCBasicApplicantInfor uc1 = new UCBasicApplicantInfor();
+            //uc1.Dock = DockStyle.Fill;
+            //this.pnlBasicInfo.Controls.Clear();
+            //this.pnlBasicInfo.Controls.Add(uc1);
+            
+
         }
     }
 }
