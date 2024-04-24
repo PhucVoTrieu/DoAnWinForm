@@ -4,26 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4c6824c33f78433bb7d31100cec73fe7" Name="Diagram1">
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.Aboutme" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.Applicant" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.ApplicantSkill" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.ApplicantsOfCompany" Width="1.5" PointX="6" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.Company" Width="1.5" PointX="1.5" PointY="1.375" IsExpanded="true" />
+      <Diagram DiagramId="38b005819608424da2db3170f12719e3" Name="Diagram1">
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Aboutme" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Applicant" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ApplicantSkill" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.ApplicantsOfCompany" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Company" Width="1.5" PointX="1.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DoAnCuoiKyModel.Education" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.Job" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.JobSkill" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.JobStatu" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.PersonalProject" Width="1.5" PointX="3" PointY="20.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.Skill" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.WorkExperience" Width="1.5" PointX="3" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Job" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.JobSkill" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.JobStatu" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.PersonalProject" Width="1.5" PointX="3" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Skill" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.WorkExperience" Width="1.5" PointX="3" PointY="24.75" IsExpanded="true" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__Aboutme__Applica__75A278F5" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__Applicant__Appli__70DDC3D8" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__Applicant__Appli__797309D9" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__Education__Appli__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__Education__Appli__160F4887" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__JobStatus__Appli__6B24EA82" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__PersonalP__Appli__02084FDA" ManuallyRouted="false" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__WorkExper__Appli__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__PersonalP__Appli__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__WorkExper__Appli__18EBB532" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__Applicant__Skill__787EE5A0" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__Applicant__Compa__6FE99F9F" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__Jobs__CompanyID__60A75C0F" ManuallyRouted="false" />
