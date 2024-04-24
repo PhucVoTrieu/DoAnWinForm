@@ -49,8 +49,9 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1042, 74);
+            this.panel2.Size = new System.Drawing.Size(782, 60);
             this.panel2.TabIndex = 4;
             // 
             // label1
@@ -58,9 +59,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(9, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 51);
+            this.label1.Size = new System.Drawing.Size(172, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "About Me";
             // 
@@ -78,14 +80,14 @@
             this.txtAboutMe.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAboutMe.ForeColor = System.Drawing.Color.Black;
             this.txtAboutMe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAboutMe.Location = new System.Drawing.Point(19, 53);
-            this.txtAboutMe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAboutMe.Location = new System.Drawing.Point(14, 43);
+            this.txtAboutMe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAboutMe.Multiline = true;
             this.txtAboutMe.Name = "txtAboutMe";
             this.txtAboutMe.PasswordChar = '\0';
             this.txtAboutMe.PlaceholderText = "Write something about you";
             this.txtAboutMe.SelectedText = "";
-            this.txtAboutMe.Size = new System.Drawing.Size(1011, 359);
+            this.txtAboutMe.Size = new System.Drawing.Size(758, 292);
             this.txtAboutMe.TabIndex = 4;
             // 
             // panel5
@@ -95,9 +97,10 @@
             this.panel5.Controls.Add(this.btnCancel);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel5.Location = new System.Drawing.Point(0, 432);
+            this.panel5.Location = new System.Drawing.Point(0, 351);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1042, 68);
+            this.panel5.Size = new System.Drawing.Size(782, 55);
             this.panel5.TabIndex = 18;
             // 
             // btnSave
@@ -112,10 +115,10 @@
             this.btnSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(852, 11);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Location = new System.Drawing.Point(639, 9);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(175, 46);
+            this.btnSave.Size = new System.Drawing.Size(131, 37);
             this.btnSave.TabIndex = 29;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -132,21 +135,23 @@
             this.btnCancel.FillColor2 = System.Drawing.Color.Transparent;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(660, 11);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(495, 9);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(175, 46);
+            this.btnCancel.Size = new System.Drawing.Size(131, 37);
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Location = new System.Drawing.Point(0, 431);
+            this.panel4.Location = new System.Drawing.Point(0, 350);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1042, 1);
+            this.panel4.Size = new System.Drawing.Size(782, 1);
             this.panel4.TabIndex = 19;
             // 
             // panel3
@@ -158,9 +163,10 @@
             this.panel3.Controls.Add(this.txtAboutMe);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel3.Location = new System.Drawing.Point(0, 74);
+            this.panel3.Location = new System.Drawing.Point(0, 60);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1042, 500);
+            this.panel3.Size = new System.Drawing.Size(782, 406);
             this.panel3.TabIndex = 6;
             // 
             // label2
@@ -168,21 +174,23 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(15, 16);
+            this.label2.Location = new System.Drawing.Point(11, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(757, 25);
+            this.label2.Size = new System.Drawing.Size(609, 20);
             this.label2.TabIndex = 20;
             this.label2.Text = "Tips: Summarize your professional experience, highlight your skills and your stre" +
     "ngths.";
             // 
             // FAboutMe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 574);
+            this.ClientSize = new System.Drawing.Size(782, 466);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FAboutMe";
             this.Text = "FAboutMe";
             this.panel2.ResumeLayout(false);

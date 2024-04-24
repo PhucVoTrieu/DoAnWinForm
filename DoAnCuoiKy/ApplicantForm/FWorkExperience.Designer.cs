@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlDetail = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.txtProjectAddDetails = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,8 +53,7 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1.SuspendLayout();
             this.pnlDetail.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -65,7 +67,7 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1033, 718);
             this.guna2Panel1.TabIndex = 8;
@@ -73,6 +75,7 @@
             // pnlDetail
             // 
             this.pnlDetail.AutoScroll = true;
+            this.pnlDetail.BackColor = System.Drawing.SystemColors.Menu;
             this.pnlDetail.Controls.Add(this.label6);
             this.pnlDetail.Controls.Add(this.guna2Panel3);
             this.pnlDetail.Controls.Add(this.label8);
@@ -91,7 +94,7 @@
             this.pnlDetail.Controls.Add(this.txtCompany);
             this.pnlDetail.Controls.Add(this.txtJobTitle);
             this.pnlDetail.Location = new System.Drawing.Point(0, 75);
-            this.pnlDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlDetail.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDetail.Name = "pnlDetail";
             this.pnlDetail.Size = new System.Drawing.Size(1012, 936);
             this.pnlDetail.TabIndex = 9;
@@ -116,10 +119,50 @@
             this.guna2Panel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 874);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1012, 62);
             this.guna2Panel3.TabIndex = 8;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BorderRadius = 10;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(875, 14);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(131, 37);
+            this.btnSave.TabIndex = 31;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.Location = new System.Drawing.Point(731, 12);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(131, 37);
+            this.btnCancel.TabIndex = 30;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label8
             // 
@@ -140,7 +183,7 @@
             this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
             this.guna2CustomCheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.guna2CustomCheckBox1.Location = new System.Drawing.Point(26, 222);
-            this.guna2CustomCheckBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomCheckBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
             this.guna2CustomCheckBox1.Size = new System.Drawing.Size(30, 25);
             this.guna2CustomCheckBox1.TabIndex = 42;
@@ -262,7 +305,7 @@
             "2023",
             "2024"});
             this.cbWorkYearTo.Location = new System.Drawing.Point(792, 310);
-            this.cbWorkYearTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkYearTo.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkYearTo.MaxDropDownItems = 4;
             this.cbWorkYearTo.Name = "cbWorkYearTo";
             this.cbWorkYearTo.Size = new System.Drawing.Size(215, 61);
@@ -299,7 +342,7 @@
             "11",
             "12"});
             this.cbWorkMonthTo.Location = new System.Drawing.Point(556, 310);
-            this.cbWorkMonthTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkMonthTo.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkMonthTo.MaxDropDownItems = 4;
             this.cbWorkMonthTo.Name = "cbWorkMonthTo";
             this.cbWorkMonthTo.Size = new System.Drawing.Size(215, 61);
@@ -359,7 +402,7 @@
             "2023",
             "2024"});
             this.cbWorkYearFrom.Location = new System.Drawing.Point(262, 310);
-            this.cbWorkYearFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkYearFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkYearFrom.MaxDropDownItems = 4;
             this.cbWorkYearFrom.Name = "cbWorkYearFrom";
             this.cbWorkYearFrom.Size = new System.Drawing.Size(215, 61);
@@ -396,7 +439,7 @@
             "11",
             "12"});
             this.cbWorkMonthFrom.Location = new System.Drawing.Point(26, 310);
-            this.cbWorkMonthFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkMonthFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkMonthFrom.MaxDropDownItems = 4;
             this.cbWorkMonthFrom.Name = "cbWorkMonthFrom";
             this.cbWorkMonthFrom.Size = new System.Drawing.Size(215, 61);
@@ -509,7 +552,7 @@
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1016, 70);
             this.guna2Panel2.TabIndex = 7;
@@ -523,7 +566,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Gray;
             this.guna2ControlBox1.Location = new System.Drawing.Point(955, 21);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(44, 37);
             this.guna2ControlBox1.TabIndex = 4;
@@ -540,44 +583,11 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Work Experience";
             // 
-            // btnSave
+            // guna2DragControl1
             // 
-            this.btnSave.BorderRadius = 10;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.btnSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(875, 14);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(131, 37);
-            this.btnSave.TabIndex = 31;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.Transparent;
-            this.btnCancel.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(731, 12);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(131, 37);
-            this.btnCancel.TabIndex = 30;
-            this.btnCancel.Text = "Cancel";
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // FWorkExperience
             // 
@@ -587,7 +597,7 @@
             this.ClientSize = new System.Drawing.Size(1033, 718);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FWorkExperience";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FWorkExperience";
@@ -627,5 +637,6 @@
         public Guna.UI2.WinForms.Guna2TextBox txtJobTitle;
         public Guna.UI2.WinForms.Guna2GradientButton btnSave;
         public Guna.UI2.WinForms.Guna2GradientButton btnCancel;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

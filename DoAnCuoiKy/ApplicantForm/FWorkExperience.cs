@@ -40,19 +40,13 @@ namespace DoAnCuoiKy.ApplicantForm
         private void btnSave_Click(object sender, EventArgs e)
         {
             ApplicantsDAO applicantsDAO = new ApplicantsDAO();
-            //if (WorkExperience != null)
-            //{
-            //    applicantsDAO.SuaThongTinWorkExp(this);
-            //}
-            //else 
-            //{
-            //    applicantsDAO.ThemThongTinWorkExp(this);
-
-
-            //}
             applicantsDAO.SuaThongTinWorkExp(this);
             this.Close();
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

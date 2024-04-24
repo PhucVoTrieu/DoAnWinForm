@@ -86,7 +86,7 @@ namespace DoAnCuoiKy
         private void btnAddAboutMe_Click_1(object sender, EventArgs e)
         {
             FAboutMe f1 = new FAboutMe(this);
-            f1.Show();
+            f1.ShowDialog();
             applicantsDAO.LoadThongTinAboutMe(this);
         }
 
@@ -95,6 +95,11 @@ namespace DoAnCuoiKy
             FWorkExperience f1 = new FWorkExperience(null,this);
             f1.Show();
           //  applicantsDAO.LoadThongTinWorkExp(this);
+        }
+
+        private void pnlMain_MouseEnter(object sender, EventArgs e)
+        {
+            this.pnlMain.Focus();
         }
     }
 }

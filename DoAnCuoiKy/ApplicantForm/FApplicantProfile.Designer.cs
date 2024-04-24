@@ -53,13 +53,11 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblYourName = new System.Windows.Forms.Label();
             this.pnlAboutMe = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblAboutMe = new System.Windows.Forms.Label();
             this.btnAddAboutMe = new Guna.UI2.WinForms.Guna2Button();
             this.pnlListOfAboutMe = new System.Windows.Forms.FlowLayoutPanel();
             this.lblAboutMePlaceHolder = new System.Windows.Forms.Label();
             this.pnlWorkExp = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnaAddWorkExp = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlListOfWorkExp = new System.Windows.Forms.FlowLayoutPanel();
@@ -75,6 +73,8 @@
             this.BasicInforElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlMain.SuspendLayout();
             this.pnlBasicInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAvatar)).BeginInit();
@@ -111,9 +111,10 @@
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.pnlMain.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.pnlMain.Size = new System.Drawing.Size(1167, 619);
             this.pnlMain.TabIndex = 0;
+            this.pnlMain.MouseEnter += new System.EventHandler(this.pnlMain_MouseEnter);
             // 
             // pnlBasicInfo
             // 
@@ -140,7 +141,7 @@
             this.pnlBasicInfo.Controls.Add(this.guna2CirclePictureBox1);
             this.pnlBasicInfo.Controls.Add(this.lblYourName);
             this.pnlBasicInfo.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlBasicInfo.Location = new System.Drawing.Point(33, 3);
+            this.pnlBasicInfo.Location = new System.Drawing.Point(38, 3);
             this.pnlBasicInfo.Name = "pnlBasicInfo";
             this.pnlBasicInfo.Size = new System.Drawing.Size(1095, 252);
             this.pnlBasicInfo.TabIndex = 104;
@@ -380,23 +381,14 @@
             // pnlAboutMe
             // 
             this.pnlAboutMe.BackColor = System.Drawing.Color.White;
-            this.pnlAboutMe.Controls.Add(this.guna2Separator1);
             this.pnlAboutMe.Controls.Add(this.lblAboutMe);
             this.pnlAboutMe.Controls.Add(this.btnAddAboutMe);
             this.pnlAboutMe.Controls.Add(this.pnlListOfAboutMe);
-            this.pnlAboutMe.Location = new System.Drawing.Point(33, 278);
-            this.pnlAboutMe.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.pnlAboutMe.Location = new System.Drawing.Point(38, 278);
+            this.pnlAboutMe.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.pnlAboutMe.Name = "pnlAboutMe";
             this.pnlAboutMe.Size = new System.Drawing.Size(1095, 141);
             this.pnlAboutMe.TabIndex = 103;
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Location = new System.Drawing.Point(20, 54);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1042, 18);
-            this.guna2Separator1.TabIndex = 132;
             // 
             // lblAboutMe
             // 
@@ -454,23 +446,14 @@
             // pnlWorkExp
             // 
             this.pnlWorkExp.BackColor = System.Drawing.Color.White;
-            this.pnlWorkExp.Controls.Add(this.guna2Separator2);
             this.pnlWorkExp.Controls.Add(this.btnaAddWorkExp);
             this.pnlWorkExp.Controls.Add(this.label1);
             this.pnlWorkExp.Controls.Add(this.pnlListOfWorkExp);
-            this.pnlWorkExp.Location = new System.Drawing.Point(33, 459);
-            this.pnlWorkExp.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.pnlWorkExp.Location = new System.Drawing.Point(38, 442);
+            this.pnlWorkExp.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.pnlWorkExp.Name = "pnlWorkExp";
             this.pnlWorkExp.Size = new System.Drawing.Size(1095, 142);
             this.pnlWorkExp.TabIndex = 106;
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.Location = new System.Drawing.Point(20, 59);
-            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(1042, 18);
-            this.guna2Separator2.TabIndex = 133;
             // 
             // btnaAddWorkExp
             // 
@@ -531,7 +514,7 @@
             this.pnlEducation.Controls.Add(this.guna2Button2);
             this.pnlEducation.Controls.Add(this.label2);
             this.pnlEducation.Controls.Add(this.pnlListOfEducation);
-            this.pnlEducation.Location = new System.Drawing.Point(33, 641);
+            this.pnlEducation.Location = new System.Drawing.Point(38, 607);
             this.pnlEducation.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
             this.pnlEducation.Name = "pnlEducation";
             this.pnlEducation.Size = new System.Drawing.Size(1095, 193);
@@ -593,8 +576,8 @@
             this.pnlSkill.BackColor = System.Drawing.Color.White;
             this.pnlSkill.Controls.Add(this.guna2Button3);
             this.pnlSkill.Controls.Add(this.label3);
-            this.pnlSkill.Location = new System.Drawing.Point(33, 874);
-            this.pnlSkill.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.pnlSkill.Location = new System.Drawing.Point(38, 823);
+            this.pnlSkill.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.pnlSkill.Name = "pnlSkill";
             this.pnlSkill.Size = new System.Drawing.Size(1095, 193);
             this.pnlSkill.TabIndex = 108;
@@ -642,6 +625,16 @@
             // 
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this.pboxAvatar;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 15;
+            this.guna2Elipse2.TargetControl = this.pnlWorkExp;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 15;
+            this.guna2Elipse3.TargetControl = this.pnlAboutMe;
             // 
             // FProfileApplicant
             // 
@@ -728,12 +721,12 @@
         public Guna.UI2.WinForms.Guna2Elipse BasicInforElipse;
         public Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         public Guna.UI2.WinForms.Guna2Panel pnlSkill;
         public Guna.UI2.WinForms.Guna2Button guna2Button3;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.FlowLayoutPanel pnlListOfWorkExp;
         public System.Windows.Forms.Label lblWorkExpPlaceholder;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
     }
 }

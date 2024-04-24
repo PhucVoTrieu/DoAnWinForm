@@ -83,7 +83,7 @@ namespace DoAnCuoiKy
                             select c;
                 if (query.Any())
                 {
-                    f1.pnlWorkExp.Size = new System.Drawing.Size(f1.pnlWorkExp.Size.Width, 142);
+                    f1.pnlWorkExp.Size = new System.Drawing.Size(f1.pnlWorkExp.Size.Width, 100);
                     f1.pnlListOfWorkExp.Controls.Clear();
                     //f1.lblWorkExpPlaceholder.Visible=false;
                     foreach (var workExp in query)

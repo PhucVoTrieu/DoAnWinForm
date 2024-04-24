@@ -35,6 +35,7 @@
             this.lblProjectName = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.SuspendLayout();
             // 
             // lblCompanyName
@@ -42,7 +43,7 @@
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCompanyName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCompanyName.Location = new System.Drawing.Point(17, 49);
+            this.lblCompanyName.Location = new System.Drawing.Point(17, 85);
             this.lblCompanyName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(122, 20);
@@ -54,7 +55,7 @@
             this.lblJobtitle.AutoSize = true;
             this.lblJobtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblJobtitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJobtitle.Location = new System.Drawing.Point(17, 12);
+            this.lblJobtitle.Location = new System.Drawing.Point(17, 48);
             this.lblJobtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJobtitle.Name = "lblJobtitle";
             this.lblJobtitle.Size = new System.Drawing.Size(90, 24);
@@ -66,7 +67,7 @@
             this.lblJobDescription.AutoSize = true;
             this.lblJobDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblJobDescription.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJobDescription.Location = new System.Drawing.Point(17, 123);
+            this.lblJobDescription.Location = new System.Drawing.Point(17, 159);
             this.lblJobDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJobDescription.Name = "lblJobDescription";
             this.lblJobDescription.Size = new System.Drawing.Size(134, 20);
@@ -78,7 +79,7 @@
             this.lblFromToDate.AutoSize = true;
             this.lblFromToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblFromToDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFromToDate.Location = new System.Drawing.Point(17, 86);
+            this.lblFromToDate.Location = new System.Drawing.Point(17, 122);
             this.lblFromToDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFromToDate.Name = "lblFromToDate";
             this.lblFromToDate.Size = new System.Drawing.Size(100, 20);
@@ -90,7 +91,7 @@
             this.lblProjectName.AutoSize = true;
             this.lblProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblProjectName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblProjectName.Location = new System.Drawing.Point(17, 160);
+            this.lblProjectName.Location = new System.Drawing.Point(17, 196);
             this.lblProjectName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProjectName.Name = "lblProjectName";
             this.lblProjectName.Size = new System.Drawing.Size(92, 20);
@@ -105,7 +106,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Image = global::DoAnCuoiKy.Properties.Resources.trash2;
-            this.btnDelete.Location = new System.Drawing.Point(1020, 9);
+            this.btnDelete.Location = new System.Drawing.Point(1028, 41);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(46, 44);
@@ -121,7 +122,7 @@
             this.btnEdit.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Red;
             this.btnEdit.Image = global::DoAnCuoiKy.Properties.Resources.editing24;
-            this.btnEdit.Location = new System.Drawing.Point(980, 12);
+            this.btnEdit.Location = new System.Drawing.Point(988, 44);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(36, 37);
@@ -129,11 +130,20 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Location = new System.Drawing.Point(21, 21);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(1042, 18);
+            this.guna2Separator1.TabIndex = 133;
+            // 
             // UCApplicantWorkExp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.lblProjectName);
@@ -143,7 +153,7 @@
             this.Controls.Add(this.lblJobtitle);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCApplicantWorkExp";
-            this.Size = new System.Drawing.Size(1095, 200);
+            this.Size = new System.Drawing.Size(1095, 231);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +167,6 @@
         public System.Windows.Forms.Label lblProjectName;
         public System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }
