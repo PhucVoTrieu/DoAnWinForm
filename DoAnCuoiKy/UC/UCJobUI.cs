@@ -19,8 +19,8 @@ namespace DoAnCuoiKy
         public Job job;
         JobDetails jobDetails;
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        DBconnection db = new DBconnection();
-      
+        DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+
         public UCJobUI()
         {
             InitializeComponent();
@@ -49,13 +49,17 @@ namespace DoAnCuoiKy
             this.txtExpYear.Text = j1.ExpInYears;
             
         }
-        private void btnDetails_Click_1(object sender, EventArgs e)
+        //private void btnDetails_Click_1(object sender, EventArgs e)
+        //{
+        //    FJobDetails f1 = new FJobDetails(this.jobDetails);
+
+        //    f1.ShowDialog();
+        //}
+        private void btnDetails_Click(object sender, EventArgs e)
         {
-            FJobDetails f1 = new FJobDetails(this.jobDetails);
-       
+            FJobDetails f1 = new FJobDetails(this.job);
             f1.ShowDialog();
         }
-
         private void btnApplyNow_Click(object sender, EventArgs e)
         {
 
@@ -79,10 +83,5 @@ namespace DoAnCuoiKy
             
         }
 
-        private void btnDetails_Click(object sender, EventArgs e)
-        {
-            FJobDetails f1 = new FJobDetails(this.jobDetails);
-            f1.Show();
-        }
     }
 }

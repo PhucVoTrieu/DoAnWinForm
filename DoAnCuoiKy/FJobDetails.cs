@@ -16,26 +16,27 @@ namespace DoAnCuoiKy
     public partial class FJobDetails : Form
     {
         JobDetails jobDetails;
+        DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
         public FJobDetails()
         {
             InitializeComponent();
         }
-        public FJobDetails(JobDetails j1)
+        public FJobDetails(Job j1 )
         {
             InitializeComponent();
-            //this.txtJobTitle.Text = j1.JobTitle.ToString();
-            //this.txtJobPosition.Text = j1.JobPosition.ToString();
-            //this.txtJobType.Text = j1.JobType.ToString();
-            //this.txtExperienceYears.Text = j1.ExpInYears;
-            //this.txtLocation.Text = j1.Location.ToString();
-            //this.txtRecruitmentQuota.Text= j1.RecruitmentQuota.ToString();
-            //this.txtSalary.Text = j1.JobSalary.ToString();
-            //this.txtJobDescription.Text = j1.JobDescription.ToString();
-            //this.txtBenefit.Text = j1.Benefit;
-            //this.btnCompanyName.Text = j1.CompanyName;
-
-            //this.jobDetails = j1; 
-
+            var inforCompany = from c in db.Companies where c.CompanyID == j1.CompanyID select c;
+            var result = inforCompany.First();
+            this.lblJobTitle.Text = j1.JobTitle.ToString();
+            this.lblCompanyName.Text = result.CompanyName.ToString();
+            this.labelCompanyName2.Text = result.CompanyName.ToString();
+            this.lblCompanySize.Text = result.CompanySize.ToString();
+            this.lblCompanyType.Text = result.CompanyType.ToString();
+            this.lblCountry.Text = result.CompanyCountry.ToString();
+            this.lblWorkingday.Text = result.CompanyWorkingDays.ToString();
+            this.lblSalary.Text = j1.JobSalary.ToString();
+            this.txtJobDesciption.Text = j1.JobDescription.ToString();
+            this.txtJobBenefit.Text = j1.JobBenefit.ToString();
+            this.txtJobRequirement.Text = j1.JobRequirement.ToString();
         }
 
         private void btnApply_Click(object sender, EventArgs e)
