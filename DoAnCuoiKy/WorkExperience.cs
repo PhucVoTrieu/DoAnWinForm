@@ -17,8 +17,10 @@ namespace DoAnCuoiKy
         public int WorkExperienceID { get; set; }
         public string JobTitle { get; set; }
         public string CompanyName { get; set; }
-        public string FromDate { get; set; }
-        public string ToDate { get; set; }
+        public string FromMonth { get; set; }
+        public string FromYear { get; set; }
+        public string ToMonth { get; set; }
+        public string ToYear { get; set; }
         public string WorkDetails { get; set; }
         public string ProjectDetails { get; set; }
         public Nullable<int> ApplicantID { get; set; }

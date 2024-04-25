@@ -17,8 +17,10 @@ namespace DoAnCuoiKy
         public int EducationID { get; set; }
         public string School { get; set; }
         public string Major { get; set; }
-        public string FromDate { get; set; }
-        public string ToDate { get; set; }
+        public string FromMonth { get; set; }
+        public string FromYear { get; set; }
+        public string ToMonth { get; set; }
+        public string ToYear { get; set; }
         public string AddDetails { get; set; }
         public Nullable<int> ApplicantID { get; set; }
     

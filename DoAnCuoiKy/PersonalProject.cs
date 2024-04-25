@@ -16,8 +16,10 @@ namespace DoAnCuoiKy
     {
         public int PersonalProjectID { get; set; }
         public string ProjectName { get; set; }
-        public string FromDate { get; set; }
-        public string ToDate { get; set; }
+        public string FromMonth { get; set; }
+        public string FromYear { get; set; }
+        public string ToMonth { get; set; }
+        public string ToYear { get; set; }
         public string ShortDescription { get; set; }
         public string ProjectURL { get; set; }
         public Nullable<int> ApplicantID { get; set; }

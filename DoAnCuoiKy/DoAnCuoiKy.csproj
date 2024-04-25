@@ -84,6 +84,18 @@
     <Compile Include="ApplicantForm\FAddEducation.Designer.cs">
       <DependentUpon>FAddEducation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicantForm\FAddSkill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicantForm\FAddSkill.Designer.cs">
+      <DependentUpon>FAddSkill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantForm\FeditBasicInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicantForm\FeditBasicInfor.Designer.cs">
+      <DependentUpon>FeditBasicInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicantForm\FPersonalDetais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,11 +298,23 @@
     <Compile Include="UC\UCApplicants.Designer.cs">
       <DependentUpon>UCApplicants.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCApplicantSkill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCApplicantSkill.Designer.cs">
+      <DependentUpon>UCApplicantSkill.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCApplicantWorkExp.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCApplicantWorkExp.Designer.cs">
       <DependentUpon>UCApplicantWorkExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCBasicApplicantInfor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCBasicApplicantInfor.Designer.cs">
+      <DependentUpon>UCBasicApplicantInfor.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCJobUI.cs">
       <SubType>UserControl</SubType>
@@ -306,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FAddEducation.resx">
       <DependentUpon>FAddEducation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicantForm\FAddSkill.resx">
+      <DependentUpon>FAddSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicantForm\FeditBasicInfor.resx">
+      <DependentUpon>FeditBasicInfor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FPersonalDetais.resx">
       <DependentUpon>FPersonalDetais.cs</DependentUpon>
@@ -392,8 +422,14 @@
     <EmbeddedResource Include="UC\UCApplicants.resx">
       <DependentUpon>UCApplicants.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCApplicantSkill.resx">
+      <DependentUpon>UCApplicantSkill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCApplicantWorkExp.resx">
       <DependentUpon>UCApplicantWorkExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCBasicApplicantInfor.resx">
+      <DependentUpon>UCBasicApplicantInfor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCJobUI.resx">
       <DependentUpon>UCJobUI.cs</DependentUpon>
@@ -687,6 +723,9 @@
     <None Include="Resources\trash2.png" />
     <None Include="Resources\trash.png" />
     <None Include="Resources\pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editing24.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DoAnCuoiKyModel.Context.tt">
