@@ -16,8 +16,10 @@ namespace DoAnCuoiKy
     public partial class FApplicants : Form
     {
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
-        SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        Company companyInfo;
+        public Company companyInfo;
+        public FApplicants()
+        {
+        }
         public FApplicants(Company e1)
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace DoAnCuoiKy
         private void btnDelete_Click(object sender, EventArgs e)
         {
             List<UCApplicants> list = new List<UCApplicants>();
-            foreach (Control c in pnlAllCandidate.Controls)
+            foreach (Control c in pnlAllApplicant.Controls)
             {
                 if (c.GetType() == typeof(UCApplicants))
                 {
@@ -41,7 +43,7 @@ namespace DoAnCuoiKy
             }
             foreach (UCApplicants c in list)
             {
-                this.pnlAllCandidate.Controls.Remove(c);
+                this.pnlAllApplicant.Controls.Remove(c);
                 applicantsDAO.xoaUC(c);
             }
         }

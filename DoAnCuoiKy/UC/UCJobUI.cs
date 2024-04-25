@@ -83,5 +83,11 @@ namespace DoAnCuoiKy
             
         }
 
+        private void btnApplyNow_Click_1(object sender, EventArgs e)
+        {
+            this.btnApplyNow.Enabled= false;
+            this.btnApplyNow.Text = "Applied";
+
+        }
     }
 }

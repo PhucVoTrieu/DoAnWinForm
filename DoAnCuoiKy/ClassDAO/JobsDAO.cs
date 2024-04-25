@@ -11,8 +11,7 @@ namespace DoAnCuoiKy
     internal class JobsDAO
     {
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-        SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        public void them(FPostAJob f)
+        public void Them(FPostAJob f)
         {
             db.Jobs.Add(new Job
             {

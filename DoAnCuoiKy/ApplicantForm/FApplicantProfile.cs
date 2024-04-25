@@ -17,20 +17,24 @@ namespace DoAnCuoiKy
     public partial class FProfileApplicant : Form
     {
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
-
+        public Applicant applicantInfo;
         public FProfileApplicant()
         {
             InitializeComponent();
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            var query = from a in db.Applicants where Constant.ApplicantID == a.ApplicantID select a;   
+            this.applicantInfo = query.FirstOrDefault();
             LoadDanhSach();
         }
         public FProfileApplicant(Applicant applicant)
         {
+            this.applicantInfo = applicant;
             InitializeComponent();
             LoadDanhSach();
         }
         public void LoadDanhSach()
         {
-            applicantsDAO.loadThongTinBasicInforlenForm(this);
+            applicantsDAO.LoadThongTinBasicInforlenForm(this);
             applicantsDAO.LoadThongTinAboutMe(this);
             applicantsDAO.LoadThongTinWorkExp(this);
             applicantsDAO.LoadThongTinEducation(this);
@@ -82,10 +86,6 @@ namespace DoAnCuoiKy
           //  applicantsDAO.LoadThongTinWorkExp(this);
         }
 
-        private void pnlMain_MouseEnter(object sender, EventArgs e)
-        {
-            this.pnlMain.Focus();
-        }
 
         private void btnAddEducation_Click(object sender, EventArgs e)
         {

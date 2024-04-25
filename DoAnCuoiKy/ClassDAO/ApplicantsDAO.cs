@@ -80,11 +80,11 @@ namespace DoAnCuoiKy
             try
             {
                 var query = from c in db.WorkExperiences
-                            where c.ApplicantID == Constant.ApplicantID
+                            where c.ApplicantID == f1.applicantInfo.ApplicantID
                             select c;
                 if (query.Any())
                 {
-                    f1.pnlWorkExp.Size = new System.Drawing.Size(f1.pnlWorkExp.Size.Width, 100);
+                    f1.pnlWorkExp.Size = new System.Drawing.Size(f1.pnlWorkExp.Size.Width, 65);
                     f1.pnlListOfWorkExp.Controls.Clear();
                     //f1.lblWorkExpPlaceholder.Visible=false;
                     foreach (var workExp in query)
@@ -95,12 +95,7 @@ namespace DoAnCuoiKy
                         f1.pnlWorkExp.Size = new System.Drawing.Size(f1.pnlWorkExp.Size.Width, f1.pnlWorkExp.Size.Height + uc1.Size.Height);
                     }
                 }
-                else
-                {
-                    // f1.lblWorkExpPlaceholder.Visible = true;
-                    //f1.lblAboutMePlaceHolder.Text = "Introduce your strengths and years of experience";
-                    //f1.pnlAboutMe.Size = new System.Drawing.Size(f1.pnlAboutMe.Size.Width, 100 + f1.lblAboutMePlaceHolder.Size.Height);
-                }
+                
             }
             catch (Exception ex)
             {
@@ -138,7 +133,7 @@ namespace DoAnCuoiKy
             try
             {
                 var query = from c in db.Aboutmes
-                            where c.ApplicantID == Constant.ApplicantID
+                            where c.ApplicantID == f1.applicantInfo.ApplicantID
                             select c.AboutmeDetails;
                 if (query.Count() > 0)
                 {
@@ -191,16 +186,18 @@ namespace DoAnCuoiKy
         {
             try
             {
-                var candidate = from c in db.Applicants select c;
+                var applicantsOfCompanies = from c in db.ApplicantsOfCompanies where c.CompanyID == f.companyInfo.CompanyID select c.ApplicantID into query
+                                            from a in db.Applicants where a.ApplicantID == query select a;
 
-                foreach (var c in candidate)
+                
+                foreach (var applicant in applicantsOfCompanies)
                 {
-                    UCApplicants uCApplicants = new UCApplicants(c);
-                    if (checkYeuThich(c))
+                    UCApplicants uCApplicants = new UCApplicants(applicant);
+                    if (CheckYeuThich(applicant))
                     {
                         uCApplicants.btnFavorite.Checked = true;
                     }
-                    f.pnlAllCandidate.Controls.Add(uCApplicants);
+                    f.pnlAllApplicant.Controls.Add(uCApplicants);
                 }
             }
             catch (Exception ex)
@@ -209,7 +206,7 @@ namespace DoAnCuoiKy
             }
 
         }
-        public bool checkYeuThich(Applicant app1)
+        public bool CheckYeuThich(Applicant app1)
         {
             var query = from c in db.ApplicantsOfCompanies where c.ApplicantID == app1.ApplicantID select c;
             return query.SingleOrDefault().IsFavorite == true;
@@ -292,11 +289,11 @@ namespace DoAnCuoiKy
             try
             {
                 var query = from c in db.Educations
-                            where c.ApplicantID == Constant.ApplicantID
+                            where c.ApplicantID == f1.applicantInfo.ApplicantID
                             select c;
                 if (query.Any()) 
                 {
-                    f1.pnlEducation.Size = new System.Drawing.Size(f1.pnlEducation.Size.Width, 100);
+                    f1.pnlEducation.Size = new System.Drawing.Size(f1.pnlEducation.Size.Width, 45);
                     f1.pnlListOfEducation.Controls.Clear();
                     foreach (var education in query)
                     {
@@ -362,7 +359,7 @@ namespace DoAnCuoiKy
             try
             { 
                 // danh sách toàn bộ Skill có trong ApplicantID
-                var allSkillID = from c in db.ApplicantSkills where c.ApplicantID == Constant.ApplicantID
+                var allSkillID = from c in db.ApplicantSkills where c.ApplicantID == f1.applicantInfo.ApplicantID
                                                               select c;
                 //chuyển sang list
                 allSkillID.ToList();
@@ -375,13 +372,13 @@ namespace DoAnCuoiKy
                     listOFSkill.AddRange(Skillname.ToList());
                 }
 
-                f1.pnlSkill.Size = new System.Drawing.Size(f1.pnlEducation.Size.Width, 100);
+               // f1.pnlSkill.Size = new System.Drawing.Size(f1.pnlEducation.Size.Width, 20);
                 f1.pnlListOfSkills.Controls.Clear();
                 foreach (var allSkill in listOFSkill)
                 {
                     UCApplicantSkill uc1 = new UCApplicantSkill(allSkill , f1);
                     f1.pnlListOfSkills.Controls.Add(uc1);
-                    f1.pnlSkill.Size = new System.Drawing.Size(f1.pnlSkill.Size.Width, f1.pnlSkill.Size.Height + uc1.Size.Height);
+                 //   f1.pnlSkill.Size = new System.Drawing.Size(f1.pnlSkill.Size.Width, f1.pnlSkill.Size.Height + uc1.Size.Height);
                 }
 
             }
@@ -390,11 +387,11 @@ namespace DoAnCuoiKy
                 Console.WriteLine("Lỗi truy vấn: " + ex.Message);
             }
         }
-        public void xoaThongTinSkill(Skill skill , FProfileApplicant f1)
+        public void XoaThongTinSkill(Skill skill , FProfileApplicant f1)
         {
             using (DoAnCuoiKyEntities db = new DoAnCuoiKyEntities())
             {
-                var result = from c in db.ApplicantSkills where c.SkillID == skill.SkillID && c.ApplicantID == Constant.ApplicantID select c;
+                var result = from c in db.ApplicantSkills where c.SkillID == skill.SkillID && c.ApplicantID == f1.applicantInfo.ApplicantID select c;
                 // điều kiện phải bằng skill ID  vì sẽ có skill ID giống nhau nhưng khác ApplicantID
                 result.ToList();
                 foreach(var skill3  in result) 
@@ -410,7 +407,7 @@ namespace DoAnCuoiKy
             }
             LoadThongTinSkill(f1);
         }
-        public void suaThongTinBasicInfor(FeditBasicInfor f1) 
+        public void SuaThongTinBasicInfor(FeditBasicInfor f1) 
         {
             if(f1 != null)
             {
@@ -423,13 +420,13 @@ namespace DoAnCuoiKy
                 result.First().ApplicantDOB = f1.applicant1.ApplicantDOB;
                 db.SaveChanges() ;
             }
-            loadThongTinBasicInfor(f1);
+            LoadThongTinBasicInfor(f1);
         }
-        public void loadThongTinBasicInfor(FeditBasicInfor f1)
+        public void LoadThongTinBasicInfor(FeditBasicInfor f1)
         {
             try
             {
-                var result = from c in db.Applicants where c.ApplicantID == f1.applicant1.ApplicantID select c;
+                var result = from c in db.Applicants where c.ApplicantID == f1.applicant1.ApplicantID  select c ;
 
                 f1.txtAddress.Text = result.First().ApplicantAddress;
                 f1.txtEmail.Text = result.First().ApplicantEmail;
@@ -438,7 +435,7 @@ namespace DoAnCuoiKy
                 f1.txtPhoneNumber.Text = result.First().ApplicantPhonenumber;
                 f1.txtDOB.Text = result.First().ApplicantDOB.ToString();
                
-                loadThongTinBasicInforlenForm(f1.fProfile);
+                LoadThongTinBasicInforlenForm(f1.fProfile);
 
             }
             catch (Exception ex)
@@ -446,10 +443,10 @@ namespace DoAnCuoiKy
                 Console.WriteLine("Lỗi truy vấn: " + ex.Message);
             }
         }
-        public void loadThongTinBasicInforlenForm(FProfileApplicant f1)
+        public void LoadThongTinBasicInforlenForm(FProfileApplicant f1)
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            var query = from applicant in db.Applicants where Constant.ApplicantID == applicant.ApplicantID select applicant;
+            var query = from applicant in db.Applicants where f1.applicantInfo.ApplicantID == applicant.ApplicantID select applicant;
 
             f1.lblEmail.Text = query.Single().ApplicantEmail;
             f1.lblAddress.Text = query.Single().ApplicantAddress;

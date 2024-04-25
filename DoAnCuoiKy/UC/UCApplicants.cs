@@ -62,5 +62,15 @@ namespace DoAnCuoiKy
             }
         }
 
+        private void btnApplicantDetails_Click(object sender, EventArgs e)
+        {
+            FProfileApplicant applicant = new FProfileApplicant(this.applicantInfo);
+            applicant.btnaAddWorkExp.Hide();
+            applicant.btnAddEducation.Hide();
+            applicant.btnAddAboutMe.Hide();
+            applicant.btnEditBasicInfo.Hide();
+            applicant.btnAddSkill.Hide();
+            applicant.Show();
+        }
     }
 }

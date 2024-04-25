@@ -33,16 +33,16 @@
             this.CBoxSelected = new Guna.UI2.WinForms.Guna2CheckBox();
             this.pnlUCJob = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
             this.btnDetails = new Guna.UI2.WinForms.Guna2Button();
             this.btnApplyNow = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtExpYear = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
             this.lblJobTitle = new System.Windows.Forms.Label();
             this.txtJobtype = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlUCJob.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -97,35 +97,6 @@
             this.guna2Separator1.Size = new System.Drawing.Size(301, 12);
             this.guna2Separator1.TabIndex = 26;
             // 
-            // btnFavorite
-            // 
-            this.btnFavorite.AutoRoundedCorners = true;
-            this.btnFavorite.BackColor = System.Drawing.Color.Transparent;
-            this.btnFavorite.BorderColor = System.Drawing.Color.White;
-            this.btnFavorite.BorderRadius = 21;
-            this.btnFavorite.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btnFavorite.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnFavorite.CheckedState.Image = global::DoAnCuoiKy.Properties.Resources._93;
-            this.btnFavorite.CustomizableEdges.BottomRight = false;
-            this.btnFavorite.CustomizableEdges.TopRight = false;
-            this.btnFavorite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFavorite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFavorite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFavorite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFavorite.FillColor = System.Drawing.Color.White;
-            this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnFavorite.ForeColor = System.Drawing.Color.White;
-            this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._92;
-            this.btnFavorite.Location = new System.Drawing.Point(294, 25);
-            this.btnFavorite.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFavorite.Name = "btnFavorite";
-            this.btnFavorite.ShadowDecoration.BorderRadius = 15;
-            this.btnFavorite.ShadowDecoration.Depth = 15;
-            this.btnFavorite.ShadowDecoration.Enabled = true;
-            this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.btnFavorite.Size = new System.Drawing.Size(77, 44);
-            this.btnFavorite.TabIndex = 25;
-            // 
             // btnDetails
             // 
             this.btnDetails.AutoRoundedCorners = true;
@@ -152,11 +123,11 @@
             this.btnApplyNow.AutoRoundedCorners = true;
             this.btnApplyNow.BackColor = System.Drawing.Color.Transparent;
             this.btnApplyNow.BorderRadius = 22;
-            this.btnApplyNow.Checked = true;
-            this.btnApplyNow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnApplyNow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApplyNow.DisabledState.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnApplyNow.DisabledState.CustomBorderColor = System.Drawing.Color.LimeGreen;
             this.btnApplyNow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnApplyNow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApplyNow.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnApplyNow.DisabledState.Image = global::DoAnCuoiKy.Properties.Resources._132;
             this.btnApplyNow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnApplyNow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApplyNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
@@ -166,19 +137,7 @@
             this.btnApplyNow.Size = new System.Drawing.Size(153, 46);
             this.btnApplyNow.TabIndex = 23;
             this.btnApplyNow.Text = "Apply Now";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._311;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(8, 25);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(116, 70);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 22;
-            this.guna2PictureBox1.TabStop = false;
+            this.btnApplyNow.Click += new System.EventHandler(this.btnApplyNow_Click_1);
             // 
             // txtExpYear
             // 
@@ -233,11 +192,10 @@
             // 
             // lblJobTitle
             // 
-            this.lblJobTitle.AutoSize = true;
             this.lblJobTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.lblJobTitle.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobTitle.ForeColor = System.Drawing.Color.White;
-            this.lblJobTitle.Location = new System.Drawing.Point(130, 25);
+            this.lblJobTitle.Location = new System.Drawing.Point(120, 25);
             this.lblJobTitle.Name = "lblJobTitle";
             this.lblJobTitle.Size = new System.Drawing.Size(167, 74);
             this.lblJobTitle.TabIndex = 16;
@@ -274,6 +232,48 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 15;
+            // 
+            // btnFavorite
+            // 
+            this.btnFavorite.AutoRoundedCorners = true;
+            this.btnFavorite.BackColor = System.Drawing.Color.Transparent;
+            this.btnFavorite.BorderColor = System.Drawing.Color.White;
+            this.btnFavorite.BorderRadius = 21;
+            this.btnFavorite.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnFavorite.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnFavorite.CheckedState.Image = global::DoAnCuoiKy.Properties.Resources._93;
+            this.btnFavorite.CustomizableEdges.BottomRight = false;
+            this.btnFavorite.CustomizableEdges.TopRight = false;
+            this.btnFavorite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFavorite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFavorite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFavorite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFavorite.FillColor = System.Drawing.Color.White;
+            this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFavorite.ForeColor = System.Drawing.Color.White;
+            this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._92;
+            this.btnFavorite.Location = new System.Drawing.Point(294, 25);
+            this.btnFavorite.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFavorite.Name = "btnFavorite";
+            this.btnFavorite.ShadowDecoration.BorderRadius = 15;
+            this.btnFavorite.ShadowDecoration.Depth = 15;
+            this.btnFavorite.ShadowDecoration.Enabled = true;
+            this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.btnFavorite.Size = new System.Drawing.Size(77, 44);
+            this.btnFavorite.TabIndex = 25;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._311;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(8, 25);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(116, 70);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 22;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // UCJobUI
             // 

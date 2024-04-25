@@ -33,7 +33,7 @@ namespace DoAnCuoiKy.UC
         private void btnDelete_Click(object sender, EventArgs e)
         {
             ApplicantsDAO applicantsDAO = new ApplicantsDAO();
-            applicantsDAO.xoaThongTinSkill(this.Skill, this.fProfile);
+            applicantsDAO.XoaThongTinSkill(this.Skill, this.fProfile);
         }
     }
 }

@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Guna.UI2.WinForms.Helpers.GraphicsHelper;
 using System.Windows.Forms.DataVisualization.Charting;
+using DoAnCuoiKy.Class;
 
 namespace DoAnCuoiKy
 {
     public partial class FJobDetails : Form
     {
-        JobDetails jobDetails;
+        Job jobInfo;
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
         public FJobDetails()
         {
@@ -24,6 +25,7 @@ namespace DoAnCuoiKy
         public FJobDetails(Job j1 )
         {
             InitializeComponent();
+            this.jobInfo = j1;
             var inforCompany = from c in db.Companies where c.CompanyID == j1.CompanyID select c;
             var result = inforCompany.First();
             this.lblJobTitle.Text = j1.JobTitle.ToString();
@@ -38,13 +40,6 @@ namespace DoAnCuoiKy
             this.txtJobBenefit.Text = j1.JobBenefit.ToString();
             this.txtJobRequirement.Text = j1.JobRequirement.ToString();
         }
-
-        private void btnApply_Click(object sender, EventArgs e)
-        {
-            FProfileApplicant f1 = new FProfileApplicant();
-            f1.Show();
-        }
-
         private void btnCompanyName_Click(object sender, EventArgs e)
         {
             
@@ -70,6 +65,12 @@ namespace DoAnCuoiKy
         {
             FInformation f1 = new FInformation();
             f1.Show();
+        }
+
+        private void btnApplyNow_Click_1(object sender, EventArgs e)
+        {
+            CompanyDAO companyDAO = new CompanyDAO();
+            companyDAO.ThemApplicant(Constant.ApplicantID,(int)this.jobInfo.CompanyID);
         }
     }
 }

@@ -43,9 +43,10 @@
             // 
             this.lblSkills.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblSkills.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblSkills.Location = new System.Drawing.Point(12, 16);
+            this.lblSkills.Location = new System.Drawing.Point(16, 20);
+            this.lblSkills.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSkills.Name = "lblSkills";
-            this.lblSkills.Size = new System.Drawing.Size(95, 37);
+            this.lblSkills.Size = new System.Drawing.Size(127, 46);
             this.lblSkills.TabIndex = 139;
             this.lblSkills.Text = ".NET";
             this.lblSkills.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -58,25 +59,26 @@
             this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDelete.FillColor = System.Drawing.Color.White;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = global::DoAnCuoiKy.Properties.Resources.trash2;
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnDelete.Location = new System.Drawing.Point(101, 3);
+            this.btnDelete.Location = new System.Drawing.Point(135, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(36, 30);
+            this.btnDelete.Size = new System.Drawing.Size(48, 37);
             this.btnDelete.TabIndex = 140;
+            this.btnDelete.Text = "X";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // UCApplicantSkill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.lblSkills);
             this.Controls.Add(this.btnDelete);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.Name = "UCApplicantSkill";
-            this.Size = new System.Drawing.Size(156, 61);
+            this.Size = new System.Drawing.Size(189, 75);
             this.ResumeLayout(false);
 
         }

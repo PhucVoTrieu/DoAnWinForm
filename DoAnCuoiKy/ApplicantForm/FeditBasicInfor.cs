@@ -46,7 +46,7 @@ namespace DoAnCuoiKy.ApplicantForm
             this.applicant1.ApplicantGender = this.txtGender.Text;
             this.applicant1.ApplicantPersonalLink = this.txtPersonalLink.Text;
             this.applicant1.ApplicantPhonenumber = this.txtPhoneNumber.Text;
-            applicantsDAO.suaThongTinBasicInfor(this);
+            applicantsDAO.SuaThongTinBasicInfor(this);
             this.Close();
         }
 

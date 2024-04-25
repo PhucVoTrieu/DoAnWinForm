@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.lblFromToDate = new System.Windows.Forms.Label();
             this.lblDetails = new System.Windows.Forms.Label();
             this.lblMajor = new System.Windows.Forms.Label();
             this.lblSchool = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // guna2Separator1
@@ -44,38 +44,6 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(1389, 22);
             this.guna2Separator1.TabIndex = 141;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Image = global::DoAnCuoiKy.Properties.Resources.trash2;
-            this.btnDelete.Location = new System.Drawing.Point(1374, 46);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(61, 54);
-            this.btnDelete.TabIndex = 140;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.Red;
-            this.btnEdit.Image = global::DoAnCuoiKy.Properties.Resources.editing24;
-            this.btnEdit.Location = new System.Drawing.Point(1320, 50);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(48, 46);
-            this.btnEdit.TabIndex = 139;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblFromToDate
             // 
@@ -121,6 +89,38 @@
             this.lblSchool.TabIndex = 134;
             this.lblSchool.Text = "School";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Image = global::DoAnCuoiKy.Properties.Resources.trash2;
+            this.btnDelete.Location = new System.Drawing.Point(1374, 46);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(61, 54);
+            this.btnDelete.TabIndex = 140;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.Red;
+            this.btnEdit.Image = global::DoAnCuoiKy.Properties.Resources.editing24;
+            this.btnEdit.Location = new System.Drawing.Point(1320, 50);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(48, 46);
+            this.btnEdit.TabIndex = 139;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // UCApplicantEducation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -133,7 +133,7 @@
             this.Controls.Add(this.lblMajor);
             this.Controls.Add(this.lblSchool);
             this.Name = "UCApplicantEducation";
-            this.Size = new System.Drawing.Size(1460, 255);
+            this.Size = new System.Drawing.Size(1460, 284);
             this.ResumeLayout(false);
             this.PerformLayout();
 

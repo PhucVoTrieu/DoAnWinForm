@@ -35,15 +35,15 @@ namespace DoAnCuoiKy.ApplicantForm
             }
             this.fProfile = f1;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
-            ApplicantsDAO applicantsDAO = new ApplicantsDAO();
-            applicantsDAO.SuaThongTinWorkExp(this);
             this.Close();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
+            ApplicantsDAO applicantsDAO = new ApplicantsDAO();
+            applicantsDAO.SuaThongTinWorkExp(this);
             this.Close();
         }
     }

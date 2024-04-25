@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlDetail = new Guna.UI2.WinForms.Guna2Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pnlDetail = new Guna.UI2.WinForms.Guna2Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.txtProjectAddDetails = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,81 +49,76 @@
             this.cbWorkMonthFrom = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtWorkAddDetails = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtCompany = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtJobTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1.SuspendLayout();
-            this.pnlDetail.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.pnlDetail.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.AutoScroll = true;
             this.guna2Panel1.Controls.Add(this.pnlDetail);
-            this.guna2Panel1.Controls.Add(this.guna2Panel2);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 92);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1377, 884);
-            this.guna2Panel1.TabIndex = 8;
+            this.guna2Panel1.Size = new System.Drawing.Size(1381, 470);
+            this.guna2Panel1.TabIndex = 0;
             // 
-            // pnlDetail
+            // guna2Panel4
             // 
-            this.pnlDetail.AutoScroll = true;
-            this.pnlDetail.BackColor = System.Drawing.SystemColors.Menu;
-            this.pnlDetail.Controls.Add(this.label6);
-            this.pnlDetail.Controls.Add(this.guna2Panel3);
-            this.pnlDetail.Controls.Add(this.label8);
-            this.pnlDetail.Controls.Add(this.guna2CustomCheckBox1);
-            this.pnlDetail.Controls.Add(this.txtProjectAddDetails);
-            this.pnlDetail.Controls.Add(this.label7);
-            this.pnlDetail.Controls.Add(this.label5);
-            this.pnlDetail.Controls.Add(this.label4);
-            this.pnlDetail.Controls.Add(this.cbWorkYearTo);
-            this.pnlDetail.Controls.Add(this.cbWorkMonthTo);
-            this.pnlDetail.Controls.Add(this.cbWorkYearFrom);
-            this.pnlDetail.Controls.Add(this.cbWorkMonthFrom);
-            this.pnlDetail.Controls.Add(this.txtWorkAddDetails);
-            this.pnlDetail.Controls.Add(this.label3);
-            this.pnlDetail.Controls.Add(this.label2);
-            this.pnlDetail.Controls.Add(this.txtCompany);
-            this.pnlDetail.Controls.Add(this.txtJobTitle);
-            this.pnlDetail.Location = new System.Drawing.Point(0, 92);
-            this.pnlDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlDetail.Name = "pnlDetail";
-            this.pnlDetail.Size = new System.Drawing.Size(1349, 1152);
-            this.pnlDetail.TabIndex = 9;
+            this.guna2Panel4.BackColor = System.Drawing.Color.Bisque;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.Controls.Add(this.guna2ControlBox2);
+            this.guna2Panel4.Controls.Add(this.label9);
+            this.guna2Panel4.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 1);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(1381, 86);
+            this.guna2Panel4.TabIndex = 14;
             // 
-            // label6
+            // guna2ControlBox2
             // 
-            this.label6.Font = new System.Drawing.Font("Nirmala UI Semilight", 10F, System.Drawing.FontStyle.Italic);
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(33, 778);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1016, 23);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Tips: Include project details, your role, technologies and team size.";
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
+            this.guna2ControlBox2.CustomIconSize = 15F;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Gray;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1306, 21);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(59, 46);
+            this.guna2ControlBox2.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(12, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(280, 45);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Work Experience";
             // 
             // guna2Panel3
             // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.Bisque;
             this.guna2Panel3.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.Controls.Add(this.btnSave);
             this.guna2Panel3.Controls.Add(this.btnCancel);
             this.guna2Panel3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.guna2Panel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 1076);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 567);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1349, 76);
-            this.guna2Panel3.TabIndex = 8;
+            this.guna2Panel3.Size = new System.Drawing.Size(1381, 76);
+            this.guna2Panel3.TabIndex = 15;
             // 
             // btnSave
             // 
@@ -141,7 +138,7 @@
             this.btnSave.Size = new System.Drawing.Size(175, 46);
             this.btnSave.TabIndex = 31;
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // btnCancel
             // 
@@ -161,14 +158,49 @@
             this.btnCancel.Size = new System.Drawing.Size(175, 46);
             this.btnCancel.TabIndex = 30;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            // 
+            // pnlDetail
+            // 
+            this.pnlDetail.BackColor = System.Drawing.SystemColors.Menu;
+            this.pnlDetail.Controls.Add(this.label6);
+            this.pnlDetail.Controls.Add(this.label8);
+            this.pnlDetail.Controls.Add(this.guna2CustomCheckBox1);
+            this.pnlDetail.Controls.Add(this.txtProjectAddDetails);
+            this.pnlDetail.Controls.Add(this.label7);
+            this.pnlDetail.Controls.Add(this.label5);
+            this.pnlDetail.Controls.Add(this.label4);
+            this.pnlDetail.Controls.Add(this.cbWorkYearTo);
+            this.pnlDetail.Controls.Add(this.cbWorkMonthTo);
+            this.pnlDetail.Controls.Add(this.cbWorkYearFrom);
+            this.pnlDetail.Controls.Add(this.cbWorkMonthFrom);
+            this.pnlDetail.Controls.Add(this.txtWorkAddDetails);
+            this.pnlDetail.Controls.Add(this.label3);
+            this.pnlDetail.Controls.Add(this.label10);
+            this.pnlDetail.Controls.Add(this.txtCompany);
+            this.pnlDetail.Controls.Add(this.txtJobTitle);
+            this.pnlDetail.Location = new System.Drawing.Point(3, 2);
+            this.pnlDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlDetail.Name = "pnlDetail";
+            this.pnlDetail.Size = new System.Drawing.Size(1355, 1092);
+            this.pnlDetail.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Nirmala UI Semilight", 10F, System.Drawing.FontStyle.Italic);
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(28, 828);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(1016, 23);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Tips: Include project details, your role, technologies and team size.";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(81, 273);
+            this.label8.Location = new System.Drawing.Point(76, 280);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(299, 31);
             this.label8.TabIndex = 43;
@@ -180,7 +212,7 @@
             this.guna2CustomCheckBox1.CheckedState.BorderRadius = 2;
             this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
             this.guna2CustomCheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.guna2CustomCheckBox1.Location = new System.Drawing.Point(35, 273);
+            this.guna2CustomCheckBox1.Location = new System.Drawing.Point(30, 280);
             this.guna2CustomCheckBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
             this.guna2CustomCheckBox1.Size = new System.Drawing.Size(40, 31);
@@ -205,24 +237,24 @@
             this.txtProjectAddDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProjectAddDetails.ForeColor = System.Drawing.Color.Black;
             this.txtProjectAddDetails.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProjectAddDetails.Location = new System.Drawing.Point(37, 805);
+            this.txtProjectAddDetails.Location = new System.Drawing.Point(32, 855);
             this.txtProjectAddDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProjectAddDetails.Multiline = true;
             this.txtProjectAddDetails.Name = "txtProjectAddDetails";
             this.txtProjectAddDetails.PasswordChar = '\0';
             this.txtProjectAddDetails.PlaceholderText = "Additional Details";
             this.txtProjectAddDetails.SelectedText = "";
-            this.txtProjectAddDetails.Size = new System.Drawing.Size(1295, 234);
+            this.txtProjectAddDetails.Size = new System.Drawing.Size(1304, 190);
             this.txtProjectAddDetails.TabIndex = 41;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(33, 741);
+            this.label7.Location = new System.Drawing.Point(28, 791);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 28);
+            this.label7.Size = new System.Drawing.Size(90, 31);
             this.label7.TabIndex = 40;
             this.label7.Text = "Project";
             // 
@@ -230,7 +262,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Nirmala UI Semilight", 10F, System.Drawing.FontStyle.Italic);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(33, 510);
+            this.label5.Location = new System.Drawing.Point(26, 531);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(1016, 23);
             this.label5.TabIndex = 39;
@@ -240,11 +272,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(33, 470);
+            this.label4.Location = new System.Drawing.Point(26, 491);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 28);
+            this.label4.Size = new System.Drawing.Size(138, 31);
             this.label4.TabIndex = 38;
             this.label4.Text = "Description";
             // 
@@ -299,7 +331,7 @@
             "2022",
             "2023",
             "2024"});
-            this.cbWorkYearTo.Location = new System.Drawing.Point(1056, 382);
+            this.cbWorkYearTo.Location = new System.Drawing.Point(1054, 389);
             this.cbWorkYearTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbWorkYearTo.MaxDropDownItems = 4;
             this.cbWorkYearTo.Name = "cbWorkYearTo";
@@ -336,7 +368,7 @@
             "10",
             "11",
             "12"});
-            this.cbWorkMonthTo.Location = new System.Drawing.Point(741, 382);
+            this.cbWorkMonthTo.Location = new System.Drawing.Point(736, 389);
             this.cbWorkMonthTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbWorkMonthTo.MaxDropDownItems = 4;
             this.cbWorkMonthTo.Name = "cbWorkMonthTo";
@@ -396,7 +428,7 @@
             "2022",
             "2023",
             "2024"});
-            this.cbWorkYearFrom.Location = new System.Drawing.Point(349, 382);
+            this.cbWorkYearFrom.Location = new System.Drawing.Point(344, 389);
             this.cbWorkYearFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbWorkYearFrom.MaxDropDownItems = 4;
             this.cbWorkYearFrom.Name = "cbWorkYearFrom";
@@ -433,7 +465,7 @@
             "10",
             "11",
             "12"});
-            this.cbWorkMonthFrom.Location = new System.Drawing.Point(35, 382);
+            this.cbWorkMonthFrom.Location = new System.Drawing.Point(30, 389);
             this.cbWorkMonthFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbWorkMonthFrom.MaxDropDownItems = 4;
             this.cbWorkMonthFrom.Name = "cbWorkMonthFrom";
@@ -456,7 +488,7 @@
             this.txtWorkAddDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWorkAddDetails.ForeColor = System.Drawing.Color.Black;
             this.txtWorkAddDetails.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtWorkAddDetails.Location = new System.Drawing.Point(37, 537);
+            this.txtWorkAddDetails.Location = new System.Drawing.Point(30, 558);
             this.txtWorkAddDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWorkAddDetails.Multiline = true;
             this.txtWorkAddDetails.Name = "txtWorkAddDetails";
@@ -471,22 +503,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(735, 325);
+            this.label3.Location = new System.Drawing.Point(730, 332);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 31);
             this.label3.TabIndex = 32;
             this.label3.Text = "To*";
             // 
-            // label2
+            // label10
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(31, 325);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 31);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "From*";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(26, 332);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 31);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "From*";
             // 
             // txtCompany
             // 
@@ -502,14 +534,14 @@
             this.txtCompany.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCompany.ForeColor = System.Drawing.Color.Black;
             this.txtCompany.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCompany.Location = new System.Drawing.Point(35, 158);
+            this.txtCompany.Location = new System.Drawing.Point(30, 165);
             this.txtCompany.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.PasswordChar = '\0';
             this.txtCompany.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtCompany.PlaceholderText = "Company";
             this.txtCompany.SelectedText = "";
-            this.txtCompany.Size = new System.Drawing.Size(1307, 81);
+            this.txtCompany.Size = new System.Drawing.Size(1304, 81);
             this.txtCompany.TabIndex = 30;
             // 
             // txtJobTitle
@@ -526,67 +558,23 @@
             this.txtJobTitle.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtJobTitle.ForeColor = System.Drawing.Color.Black;
             this.txtJobTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobTitle.Location = new System.Drawing.Point(35, 39);
+            this.txtJobTitle.Location = new System.Drawing.Point(30, 46);
             this.txtJobTitle.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtJobTitle.Name = "txtJobTitle";
             this.txtJobTitle.PasswordChar = '\0';
             this.txtJobTitle.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtJobTitle.PlaceholderText = "Job Title";
             this.txtJobTitle.SelectedText = "";
-            this.txtJobTitle.Size = new System.Drawing.Size(1307, 81);
+            this.txtJobTitle.Size = new System.Drawing.Size(1304, 81);
             this.txtJobTitle.TabIndex = 29;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1356, 86);
-            this.guna2Panel2.TabIndex = 7;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
-            this.guna2ControlBox1.CustomIconSize = 15F;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Gray;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1274, 26);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(59, 46);
-            this.guna2ControlBox1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(12, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 45);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Work Experience";
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this;
-            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // FWorkExperience
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1377, 884);
+            this.ClientSize = new System.Drawing.Size(1377, 638);
+            this.Controls.Add(this.guna2Panel3);
+            this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -594,11 +582,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FWorkExperience";
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
+            this.guna2Panel3.ResumeLayout(false);
             this.pnlDetail.ResumeLayout(false);
             this.pnlDetail.PerformLayout();
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -606,10 +594,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        public System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        public System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2GradientButton btnSave;
+        public Guna.UI2.WinForms.Guna2GradientButton btnCancel;
         private Guna.UI2.WinForms.Guna2Panel pnlDetail;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label8;
@@ -624,11 +614,8 @@
         public Guna.UI2.WinForms.Guna2ComboBox cbWorkMonthFrom;
         public Guna.UI2.WinForms.Guna2TextBox txtWorkAddDetails;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label10;
         public Guna.UI2.WinForms.Guna2TextBox txtCompany;
         public Guna.UI2.WinForms.Guna2TextBox txtJobTitle;
-        public Guna.UI2.WinForms.Guna2GradientButton btnSave;
-        public Guna.UI2.WinForms.Guna2GradientButton btnCancel;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

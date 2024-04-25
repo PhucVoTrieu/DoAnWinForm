@@ -31,7 +31,7 @@ namespace DoAnCuoiKy
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
               
 
-                jobsDAO.them(this);
+                jobsDAO.Them(this);
               
                 db.SaveChanges();
                 MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -43,5 +43,7 @@ namespace DoAnCuoiKy
             //  jobDetailsDAO.them(Job);
             this.Close();
         }
+
+        
     }
 }

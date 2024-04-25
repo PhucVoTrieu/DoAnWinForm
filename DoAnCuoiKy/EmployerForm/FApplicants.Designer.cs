@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlAllCandidate = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlAllApplicant = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -46,10 +46,15 @@
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.lblCompanyRegistration = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucApplicants1 = new DoAnCuoiKy.UCApplicants();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -58,29 +63,32 @@
             this.guna2GradientPanel1.Controls.Add(this.guna2Panel2);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1361, 884);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1019, 718);
             this.guna2GradientPanel1.TabIndex = 30;
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.guna2Panel1.Controls.Add(this.pnlAllCandidate);
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.lblCompanyRegistration);
+            this.guna2Panel1.Controls.Add(this.pnlAllApplicant);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 75);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 61);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1361, 809);
+            this.guna2Panel1.Size = new System.Drawing.Size(1019, 657);
             this.guna2Panel1.TabIndex = 18;
             // 
-            // pnlAllCandidate
+            // pnlAllApplicant
             // 
-            this.pnlAllCandidate.AutoScroll = true;
-            this.pnlAllCandidate.Location = new System.Drawing.Point(39, 38);
-            this.pnlAllCandidate.Name = "pnlAllCandidate";
-            this.pnlAllCandidate.Size = new System.Drawing.Size(1251, 759);
-            this.pnlAllCandidate.TabIndex = 0;
+            this.pnlAllApplicant.AutoScroll = true;
+            this.pnlAllApplicant.Location = new System.Drawing.Point(40, 63);
+            this.pnlAllApplicant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAllApplicant.Name = "pnlAllApplicant";
+            this.pnlAllApplicant.Size = new System.Drawing.Size(877, 239);
+            this.pnlAllApplicant.TabIndex = 0;
             // 
             // guna2Panel2
             // 
@@ -100,9 +108,9 @@
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1361, 75);
+            this.guna2Panel2.Size = new System.Drawing.Size(1019, 61);
             this.guna2Panel2.TabIndex = 15;
             // 
             // guna2PictureBox1
@@ -110,10 +118,9 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Black;
             this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._282;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(16, 16);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 13);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(31, 44);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(23, 36);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -134,20 +141,20 @@
             this.guna2ComboBox2.ItemHeight = 30;
             this.guna2ComboBox2.Items.AddRange(new object[] {
             "Experience Years"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(396, 16);
-            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ComboBox2.Location = new System.Drawing.Point(297, 13);
+            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(192, 36);
+            this.guna2ComboBox2.Size = new System.Drawing.Size(145, 36);
             this.guna2ComboBox2.StartIndex = 0;
             this.guna2ComboBox2.TabIndex = 33;
             // 
             // guna2VSeparator3
             // 
             this.guna2VSeparator3.FillColor = System.Drawing.Color.Black;
-            this.guna2VSeparator3.Location = new System.Drawing.Point(595, 16);
-            this.guna2VSeparator3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2VSeparator3.Location = new System.Drawing.Point(446, 13);
+            this.guna2VSeparator3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2VSeparator3.Name = "guna2VSeparator3";
-            this.guna2VSeparator3.Size = new System.Drawing.Size(20, 44);
+            this.guna2VSeparator3.Size = new System.Drawing.Size(15, 36);
             this.guna2VSeparator3.TabIndex = 40;
             // 
             // guna2ComboBox4
@@ -166,20 +173,20 @@
             this.guna2ComboBox4.ItemHeight = 30;
             this.guna2ComboBox4.Items.AddRange(new object[] {
             "Status"});
-            this.guna2ComboBox4.Location = new System.Drawing.Point(619, 16);
-            this.guna2ComboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ComboBox4.Location = new System.Drawing.Point(464, 13);
+            this.guna2ComboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.Size = new System.Drawing.Size(117, 36);
+            this.guna2ComboBox4.Size = new System.Drawing.Size(89, 36);
             this.guna2ComboBox4.StartIndex = 0;
             this.guna2ComboBox4.TabIndex = 39;
             // 
             // guna2VSeparator2
             // 
             this.guna2VSeparator2.FillColor = System.Drawing.Color.Black;
-            this.guna2VSeparator2.Location = new System.Drawing.Point(372, 16);
-            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2VSeparator2.Location = new System.Drawing.Point(279, 13);
+            this.guna2VSeparator2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2VSeparator2.Name = "guna2VSeparator2";
-            this.guna2VSeparator2.Size = new System.Drawing.Size(20, 44);
+            this.guna2VSeparator2.Size = new System.Drawing.Size(15, 36);
             this.guna2VSeparator2.TabIndex = 38;
             // 
             // guna2ComboBox3
@@ -198,10 +205,10 @@
             this.guna2ComboBox3.ItemHeight = 30;
             this.guna2ComboBox3.Items.AddRange(new object[] {
             "Desginer"});
-            this.guna2ComboBox3.Location = new System.Drawing.Point(244, 17);
-            this.guna2ComboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ComboBox3.Location = new System.Drawing.Point(183, 14);
+            this.guna2ComboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(132, 36);
+            this.guna2ComboBox3.Size = new System.Drawing.Size(100, 36);
             this.guna2ComboBox3.StartIndex = 0;
             this.guna2ComboBox3.TabIndex = 37;
             // 
@@ -219,20 +226,20 @@
             this.guna2ComboBox1.ItemHeight = 30;
             this.guna2ComboBox1.Items.AddRange(new object[] {
             "J.Maddison"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(53, 16);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(40, 13);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(167, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(126, 36);
             this.guna2ComboBox1.StartIndex = 0;
             this.guna2ComboBox1.TabIndex = 36;
             // 
             // guna2VSeparator1
             // 
             this.guna2VSeparator1.FillColor = System.Drawing.Color.Black;
-            this.guna2VSeparator1.Location = new System.Drawing.Point(219, 16);
-            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(164, 13);
+            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(21, 46);
+            this.guna2VSeparator1.Size = new System.Drawing.Size(16, 37);
             this.guna2VSeparator1.TabIndex = 35;
             // 
             // guna2GradientButton3
@@ -247,10 +254,10 @@
             this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(166)))));
             this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(1141, 15);
-            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(856, 12);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(180, 46);
+            this.guna2GradientButton3.Size = new System.Drawing.Size(135, 37);
             this.guna2GradientButton3.TabIndex = 30;
             this.guna2GradientButton3.Text = "Edit";
             // 
@@ -266,10 +273,10 @@
             this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(166)))));
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(945, 15);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(709, 12);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(180, 46);
+            this.btnDelete.Size = new System.Drawing.Size(135, 37);
             this.btnDelete.TabIndex = 29;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -286,11 +293,11 @@
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(166)))));
             this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(745, 15);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(559, 12);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.ShadowDecoration.Depth = 20;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(180, 46);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(135, 37);
             this.guna2GradientButton1.TabIndex = 28;
             this.guna2GradientButton1.Text = "Add";
             // 
@@ -304,21 +311,63 @@
             this.guna2DragControl1.TargetControl = this.guna2Panel2;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // lblCompanyRegistration
+            // 
+            this.lblCompanyRegistration.AutoSize = true;
+            this.lblCompanyRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyRegistration.Location = new System.Drawing.Point(38, 356);
+            this.lblCompanyRegistration.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCompanyRegistration.Name = "lblCompanyRegistration";
+            this.lblCompanyRegistration.Size = new System.Drawing.Size(142, 36);
+            this.lblCompanyRegistration.TabIndex = 37;
+            this.lblCompanyRegistration.Text = "Designer";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 36);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Developer";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.ucApplicants1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(44, 407);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(888, 250);
+            this.flowLayoutPanel1.TabIndex = 39;
+            // 
+            // ucApplicants1
+            // 
+            this.ucApplicants1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.ucApplicants1.Location = new System.Drawing.Point(3, 3);
+            this.ucApplicants1.Name = "ucApplicants1";
+            this.ucApplicants1.Size = new System.Drawing.Size(304, 299);
+            this.ucApplicants1.TabIndex = 0;
+            // 
             // FApplicants
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1361, 884);
+            this.ClientSize = new System.Drawing.Size(1019, 718);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FApplicants";
             this.Text = "FJobs";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -340,6 +389,10 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        public System.Windows.Forms.FlowLayoutPanel pnlAllCandidate;
+        public System.Windows.Forms.FlowLayoutPanel pnlAllApplicant;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCompanyRegistration;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private UCApplicants ucApplicants1;
     }
 }
