@@ -28,81 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblSkills = new System.Windows.Forms.Label();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
-            // guna2Separator1
+            // guna2Elipse1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(31, 22);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1389, 22);
-            this.guna2Separator1.TabIndex = 141;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Image = global::DoAnCuoiKy.Properties.Resources.trash2;
-            this.btnDelete.Location = new System.Drawing.Point(1374, 46);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(61, 54);
-            this.btnDelete.TabIndex = 140;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.Red;
-            this.btnEdit.Image = global::DoAnCuoiKy.Properties.Resources.editing24;
-            this.btnEdit.Location = new System.Drawing.Point(1320, 50);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(48, 46);
-            this.btnEdit.TabIndex = 139;
-            this.btnEdit.UseVisualStyleBackColor = false;
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.lblSkills;
             // 
             // lblSkills
             // 
-            this.lblSkills.AutoSize = true;
-            this.lblSkills.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblSkills.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSkills.Location = new System.Drawing.Point(26, 55);
+            this.lblSkills.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblSkills.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblSkills.Location = new System.Drawing.Point(12, 16);
             this.lblSkills.Name = "lblSkills";
-            this.lblSkills.Size = new System.Drawing.Size(77, 29);
-            this.lblSkills.TabIndex = 134;
-            this.lblSkills.Text = "Skills";
+            this.lblSkills.Size = new System.Drawing.Size(95, 37);
+            this.lblSkills.TabIndex = 139;
+            this.lblSkills.Text = ".NET";
+            this.lblSkills.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.White;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::DoAnCuoiKy.Properties.Resources.trash2;
+            this.btnDelete.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnDelete.Location = new System.Drawing.Point(101, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(36, 30);
+            this.btnDelete.TabIndex = 140;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // UCApplicantSkill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.lblSkills);
+            this.Controls.Add(this.btnDelete);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UCApplicantSkill";
-            this.Size = new System.Drawing.Size(1460, 156);
+            this.Size = new System.Drawing.Size(156, 61);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        public System.Windows.Forms.Button btnDelete;
-        public System.Windows.Forms.Button btnEdit;
-        public System.Windows.Forms.Label lblSkills;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label lblSkills;
+        public Guna.UI2.WinForms.Guna2Button btnDelete;
     }
 }

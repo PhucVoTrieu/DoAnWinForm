@@ -30,22 +30,11 @@ namespace DoAnCuoiKy
         }
         public void LoadDanhSach()
         {
-            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            var query = from applicant in db.Applicants where Constant.ApplicantID == applicant.ApplicantID select applicant;
-
-            this.lblEmail.Text = query.Single().ApplicantEmail;
-            this.lblAddress.Text = query.Single().ApplicantAddress;
-            DateTime a = (DateTime)query.Single().ApplicantDOB;
-            this.lblDOB.Text = a.ToString("dd/MM/yyyy");
-            this.lblPhoneNum.Text = query.Single().ApplicantPhonenumber;
-            this.lblYourName.Text = query.Single().ApplicantName;
-            this.lblYourTitle.Text = query.Single().ApplicantTitle;
-            this.lblGender.Text = query.Single().ApplicantGender;
-            this.lblPersonalPink.Text = query.Single().ApplicantPersonalLink;
-
+            applicantsDAO.loadThongTinBasicInforlenForm(this);
             applicantsDAO.LoadThongTinAboutMe(this);
             applicantsDAO.LoadThongTinWorkExp(this);
             applicantsDAO.LoadThongTinEducation(this);
+            applicantsDAO.LoadThongTinSkill(this);
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -74,13 +63,6 @@ namespace DoAnCuoiKy
         {
 
         }
-
-        private void btnEditBasicInfo_Click(object sender, EventArgs e)
-        {
-            FPersonalDetais f1 = new FPersonalDetais();
-            f1.Show();
-        }
-
         private void lblPersonalPink_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(this.lblPersonalPink.Text);
@@ -113,21 +95,17 @@ namespace DoAnCuoiKy
 
         private void btnAddSkill_Click(object sender, EventArgs e)
         {
-            FAddSkill f1 = new FAddSkill(null,this);
+            FAddSkill f1 = new FAddSkill(this);
             f1.Show();
+            applicantsDAO.LoadThongTinSkill(this);
         }
 
-        private void btnEditBasicInfo_Click_1(object sender, EventArgs e)
+        private void btnEditBasicInfo_Click(object sender, EventArgs e)
         {
-            //DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            //var query = from applicant in db.Applicants where Constant.ApplicantID == applicant.ApplicantID select applicant;
-            //var result = query.First();
-            //UCBasicApplicantInfor uc1 = new UCBasicApplicantInfor();
-            //uc1.Dock = DockStyle.Fill;
-            //this.pnlBasicInfo.Controls.Clear();
-            //this.pnlBasicInfo.Controls.Add(uc1);
-            
-
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            var result = from c in db.Applicants where c.ApplicantID == Constant.ApplicantID select c;
+            FeditBasicInfor f1 = new FeditBasicInfor( result.First() ,this);
+            f1.Show();
         }
     }
 }

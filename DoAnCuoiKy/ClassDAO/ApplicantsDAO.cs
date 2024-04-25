@@ -46,7 +46,7 @@ namespace DoAnCuoiKy
 
             });
             db.SaveChanges();
-            LoadThongTinWorkExp(f1.fProfile);
+            //LoadThongTinWorkExp(f1.fProfile);
         }
         public void SuaThongTinWorkExp(FWorkExperience f1)
         {
@@ -331,6 +331,136 @@ namespace DoAnCuoiKy
             LoadThongTinEducation(f1);
         }
 
+        public void themThongTinSkill(FAddSkill f1)
+        {
+            
+            //if(f1.Skill == null)
+            //{
+                db.Skills.Add(new Skill
+                {
+                    SkillName = f1.txtYourSkill.Text
+                });
+                // tìm theo tên lấy ID của những skill vừa thêm
+                var result = from c in db.Skills where c.SkillName == f1.txtYourSkill.Text select c;
+                
+                db.SaveChanges();
+                if (result.Any())
+                {
+                // thêm vào ApplicantSkill theo ID 
+                db.ApplicantSkills.Add(new ApplicantSkill
+                {
+                    SkillID = result.Single().SkillID,
+                    ApplicantID = Constant.ApplicantID
+                });
+                db.SaveChanges ();
+                }
+                LoadThongTinSkill(f1.fprofile);
+            //}
+        }
+        public void LoadThongTinSkill(FProfileApplicant f1)
+        {
+            try
+            { 
+                // danh sách toàn bộ Skill có trong ApplicantID
+                var allSkillID = from c in db.ApplicantSkills where c.ApplicantID == Constant.ApplicantID
+                                                              select c;
+                //chuyển sang list
+                allSkillID.ToList();
+                List<Skill> listOFSkill = new List<Skill>();
+                foreach (var skillid in allSkillID)
+                {
+                    //skillname là dữ liệu các skill có trong ApplicantID
+                    var Skillname = from c in db.Skills where c.SkillID == skillid.SkillID select c;
+                    //thêm vào list
+                    listOFSkill.AddRange(Skillname.ToList());
+                }
+
+                f1.pnlSkill.Size = new System.Drawing.Size(f1.pnlEducation.Size.Width, 100);
+                f1.pnlListOfSkills.Controls.Clear();
+                foreach (var allSkill in listOFSkill)
+                {
+                    UCApplicantSkill uc1 = new UCApplicantSkill(allSkill , f1);
+                    f1.pnlListOfSkills.Controls.Add(uc1);
+                    f1.pnlSkill.Size = new System.Drawing.Size(f1.pnlSkill.Size.Width, f1.pnlSkill.Size.Height + uc1.Size.Height);
+                }
+
+            }
+              catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+        }
+        public void xoaThongTinSkill(Skill skill , FProfileApplicant f1)
+        {
+            using (DoAnCuoiKyEntities db = new DoAnCuoiKyEntities())
+            {
+                var result = from c in db.ApplicantSkills where c.SkillID == skill.SkillID && c.ApplicantID == Constant.ApplicantID select c;
+                // điều kiện phải bằng skill ID  vì sẽ có skill ID giống nhau nhưng khác ApplicantID
+                result.ToList();
+                foreach(var skill3  in result) 
+                {
+                    db.ApplicantSkills.Remove(skill3);
+                }
+                var result2 = db.Skills.Find(skill.SkillID);
+                if (result2 != null)
+                {
+                    db.Skills.Remove(result2);
+                }
+                db.SaveChanges();
+            }
+            LoadThongTinSkill(f1);
+        }
+        public void suaThongTinBasicInfor(FeditBasicInfor f1) 
+        {
+            if(f1 != null)
+            {
+                var result = from c in db.Applicants where c.ApplicantID == f1.applicant1.ApplicantID select c;
+                result.First().ApplicantEmail = f1.applicant1.ApplicantEmail;
+                result.First().ApplicantPhonenumber = f1.applicant1.ApplicantPhonenumber;
+                result.First().ApplicantGender = f1.applicant1.ApplicantGender;
+                result.First().ApplicantAddress = f1.applicant1.ApplicantAddress;
+                result.First().ApplicantPersonalLink = f1.applicant1.ApplicantPersonalLink;
+                result.First().ApplicantDOB = f1.applicant1.ApplicantDOB;
+                db.SaveChanges() ;
+            }
+            loadThongTinBasicInfor(f1);
+        }
+        public void loadThongTinBasicInfor(FeditBasicInfor f1)
+        {
+            try
+            {
+                var result = from c in db.Applicants where c.ApplicantID == f1.applicant1.ApplicantID select c;
+
+                f1.txtAddress.Text = result.First().ApplicantAddress;
+                f1.txtEmail.Text = result.First().ApplicantEmail;
+                f1.txtGender.Text = result.First().ApplicantGender;
+                f1.txtPersonalLink.Text = result.First().ApplicantPersonalLink;
+                f1.txtPhoneNumber.Text = result.First().ApplicantPhonenumber;
+                f1.txtDOB.Text = result.First().ApplicantDOB.ToString();
+               
+                loadThongTinBasicInforlenForm(f1.fProfile);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+        }
+        public void loadThongTinBasicInforlenForm(FProfileApplicant f1)
+        {
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            var query = from applicant in db.Applicants where Constant.ApplicantID == applicant.ApplicantID select applicant;
+
+            f1.lblEmail.Text = query.Single().ApplicantEmail;
+            f1.lblAddress.Text = query.Single().ApplicantAddress;
+            DateTime a = (DateTime)query.Single().ApplicantDOB;
+            f1.lblDOB.Text = a.ToString("dd/MM/yyyy");
+            f1.lblPhoneNum.Text = query.Single().ApplicantPhonenumber;
+            f1.lblYourName.Text = query.Single().ApplicantName;
+            f1.lblYourTitle.Text = query.Single().ApplicantTitle;
+            f1.lblGender.Text = query.Single().ApplicantGender;
+            f1.lblPersonalPink.Text = query.Single().ApplicantPersonalLink;
+        }
     }
 
 

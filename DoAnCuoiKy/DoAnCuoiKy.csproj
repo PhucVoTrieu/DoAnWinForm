@@ -90,6 +90,12 @@
     <Compile Include="ApplicantForm\FAddSkill.Designer.cs">
       <DependentUpon>FAddSkill.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicantForm\FeditBasicInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicantForm\FeditBasicInfor.Designer.cs">
+      <DependentUpon>FeditBasicInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicantForm\FPersonalDetais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FAddSkill.resx">
       <DependentUpon>FAddSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicantForm\FeditBasicInfor.resx">
+      <DependentUpon>FeditBasicInfor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FPersonalDetais.resx">
       <DependentUpon>FPersonalDetais.cs</DependentUpon>
