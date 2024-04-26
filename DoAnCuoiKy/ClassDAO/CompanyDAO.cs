@@ -22,6 +22,8 @@ namespace DoAnCuoiKy
                 IsAccepted = false,
                 IsFavorite = false,
             });
+            var addFavorite = from status in db.JobStatus where status.ApplicantID == applicantID select status;
+            addFavorite.First().IsApplied=true;
             db.SaveChanges();
         }
     }

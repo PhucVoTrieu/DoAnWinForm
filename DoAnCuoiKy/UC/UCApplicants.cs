@@ -31,7 +31,7 @@ namespace DoAnCuoiKy
             //this.lblCandidateApplyPos.Text = applicant.appli;
             this.txtExpYears.Text = applicant.ApplicantExpYears;
             //this.txtSkill.Text = applicant.appli;
-
+            this.lblCandidateApplyPos.Text = applicant.ApplicantTitle;
 
 
         }

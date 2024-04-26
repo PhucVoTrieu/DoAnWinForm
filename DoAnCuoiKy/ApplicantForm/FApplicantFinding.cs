@@ -17,13 +17,19 @@ namespace DoAnCuoiKy
 {
     public partial class FFindingCandidate : Form
     {
-        SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
         JobsDAO jobDetailsDAO = new JobsDAO();
+        public Applicant applicant;
         public FFindingCandidate()
         {
             InitializeComponent();
             jobDetailsDAO.LoadDanhSach(this);
-            
+        }
+        public FFindingCandidate(Applicant applicant)
+        {
+            InitializeComponent();
+            this.applicant = applicant;
+            jobDetailsDAO.LoadDanhSach(this);
+
 
         }
         private void btnViewProfile_Click(object sender, EventArgs e)

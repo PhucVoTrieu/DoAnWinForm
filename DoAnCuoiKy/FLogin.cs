@@ -44,9 +44,6 @@ namespace DoAnCuoiKy
                     FTrangChuCongTy fTrang = new FTrangChuCongTy(employerAccount.SingleOrDefault());
                        fTrang.Show();
                     
-                  
-
-
                 }
                 catch (Exception ex)
                 {
@@ -64,22 +61,21 @@ namespace DoAnCuoiKy
                 try
                 {
                     DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-                    var applicantAccount = from account in db.Applicants
-                                          where account.ApplicantEmail == this.txtEmail.Text
-                                              && account.ApplicantPassword == this.txtPassword.Text
-                                          select account;
-                    Constant.ApplicantID = applicantAccount.SingleOrDefault().ApplicantID;
+                    var applicantAccount = (from account in db.Applicants
+                                            where account.ApplicantEmail == this.txtEmail.Text
+                                                && account.ApplicantPassword == this.txtPassword.Text
+                                            select account);
+                    Applicant applicant = applicantAccount.SingleOrDefault();
+      
+                    Constant.ApplicantID = applicantAccount.FirstOrDefault().ApplicantID;
 
                     FApplicantHomePage fTrang = new FApplicantHomePage();
-                    fTrang.Show();
-
-
-
-                    
+                    fTrang.Show(); 
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+                   // MessageBox.Show("Loi o Flogin");
+                    Console.WriteLine("Lỗi truy vấn1312312: " + ex.Message);
                 }
 
             }
