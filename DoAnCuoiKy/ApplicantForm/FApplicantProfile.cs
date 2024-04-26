@@ -67,10 +67,6 @@ namespace DoAnCuoiKy
         {
 
         }
-        private void lblPersonalPink_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start(this.lblPersonalPink.Text);
-        }
 
         private void btnAddAboutMe_Click_1(object sender, EventArgs e)
         {
@@ -106,6 +102,11 @@ namespace DoAnCuoiKy
             var result = from c in db.Applicants where c.ApplicantID == Constant.ApplicantID select c;
             FeditBasicInfor f1 = new FeditBasicInfor( result.First() ,this);
             f1.Show();
+        }
+
+        private void lblPersonalPink_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(this.lblPersonalPink.Text);
         }
     }
 }

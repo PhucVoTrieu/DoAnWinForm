@@ -443,6 +443,16 @@ namespace DoAnCuoiKy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _293 {
+            get {
+                object obj = ResourceManager.GetObject("293", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("3", resourceCulture);
@@ -1156,6 +1166,26 @@ namespace DoAnCuoiKy.Properties {
         internal static System.Drawing.Bitmap _904 {
             get {
                 object obj = ResourceManager.GetObject("904", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _905 {
+            get {
+                object obj = ResourceManager.GetObject("905", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _906 {
+            get {
+                object obj = ResourceManager.GetObject("906", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

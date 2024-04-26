@@ -54,6 +54,7 @@
             this.cbxLocation = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txtJobName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.pnlJobFilter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -382,12 +383,34 @@
             this.txtJobName.Size = new System.Drawing.Size(508, 52);
             this.txtJobName.TabIndex = 36;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnDelete.BorderRadius = 10;
+            this.btnDelete.BorderThickness = 1;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnDelete.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(811, 153);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(105, 32);
+            this.btnDelete.TabIndex = 39;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextOffset = new System.Drawing.Point(0, -2);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            // 
             // FJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1167, 718);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.ScrollBar1);
             this.Controls.Add(this.cbxLocation);
             this.Controls.Add(this.btnSearch);
@@ -397,7 +420,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FJobs";
             this.Text = "FJobs";
             this.pnlJobFilter.ResumeLayout(false);
@@ -434,5 +457,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbxLocation;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtJobName;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
     }
 }

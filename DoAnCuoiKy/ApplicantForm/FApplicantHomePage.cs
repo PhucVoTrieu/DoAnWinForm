@@ -12,10 +12,18 @@ namespace DoAnCuoiKy
 {
     public partial class FApplicantHomePage : Form
     {
+        public Applicant Applicant;
         public FApplicantHomePage()
         {
             InitializeComponent();
-            OpenForm(new FFindingCandidate());
+            OpenForm(new FFindingCandidate(this.Applicant));
+        }
+        public FApplicantHomePage(Applicant applicant)
+        {
+            this.Applicant = applicant;
+            InitializeComponent();
+            OpenForm(new FFindingCandidate(this.Applicant));
+            
         }
         private Form currentFormChild;
         private void OpenForm(Form form)
@@ -35,7 +43,7 @@ namespace DoAnCuoiKy
         }
         private void btnFindding_Click(object sender, EventArgs e)
         {
-            OpenForm(new FFindingCandidate());
+            OpenForm(new FFindingCandidate(this.Applicant));
         }
 
         private void btnFavorite_Click(object sender, EventArgs e)

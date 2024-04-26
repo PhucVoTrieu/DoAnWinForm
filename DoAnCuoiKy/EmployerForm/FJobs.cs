@@ -30,6 +30,7 @@ namespace DoAnCuoiKy
             try
             {
                 DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                this.pnlCreatedJob.Controls.Clear();
                 var jobsOfCompany = from c in db.Jobs where c.CompanyID == Constant.CompanyID select c;
 
                 foreach (var job in jobsOfCompany)
@@ -84,6 +85,17 @@ namespace DoAnCuoiKy
 
         }
 
-        
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            JobsDAO jobsDAO = new JobsDAO();
+            foreach ( UCJobUI uCJobUI in pnlCreatedJob.Controls)
+            {
+                if (uCJobUI.CBoxSelected.Checked)
+                {
+                    jobsDAO.XoaJob(uCJobUI.job);
+                }
+            }
+            LoadDanhSach();
+        }
     }
 }

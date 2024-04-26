@@ -120,7 +120,6 @@
     <Compile Include="ApplicantsOfCompany.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class\Candidate.cs" />
     <Compile Include="ClassDAO\ApplicantsDAO.cs" />
     <Compile Include="ClassDAO\CompanyDAO.cs" />
     <Compile Include="Class\Constant.cs" />
@@ -339,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FAddSkill.resx">
       <DependentUpon>FAddSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicantForm\FApplicantFinding.resx">
+      <DependentUpon>FApplicantFinding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FeditBasicInfor.resx">
       <DependentUpon>FeditBasicInfor.cs</DependentUpon>

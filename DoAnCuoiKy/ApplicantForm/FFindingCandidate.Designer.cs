@@ -73,7 +73,7 @@
             // btnSearch
             // 
             this.btnSearch.AutoRoundedCorners = true;
-            this.btnSearch.BorderRadius = 10;
+            this.btnSearch.BorderRadius = 21;
             this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -115,7 +115,7 @@
             this.cbxLocation.AutoRoundedCorners = true;
             this.cbxLocation.BackColor = System.Drawing.Color.Transparent;
             this.cbxLocation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(60)))), ((int)(((byte)(89)))));
-            this.cbxLocation.BorderRadius = 10;
+            this.cbxLocation.BorderRadius = 21;
             this.cbxLocation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbxLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxLocation.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -484,7 +484,7 @@
             // 
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._292;
+            this.guna2CirclePictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._293;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1038, 28);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
@@ -539,7 +539,7 @@
             this.Controls.Add(this.pnlViewProfile);
             this.Controls.Add(this.PnlFinding);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FFindingCandidate";
             this.Text = "FFindingCandidate";
             this.Load += new System.EventHandler(this.FFindingCandidate_Load);

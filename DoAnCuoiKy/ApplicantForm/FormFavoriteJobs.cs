@@ -15,11 +15,11 @@ namespace DoAnCuoiKy
     public partial class FormFavoriteJobs : Form
     {
         SqlConnection connStr = new SqlConnection(DoAnCuoiKy.Properties.Settings.Default.connStr);
-        
+        JobsDAO jobsDAO = new JobsDAO();
         public FormFavoriteJobs()
         {
             InitializeComponent();
-            //favoriteJobDAO.LoadDanhSach(this);
+            jobsDAO.LoadDanhSachJobYeuThich(this);
             this.btnCountFavJob.Text = CountFavoriteJob().ToString();
 
         }
