@@ -102,6 +102,15 @@ namespace DoAnCuoiKy
             }
 
         }
+        public void LoadDanhSach2(FFindingCandidate f , List<Job> jobs)
+        {
+            foreach (var job in jobs)
+            {
+                UCJobUI ucJob = new UCJobUI(job);
+                ucJob.CBoxSelected.Visible = false;
+                f.PnlRecommendJobs.Controls.Add(ucJob);
+            }    
+        }
         public bool CheckApply(Job job1, int ApplicantID)
         {
             var query = from a in db.JobStatus where a.JobID == job1.JobID && a.ApplicantID == ApplicantID select a;
@@ -146,22 +155,19 @@ namespace DoAnCuoiKy
         //}
         public void xoaUCfav(UCJobUI uCJobUI)
         {
-
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            ////var deleteUCJobUI = from UCJob in db.Jobs where UCJob.JobID == uCJobUI.job.JobID select UCJob;
-            ////db.Jobs.Remove(deleteUCJobUI.SingleOrDefault());
-            //var deleteUCJobUI = db.Jobs.Find(uCJobUI.job.JobID);
-            //if (deleteUCJobUI != null)
-            //{
-            //    db.Jobs.Remove(deleteUCJobUI);
-            //}
             HuyYeuThich(uCJobUI.job);
             db.SaveChanges();
         }
         public void xoaUC(UCJobUI uCJobUI)
         {
-            HuyYeuThich(uCJobUI.job);
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            var query = (from a in db.JobStatus where a.JobID == uCJobUI.job.JobID select a);
+            foreach (var a in query) 
+            {
+                db.JobStatus.Remove(a);
+            }
+            db.SaveChanges();
             var result = from c in db.Jobs where c.JobID ==  uCJobUI.job.JobID select c;
             var deletedJob = result.First();
             db.Jobs.Remove(deletedJob);
