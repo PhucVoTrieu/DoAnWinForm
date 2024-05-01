@@ -65,11 +65,6 @@ namespace DoAnCuoiKy
             
         }
 
-        private void btnFavorite_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnApplyNow_Click_1(object sender, EventArgs e)
         {
             this.btnApplyNow.Enabled= false;
@@ -79,7 +74,7 @@ namespace DoAnCuoiKy
 
         }
 
-        private void btnFavorite_Click_1(object sender, EventArgs e)
+        private void btnFavorite_Click(object sender, EventArgs e)
         {
             JobsDAO jobsDAO = new JobsDAO();
             if (this.btnFavorite.Checked)
@@ -88,7 +83,7 @@ namespace DoAnCuoiKy
             }
             else
             {
-                //jobsDAO.HuyYeuThich(this.job);
+                jobsDAO.HuyYeuThich(this.job);
             }
         }
     }

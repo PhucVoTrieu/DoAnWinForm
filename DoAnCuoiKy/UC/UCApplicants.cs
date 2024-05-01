@@ -13,7 +13,7 @@ namespace DoAnCuoiKy
 {
     public partial class UCApplicants : UserControl
     {
-        Applicant applicantInfo;
+        public Applicant applicantInfo;
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
         public UCApplicants()
         {

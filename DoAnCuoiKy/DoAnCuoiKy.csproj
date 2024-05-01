@@ -360,9 +360,6 @@
     <EmbeddedResource Include="ApplicantForm\FApplicantHomePage.resx">
       <DependentUpon>FApplicantHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicantForm\FFindingCandidate.resx">
-      <DependentUpon>FApplicantFinding.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EmployerForm\FCompanyRegistration.resx">
       <DependentUpon>FCompanyRegistration.cs</DependentUpon>
     </EmbeddedResource>

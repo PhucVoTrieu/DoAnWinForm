@@ -36,7 +36,7 @@ namespace DoAnCuoiKy
                 foreach (var job in jobsOfCompany)
                 {
                     UCJobUI uCJob = new UCJobUI(job);
-                   
+                   uCJob.btnApplyNow.Visible = false;
                     this.pnlCreatedJob.Controls.Add(uCJob);
                 }
             }
@@ -58,6 +58,7 @@ namespace DoAnCuoiKy
             }
             return count;
         }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             List<UCJobUI> list = new List<UCJobUI>();
@@ -70,7 +71,7 @@ namespace DoAnCuoiKy
                     if (A.CBoxSelected.Checked)
                     {
                         list.Add(A);
-                        
+
                     }
                 }
 
@@ -78,24 +79,22 @@ namespace DoAnCuoiKy
             foreach (UCJobUI c in list)
             {
                 this.pnlCreatedJob.Controls.Remove(c);
-             //   this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
+                //this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
                 jobDetailsDAO.xoaUC(c);
             }
-
-
         }
 
-        private void btnDelete_Click_1(object sender, EventArgs e)
-        {
-            JobsDAO jobsDAO = new JobsDAO();
-            foreach ( UCJobUI uCJobUI in pnlCreatedJob.Controls)
-            {
-                if (uCJobUI.CBoxSelected.Checked)
-                {
-                    jobsDAO.XoaJob(uCJobUI.job);
-                }
-            }
-            LoadDanhSach();
-        }
+        //private void btnDelete_Click_1(object sender, EventArgs e)
+        //{
+        //    JobsDAO jobsDAO = new JobsDAO();
+        //    foreach ( UCJobUI uCJobUI in pnlCreatedJob.Controls)
+        //    {
+        //        if (uCJobUI.CBoxSelected.Checked)
+        //        {
+        //            jobsDAO.XoaJob(uCJobUI.job);
+        //        }
+        //    }
+        //    LoadDanhSach();
+        //}
     }
 }
