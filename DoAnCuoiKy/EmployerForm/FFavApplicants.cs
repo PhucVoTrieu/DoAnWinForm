@@ -28,6 +28,7 @@ namespace DoAnCuoiKy
         private void LoadDanhSach()
         {
             applicantsDAO.LoadDanhSachUngVienYeuThich(this);
+            this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }
         public int CountFavoriteApplicants()
         {
@@ -55,7 +56,6 @@ namespace DoAnCuoiKy
                     if (A.CBoxSelected.Checked)
                     {
                         list.Add(A);
-
                     }
                 }
 
@@ -64,7 +64,7 @@ namespace DoAnCuoiKy
             {
                 this.pnlFavApplicants.Controls.Remove(c);
                 this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
-                //favApplicantDao.xoaUC(c);
+                applicantsDAO.xoaUC2(c);
             }
 
         }

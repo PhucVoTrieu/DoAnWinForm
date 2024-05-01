@@ -163,13 +163,10 @@ namespace DoAnCuoiKy
             try
             {
 
-                var favoriteApplicant = from c in db.ApplicantsOfCompanies
-                                        where c.CompanyID == Constant.CompanyID && c.IsFavorite == true
-                                        from a in db.Applicants
-                                        where a.ApplicantID == c.ApplicantID
-                                        select a;
-
-                foreach (var c in favoriteApplicant)
+                var favApplicant = from c in db.ApplicantsOfCompanies where c.CompanyID == Constant.CompanyID && c.IsFavorite == true select c;
+                var allApplicant = from applicant in db.Applicants join c in favApplicant  on applicant.ApplicantID equals c.ApplicantID select applicant;
+                var result = allApplicant.ToList();
+                foreach (var c in allApplicant)
                 {
                     UCApplicants uCApplicants = new UCApplicants(c);
                     uCApplicants.btnFavorite.Hide();
@@ -189,14 +186,14 @@ namespace DoAnCuoiKy
                 var applicantsOfCompanies = from c in db.ApplicantsOfCompanies where c.CompanyID == f.companyInfo.CompanyID select c.ApplicantID into query
                                             from a in db.Applicants where a.ApplicantID == query select a;
 
-                
-                foreach (var applicant in applicantsOfCompanies)
+                var result = applicantsOfCompanies.ToList();
+                foreach (var applicant in result)
                 {
                     UCApplicants uCApplicants = new UCApplicants(applicant);
-                    if (CheckYeuThich(applicant))
-                    {
-                        uCApplicants.btnFavorite.Checked = true;
-                    }
+                    //if (CheckYeuThich(applicant))
+                    //{
+                    //    uCApplicants.btnFavorite.Checked = true;
+                    //}
                     f.pnlAllApplicant.Controls.Add(uCApplicants);
                 }
             }
@@ -206,20 +203,26 @@ namespace DoAnCuoiKy
             }
 
         }
-        public bool CheckYeuThich(Applicant app1)
-        {
-            var query = from c in db.ApplicantsOfCompanies where c.ApplicantID == app1.ApplicantID select c;
-            return query.SingleOrDefault().IsFavorite == true;
-        }
+        //public bool CheckYeuThich(Applicant app1)
+        //{
+        //    var query = from c in db.ApplicantsOfCompanies where c.ApplicantID == app1.ApplicantID select c;
+        //    return query.SingleOrDefault().IsFavorite == true;
+        //}
         public void xoaUC(UCApplicants uCApplicants)
         {
-            //string SQL = string.Format("DELETE FROM Profile WHERE  ApplyPosition = '{0}' ",
-            // uCApplicants.lblCandidateApplyPos.Text);
-            //db.thucthi(SQL);
+            var deletedApplicant = from c in db.ApplicantsOfCompanies where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
+            db.ApplicantsOfCompanies.Remove(deletedApplicant.First());
+            db.SaveChanges();
+        }
+        public void xoaUC2(UCApplicants uCApplicants)
+        {
+            var deletedApplicant = from c in db.ApplicantsOfCompanies where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
+            deletedApplicant.First().IsFavorite = false;
+            db.SaveChanges();
         }
         public void HuyYeuThich(Applicant applicant)
         {
-            var entity = from a in db.ApplicantsOfCompanies where a.ApplicantID == applicant.ApplicantID select a;
+            var entity = from a in db.ApplicantsOfCompanies where a.ApplicantID == applicant.ApplicantID && a.CompanyID == Constant.CompanyID select a;
             entity.SingleOrDefault().IsFavorite = false;
             db.SaveChanges();
 
@@ -227,7 +230,7 @@ namespace DoAnCuoiKy
 
         public void YeuThich(Applicant applicant)
         {
-            var entity = from a in db.ApplicantsOfCompanies where a.ApplicantID == applicant.ApplicantID select a;
+            var entity = from a in db.ApplicantsOfCompanies where a.ApplicantID == applicant.ApplicantID && a.CompanyID == Constant.CompanyID select a;
             entity.SingleOrDefault().IsFavorite = true;
             db.SaveChanges();
 

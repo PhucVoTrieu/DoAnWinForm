@@ -60,7 +60,7 @@
             this.CBoxSelected.CheckedState.BorderThickness = 0;
             this.CBoxSelected.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CBoxSelected.Location = new System.Drawing.Point(13, 3);
-            this.CBoxSelected.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CBoxSelected.Margin = new System.Windows.Forms.Padding(2);
             this.CBoxSelected.Name = "CBoxSelected";
             this.CBoxSelected.Size = new System.Drawing.Size(15, 14);
             this.CBoxSelected.TabIndex = 12;
@@ -86,7 +86,7 @@
             this.pnlUCJob.Controls.Add(this.lblJobTitle);
             this.pnlUCJob.Controls.Add(this.txtJobtype);
             this.pnlUCJob.Location = new System.Drawing.Point(13, 21);
-            this.pnlUCJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlUCJob.Margin = new System.Windows.Forms.Padding(2);
             this.pnlUCJob.Name = "pnlUCJob";
             this.pnlUCJob.Size = new System.Drawing.Size(278, 257);
             this.pnlUCJob.TabIndex = 13;
@@ -125,7 +125,7 @@
             this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.btnFavorite.Size = new System.Drawing.Size(58, 36);
             this.btnFavorite.TabIndex = 25;
-            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click_1);
+            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
             // 
             // btnDetails
             // 
@@ -161,7 +161,7 @@
             this.btnApplyNow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApplyNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.btnApplyNow.Location = new System.Drawing.Point(22, 200);
-            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(2);
             this.btnApplyNow.Name = "btnApplyNow";
             this.btnApplyNow.Size = new System.Drawing.Size(115, 37);
             this.btnApplyNow.TabIndex = 23;
@@ -174,7 +174,7 @@
             this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._311;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(6, 20);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(87, 57);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,8 +199,8 @@
             this.txtExpYear.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpYear.ForeColor = System.Drawing.Color.Black;
             this.txtExpYear.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpYear.Location = new System.Drawing.Point(84, 101);
-            this.txtExpYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExpYear.Location = new System.Drawing.Point(84, 118);
+            this.txtExpYear.Margin = new System.Windows.Forms.Padding(2);
             this.txtExpYear.Name = "txtExpYear";
             this.txtExpYear.PasswordChar = '\0';
             this.txtExpYear.PlaceholderText = "";
@@ -227,7 +227,7 @@
             this.lblSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.lblSalary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.ForeColor = System.Drawing.Color.White;
-            this.lblSalary.Location = new System.Drawing.Point(20, 140);
+            this.lblSalary.Location = new System.Drawing.Point(24, 85);
             this.lblSalary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(69, 21);
@@ -264,8 +264,8 @@
             this.txtJobtype.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJobtype.ForeColor = System.Drawing.Color.Black;
             this.txtJobtype.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobtype.Location = new System.Drawing.Point(18, 101);
-            this.txtJobtype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJobtype.Location = new System.Drawing.Point(18, 118);
+            this.txtJobtype.Margin = new System.Windows.Forms.Padding(2);
             this.txtJobtype.Name = "txtJobtype";
             this.txtJobtype.PasswordChar = '\0';
             this.txtJobtype.PlaceholderText = "";
@@ -286,7 +286,7 @@
             this.Controls.Add(this.pnlUCJob);
             this.Controls.Add(this.CBoxSelected);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCJobUI";
             this.Size = new System.Drawing.Size(304, 299);
             this.pnlUCJob.ResumeLayout(false);

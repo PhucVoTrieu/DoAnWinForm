@@ -8,23 +8,29 @@ namespace DoAnCuoiKy
 {
     internal class CompanyDAO
     {
+        DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
         public CompanyDAO() { 
 
         }
         public void ThemApplicant(int applicantID,int companyID)
         {
-            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            var query = from app in db.ApplicantsOfCompanies  select app;
-            db.ApplicantsOfCompanies.Add(new ApplicantsOfCompany
+           if(checkApplied( applicantID, companyID))
             {
-                CompanyID = companyID,
-                ApplicantID = applicantID,
-                IsAccepted = false,
-                IsFavorite = false,
-            });
-            var addFavorite = from status in db.JobStatus where status.ApplicantID == applicantID select status;
-            addFavorite.First().IsApplied=true;
+                db.ApplicantsOfCompanies.Add(new ApplicantsOfCompany
+                {
+                    CompanyID = companyID,
+                    ApplicantID = applicantID,
+                    IsAccepted = false,
+                    IsFavorite = false,
+                });
+            }
             db.SaveChanges();
+        }
+        public bool checkApplied(int applicantID,int companyID) 
+        {
+            var result = from c in db.ApplicantsOfCompanies where c.ApplicantID==applicantID && c.CompanyID == companyID select c;
+            if (result.Count() == 0) return true;
+            return false;
         }
     }
 

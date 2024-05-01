@@ -58,7 +58,7 @@ namespace DoAnCuoiKy
             {
                 this.pnlFavJobs.Controls.Remove(c);
                 this.btnCountFavJob.Text = CountFavoriteJob().ToString();
-                //favoriteJobDAO.xoaUC(c);
+                jobsDAO.xoaUCfav(c);
             }
            
 
