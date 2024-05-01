@@ -43,6 +43,7 @@
             this.lblJobTitle = new System.Windows.Forms.Label();
             this.txtJobtype = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlUCJob.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             this.pnlUCJob.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.pnlUCJob.BorderRadius = 30;
             this.pnlUCJob.BorderThickness = 1;
+            this.pnlUCJob.Controls.Add(this.label1);
             this.pnlUCJob.Controls.Add(this.guna2Separator1);
             this.pnlUCJob.Controls.Add(this.btnFavorite);
             this.pnlUCJob.Controls.Add(this.btnDetails);
@@ -278,6 +280,19 @@
             // 
             this.guna2Elipse2.BorderRadius = 15;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(97, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 21);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "USD";
+            // 
             // UCJobUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,5 +327,6 @@
         public System.Windows.Forms.Label lblSalary;
         public System.Windows.Forms.Label lblJobTitle;
         public Guna.UI2.WinForms.Guna2TextBox txtJobtype;
+        public System.Windows.Forms.Label label1;
     }
 }

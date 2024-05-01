@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PnlFinding = new Guna.UI2.WinForms.Guna2Panel();
             this.cbxLocation = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtJobName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,14 +44,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.guna2CheckBox4 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox5 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.trackbarSalary = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.checkboxTemporary = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.checkboxFullTime = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2CheckBox6 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox3 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.checkboxparttime = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.checkbox5To10 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.checkboxLessThan3 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.checkbox3To5 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.PnlRecommendJobs = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlViewProfile = new Guna.UI2.WinForms.Guna2Panel();
@@ -62,7 +63,6 @@
             this.ScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.txtJobName = new Guna.UI2.WinForms.Guna2TextBox();
             this.PnlFinding.SuspendLayout();
             this.pnlJobFilter.SuspendLayout();
             this.pnlViewProfile.SuspendLayout();
@@ -126,13 +126,41 @@
             this.cbxLocation.Items.AddRange(new object[] {
             "Ha Noi",
             "Ho Chi Minh",
-            "Hai Phong"});
+            "Hai Phong",
+            "LonDon",
+            "Berlin"});
             this.cbxLocation.Location = new System.Drawing.Point(574, 86);
             this.cbxLocation.Name = "cbxLocation";
             this.cbxLocation.Size = new System.Drawing.Size(149, 45);
             this.cbxLocation.StartIndex = 0;
             this.cbxLocation.TabIndex = 6;
             this.cbxLocation.SelectedIndexChanged += new System.EventHandler(this.cbxLocation_SelectedIndexChanged);
+            // 
+            // txtJobName
+            // 
+            this.txtJobName.AutoRoundedCorners = true;
+            this.txtJobName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(60)))), ((int)(((byte)(89)))));
+            this.txtJobName.BorderRadius = 21;
+            this.txtJobName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtJobName.DefaultText = "";
+            this.txtJobName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtJobName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtJobName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtJobName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtJobName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtJobName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtJobName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtJobName.IconLeft = global::DoAnCuoiKy.Properties.Resources._871;
+            this.txtJobName.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtJobName.Location = new System.Drawing.Point(211, 86);
+            this.txtJobName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtJobName.Name = "txtJobName";
+            this.txtJobName.PasswordChar = '\0';
+            this.txtJobName.PlaceholderText = "Search jobs by name and location";
+            this.txtJobName.SelectedText = "";
+            this.txtJobName.Size = new System.Drawing.Size(357, 44);
+            this.txtJobName.TabIndex = 1;
+            this.txtJobName.TextChanged += new System.EventHandler(this.txtJobName_TextChanged);
             // 
             // guna2CircleButton1
             // 
@@ -219,14 +247,14 @@
             this.pnlJobFilter.Controls.Add(this.label8);
             this.pnlJobFilter.Controls.Add(this.label13);
             this.pnlJobFilter.Controls.Add(this.label12);
-            this.pnlJobFilter.Controls.Add(this.guna2TrackBar1);
-            this.pnlJobFilter.Controls.Add(this.guna2CheckBox4);
-            this.pnlJobFilter.Controls.Add(this.guna2CheckBox5);
+            this.pnlJobFilter.Controls.Add(this.trackbarSalary);
+            this.pnlJobFilter.Controls.Add(this.checkboxTemporary);
+            this.pnlJobFilter.Controls.Add(this.checkboxFullTime);
             this.pnlJobFilter.Controls.Add(this.label7);
-            this.pnlJobFilter.Controls.Add(this.guna2CheckBox6);
-            this.pnlJobFilter.Controls.Add(this.guna2CheckBox3);
-            this.pnlJobFilter.Controls.Add(this.guna2CheckBox1);
-            this.pnlJobFilter.Controls.Add(this.guna2CheckBox2);
+            this.pnlJobFilter.Controls.Add(this.checkboxparttime);
+            this.pnlJobFilter.Controls.Add(this.checkbox5To10);
+            this.pnlJobFilter.Controls.Add(this.checkboxLessThan3);
+            this.pnlJobFilter.Controls.Add(this.checkbox3To5);
             this.pnlJobFilter.Controls.Add(this.label6);
             this.pnlJobFilter.Location = new System.Drawing.Point(982, 300);
             this.pnlJobFilter.Name = "pnlJobFilter";
@@ -262,52 +290,52 @@
             this.label12.TabIndex = 34;
             this.label12.Text = "0$";
             // 
-            // guna2TrackBar1
+            // trackbarSalary
             // 
-            this.guna2TrackBar1.FillColor = System.Drawing.Color.White;
-            this.guna2TrackBar1.Location = new System.Drawing.Point(30, 294);
-            this.guna2TrackBar1.Name = "guna2TrackBar1";
-            this.guna2TrackBar1.Size = new System.Drawing.Size(148, 31);
-            this.guna2TrackBar1.TabIndex = 33;
-            this.guna2TrackBar1.ThumbColor = System.Drawing.Color.Black;
+            this.trackbarSalary.FillColor = System.Drawing.Color.White;
+            this.trackbarSalary.Location = new System.Drawing.Point(30, 294);
+            this.trackbarSalary.Name = "trackbarSalary";
+            this.trackbarSalary.Size = new System.Drawing.Size(148, 31);
+            this.trackbarSalary.TabIndex = 33;
+            this.trackbarSalary.ThumbColor = System.Drawing.Color.Black;
             // 
-            // guna2CheckBox4
+            // checkboxTemporary
             // 
-            this.guna2CheckBox4.AutoSize = true;
-            this.guna2CheckBox4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox4.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox4.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox4.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox4.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2CheckBox4.Location = new System.Drawing.Point(30, 217);
-            this.guna2CheckBox4.Name = "guna2CheckBox4";
-            this.guna2CheckBox4.Size = new System.Drawing.Size(90, 21);
-            this.guna2CheckBox4.TabIndex = 32;
-            this.guna2CheckBox4.Text = "Temporary";
-            this.guna2CheckBox4.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CheckBox4.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox4.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxTemporary.AutoSize = true;
+            this.checkboxTemporary.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxTemporary.CheckedState.BorderRadius = 0;
+            this.checkboxTemporary.CheckedState.BorderThickness = 0;
+            this.checkboxTemporary.CheckedState.FillColor = System.Drawing.Color.White;
+            this.checkboxTemporary.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxTemporary.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.checkboxTemporary.Location = new System.Drawing.Point(30, 217);
+            this.checkboxTemporary.Name = "checkboxTemporary";
+            this.checkboxTemporary.Size = new System.Drawing.Size(90, 21);
+            this.checkboxTemporary.TabIndex = 32;
+            this.checkboxTemporary.Text = "Temporary";
+            this.checkboxTemporary.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.checkboxTemporary.UncheckedState.BorderRadius = 0;
+            this.checkboxTemporary.UncheckedState.BorderThickness = 1;
+            this.checkboxTemporary.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             // 
-            // guna2CheckBox5
+            // checkboxFullTime
             // 
-            this.guna2CheckBox5.AutoSize = true;
-            this.guna2CheckBox5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox5.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox5.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox5.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox5.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2CheckBox5.Location = new System.Drawing.Point(30, 190);
-            this.guna2CheckBox5.Name = "guna2CheckBox5";
-            this.guna2CheckBox5.Size = new System.Drawing.Size(76, 21);
-            this.guna2CheckBox5.TabIndex = 31;
-            this.guna2CheckBox5.Text = "Full-time";
-            this.guna2CheckBox5.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CheckBox5.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox5.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxFullTime.AutoSize = true;
+            this.checkboxFullTime.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxFullTime.CheckedState.BorderRadius = 0;
+            this.checkboxFullTime.CheckedState.BorderThickness = 0;
+            this.checkboxFullTime.CheckedState.FillColor = System.Drawing.Color.White;
+            this.checkboxFullTime.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxFullTime.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.checkboxFullTime.Location = new System.Drawing.Point(30, 190);
+            this.checkboxFullTime.Name = "checkboxFullTime";
+            this.checkboxFullTime.Size = new System.Drawing.Size(76, 21);
+            this.checkboxFullTime.TabIndex = 31;
+            this.checkboxFullTime.Text = "Full-time";
+            this.checkboxFullTime.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.checkboxFullTime.UncheckedState.BorderRadius = 0;
+            this.checkboxFullTime.UncheckedState.BorderThickness = 1;
+            this.checkboxFullTime.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             // 
             // label7
             // 
@@ -320,81 +348,81 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Job type";
             // 
-            // guna2CheckBox6
+            // checkboxparttime
             // 
-            this.guna2CheckBox6.AutoSize = true;
-            this.guna2CheckBox6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox6.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox6.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox6.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox6.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2CheckBox6.Location = new System.Drawing.Point(30, 163);
-            this.guna2CheckBox6.Name = "guna2CheckBox6";
-            this.guna2CheckBox6.Size = new System.Drawing.Size(80, 21);
-            this.guna2CheckBox6.TabIndex = 29;
-            this.guna2CheckBox6.Text = "Part-time";
-            this.guna2CheckBox6.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CheckBox6.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox6.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxparttime.AutoSize = true;
+            this.checkboxparttime.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxparttime.CheckedState.BorderRadius = 0;
+            this.checkboxparttime.CheckedState.BorderThickness = 0;
+            this.checkboxparttime.CheckedState.FillColor = System.Drawing.Color.White;
+            this.checkboxparttime.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxparttime.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.checkboxparttime.Location = new System.Drawing.Point(30, 163);
+            this.checkboxparttime.Name = "checkboxparttime";
+            this.checkboxparttime.Size = new System.Drawing.Size(80, 21);
+            this.checkboxparttime.TabIndex = 29;
+            this.checkboxparttime.Text = "Part-time";
+            this.checkboxparttime.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.checkboxparttime.UncheckedState.BorderRadius = 0;
+            this.checkboxparttime.UncheckedState.BorderThickness = 1;
+            this.checkboxparttime.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             // 
-            // guna2CheckBox3
+            // checkbox5To10
             // 
-            this.guna2CheckBox3.AutoSize = true;
-            this.guna2CheckBox3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox3.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox3.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox3.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox3.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2CheckBox3.Location = new System.Drawing.Point(30, 105);
-            this.guna2CheckBox3.Name = "guna2CheckBox3";
-            this.guna2CheckBox3.Size = new System.Drawing.Size(61, 21);
-            this.guna2CheckBox3.TabIndex = 28;
-            this.guna2CheckBox3.Text = "5 - 10";
-            this.guna2CheckBox3.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CheckBox3.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox3.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkbox5To10.AutoSize = true;
+            this.checkbox5To10.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkbox5To10.CheckedState.BorderRadius = 0;
+            this.checkbox5To10.CheckedState.BorderThickness = 0;
+            this.checkbox5To10.CheckedState.FillColor = System.Drawing.Color.White;
+            this.checkbox5To10.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkbox5To10.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.checkbox5To10.Location = new System.Drawing.Point(30, 105);
+            this.checkbox5To10.Name = "checkbox5To10";
+            this.checkbox5To10.Size = new System.Drawing.Size(61, 21);
+            this.checkbox5To10.TabIndex = 28;
+            this.checkbox5To10.Text = "5 - 10";
+            this.checkbox5To10.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.checkbox5To10.UncheckedState.BorderRadius = 0;
+            this.checkbox5To10.UncheckedState.BorderThickness = 1;
+            this.checkbox5To10.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             // 
-            // guna2CheckBox1
+            // checkboxLessThan3
             // 
-            this.guna2CheckBox1.AutoSize = true;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2CheckBox1.Location = new System.Drawing.Point(30, 51);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(92, 21);
-            this.guna2CheckBox1.TabIndex = 0;
-            this.guna2CheckBox1.Text = "Less than 3";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxLessThan3.AutoSize = true;
+            this.checkboxLessThan3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxLessThan3.CheckedState.BorderRadius = 0;
+            this.checkboxLessThan3.CheckedState.BorderThickness = 0;
+            this.checkboxLessThan3.CheckedState.FillColor = System.Drawing.Color.White;
+            this.checkboxLessThan3.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkboxLessThan3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.checkboxLessThan3.Location = new System.Drawing.Point(30, 51);
+            this.checkboxLessThan3.Name = "checkboxLessThan3";
+            this.checkboxLessThan3.Size = new System.Drawing.Size(92, 21);
+            this.checkboxLessThan3.TabIndex = 0;
+            this.checkboxLessThan3.Text = "Less than 3";
+            this.checkboxLessThan3.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.checkboxLessThan3.UncheckedState.BorderRadius = 0;
+            this.checkboxLessThan3.UncheckedState.BorderThickness = 1;
+            this.checkboxLessThan3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             // 
-            // guna2CheckBox2
+            // checkbox3To5
             // 
-            this.guna2CheckBox2.AutoSize = true;
-            this.guna2CheckBox2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox2.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox2.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox2.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
-            this.guna2CheckBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2CheckBox2.Location = new System.Drawing.Point(30, 78);
-            this.guna2CheckBox2.Name = "guna2CheckBox2";
-            this.guna2CheckBox2.Size = new System.Drawing.Size(54, 21);
-            this.guna2CheckBox2.TabIndex = 27;
-            this.guna2CheckBox2.Text = "3 - 5";
-            this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2CheckBox2.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox2.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkbox3To5.AutoSize = true;
+            this.checkbox3To5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkbox3To5.CheckedState.BorderRadius = 0;
+            this.checkbox3To5.CheckedState.BorderThickness = 0;
+            this.checkbox3To5.CheckedState.FillColor = System.Drawing.Color.White;
+            this.checkbox3To5.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
+            this.checkbox3To5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.checkbox3To5.Location = new System.Drawing.Point(30, 78);
+            this.checkbox3To5.Name = "checkbox3To5";
+            this.checkbox3To5.Size = new System.Drawing.Size(54, 21);
+            this.checkbox3To5.TabIndex = 27;
+            this.checkbox3To5.Text = "3 - 5";
+            this.checkbox3To5.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.checkbox3To5.UncheckedState.BorderRadius = 0;
+            this.checkbox3To5.UncheckedState.BorderThickness = 1;
+            this.checkbox3To5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             // 
             // label6
             // 
@@ -495,32 +523,6 @@
             this.guna2CirclePictureBox1.TabStop = false;
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
             // 
-            // txtJobName
-            // 
-            this.txtJobName.AutoRoundedCorners = true;
-            this.txtJobName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(60)))), ((int)(((byte)(89)))));
-            this.txtJobName.BorderRadius = 21;
-            this.txtJobName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtJobName.DefaultText = "";
-            this.txtJobName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtJobName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtJobName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtJobName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtJobName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtJobName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobName.IconLeft = global::DoAnCuoiKy.Properties.Resources._871;
-            this.txtJobName.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtJobName.Location = new System.Drawing.Point(211, 86);
-            this.txtJobName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtJobName.Name = "txtJobName";
-            this.txtJobName.PasswordChar = '\0';
-            this.txtJobName.PlaceholderText = "Search jobs by name and location";
-            this.txtJobName.SelectedText = "";
-            this.txtJobName.Size = new System.Drawing.Size(357, 44);
-            this.txtJobName.TabIndex = 1;
-            this.txtJobName.TextChanged += new System.EventHandler(this.txtJobName_TextChanged);
-            // 
             // FFindingCandidate
             // 
             this.AllowDrop = true;
@@ -579,16 +581,16 @@
         private Guna.UI2.WinForms.Guna2Elipse JobFilterElipse;
         private Guna.UI2.WinForms.Guna2Elipse RecommendJobsElipse;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox4;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox5;
+        private Guna.UI2.WinForms.Guna2CheckBox checkboxLessThan3;
+        private Guna.UI2.WinForms.Guna2CheckBox checkboxTemporary;
+        private Guna.UI2.WinForms.Guna2CheckBox checkboxFullTime;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox6;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox3;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
+        private Guna.UI2.WinForms.Guna2CheckBox checkboxparttime;
+        private Guna.UI2.WinForms.Guna2CheckBox checkbox5To10;
+        private Guna.UI2.WinForms.Guna2CheckBox checkbox3To5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
+        private Guna.UI2.WinForms.Guna2TrackBar trackbarSalary;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2VScrollBar ScrollBar1;
         private Guna.UI2.WinForms.Guna2ComboBox cbxLocation;

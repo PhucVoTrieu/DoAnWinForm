@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DoAnCuoiKy
 {
@@ -14,7 +15,7 @@ namespace DoAnCuoiKy
         }
         public void ThemApplicant(int applicantID,int companyID)
         {
-           if(checkApplied( applicantID, companyID))
+            if (checkApplied(applicantID, companyID))
             {
                 db.ApplicantsOfCompanies.Add(new ApplicantsOfCompany
                 {
@@ -23,8 +24,9 @@ namespace DoAnCuoiKy
                     IsAccepted = false,
                     IsFavorite = false,
                 });
+                db.SaveChanges();
             }
-            db.SaveChanges();
+            else MessageBox.Show("You have already applied for this job");
         }
         public bool checkApplied(int applicantID,int companyID) 
         {
