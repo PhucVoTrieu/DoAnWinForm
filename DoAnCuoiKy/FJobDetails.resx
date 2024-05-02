@@ -167,10 +167,6 @@ Chế độ phúc lợi cạnh tranh: Du lịch hàng năm, Khám sức khỏe �
 Môi trường làm việc chuyên nghiệp, thân thiện, cởi mở.
 Được làm việc với các hệ thống hiện đại, tiên tiến nhất thị trường, áp dụng các công nghệ hàng đầu về an ninh bảo mật để đảm bảo an toàn cho người sử dụng.
 Cơ hội học hỏi nghiệp vụ ngân hàng.
-
-
-
-
 </value>
   </data>
   <metadata name="guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -190,5 +186,8 @@ Cơ hội học hỏi nghiệp vụ ngân hàng.
   </metadata>
   <metadata name="guna2DragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 54</value>
+  </metadata>
+  <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>204, 54</value>
   </metadata>
 </root>

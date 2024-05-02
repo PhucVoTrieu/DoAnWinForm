@@ -38,8 +38,36 @@ namespace DoAnCuoiKy
         }
         private void btnDetails_Click(object sender, EventArgs e)
         {
-            FJobDetails f1 = new FJobDetails(this.job);
-            f1.ShowDialog();
+            Form formBackground = new Form();
+            try
+            {
+                using (FJobDetails f1 = new FJobDetails(this.job))
+                {
+                    formBackground.StartPosition = FormStartPosition.Manual;
+                    formBackground.FormBorderStyle = FormBorderStyle.None;
+                    formBackground.Opacity = .50d;
+                    formBackground.BackColor = Color.Black;
+                    formBackground.WindowState = FormWindowState.Maximized;
+                    formBackground.TopMost = false;
+                    formBackground.Location = this.Location;
+                    formBackground.ShowInTaskbar = false;
+                    formBackground.Show();
+
+                    f1.Owner = formBackground;
+                    f1.ShowDialog();
+
+                    formBackground.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+            
         }
    
         private void btnApplyNow_Click_1(object sender, EventArgs e)
