@@ -127,6 +127,9 @@
     <Compile Include="Company.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DateInterview.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DoAnCuoiKyModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

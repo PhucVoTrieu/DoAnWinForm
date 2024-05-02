@@ -15,6 +15,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DoAnCuoiKy
 {
@@ -216,6 +217,15 @@ namespace DoAnCuoiKy
             }
 
         }
+        public void LoadDanhSachUngVienTiemNang(FInvitedApplicant f, List<Applicant> applicants)
+        {
+            foreach (var a in applicants)
+            {
+                UCApplicants uCApplicants = new UCApplicants(a);
+                uCApplicants.btnFavorite.Hide();
+                f.pnlPotentialApplicant.Controls.Add(uCApplicants);
+            }
+        }
         public void LoadDanhSachUngVienYeuThich(FFavoriteApplicants f , List<Applicant> applicants)
         {
             foreach(var a in applicants)
@@ -225,15 +235,7 @@ namespace DoAnCuoiKy
                 f.pnlFavApplicants.Controls.Add(uCApplicants);
             }
         }
-        public void LoadDanhSachUngVienTiemNang(FInvitedApplicant f , List<Applicant> applicants)
-        {
-            foreach (var a in applicants)
-            {
-                UCApplicants uCApplicants = new UCApplicants(a);
-                uCApplicants.btnFavorite.Hide();
-                f.pnlPotentialApplicant.Controls.Add(uCApplicants);
-            }
-        }
+        
         public void LoadDanhSachUngVien(FApplicants f)
         {
             try
@@ -244,7 +246,7 @@ namespace DoAnCuoiKy
                 var result = applicantsOfCompanies.ToList();
                 foreach (var applicant in result)
                 {
-                    UCApplicants uCApplicants = new UCApplicants(applicant);
+                    UCApplicants uCApplicants = new UCApplicants(applicant,f);
                     if (applicant.ApplicantTitle.ToLower().Contains("developer"))
                         f.pnlDeveLoperApplicant.Controls.Add(uCApplicants);
                     else
@@ -273,6 +275,8 @@ namespace DoAnCuoiKy
         {
             var deletedApplicant = from c in db.ApplicantsOfCompanies where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
             deletedApplicant.First().IsAccepted = false;
+            var deletedDate = from c in db.DateInterviews where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
+            db.DateInterviews.Remove(deletedDate.First());
             db.SaveChanges();
         }
         public void HuyYeuThich(Applicant applicant)
@@ -289,11 +293,26 @@ namespace DoAnCuoiKy
             db.SaveChanges();
 
         }
-        public void Invite(Applicant applicant)
+        public void Invite(UCApplicants u)
         {
-            var applicant2 = from c in db.ApplicantsOfCompanies where Constant.CompanyID == c.CompanyID && c.ApplicantID == applicant.ApplicantID select c;
-            applicant2.First().IsAccepted = true;
-            db.SaveChanges();
+            var check = from c in db.DateInterviews where c.DateInterview1 == u.fApplicants.dtpInvite.Value && c.CompanyID == Constant.CompanyID select c;
+            if (check.Count() > 0) 
+            {
+                MessageBox.Show("Date already has an interview scheduled");
+            }
+            else
+            {
+                db.DateInterviews.Add(new DateInterview 
+                { 
+                    DateInterview1 = u.fApplicants.dtpInvite.Value,
+                    CompanyID = Constant.CompanyID,
+                    ApplicantID = u.applicantInfo.ApplicantID
+                });
+                db.SaveChanges();
+                var applicant2 = from c in db.ApplicantsOfCompanies where Constant.CompanyID == c.CompanyID && c.ApplicantID == u.applicantInfo.ApplicantID select c;
+                applicant2.First().IsAccepted = true;
+                db.SaveChanges();
+            }
         }
         public void xoa(Applicant applicant)
         {
