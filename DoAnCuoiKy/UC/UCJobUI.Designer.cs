@@ -43,7 +43,6 @@
             this.lblJobTitle = new System.Windows.Forms.Label();
             this.txtJobtype = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlUCJob.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,8 +59,8 @@
             this.CBoxSelected.CheckedState.BorderRadius = 0;
             this.CBoxSelected.CheckedState.BorderThickness = 0;
             this.CBoxSelected.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CBoxSelected.Location = new System.Drawing.Point(13, 3);
-            this.CBoxSelected.Margin = new System.Windows.Forms.Padding(2);
+            this.CBoxSelected.Location = new System.Drawing.Point(17, 4);
+            this.CBoxSelected.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CBoxSelected.Name = "CBoxSelected";
             this.CBoxSelected.Size = new System.Drawing.Size(15, 14);
             this.CBoxSelected.TabIndex = 12;
@@ -76,7 +75,6 @@
             this.pnlUCJob.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.pnlUCJob.BorderRadius = 30;
             this.pnlUCJob.BorderThickness = 1;
-            this.pnlUCJob.Controls.Add(this.label1);
             this.pnlUCJob.Controls.Add(this.guna2Separator1);
             this.pnlUCJob.Controls.Add(this.btnFavorite);
             this.pnlUCJob.Controls.Add(this.btnDetails);
@@ -87,17 +85,18 @@
             this.pnlUCJob.Controls.Add(this.lblSalary);
             this.pnlUCJob.Controls.Add(this.lblJobTitle);
             this.pnlUCJob.Controls.Add(this.txtJobtype);
-            this.pnlUCJob.Location = new System.Drawing.Point(13, 21);
-            this.pnlUCJob.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlUCJob.Location = new System.Drawing.Point(17, 26);
+            this.pnlUCJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlUCJob.Name = "pnlUCJob";
-            this.pnlUCJob.Size = new System.Drawing.Size(278, 257);
+            this.pnlUCJob.Size = new System.Drawing.Size(371, 316);
             this.pnlUCJob.TabIndex = 13;
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(22, 181);
+            this.guna2Separator1.Location = new System.Drawing.Point(29, 223);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(226, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(301, 12);
             this.guna2Separator1.TabIndex = 26;
             // 
             // btnFavorite
@@ -105,7 +104,7 @@
             this.btnFavorite.AutoRoundedCorners = true;
             this.btnFavorite.BackColor = System.Drawing.Color.Transparent;
             this.btnFavorite.BorderColor = System.Drawing.Color.White;
-            this.btnFavorite.BorderRadius = 17;
+            this.btnFavorite.BorderRadius = 21;
             this.btnFavorite.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btnFavorite.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnFavorite.CheckedState.Image = global::DoAnCuoiKy.Properties.Resources._93;
@@ -119,13 +118,14 @@
             this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnFavorite.ForeColor = System.Drawing.Color.White;
             this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._92;
-            this.btnFavorite.Location = new System.Drawing.Point(220, 20);
+            this.btnFavorite.Location = new System.Drawing.Point(293, 25);
+            this.btnFavorite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.ShadowDecoration.BorderRadius = 15;
             this.btnFavorite.ShadowDecoration.Depth = 15;
             this.btnFavorite.ShadowDecoration.Enabled = true;
             this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.btnFavorite.Size = new System.Drawing.Size(58, 36);
+            this.btnFavorite.Size = new System.Drawing.Size(77, 44);
             this.btnFavorite.TabIndex = 25;
             this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
             // 
@@ -133,7 +133,7 @@
             // 
             this.btnDetails.AutoRoundedCorners = true;
             this.btnDetails.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.btnDetails.BorderRadius = 17;
+            this.btnDetails.BorderRadius = 22;
             this.btnDetails.BorderThickness = 1;
             this.btnDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -142,9 +142,10 @@
             this.btnDetails.FillColor = System.Drawing.Color.Transparent;
             this.btnDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
-            this.btnDetails.Location = new System.Drawing.Point(141, 200);
+            this.btnDetails.Location = new System.Drawing.Point(188, 246);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(115, 37);
+            this.btnDetails.Size = new System.Drawing.Size(153, 46);
             this.btnDetails.TabIndex = 24;
             this.btnDetails.Text = "Details";
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
@@ -153,7 +154,7 @@
             // 
             this.btnApplyNow.AutoRoundedCorners = true;
             this.btnApplyNow.BackColor = System.Drawing.Color.Transparent;
-            this.btnApplyNow.BorderRadius = 17;
+            this.btnApplyNow.BorderRadius = 22;
             this.btnApplyNow.DisabledState.BorderColor = System.Drawing.Color.DarkGreen;
             this.btnApplyNow.DisabledState.CustomBorderColor = System.Drawing.Color.LimeGreen;
             this.btnApplyNow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -162,10 +163,10 @@
             this.btnApplyNow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnApplyNow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApplyNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.btnApplyNow.Location = new System.Drawing.Point(22, 200);
-            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApplyNow.Location = new System.Drawing.Point(29, 246);
+            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApplyNow.Name = "btnApplyNow";
-            this.btnApplyNow.Size = new System.Drawing.Size(115, 37);
+            this.btnApplyNow.Size = new System.Drawing.Size(153, 46);
             this.btnApplyNow.TabIndex = 23;
             this.btnApplyNow.Text = "Apply Now";
             this.btnApplyNow.Click += new System.EventHandler(this.btnApplyNow_Click_1);
@@ -175,10 +176,10 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._311;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(6, 20);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(8, 25);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(87, 57);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(116, 70);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 22;
             this.guna2PictureBox1.TabStop = false;
@@ -188,7 +189,7 @@
             this.txtExpYear.AutoRoundedCorners = true;
             this.txtExpYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.txtExpYear.BorderColor = System.Drawing.Color.Black;
-            this.txtExpYear.BorderRadius = 13;
+            this.txtExpYear.BorderRadius = 16;
             this.txtExpYear.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtExpYear.DefaultText = "5-7 Experience years";
             this.txtExpYear.DisabledState.BorderColor = System.Drawing.Color.Black;
@@ -201,13 +202,13 @@
             this.txtExpYear.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpYear.ForeColor = System.Drawing.Color.Black;
             this.txtExpYear.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpYear.Location = new System.Drawing.Point(84, 118);
-            this.txtExpYear.Margin = new System.Windows.Forms.Padding(2);
+            this.txtExpYear.Location = new System.Drawing.Point(112, 145);
+            this.txtExpYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtExpYear.Name = "txtExpYear";
             this.txtExpYear.PasswordChar = '\0';
             this.txtExpYear.PlaceholderText = "";
             this.txtExpYear.SelectedText = "";
-            this.txtExpYear.Size = new System.Drawing.Size(116, 28);
+            this.txtExpYear.Size = new System.Drawing.Size(155, 34);
             this.txtExpYear.TabIndex = 21;
             this.txtExpYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -216,10 +217,9 @@
             this.lblLocation.AutoSize = true;
             this.lblLocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.lblLocation.ForeColor = System.Drawing.Color.White;
-            this.lblLocation.Location = new System.Drawing.Point(21, 165);
-            this.lblLocation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLocation.Location = new System.Drawing.Point(28, 203);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(112, 13);
+            this.lblLocation.Size = new System.Drawing.Size(134, 16);
             this.lblLocation.TabIndex = 18;
             this.lblLocation.Text = "District 9, Ho Chi Minh";
             // 
@@ -229,22 +229,21 @@
             this.lblSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.lblSalary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.ForeColor = System.Drawing.Color.White;
-            this.lblSalary.Location = new System.Drawing.Point(24, 85);
-            this.lblSalary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSalary.Location = new System.Drawing.Point(32, 105);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(69, 21);
             this.lblSalary.TabIndex = 17;
             this.lblSalary.Text = "$250/hr";
+            this.lblSalary.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblJobTitle
             // 
             this.lblJobTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.lblJobTitle.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobTitle.ForeColor = System.Drawing.Color.White;
-            this.lblJobTitle.Location = new System.Drawing.Point(90, 20);
-            this.lblJobTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJobTitle.Location = new System.Drawing.Point(120, 25);
             this.lblJobTitle.Name = "lblJobTitle";
-            this.lblJobTitle.Size = new System.Drawing.Size(125, 60);
+            this.lblJobTitle.Size = new System.Drawing.Size(167, 74);
             this.lblJobTitle.TabIndex = 16;
             this.lblJobTitle.Text = "Senior UI/UX\r\nDesigner";
             // 
@@ -253,7 +252,7 @@
             this.txtJobtype.AutoRoundedCorners = true;
             this.txtJobtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.txtJobtype.BorderColor = System.Drawing.Color.Black;
-            this.txtJobtype.BorderRadius = 13;
+            this.txtJobtype.BorderRadius = 16;
             this.txtJobtype.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtJobtype.DefaultText = "Full-time\r\n";
             this.txtJobtype.DisabledState.BorderColor = System.Drawing.Color.Black;
@@ -266,13 +265,13 @@
             this.txtJobtype.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJobtype.ForeColor = System.Drawing.Color.Black;
             this.txtJobtype.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobtype.Location = new System.Drawing.Point(18, 118);
-            this.txtJobtype.Margin = new System.Windows.Forms.Padding(2);
+            this.txtJobtype.Location = new System.Drawing.Point(24, 145);
+            this.txtJobtype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJobtype.Name = "txtJobtype";
             this.txtJobtype.PasswordChar = '\0';
             this.txtJobtype.PlaceholderText = "";
             this.txtJobtype.SelectedText = "";
-            this.txtJobtype.Size = new System.Drawing.Size(62, 28);
+            this.txtJobtype.Size = new System.Drawing.Size(83, 34);
             this.txtJobtype.TabIndex = 20;
             this.txtJobtype.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -280,30 +279,17 @@
             // 
             this.guna2Elipse2.BorderRadius = 15;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(97, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 21);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "USD";
-            // 
             // UCJobUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.Controls.Add(this.pnlUCJob);
             this.Controls.Add(this.CBoxSelected);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCJobUI";
-            this.Size = new System.Drawing.Size(304, 299);
+            this.Size = new System.Drawing.Size(405, 368);
             this.pnlUCJob.ResumeLayout(false);
             this.pnlUCJob.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -327,6 +313,5 @@
         public System.Windows.Forms.Label lblSalary;
         public System.Windows.Forms.Label lblJobTitle;
         public Guna.UI2.WinForms.Guna2TextBox txtJobtype;
-        public System.Windows.Forms.Label label1;
     }
 }

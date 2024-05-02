@@ -1,4 +1,5 @@
 ﻿using DoAnCuoiKy.Class;
+using DoAnCuoiKy.EmployerForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,6 +75,11 @@ namespace DoAnCuoiKy
             this.Hide();
             FLogin f1 = new FLogin();
             f1.Show();
+        }
+
+        private void btnInvitedApp_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FInvitedApplicant(CompanyInformation));
         }
     }
 }

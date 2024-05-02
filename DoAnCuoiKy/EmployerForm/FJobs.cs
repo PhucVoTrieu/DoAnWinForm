@@ -84,6 +84,82 @@ namespace DoAnCuoiKy
             }
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            var result = from c in db.Jobs where c.JobTitle.Contains(this.txtJobName.Text) && c.Location.Contains(this.cbxLocation.SelectedItem.ToString()) select c;
+            int expInYearsAsInt;
+            List<Job> resultList = new List<Job>();
+            List<Job> jobFilter = new List<Job>();
+            if (this.checkboxFullTime.Checked)
+            {
+                var fullTime = from c in result where c.JobType.Contains("Full") select c;
+                if (this.checkboxPartTime.Checked)
+                {
+                    result = result.Union(fullTime);
+                }
+                else result = fullTime;
+            }
+            if (this.checkboxPartTime.Checked)
+            {
+                var partTime = from c in result where c.JobType.Contains("Part") select c;
+                if (this.checkboxFullTime.Checked)
+                {
+                    result = result.Union(partTime);
+                }
+                else result = partTime;
+            }
+            if (this.checkboxLessThan3.Checked)
+            {
+
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt < 3)
+                    {
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+
+            }
+            if (this.checkbox3To5.Checked)
+            {
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt >= 3 && expInYearsAsInt <= 5)
+                    {
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+            }
+            if (this.checkbox5To10.Checked)
+            {
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt > 5 && expInYearsAsInt <= 10)
+                    {
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+            }
+            if (jobFilter != resultList)
+                jobFilter = result.ToList();
+            //int val = trackbarSalary.Value;
+            //List<Job> salaryFilter = new List<Job>();
+            //foreach(var c in jobFilter)
+            //{
+            //    if(int.Parse(c.JobSalary) < val)
+            //    { salaryFilter.Add(c); }
+            //}   
+            this.pnlCreatedJob.Controls.Clear();
+            jobDetailsDAO.LoadDanhSach3(this, jobFilter);
+        }
+
         //private void btnDelete_Click_1(object sender, EventArgs e)
         //{
         //    JobsDAO jobsDAO = new JobsDAO();

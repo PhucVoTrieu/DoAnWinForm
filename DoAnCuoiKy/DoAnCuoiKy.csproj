@@ -182,6 +182,12 @@
     <Compile Include="EmployerForm\FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployerForm\FInvitedApplicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployerForm\FInvitedApplicant.Designer.cs">
+      <DependentUpon>FInvitedApplicant.cs</DependentUpon>
+    </Compile>
     <Compile Include="FJobDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployerForm\FInformation.resx">
       <DependentUpon>FInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployerForm\FInvitedApplicant.resx">
+      <DependentUpon>FInvitedApplicant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FJobDetails.resx">
       <DependentUpon>FJobDetails.cs</DependentUpon>

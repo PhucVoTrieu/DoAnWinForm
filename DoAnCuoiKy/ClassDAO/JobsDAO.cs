@@ -111,6 +111,15 @@ namespace DoAnCuoiKy
                 f.PnlRecommendJobs.Controls.Add(ucJob);
             }    
         }
+        public void LoadDanhSach3(FJobs f, List<Job> jobs)
+        {
+            foreach (var job in jobs)
+            {
+                UCJobUI ucJob = new UCJobUI(job);
+                ucJob.CBoxSelected.Visible = false;
+                f.pnlCreatedJob.Controls.Add(ucJob);
+            }
+        }
         public bool CheckApply(Job job1, int ApplicantID)
         {
             var query = from a in db.JobStatus where a.JobID == job1.JobID && a.ApplicantID == ApplicantID select a;
