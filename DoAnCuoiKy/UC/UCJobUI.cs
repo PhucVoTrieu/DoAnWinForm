@@ -36,35 +36,12 @@ namespace DoAnCuoiKy
             this.txtExpYear.Text = j1.ExpInYears;
 
         }
-        //private void btnDetails_Click_1(object sender, EventArgs e)
-        //{
-        //    FJobDetails f1 = new FJobDetails(this.jobDetails);
-
-        //    f1.ShowDialog();
-        //}
         private void btnDetails_Click(object sender, EventArgs e)
         {
             FJobDetails f1 = new FJobDetails(this.job);
             f1.ShowDialog();
         }
-        private void btnApplyNow_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnFavorite_CheckedChanged(object sender, EventArgs e)
-        {
-            if(this.btnFavorite.Checked)
-            {
-              //  favoriteJobDAO.them(this.job);
-            }
-            else
-            {
-               // favoriteJobDAO.xoa(this.job);
-            }
-
-            
-        }
-
+   
         private void btnApplyNow_Click_1(object sender, EventArgs e)
         {
             this.btnApplyNow.Enabled= false;

@@ -19,35 +19,19 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
         }
-
         public UCApplicants(Applicant applicant)
         {
             InitializeComponent();
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-         
             this.applicantInfo = applicant;
-
             this.lblCandidateName.Text = applicant.ApplicantName;
-            //this.lblCandidateApplyPos.Text = applicant.appli;
             this.txtExpYears.Text = applicant.ApplicantExpYears;
-            //this.txtSkill.Text = applicant.appli;
             this.lblCandidateApplyPos.Text = applicant.ApplicantTitle;
-
-
         }
         private void btnCandidateDetails_Click_1(object sender, EventArgs e)
         {
-            //FProfileApplicant f1 = new FProfileApplicant(this.candidate);
             FProfileApplicant f1 = new FProfileApplicant();
             f1.Show();
-
-        }
-
-      
-
-        private void btnFavorite_CheckedChanged(object sender, EventArgs e)
-        {
-            
 
         }
         private void btnFavorite_Click(object sender, EventArgs e)
@@ -71,6 +55,11 @@ namespace DoAnCuoiKy
             applicant.btnEditBasicInfo.Hide();
             applicant.btnAddSkill.Hide();
             applicant.Show();
+        }
+
+        private void btnInviteCanidate_Click(object sender, EventArgs e)
+        {
+            applicantsDAO.Invite(this.applicantInfo);
         }
     }
 }

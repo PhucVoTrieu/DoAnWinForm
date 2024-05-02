@@ -31,11 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucApplicants1 = new DoAnCuoiKy.UCApplicants();
+            this.pnlDesignerApplicant = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCompanyRegistration = new System.Windows.Forms.Label();
-            this.pnlAllApplicant = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlDeveLoperApplicant = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -52,7 +51,6 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,33 +69,24 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel1.Controls.Add(this.pnlDesignerApplicant);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.lblCompanyRegistration);
-            this.guna2Panel1.Controls.Add(this.pnlAllApplicant);
+            this.guna2Panel1.Controls.Add(this.pnlDeveLoperApplicant);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 61);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1019, 657);
             this.guna2Panel1.TabIndex = 18;
             // 
-            // flowLayoutPanel1
+            // pnlDesignerApplicant
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.ucApplicants1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(44, 407);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(875, 307);
-            this.flowLayoutPanel1.TabIndex = 39;
-            // 
-            // ucApplicants1
-            // 
-            this.ucApplicants1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.ucApplicants1.Location = new System.Drawing.Point(3, 3);
-            this.ucApplicants1.Name = "ucApplicants1";
-            this.ucApplicants1.Size = new System.Drawing.Size(304, 299);
-            this.ucApplicants1.TabIndex = 0;
+            this.pnlDesignerApplicant.AutoScroll = true;
+            this.pnlDesignerApplicant.Location = new System.Drawing.Point(44, 407);
+            this.pnlDesignerApplicant.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlDesignerApplicant.Name = "pnlDesignerApplicant";
+            this.pnlDesignerApplicant.Size = new System.Drawing.Size(875, 307);
+            this.pnlDesignerApplicant.TabIndex = 39;
             // 
             // label1
             // 
@@ -121,14 +110,14 @@
             this.lblCompanyRegistration.TabIndex = 37;
             this.lblCompanyRegistration.Text = "Designer";
             // 
-            // pnlAllApplicant
+            // pnlDeveLoperApplicant
             // 
-            this.pnlAllApplicant.AutoScroll = true;
-            this.pnlAllApplicant.Location = new System.Drawing.Point(40, 50);
-            this.pnlAllApplicant.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlAllApplicant.Name = "pnlAllApplicant";
-            this.pnlAllApplicant.Size = new System.Drawing.Size(879, 314);
-            this.pnlAllApplicant.TabIndex = 0;
+            this.pnlDeveLoperApplicant.AutoScroll = true;
+            this.pnlDeveLoperApplicant.Location = new System.Drawing.Point(40, 50);
+            this.pnlDeveLoperApplicant.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlDeveLoperApplicant.Name = "pnlDeveLoperApplicant";
+            this.pnlDeveLoperApplicant.Size = new System.Drawing.Size(879, 314);
+            this.pnlDeveLoperApplicant.TabIndex = 0;
             // 
             // guna2Panel2
             // 
@@ -366,7 +355,6 @@
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -390,10 +378,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        public System.Windows.Forms.FlowLayoutPanel pnlAllApplicant;
+        public System.Windows.Forms.FlowLayoutPanel pnlDeveLoperApplicant;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCompanyRegistration;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private UCApplicants ucApplicants1;
+        public System.Windows.Forms.FlowLayoutPanel pnlDesignerApplicant;
     }
 }

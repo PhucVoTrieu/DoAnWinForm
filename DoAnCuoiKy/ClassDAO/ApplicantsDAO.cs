@@ -1,5 +1,6 @@
 ﻿using DoAnCuoiKy.ApplicantForm;
 using DoAnCuoiKy.Class;
+using DoAnCuoiKy.EmployerForm;
 using DoAnCuoiKy.UC;
 using System;
 using System.Collections;
@@ -194,6 +195,45 @@ namespace DoAnCuoiKy
             }
 
         }
+        public void LoadDanhSachUngVienTiemNang(FInvitedApplicant f)
+        {
+            try
+            {
+                var favApplicant = from c in db.ApplicantsOfCompanies where c.CompanyID == Constant.CompanyID && c.IsAccepted == true select c;
+                var allApplicant = from applicant in db.Applicants join c in favApplicant on applicant.ApplicantID equals c.ApplicantID select applicant;
+                var result = allApplicant.ToList();
+                foreach (var c in allApplicant)
+                {
+                    UCApplicants uCApplicants = new UCApplicants(c);
+                    uCApplicants.btnFavorite.Hide();
+                    uCApplicants.btnInviteCanidate.Hide();
+                    f.pnlPotentialApplicant.Controls.Add(uCApplicants);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+
+        }
+        public void LoadDanhSachUngVienYeuThich(FFavoriteApplicants f , List<Applicant> applicants)
+        {
+            foreach(var a in applicants)
+            {
+                UCApplicants uCApplicants = new UCApplicants(a);
+                uCApplicants.btnFavorite.Hide();
+                f.pnlFavApplicants.Controls.Add(uCApplicants);
+            }
+        }
+        public void LoadDanhSachUngVienTiemNang(FInvitedApplicant f , List<Applicant> applicants)
+        {
+            foreach (var a in applicants)
+            {
+                UCApplicants uCApplicants = new UCApplicants(a);
+                uCApplicants.btnFavorite.Hide();
+                f.pnlPotentialApplicant.Controls.Add(uCApplicants);
+            }
+        }
         public void LoadDanhSachUngVien(FApplicants f)
         {
             try
@@ -205,11 +245,10 @@ namespace DoAnCuoiKy
                 foreach (var applicant in result)
                 {
                     UCApplicants uCApplicants = new UCApplicants(applicant);
-                    //if (CheckYeuThich(applicant))
-                    //{
-                    //    uCApplicants.btnFavorite.Checked = true;
-                    //}
-                    f.pnlAllApplicant.Controls.Add(uCApplicants);
+                    if (applicant.ApplicantTitle.ToLower().Contains("developer"))
+                        f.pnlDeveLoperApplicant.Controls.Add(uCApplicants);
+                    else
+                        f.pnlDesignerApplicant.Controls.Add(uCApplicants);
                 }
             }
             catch (Exception ex)
@@ -218,11 +257,6 @@ namespace DoAnCuoiKy
             }
 
         }
-        //public bool CheckYeuThich(Applicant app1)
-        //{
-        //    var query = from c in db.ApplicantsOfCompanies where c.ApplicantID == app1.ApplicantID select c;
-        //    return query.SingleOrDefault().IsFavorite == true;
-        //}
         public void xoaUC(UCApplicants uCApplicants)
         {
             var deletedApplicant = from c in db.ApplicantsOfCompanies where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
@@ -235,6 +269,12 @@ namespace DoAnCuoiKy
             deletedApplicant.First().IsFavorite = false;
             db.SaveChanges();
         }
+        public void xoaUC3(UCApplicants uCApplicants)
+        {
+            var deletedApplicant = from c in db.ApplicantsOfCompanies where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
+            deletedApplicant.First().IsAccepted = false;
+            db.SaveChanges();
+        }
         public void HuyYeuThich(Applicant applicant)
         {
             var entity = from a in db.ApplicantsOfCompanies where a.ApplicantID == applicant.ApplicantID && a.CompanyID == Constant.CompanyID select a;
@@ -242,7 +282,6 @@ namespace DoAnCuoiKy
             db.SaveChanges();
 
         }
-
         public void YeuThich(Applicant applicant)
         {
             var entity = from a in db.ApplicantsOfCompanies where a.ApplicantID == applicant.ApplicantID && a.CompanyID == Constant.CompanyID select a;
@@ -250,7 +289,12 @@ namespace DoAnCuoiKy
             db.SaveChanges();
 
         }
-
+        public void Invite(Applicant applicant)
+        {
+            var applicant2 = from c in db.ApplicantsOfCompanies where Constant.CompanyID == c.CompanyID && c.ApplicantID == applicant.ApplicantID select c;
+            applicant2.First().IsAccepted = true;
+            db.SaveChanges();
+        }
         public void xoa(Applicant applicant)
         {
             var applicant1 = db.Applicants.Find(applicant.ApplicantID);
@@ -260,7 +304,6 @@ namespace DoAnCuoiKy
                 db.SaveChanges();
             }
         }
-
         public void SuaThongTinEducation(FAddEducation f1)
         {
             if (f1.Education != null)
