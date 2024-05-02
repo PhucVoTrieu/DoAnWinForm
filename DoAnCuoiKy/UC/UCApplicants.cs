@@ -14,6 +14,7 @@ namespace DoAnCuoiKy
     public partial class UCApplicants : UserControl
     {
         public Applicant applicantInfo;
+        public FApplicants fApplicants;
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
         public UCApplicants()
         {
@@ -27,6 +28,16 @@ namespace DoAnCuoiKy
             this.lblCandidateName.Text = applicant.ApplicantName;
             this.txtExpYears.Text = applicant.ApplicantExpYears;
             this.lblCandidateApplyPos.Text = applicant.ApplicantTitle;
+        }
+        public UCApplicants(Applicant applicant, FApplicants f1)
+        {
+            InitializeComponent();
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            this.applicantInfo = applicant;
+            this.lblCandidateName.Text = applicant.ApplicantName;
+            this.txtExpYears.Text = applicant.ApplicantExpYears;
+            this.lblCandidateApplyPos.Text = applicant.ApplicantTitle;
+            this.fApplicants = f1;
         }
         private void btnCandidateDetails_Click_1(object sender, EventArgs e)
         {
@@ -59,7 +70,7 @@ namespace DoAnCuoiKy
 
         private void btnInviteCanidate_Click(object sender, EventArgs e)
         {
-            applicantsDAO.Invite(this.applicantInfo);
+            applicantsDAO.Invite(this);
         }
     }
 }

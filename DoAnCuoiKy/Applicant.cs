@@ -24,6 +24,7 @@ namespace DoAnCuoiKy
             this.JobStatus = new HashSet<JobStatu>();
             this.PersonalProjects = new HashSet<PersonalProject>();
             this.WorkExperiences = new HashSet<WorkExperience>();
+            this.DateInterviews = new HashSet<DateInterview>();
         }
     
         public int ApplicantID { get; set; }
@@ -54,5 +55,7 @@ namespace DoAnCuoiKy
         public virtual ICollection<PersonalProject> PersonalProjects { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WorkExperience> WorkExperiences { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DateInterview> DateInterviews { get; set; }
     }
 }

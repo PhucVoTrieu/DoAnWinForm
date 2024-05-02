@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtpInvite = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.pnlDesignerApplicant = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCompanyRegistration = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -69,6 +71,8 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.dtpInvite);
             this.guna2Panel1.Controls.Add(this.pnlDesignerApplicant);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.lblCompanyRegistration);
@@ -79,13 +83,29 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1019, 657);
             this.guna2Panel1.TabIndex = 18;
             // 
+            // dtpInvite
+            // 
+            this.dtpInvite.Animated = true;
+            this.dtpInvite.BorderRadius = 5;
+            this.dtpInvite.Checked = true;
+            this.dtpInvite.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtpInvite.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dtpInvite.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpInvite.Location = new System.Drawing.Point(709, 87);
+            this.dtpInvite.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpInvite.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpInvite.Name = "dtpInvite";
+            this.dtpInvite.Size = new System.Drawing.Size(282, 54);
+            this.dtpInvite.TabIndex = 41;
+            this.dtpInvite.Value = new System.DateTime(2024, 5, 2, 19, 35, 43, 655);
+            // 
             // pnlDesignerApplicant
             // 
             this.pnlDesignerApplicant.AutoScroll = true;
             this.pnlDesignerApplicant.Location = new System.Drawing.Point(44, 407);
             this.pnlDesignerApplicant.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDesignerApplicant.Name = "pnlDesignerApplicant";
-            this.pnlDesignerApplicant.Size = new System.Drawing.Size(875, 307);
+            this.pnlDesignerApplicant.Size = new System.Drawing.Size(650, 307);
             this.pnlDesignerApplicant.TabIndex = 39;
             // 
             // label1
@@ -116,7 +136,7 @@
             this.pnlDeveLoperApplicant.Location = new System.Drawing.Point(40, 50);
             this.pnlDeveLoperApplicant.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDeveLoperApplicant.Name = "pnlDeveLoperApplicant";
-            this.pnlDeveLoperApplicant.Size = new System.Drawing.Size(879, 314);
+            this.pnlDeveLoperApplicant.Size = new System.Drawing.Size(654, 314);
             this.pnlDeveLoperApplicant.TabIndex = 0;
             // 
             // guna2Panel2
@@ -340,6 +360,17 @@
             this.guna2DragControl1.TargetControl = this.guna2Panel2;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(717, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(221, 20);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Choose Your InterviewDay";
+            // 
             // FApplicants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,5 +413,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCompanyRegistration;
         public System.Windows.Forms.FlowLayoutPanel pnlDesignerApplicant;
+        public  Guna.UI2.WinForms.Guna2DateTimePicker dtpInvite;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -37,5 +37,6 @@ namespace DoAnCuoiKy
         public virtual DbSet<PersonalProject> PersonalProjects { get; set; }
         public virtual DbSet<Skill> Skills { get; set; }
         public virtual DbSet<WorkExperience> WorkExperiences { get; set; }
+        public virtual DbSet<DateInterview> DateInterviews { get; set; }
     }
 }
