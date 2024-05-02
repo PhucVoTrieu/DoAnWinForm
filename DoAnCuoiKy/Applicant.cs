@@ -38,6 +38,7 @@ namespace DoAnCuoiKy
         public string ApplicantPhonenumber { get; set; }
         public Nullable<System.DateTime> ApplicantDOB { get; set; }
         public string ApplicantPersonalLink { get; set; }
+        public string ApplicantAvatar { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Aboutme> Aboutmes { get; set; }

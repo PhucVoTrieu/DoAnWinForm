@@ -36,9 +36,10 @@ namespace DoAnCuoiKy
             this.lblCountry.Text = result.CompanyCountry.ToString();
             this.lblWorkingday.Text = result.CompanyWorkingDays.ToString();
             this.lblSalary.Text = j1.JobSalary.ToString();
-            this.txtJobDesciption.Text = j1.JobDescription.ToString();
-            this.txtJobBenefit.Text = j1.JobBenefit.ToString();
-            this.txtJobRequirement.Text = j1.JobRequirement.ToString();
+            this.lblJobDescription.Text = j1.JobDescription.ToString();
+            this.lblJobBenefit.Text = j1.JobBenefit.ToString();
+            this.lblJobRequirement.Text = j1.JobRequirement.ToString();
+            this.pnlDetails.Size = new Size(this.pnlDetails.Width, this.lblJobBenefit.Location.Y-this.pnlJobDetails.Location.Y+30);
         }
         private void btnCompanyName_Click(object sender, EventArgs e)
         {
@@ -49,16 +50,6 @@ namespace DoAnCuoiKy
         {
             FProfileApplicant f1 = new FProfileApplicant();
             f1.Show();
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void pnlDetail_MouseEnter(object sender, EventArgs e)
-        {
-            this.pnlDetail.Focus();
         }
 
         private void btnViewCompany_Click(object sender, EventArgs e)

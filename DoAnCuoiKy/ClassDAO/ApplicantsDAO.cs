@@ -5,10 +5,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees;
 using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +21,18 @@ namespace DoAnCuoiKy
     {
 
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+        public void XoaAvatar(Applicant app)
+        {
+            var query = from a in db.Applicants where app.ApplicantID == a.ApplicantID select a;
+            query.First().ApplicantAvatar = null;
+            db.SaveChanges();
+        }
+        public void LuuAvatar(Applicant app)
+        {
+            var query = from a in db.Applicants where app.ApplicantID == a.ApplicantID select a;
+            query.First().ApplicantAvatar = app.ApplicantAvatar;
+            db.SaveChanges();
+        }
         public void XoaThongTinWorkExp(WorkExperience workExperience, FProfileApplicant f1)
         {
             using (DoAnCuoiKyEntities db = new DoAnCuoiKyEntities())
@@ -421,6 +436,8 @@ namespace DoAnCuoiKy
                 result.First().ApplicantAddress = f1.applicant1.ApplicantAddress;
                 result.First().ApplicantPersonalLink = f1.applicant1.ApplicantPersonalLink;
                 result.First().ApplicantDOB = f1.applicant1.ApplicantDOB;
+
+                
                 db.SaveChanges() ;
             }
             LoadThongTinBasicInfor(f1);
@@ -437,8 +454,16 @@ namespace DoAnCuoiKy
                 f1.txtPersonalLink.Text = result.First().ApplicantPersonalLink;
                 f1.txtPhoneNumber.Text = result.First().ApplicantPhonenumber;
                 f1.txtDOB.Text = result.First().ApplicantDOB.ToString();
-               
-                LoadThongTinBasicInforlenForm(f1.fProfile);
+                if (result.First().ApplicantAvatar != null)
+                {
+                    string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+                    f1.pboxAvatar.Image = Image.FromFile(Path.Combine(appDirectory, result.First().ApplicantAvatar));
+                }
+                else if(result.First().ApplicantAvatar == null)
+                {
+                    f1.pboxAvatar.Image = DoAnCuoiKy.Properties.Resources.ss1;
+                }
+                
 
             }
             catch (Exception ex)
@@ -460,6 +485,18 @@ namespace DoAnCuoiKy
             f1.lblYourTitle.Text = query.Single().ApplicantTitle;
             f1.lblGender.Text = query.Single().ApplicantGender;
             f1.lblPersonalPink.Text = query.Single().ApplicantPersonalLink;
+
+
+
+            if (query.Single().ApplicantAvatar != null)
+            {
+                string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+                f1.pboxAvatar.Image = Image.FromFile(Path.Combine(appDirectory,query.Single().ApplicantAvatar));
+            }
+            else if (query.Single().ApplicantAvatar == null)
+            {
+                f1.pboxAvatar.Image = DoAnCuoiKy.Properties.Resources.ss1;
+            }
         }
     }
 

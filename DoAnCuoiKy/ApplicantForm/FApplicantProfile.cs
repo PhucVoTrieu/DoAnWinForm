@@ -7,9 +7,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Caching;
 using System.Windows.Forms;
 
 namespace DoAnCuoiKy
@@ -22,7 +24,7 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            var query = from a in db.Applicants where Constant.ApplicantID == a.ApplicantID select a;   
+            var query = from a in db.Applicants where Constant.ApplicantID == a.ApplicantID select a;
             this.applicantInfo = query.FirstOrDefault();
             LoadDanhSach();
         }
@@ -40,19 +42,6 @@ namespace DoAnCuoiKy
             applicantsDAO.LoadThongTinEducation(this);
             applicantsDAO.LoadThongTinSkill(this);
         }
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            foreach (Control c in pnlAboutMe.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
-            {
-                if(c.GetType()==typeof(Guna.UI2.WinForms.Guna2TextBox))
-                {
-                    c.Enabled = true;
-                }
-            }
-        }
-        
-    
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             foreach (Control c in pnlAboutMe.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
@@ -77,15 +66,15 @@ namespace DoAnCuoiKy
 
         private void btnaAddWorkExp_Click(object sender, EventArgs e)
         {
-            FWorkExperience f1 = new FWorkExperience(null,this);
+            FWorkExperience f1 = new FWorkExperience(null, this);
             f1.Show();
-          //  applicantsDAO.LoadThongTinWorkExp(this);
+            //  applicantsDAO.LoadThongTinWorkExp(this);
         }
 
 
         private void btnAddEducation_Click(object sender, EventArgs e)
         {
-            FAddEducation f1 = new FAddEducation(null,this);
+            FAddEducation f1 = new FAddEducation(null, this);
             f1.Show();
         }
 
@@ -100,7 +89,7 @@ namespace DoAnCuoiKy
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             var result = from c in db.Applicants where c.ApplicantID == Constant.ApplicantID select c;
-            FeditBasicInfor f1 = new FeditBasicInfor( result.First() ,this);
+            FeditBasicInfor f1 = new FeditBasicInfor(result.First(), this);
             f1.Show();
         }
 
@@ -108,5 +97,7 @@ namespace DoAnCuoiKy
         {
             System.Diagnostics.Process.Start(this.lblPersonalPink.Text);
         }
+
+
     }
 }

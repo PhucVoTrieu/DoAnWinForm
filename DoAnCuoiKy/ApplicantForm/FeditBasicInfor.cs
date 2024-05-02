@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ namespace DoAnCuoiKy.ApplicantForm
 {
     public partial class FeditBasicInfor : Form
     {
+        ApplicantsDAO applicantsDAO = new ApplicantsDAO();
+        string appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
         public Applicant applicant1;
         public FProfileApplicant fProfile;
         public FeditBasicInfor()
@@ -22,6 +25,11 @@ namespace DoAnCuoiKy.ApplicantForm
         public  FeditBasicInfor(Applicant applicant , FProfileApplicant f1)
         {
             InitializeComponent();
+            LoadDanhSach(applicant, f1);
+            
+        }
+        public void LoadDanhSach(Applicant applicant, FProfileApplicant f1)
+        {
             this.fProfile = f1;
             this.applicant1 = applicant;
             this.txtAddress.Text = applicant.ApplicantAddress;
@@ -30,8 +38,12 @@ namespace DoAnCuoiKy.ApplicantForm
             this.txtGender.Text = applicant.ApplicantGender;
             this.txtPersonalLink.Text = applicant.ApplicantPersonalLink;
             this.txtPhoneNumber.Text = applicant.ApplicantPhonenumber;
-        }
+            if (applicant.ApplicantAvatar != null)
+            {
+                this.pboxAvatar.Image = System.Drawing.Image.FromFile(Path.Combine(appDirectory, applicant.ApplicantAvatar));
 
+            }
+        }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -46,15 +58,43 @@ namespace DoAnCuoiKy.ApplicantForm
             this.applicant1.ApplicantGender = this.txtGender.Text;
             this.applicant1.ApplicantPersonalLink = this.txtPersonalLink.Text;
             this.applicant1.ApplicantPhonenumber = this.txtPhoneNumber.Text;
+
+
+            applicantsDAO.LuuAvatar(this.applicant1);
+
             applicantsDAO.SuaThongTinBasicInfor(this);
+            applicantsDAO.LoadThongTinBasicInforlenForm(this.fProfile);
             this.Close();
         }
-
-        private void btnEditBasicInfo_Click(object sender, EventArgs e)
+        private void pboxAvatar_Click(object sender, EventArgs e)
+        {
+           
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
         {
 
+            
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    string fileName = ofd.FileName;
+                    string a = DateTime.Now.ToString("dddd, dd MMMM yyyy HHmmss" + Path.GetFileName(fileName));
+                    string desPath = Path.Combine(appDirectory, a);
+
+                    File.Copy(fileName, desPath, true);
+                    this.applicant1.ApplicantAvatar = a;
+                    
+                    this.pboxAvatar.Image = System.Drawing.Image.FromFile(desPath);
+                }
+            }
         }
 
-
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            applicantsDAO.XoaAvatar(this.applicant1);
+            this.applicant1.ApplicantAvatar=null;
+            applicantsDAO.LoadThongTinBasicInfor(this);
+        }
     }
 }

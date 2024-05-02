@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FJobDetails));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlDetail = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtJobBenefit = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.guna2Separator7 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtJobRequirement = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtJobDesciption = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtJobBenefit2 = new System.Windows.Forms.TextBox();
+            this.pnlDetails = new System.Windows.Forms.FlowLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
+            this.lblReasonToJoinUs = new System.Windows.Forms.Label();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblJobDescription = new System.Windows.Forms.Label();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblJobRequirement = new System.Windows.Forms.Label();
+            this.guna2Separator7 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblJobBenefit = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlComapnyInformation = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,11 +58,15 @@
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.labelCompanyName2 = new System.Windows.Forms.Label();
+            this.picboxCompanyLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnViewCompany = new Guna.UI2.WinForms.Guna2Button();
             this.pnlJobDetails = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtJobtype = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblSkills = new System.Windows.Forms.Label();
+            this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
             this.btnApplyNow = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblSalary = new System.Windows.Forms.Label();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.lblJobTitle = new System.Windows.Forms.Label();
@@ -71,183 +75,159 @@
             this.JobDetailsElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.CompanyInforElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picboxCompanyLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnViewCompany = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
-            this.pnlDetail.SuspendLayout();
+            this.pnlDetails.SuspendLayout();
             this.pnlComapnyInformation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxCompanyLogo)).BeginInit();
             this.pnlJobDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxCompanyLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.AutoScroll = true;
-            this.guna2Panel1.Controls.Add(this.pnlDetail);
+            this.guna2Panel1.Controls.Add(this.pnlDetails);
             this.guna2Panel1.CustomizableEdges.TopLeft = false;
             this.guna2Panel1.CustomizableEdges.TopRight = false;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 50);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1555, 962);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // pnlDetail
+            // pnlDetails
             // 
-            this.pnlDetail.BackColor = System.Drawing.Color.White;
-            this.pnlDetail.Controls.Add(this.txtJobBenefit);
-            this.pnlDetail.Controls.Add(this.label12);
-            this.pnlDetail.Controls.Add(this.guna2Separator7);
-            this.pnlDetail.Controls.Add(this.txtJobRequirement);
-            this.pnlDetail.Controls.Add(this.label11);
-            this.pnlDetail.Controls.Add(this.guna2Separator4);
-            this.pnlDetail.Controls.Add(this.txtJobDesciption);
-            this.pnlDetail.Controls.Add(this.label2);
-            this.pnlDetail.Controls.Add(this.txtJobBenefit2);
-            this.pnlDetail.Controls.Add(this.label21);
-            this.pnlDetail.Controls.Add(this.guna2Separator2);
-            this.pnlDetail.CustomizableEdges.TopLeft = false;
-            this.pnlDetail.CustomizableEdges.TopRight = false;
-            this.pnlDetail.Location = new System.Drawing.Point(32, 363);
-            this.pnlDetail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnlDetail.Name = "pnlDetail";
-            this.pnlDetail.Size = new System.Drawing.Size(961, 1262);
-            this.pnlDetail.TabIndex = 11;
-            this.pnlDetail.MouseEnter += new System.EventHandler(this.pnlDetail_MouseEnter);
-            // 
-            // txtJobBenefit
-            // 
-            this.txtJobBenefit.BackColor = System.Drawing.Color.White;
-            this.txtJobBenefit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtJobBenefit.Enabled = false;
-            this.txtJobBenefit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJobBenefit.Location = new System.Drawing.Point(23, 993);
-            this.txtJobBenefit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtJobBenefit.Multiline = true;
-            this.txtJobBenefit.Name = "txtJobBenefit";
-            this.txtJobBenefit.Size = new System.Drawing.Size(900, 198);
-            this.txtJobBenefit.TabIndex = 15;
-            this.txtJobBenefit.Text = resources.GetString("txtJobBenefit.Text");
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 950);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(178, 41);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Job benefit\r\n";
-            // 
-            // guna2Separator7
-            // 
-            this.guna2Separator7.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.guna2Separator7.FillThickness = 2;
-            this.guna2Separator7.Location = new System.Drawing.Point(19, 907);
-            this.guna2Separator7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Separator7.Name = "guna2Separator7";
-            this.guna2Separator7.Size = new System.Drawing.Size(900, 38);
-            this.guna2Separator7.TabIndex = 13;
-            // 
-            // txtJobRequirement
-            // 
-            this.txtJobRequirement.BackColor = System.Drawing.Color.White;
-            this.txtJobRequirement.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtJobRequirement.Enabled = false;
-            this.txtJobRequirement.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJobRequirement.Location = new System.Drawing.Point(25, 662);
-            this.txtJobRequirement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtJobRequirement.Multiline = true;
-            this.txtJobRequirement.Name = "txtJobRequirement";
-            this.txtJobRequirement.Size = new System.Drawing.Size(900, 277);
-            this.txtJobRequirement.TabIndex = 12;
-            this.txtJobRequirement.Text = resources.GetString("txtJobRequirement.Text");
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 619);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(381, 41);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Your skills and experience";
-            // 
-            // guna2Separator4
-            // 
-            this.guna2Separator4.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.guna2Separator4.FillThickness = 2;
-            this.guna2Separator4.Location = new System.Drawing.Point(21, 576);
-            this.guna2Separator4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Separator4.Name = "guna2Separator4";
-            this.guna2Separator4.Size = new System.Drawing.Size(900, 38);
-            this.guna2Separator4.TabIndex = 10;
-            // 
-            // txtJobDesciption
-            // 
-            this.txtJobDesciption.BackColor = System.Drawing.Color.White;
-            this.txtJobDesciption.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtJobDesciption.Enabled = false;
-            this.txtJobDesciption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJobDesciption.Location = new System.Drawing.Point(21, 247);
-            this.txtJobDesciption.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtJobDesciption.Multiline = true;
-            this.txtJobDesciption.Name = "txtJobDesciption";
-            this.txtJobDesciption.Size = new System.Drawing.Size(900, 320);
-            this.txtJobDesciption.TabIndex = 6;
-            this.txtJobDesciption.Text = resources.GetString("txtJobDesciption.Text");
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 204);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 41);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Job description";
-            // 
-            // txtJobBenefit2
-            // 
-            this.txtJobBenefit2.BackColor = System.Drawing.Color.White;
-            this.txtJobBenefit2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtJobBenefit2.Enabled = false;
-            this.txtJobBenefit2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJobBenefit2.Location = new System.Drawing.Point(21, 78);
-            this.txtJobBenefit2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtJobBenefit2.Multiline = true;
-            this.txtJobBenefit2.Name = "txtJobBenefit2";
-            this.txtJobBenefit2.Size = new System.Drawing.Size(825, 102);
-            this.txtJobBenefit2.TabIndex = 3;
-            this.txtJobBenefit2.Text = "Mức lương cạnh tranh, hấp dẫn\r\nMôi trường làm việc chuyên nghiệp, thân thiện\r\nĐượ" +
-    "c làm việc với các hệ thống hiện đại, tiên tiến\r\n\r\n";
+            this.pnlDetails.BackColor = System.Drawing.Color.White;
+            this.pnlDetails.Controls.Add(this.label21);
+            this.pnlDetails.Controls.Add(this.lblReasonToJoinUs);
+            this.pnlDetails.Controls.Add(this.guna2Separator2);
+            this.pnlDetails.Controls.Add(this.label2);
+            this.pnlDetails.Controls.Add(this.lblJobDescription);
+            this.pnlDetails.Controls.Add(this.guna2Separator4);
+            this.pnlDetails.Controls.Add(this.label11);
+            this.pnlDetails.Controls.Add(this.lblJobRequirement);
+            this.pnlDetails.Controls.Add(this.guna2Separator7);
+            this.pnlDetails.Controls.Add(this.label12);
+            this.pnlDetails.Controls.Add(this.lblJobBenefit);
+            this.pnlDetails.Location = new System.Drawing.Point(32, 394);
+            this.pnlDetails.Name = "pnlDetails";
+            this.pnlDetails.Padding = new System.Windows.Forms.Padding(15, 20, 10, 10);
+            this.pnlDetails.Size = new System.Drawing.Size(961, 1886);
+            this.pnlDetails.TabIndex = 13;
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(13, 18);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(19, 20);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 15);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(348, 41);
+            this.label21.Size = new System.Drawing.Size(918, 41);
             this.label21.TabIndex = 1;
             this.label21.Text = "Top 3 reasons to join us";
+            // 
+            // lblReasonToJoinUs
+            // 
+            this.lblReasonToJoinUs.AutoSize = true;
+            this.lblReasonToJoinUs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblReasonToJoinUs.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblReasonToJoinUs.Location = new System.Drawing.Point(19, 76);
+            this.lblReasonToJoinUs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReasonToJoinUs.Name = "lblReasonToJoinUs";
+            this.lblReasonToJoinUs.Size = new System.Drawing.Size(822, 400);
+            this.lblReasonToJoinUs.TabIndex = 16;
+            this.lblReasonToJoinUs.Text = resources.GetString("lblReasonToJoinUs.Text");
             // 
             // guna2Separator2
             // 
             this.guna2Separator2.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             this.guna2Separator2.FillThickness = 2;
-            this.guna2Separator2.Location = new System.Drawing.Point(36, 172);
+            this.guna2Separator2.Location = new System.Drawing.Point(19, 481);
             this.guna2Separator2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(885, 38);
+            this.guna2Separator2.Size = new System.Drawing.Size(927, 38);
             this.guna2Separator2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 524);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(918, 41);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Job description";
+            // 
+            // lblJobDescription
+            // 
+            this.lblJobDescription.AutoSize = true;
+            this.lblJobDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblJobDescription.Location = new System.Drawing.Point(18, 580);
+            this.lblJobDescription.Name = "lblJobDescription";
+            this.lblJobDescription.Size = new System.Drawing.Size(928, 50);
+            this.lblJobDescription.TabIndex = 13;
+            this.lblJobDescription.Text = "Triển khai, quản trị, giám sát, vận hành hệ thống mạng của tổ chức bao gồm hệ thố" +
+    "ng mạng tại Trung tâm dữ liệu và các chi nhánh: Cisco ACI; Firewall Checkpoint/ " +
+    "Palo Alto/ Fortinet; Wifi; NAC…";
+            // 
+            // guna2Separator4
+            // 
+            this.guna2Separator4.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.guna2Separator4.FillThickness = 2;
+            this.guna2Separator4.Location = new System.Drawing.Point(19, 635);
+            this.guna2Separator4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Separator4.Name = "guna2Separator4";
+            this.guna2Separator4.Size = new System.Drawing.Size(927, 38);
+            this.guna2Separator4.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(19, 678);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(900, 41);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Your skills and experience";
+            // 
+            // lblJobRequirement
+            // 
+            this.lblJobRequirement.AutoSize = true;
+            this.lblJobRequirement.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblJobRequirement.Location = new System.Drawing.Point(18, 734);
+            this.lblJobRequirement.Name = "lblJobRequirement";
+            this.lblJobRequirement.Size = new System.Drawing.Size(901, 225);
+            this.lblJobRequirement.TabIndex = 17;
+            this.lblJobRequirement.Text = resources.GetString("lblJobRequirement.Text");
+            // 
+            // guna2Separator7
+            // 
+            this.guna2Separator7.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.guna2Separator7.FillThickness = 2;
+            this.guna2Separator7.Location = new System.Drawing.Point(19, 964);
+            this.guna2Separator7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Separator7.Name = "guna2Separator7";
+            this.guna2Separator7.Size = new System.Drawing.Size(927, 38);
+            this.guna2Separator7.TabIndex = 13;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(19, 1007);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(927, 41);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Job benefit\r\n";
+            // 
+            // lblJobBenefit
+            // 
+            this.lblJobBenefit.AutoSize = true;
+            this.lblJobBenefit.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblJobBenefit.Location = new System.Drawing.Point(18, 1063);
+            this.lblJobBenefit.Name = "lblJobBenefit";
+            this.lblJobBenefit.Size = new System.Drawing.Size(928, 900);
+            this.lblJobBenefit.TabIndex = 18;
+            this.lblJobBenefit.Text = resources.GetString("lblJobBenefit.Text");
             // 
             // guna2ControlBox1
             // 
@@ -255,7 +235,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1507, 4);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(48, 21);
             this.guna2ControlBox1.TabIndex = 10;
@@ -279,7 +259,7 @@
             this.pnlComapnyInformation.Controls.Add(this.picboxCompanyLogo);
             this.pnlComapnyInformation.Controls.Add(this.btnViewCompany);
             this.pnlComapnyInformation.Location = new System.Drawing.Point(1017, 50);
-            this.pnlComapnyInformation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlComapnyInformation.Margin = new System.Windows.Forms.Padding(4);
             this.pnlComapnyInformation.Name = "pnlComapnyInformation";
             this.pnlComapnyInformation.Size = new System.Drawing.Size(512, 514);
             this.pnlComapnyInformation.TabIndex = 9;
@@ -436,6 +416,47 @@
             this.labelCompanyName2.TabIndex = 21;
             this.labelCompanyName2.Text = "MB Bank";
             // 
+            // picboxCompanyLogo
+            // 
+            this.picboxCompanyLogo.Image = global::DoAnCuoiKy.Properties.Resources._200;
+            this.picboxCompanyLogo.ImageRotate = 0F;
+            this.picboxCompanyLogo.Location = new System.Drawing.Point(40, 23);
+            this.picboxCompanyLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picboxCompanyLogo.Name = "picboxCompanyLogo";
+            this.picboxCompanyLogo.Size = new System.Drawing.Size(140, 89);
+            this.picboxCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxCompanyLogo.TabIndex = 20;
+            this.picboxCompanyLogo.TabStop = false;
+            // 
+            // btnViewCompany
+            // 
+            this.btnViewCompany.AutoRoundedCorners = true;
+            this.btnViewCompany.BorderRadius = 18;
+            this.btnViewCompany.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnViewCompany.CheckedState.CustomBorderColor = System.Drawing.Color.White;
+            this.btnViewCompany.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnViewCompany.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewCompany.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewCompany.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewCompany.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewCompany.FillColor = System.Drawing.Color.White;
+            this.btnViewCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(68)))), ((int)(((byte)(189)))));
+            this.btnViewCompany.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnViewCompany.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.btnViewCompany.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnViewCompany.Image = global::DoAnCuoiKy.Properties.Resources._102;
+            this.btnViewCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnViewCompany.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnViewCompany.Location = new System.Drawing.Point(192, 64);
+            this.btnViewCompany.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewCompany.Name = "btnViewCompany";
+            this.btnViewCompany.Size = new System.Drawing.Size(205, 38);
+            this.btnViewCompany.TabIndex = 22;
+            this.btnViewCompany.Text = "View company";
+            this.btnViewCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnViewCompany.Click += new System.EventHandler(this.btnViewCompany_Click);
+            // 
             // pnlJobDetails
             // 
             this.pnlJobDetails.AutoScroll = true;
@@ -452,7 +473,7 @@
             this.pnlJobDetails.CustomizableEdges.BottomLeft = false;
             this.pnlJobDetails.CustomizableEdges.BottomRight = false;
             this.pnlJobDetails.Location = new System.Drawing.Point(32, 50);
-            this.pnlJobDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlJobDetails.Margin = new System.Windows.Forms.Padding(4);
             this.pnlJobDetails.Name = "pnlJobDetails";
             this.pnlJobDetails.Size = new System.Drawing.Size(961, 342);
             this.pnlJobDetails.TabIndex = 8;
@@ -521,6 +542,36 @@
             this.lblSkills.TabIndex = 16;
             this.lblSkills.Text = "Skill:";
             // 
+            // btnFavorite
+            // 
+            this.btnFavorite.AutoRoundedCorners = true;
+            this.btnFavorite.BackColor = System.Drawing.Color.Transparent;
+            this.btnFavorite.BorderColor = System.Drawing.Color.White;
+            this.btnFavorite.BorderRadius = 26;
+            this.btnFavorite.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnFavorite.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnFavorite.CheckedState.Image = global::DoAnCuoiKy.Properties.Resources._93;
+            this.btnFavorite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFavorite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFavorite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFavorite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFavorite.FillColor = System.Drawing.Color.White;
+            this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFavorite.ForeColor = System.Drawing.Color.White;
+            this.btnFavorite.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnFavorite.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.btnFavorite.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._92;
+            this.btnFavorite.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnFavorite.Location = new System.Drawing.Point(884, 194);
+            this.btnFavorite.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFavorite.Name = "btnFavorite";
+            this.btnFavorite.ShadowDecoration.BorderRadius = 15;
+            this.btnFavorite.ShadowDecoration.Depth = 15;
+            this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.btnFavorite.Size = new System.Drawing.Size(69, 55);
+            this.btnFavorite.TabIndex = 15;
+            // 
             // btnApplyNow
             // 
             this.btnApplyNow.AutoRoundedCorners = true;
@@ -533,12 +584,24 @@
             this.btnApplyNow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnApplyNow.ForeColor = System.Drawing.Color.White;
             this.btnApplyNow.Location = new System.Drawing.Point(27, 194);
-            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(4);
             this.btnApplyNow.Name = "btnApplyNow";
             this.btnApplyNow.Size = new System.Drawing.Size(849, 55);
             this.btnApplyNow.TabIndex = 6;
             this.btnApplyNow.Text = "Apply Now";
             this.btnApplyNow.Click += new System.EventHandler(this.btnApplyNow_Click_1);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._101;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 128);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(43, 33);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // lblSalary
             // 
@@ -584,7 +647,7 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this.pnlDetail;
+            this.guna2Elipse1.TargetControl = this.pnlDetails;
             // 
             // JobDetailsElipse
             // 
@@ -602,89 +665,6 @@
             this.guna2DragControl2.TargetControl = this;
             this.guna2DragControl2.UseTransparentDrag = true;
             // 
-            // btnFavorite
-            // 
-            this.btnFavorite.AutoRoundedCorners = true;
-            this.btnFavorite.BackColor = System.Drawing.Color.Transparent;
-            this.btnFavorite.BorderColor = System.Drawing.Color.White;
-            this.btnFavorite.BorderRadius = 26;
-            this.btnFavorite.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btnFavorite.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnFavorite.CheckedState.Image = global::DoAnCuoiKy.Properties.Resources._93;
-            this.btnFavorite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFavorite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFavorite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFavorite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFavorite.FillColor = System.Drawing.Color.White;
-            this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnFavorite.ForeColor = System.Drawing.Color.White;
-            this.btnFavorite.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnFavorite.HoverState.CustomBorderColor = System.Drawing.Color.White;
-            this.btnFavorite.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._92;
-            this.btnFavorite.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnFavorite.Location = new System.Drawing.Point(884, 194);
-            this.btnFavorite.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFavorite.Name = "btnFavorite";
-            this.btnFavorite.ShadowDecoration.BorderRadius = 15;
-            this.btnFavorite.ShadowDecoration.Depth = 15;
-            this.btnFavorite.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.btnFavorite.Size = new System.Drawing.Size(69, 55);
-            this.btnFavorite.TabIndex = 15;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._101;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 128);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(43, 33);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 4;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // picboxCompanyLogo
-            // 
-            this.picboxCompanyLogo.Image = global::DoAnCuoiKy.Properties.Resources._200;
-            this.picboxCompanyLogo.ImageRotate = 0F;
-            this.picboxCompanyLogo.Location = new System.Drawing.Point(40, 23);
-            this.picboxCompanyLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.picboxCompanyLogo.Name = "picboxCompanyLogo";
-            this.picboxCompanyLogo.Size = new System.Drawing.Size(140, 89);
-            this.picboxCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxCompanyLogo.TabIndex = 20;
-            this.picboxCompanyLogo.TabStop = false;
-            // 
-            // btnViewCompany
-            // 
-            this.btnViewCompany.AutoRoundedCorners = true;
-            this.btnViewCompany.BorderRadius = 18;
-            this.btnViewCompany.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btnViewCompany.CheckedState.CustomBorderColor = System.Drawing.Color.White;
-            this.btnViewCompany.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnViewCompany.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewCompany.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewCompany.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewCompany.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnViewCompany.FillColor = System.Drawing.Color.White;
-            this.btnViewCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(68)))), ((int)(((byte)(189)))));
-            this.btnViewCompany.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnViewCompany.HoverState.CustomBorderColor = System.Drawing.Color.White;
-            this.btnViewCompany.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnViewCompany.Image = global::DoAnCuoiKy.Properties.Resources._102;
-            this.btnViewCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnViewCompany.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnViewCompany.Location = new System.Drawing.Point(192, 64);
-            this.btnViewCompany.Margin = new System.Windows.Forms.Padding(4);
-            this.btnViewCompany.Name = "btnViewCompany";
-            this.btnViewCompany.Size = new System.Drawing.Size(205, 38);
-            this.btnViewCompany.TabIndex = 22;
-            this.btnViewCompany.Text = "View company";
-            this.btnViewCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnViewCompany.Click += new System.EventHandler(this.btnViewCompany_Click);
-            // 
             // FJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -701,64 +681,64 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FJobDetails";
             this.guna2Panel1.ResumeLayout(false);
-            this.pnlDetail.ResumeLayout(false);
-            this.pnlDetail.PerformLayout();
+            this.pnlDetails.ResumeLayout(false);
+            this.pnlDetails.PerformLayout();
             this.pnlComapnyInformation.ResumeLayout(false);
             this.pnlComapnyInformation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxCompanyLogo)).EndInit();
             this.pnlJobDetails.ResumeLayout(false);
             this.pnlJobDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxCompanyLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel pnlDetail;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
-        private System.Windows.Forms.TextBox txtJobDesciption;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtJobBenefit2;
-        private System.Windows.Forms.Label label21;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2Panel pnlComapnyInformation;
-        private System.Windows.Forms.Label labelCompanyName2;
-        private Guna.UI2.WinForms.Guna2PictureBox picboxCompanyLogo;
-        private Guna.UI2.WinForms.Guna2Button btnViewCompany;
-        private Guna.UI2.WinForms.Guna2Panel pnlJobDetails;
+        public Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        public Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        public Guna.UI2.WinForms.Guna2Panel pnlComapnyInformation;
+        public System.Windows.Forms.Label labelCompanyName2;
+        public Guna.UI2.WinForms.Guna2PictureBox picboxCompanyLogo;
+        public Guna.UI2.WinForms.Guna2Button btnViewCompany;
+        public Guna.UI2.WinForms.Guna2Panel pnlJobDetails;
         public Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         public Guna.UI2.WinForms.Guna2TextBox txtJobtype;
-        private System.Windows.Forms.Label lblSkills;
+        public System.Windows.Forms.Label lblSkills;
         public Guna.UI2.WinForms.Guna2Button btnFavorite;
-        private Guna.UI2.WinForms.Guna2Button btnApplyNow;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.Label lblCompanyName;
-        private System.Windows.Forms.Label lblJobTitle;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Elipse JobDetailsElipse;
-        private Guna.UI2.WinForms.Guna2Elipse CompanyInforElipse;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator6;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator5;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblWorkingday;
-        private System.Windows.Forms.Label lblCountry;
-        private System.Windows.Forms.Label lblCompanySize;
-        private System.Windows.Forms.Label lblCompanyType;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
-        private System.Windows.Forms.TextBox txtJobRequirement;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtJobBenefit;
-        private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator7;
+        public Guna.UI2.WinForms.Guna2Button btnApplyNow;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        public System.Windows.Forms.Label lblSalary;
+        public System.Windows.Forms.Label lblCompanyName;
+        public System.Windows.Forms.Label lblJobTitle;
+        public Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        public Guna.UI2.WinForms.Guna2Elipse JobDetailsElipse;
+        public Guna.UI2.WinForms.Guna2Elipse CompanyInforElipse;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator6;
+        public System.Windows.Forms.Label label6;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator5;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator3;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lblWorkingday;
+        public System.Windows.Forms.Label lblCountry;
+        public System.Windows.Forms.Label lblCompanySize;
+        public System.Windows.Forms.Label lblCompanyType;
+        public Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
+        public System.Windows.Forms.FlowLayoutPanel pnlDetails;
+        public System.Windows.Forms.Label label21;
+        public System.Windows.Forms.Label lblReasonToJoinUs;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lblJobDescription;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator4;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label lblJobRequirement;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator7;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label lblJobBenefit;
     }
 }

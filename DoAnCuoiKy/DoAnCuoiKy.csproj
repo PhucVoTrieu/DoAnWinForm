@@ -746,6 +746,7 @@
       <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
       <LastGenOutput>DoAnCuoiKyModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ss.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
