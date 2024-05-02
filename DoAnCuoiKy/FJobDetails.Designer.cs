@@ -75,6 +75,7 @@
             this.JobDetailsElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.CompanyInforElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
             this.pnlDetails.SuspendLayout();
             this.pnlComapnyInformation.SuspendLayout();
@@ -92,7 +93,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 50);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1555, 962);
+            this.guna2Panel1.Size = new System.Drawing.Size(1585, 962);
             this.guna2Panel1.TabIndex = 0;
             // 
             // pnlDetails
@@ -112,7 +113,7 @@
             this.pnlDetails.Location = new System.Drawing.Point(32, 394);
             this.pnlDetails.Name = "pnlDetails";
             this.pnlDetails.Padding = new System.Windows.Forms.Padding(15, 20, 10, 10);
-            this.pnlDetails.Size = new System.Drawing.Size(961, 1886);
+            this.pnlDetails.Size = new System.Drawing.Size(961, 1974);
             this.pnlDetails.TabIndex = 13;
             // 
             // label21
@@ -225,19 +226,24 @@
             this.lblJobBenefit.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.lblJobBenefit.Location = new System.Drawing.Point(18, 1063);
             this.lblJobBenefit.Name = "lblJobBenefit";
-            this.lblJobBenefit.Size = new System.Drawing.Size(928, 900);
+            this.lblJobBenefit.Size = new System.Drawing.Size(928, 800);
             this.lblJobBenefit.TabIndex = 18;
             this.lblJobBenefit.Text = resources.GetString("lblJobBenefit.Text");
             // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
+            this.guna2ControlBox1.CustomIconSize = 12F;
+            this.guna2ControlBox1.CustomizableEdges.BottomRight = false;
+            this.guna2ControlBox1.CustomizableEdges.TopLeft = false;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1507, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1497, 10);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(48, 21);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(32, 32);
             this.guna2ControlBox1.TabIndex = 10;
             // 
             // pnlComapnyInformation
@@ -665,12 +671,17 @@
             this.guna2DragControl2.TargetControl = this;
             this.guna2DragControl2.UseTransparentDrag = true;
             // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 20;
+            this.guna2Elipse2.TargetControl = this;
+            // 
             // FJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.ClientSize = new System.Drawing.Size(1556, 1088);
+            this.ClientSize = new System.Drawing.Size(1586, 1088);
             this.Controls.Add(this.pnlJobDetails);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.pnlComapnyInformation);
@@ -740,5 +751,6 @@
         public Guna.UI2.WinForms.Guna2Separator guna2Separator7;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label lblJobBenefit;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

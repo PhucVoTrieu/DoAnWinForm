@@ -31,23 +31,39 @@
             this.components = new System.ComponentModel.Container();
             this.pnlMain = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlBasicInfo = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnEditBasicInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.pboxAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblPersonalPink = new System.Windows.Forms.Label();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblAddress = new System.Windows.Forms.Label();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblGender = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblPhoneNum = new System.Windows.Forms.Label();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblDOB = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblYourTitle = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblYourName = new System.Windows.Forms.Label();
             this.pnlAboutMe = new Guna.UI2.WinForms.Guna2Panel();
             this.lblAboutMe = new System.Windows.Forms.Label();
+            this.btnAddAboutMe = new Guna.UI2.WinForms.Guna2Button();
             this.pnlListOfAboutMe = new System.Windows.Forms.FlowLayoutPanel();
             this.lblAboutMePlaceHolder = new System.Windows.Forms.Label();
             this.pnlWorkExp = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnaAddWorkExp = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlListOfWorkExp = new System.Windows.Forms.FlowLayoutPanel();
             this.lblWorkExpPlaceholder = new System.Windows.Forms.Label();
             this.pnlEducation = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddEducation = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlListOfEducation = new System.Windows.Forms.FlowLayoutPanel();
             this.lblEducationPlaceholder = new System.Windows.Forms.Label();
@@ -55,6 +71,7 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.pnlListOfSkills = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnAddSkill = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.BasicInforElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -64,35 +81,9 @@
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnEditBasicInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.pboxAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnAddAboutMe = new Guna.UI2.WinForms.Guna2Button();
-            this.btnaAddWorkExp = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddEducation = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddSkill = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMain.SuspendLayout();
             this.pnlBasicInfo.SuspendLayout();
-            this.pnlAboutMe.SuspendLayout();
-            this.pnlListOfAboutMe.SuspendLayout();
-            this.pnlWorkExp.SuspendLayout();
-            this.pnlListOfWorkExp.SuspendLayout();
-            this.pnlEducation.SuspendLayout();
-            this.pnlListOfEducation.SuspendLayout();
-            this.pnlSkill.SuspendLayout();
-            this.pnlListOfSkills.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
@@ -105,6 +96,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.pnlAboutMe.SuspendLayout();
+            this.pnlListOfAboutMe.SuspendLayout();
+            this.pnlWorkExp.SuspendLayout();
+            this.pnlListOfWorkExp.SuspendLayout();
+            this.pnlEducation.SuspendLayout();
+            this.pnlListOfEducation.SuspendLayout();
+            this.pnlSkill.SuspendLayout();
+            this.pnlListOfSkills.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
@@ -155,6 +154,84 @@
             this.pnlBasicInfo.Size = new System.Drawing.Size(1460, 359);
             this.pnlBasicInfo.TabIndex = 104;
             // 
+            // btnEditBasicInfo
+            // 
+            this.btnEditBasicInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditBasicInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditBasicInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditBasicInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditBasicInfo.FillColor = System.Drawing.Color.White;
+            this.btnEditBasicInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditBasicInfo.ForeColor = System.Drawing.Color.White;
+            this.btnEditBasicInfo.Image = global::DoAnCuoiKy.Properties.Resources.editing1;
+            this.btnEditBasicInfo.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnEditBasicInfo.Location = new System.Drawing.Point(1372, 18);
+            this.btnEditBasicInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditBasicInfo.Name = "btnEditBasicInfo";
+            this.btnEditBasicInfo.Size = new System.Drawing.Size(59, 49);
+            this.btnEditBasicInfo.TabIndex = 130;
+            this.btnEditBasicInfo.Click += new System.EventHandler(this.btnEditBasicInfo_Click);
+            // 
+            // pboxAvatar
+            // 
+            this.pboxAvatar.Image = global::DoAnCuoiKy.Properties.Resources.ss1;
+            this.pboxAvatar.ImageRotate = 0F;
+            this.pboxAvatar.Location = new System.Drawing.Point(31, 28);
+            this.pboxAvatar.Margin = new System.Windows.Forms.Padding(4);
+            this.pboxAvatar.Name = "pboxAvatar";
+            this.pboxAvatar.Size = new System.Drawing.Size(379, 294);
+            this.pboxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxAvatar.TabIndex = 128;
+            this.pboxAvatar.TabStop = false;
+            // 
+            // guna2PictureBox10
+            // 
+            this.guna2PictureBox10.Image = global::DoAnCuoiKy.Properties.Resources.globe3;
+            this.guna2PictureBox10.ImageRotate = 0F;
+            this.guna2PictureBox10.Location = new System.Drawing.Point(864, 250);
+            this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox10.Name = "guna2PictureBox10";
+            this.guna2PictureBox10.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox10.TabIndex = 126;
+            this.guna2PictureBox10.TabStop = false;
+            // 
+            // guna2PictureBox9
+            // 
+            this.guna2PictureBox9.Image = global::DoAnCuoiKy.Properties.Resources.pin2;
+            this.guna2PictureBox9.ImageRotate = 0F;
+            this.guna2PictureBox9.Location = new System.Drawing.Point(469, 250);
+            this.guna2PictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox9.Name = "guna2PictureBox9";
+            this.guna2PictureBox9.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox9.TabIndex = 125;
+            this.guna2PictureBox9.TabStop = false;
+            // 
+            // guna2PictureBox8
+            // 
+            this.guna2PictureBox8.Image = global::DoAnCuoiKy.Properties.Resources.gender3;
+            this.guna2PictureBox8.ImageRotate = 0F;
+            this.guna2PictureBox8.Location = new System.Drawing.Point(864, 204);
+            this.guna2PictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox8.Name = "guna2PictureBox8";
+            this.guna2PictureBox8.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox8.TabIndex = 124;
+            this.guna2PictureBox8.TabStop = false;
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.Image = global::DoAnCuoiKy.Properties.Resources.telephone2;
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(864, 160);
+            this.guna2PictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox7.TabIndex = 123;
+            this.guna2PictureBox7.TabStop = false;
+            // 
             // lblPersonalPink
             // 
             this.lblPersonalPink.AutoSize = true;
@@ -166,6 +243,17 @@
             this.lblPersonalPink.Text = "Your personal link";
             this.lblPersonalPink.Click += new System.EventHandler(this.lblPersonalPink_Click_1);
             // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(864, 247);
+            this.guna2PictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox6.TabIndex = 121;
+            this.guna2PictureBox6.TabStop = false;
+            // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
@@ -175,6 +263,17 @@
             this.lblAddress.Size = new System.Drawing.Size(190, 28);
             this.lblAddress.TabIndex = 120;
             this.lblAddress.Text = "Your current address";
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(469, 247);
+            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 119;
+            this.guna2PictureBox5.TabStop = false;
             // 
             // lblGender
             // 
@@ -186,6 +285,17 @@
             this.lblGender.TabIndex = 118;
             this.lblGender.Text = "Your gender";
             // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(864, 199);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 117;
+            this.guna2PictureBox4.TabStop = false;
+            // 
             // lblPhoneNum
             // 
             this.lblPhoneNum.AutoSize = true;
@@ -196,6 +306,17 @@
             this.lblPhoneNum.TabIndex = 116;
             this.lblPhoneNum.Text = "Your phone number";
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(864, 160);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 115;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
@@ -205,6 +326,18 @@
             this.lblDOB.Size = new System.Drawing.Size(166, 28);
             this.lblDOB.TabIndex = 114;
             this.lblDOB.Text = "Your date of birth";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources.birthday3;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(469, 204);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 113;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // lblYourTitle
             // 
@@ -226,6 +359,29 @@
             this.lblEmail.Size = new System.Drawing.Size(103, 28);
             this.lblEmail.TabIndex = 111;
             this.lblEmail.Text = "Your Email";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::DoAnCuoiKy.Properties.Resources.mail3;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(469, 160);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(23, 21);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 107;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(27, 18);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(157, 134);
+            this.guna2CirclePictureBox1.TabIndex = 99;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // lblYourName
             // 
@@ -259,6 +415,24 @@
             this.lblAboutMe.Size = new System.Drawing.Size(194, 50);
             this.lblAboutMe.TabIndex = 99;
             this.lblAboutMe.Text = "About me";
+            // 
+            // btnAddAboutMe
+            // 
+            this.btnAddAboutMe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddAboutMe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddAboutMe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddAboutMe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddAboutMe.FillColor = System.Drawing.Color.White;
+            this.btnAddAboutMe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddAboutMe.ForeColor = System.Drawing.Color.White;
+            this.btnAddAboutMe.Image = global::DoAnCuoiKy.Properties.Resources.add;
+            this.btnAddAboutMe.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddAboutMe.Location = new System.Drawing.Point(1372, 17);
+            this.btnAddAboutMe.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddAboutMe.Name = "btnAddAboutMe";
+            this.btnAddAboutMe.Size = new System.Drawing.Size(59, 49);
+            this.btnAddAboutMe.TabIndex = 131;
+            this.btnAddAboutMe.Click += new System.EventHandler(this.btnAddAboutMe_Click_1);
             // 
             // pnlListOfAboutMe
             // 
@@ -296,6 +470,24 @@
             this.pnlWorkExp.Name = "pnlWorkExp";
             this.pnlWorkExp.Size = new System.Drawing.Size(1460, 175);
             this.pnlWorkExp.TabIndex = 106;
+            // 
+            // btnaAddWorkExp
+            // 
+            this.btnaAddWorkExp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnaAddWorkExp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnaAddWorkExp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnaAddWorkExp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnaAddWorkExp.FillColor = System.Drawing.Color.White;
+            this.btnaAddWorkExp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnaAddWorkExp.ForeColor = System.Drawing.Color.White;
+            this.btnaAddWorkExp.Image = global::DoAnCuoiKy.Properties.Resources.add;
+            this.btnaAddWorkExp.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnaAddWorkExp.Location = new System.Drawing.Point(1372, 17);
+            this.btnaAddWorkExp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnaAddWorkExp.Name = "btnaAddWorkExp";
+            this.btnaAddWorkExp.Size = new System.Drawing.Size(59, 49);
+            this.btnaAddWorkExp.TabIndex = 131;
+            this.btnaAddWorkExp.Click += new System.EventHandler(this.btnaAddWorkExp_Click);
             // 
             // label1
             // 
@@ -344,6 +536,24 @@
             this.pnlEducation.Name = "pnlEducation";
             this.pnlEducation.Size = new System.Drawing.Size(1460, 175);
             this.pnlEducation.TabIndex = 105;
+            // 
+            // btnAddEducation
+            // 
+            this.btnAddEducation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddEducation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddEducation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddEducation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddEducation.FillColor = System.Drawing.Color.White;
+            this.btnAddEducation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddEducation.ForeColor = System.Drawing.Color.White;
+            this.btnAddEducation.Image = global::DoAnCuoiKy.Properties.Resources.add;
+            this.btnAddEducation.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddEducation.Location = new System.Drawing.Point(1372, 17);
+            this.btnAddEducation.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddEducation.Name = "btnAddEducation";
+            this.btnAddEducation.Size = new System.Drawing.Size(59, 49);
+            this.btnAddEducation.TabIndex = 131;
+            this.btnAddEducation.Click += new System.EventHandler(this.btnAddEducation_Click);
             // 
             // label2
             // 
@@ -426,6 +636,24 @@
             this.label4.TabIndex = 114;
             this.label4.Text = "Share Your Skill";
             // 
+            // btnAddSkill
+            // 
+            this.btnAddSkill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddSkill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddSkill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddSkill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddSkill.FillColor = System.Drawing.Color.White;
+            this.btnAddSkill.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddSkill.ForeColor = System.Drawing.Color.White;
+            this.btnAddSkill.Image = global::DoAnCuoiKy.Properties.Resources.add;
+            this.btnAddSkill.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddSkill.Location = new System.Drawing.Point(1372, 16);
+            this.btnAddSkill.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddSkill.Name = "btnAddSkill";
+            this.btnAddSkill.Size = new System.Drawing.Size(59, 49);
+            this.btnAddSkill.TabIndex = 131;
+            this.btnAddSkill.Click += new System.EventHandler(this.btnAddSkill_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -478,260 +706,21 @@
             this.guna2Elipse6.BorderRadius = 15;
             this.guna2Elipse6.TargetControl = this;
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.pnlMain;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1535, 37);
-            this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2VScrollBar1.Maximum = 1234;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 21;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 695);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 131;
-            // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
+            this.guna2ControlBox1.CustomIconSize = 12F;
+            this.guna2ControlBox1.CustomizableEdges.BottomRight = false;
+            this.guna2ControlBox1.CustomizableEdges.TopLeft = false;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1511, 2);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1479, 1);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(41, 31);
-            this.guna2ControlBox1.TabIndex = 132;
-            // 
-            // btnEditBasicInfo
-            // 
-            this.btnEditBasicInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditBasicInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditBasicInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditBasicInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditBasicInfo.FillColor = System.Drawing.Color.White;
-            this.btnEditBasicInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditBasicInfo.ForeColor = System.Drawing.Color.White;
-            this.btnEditBasicInfo.Image = global::DoAnCuoiKy.Properties.Resources.editing1;
-            this.btnEditBasicInfo.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnEditBasicInfo.Location = new System.Drawing.Point(1372, 18);
-            this.btnEditBasicInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditBasicInfo.Name = "btnEditBasicInfo";
-            this.btnEditBasicInfo.Size = new System.Drawing.Size(59, 49);
-            this.btnEditBasicInfo.TabIndex = 130;
-            this.btnEditBasicInfo.Click += new System.EventHandler(this.btnEditBasicInfo_Click);
-            // 
-            // pboxAvatar
-            // 
-            this.pboxAvatar.Image = global::DoAnCuoiKy.Properties.Resources.ss1;
-            this.pboxAvatar.ImageRotate = 0F;
-            this.pboxAvatar.Location = new System.Drawing.Point(31, 28);
-            this.pboxAvatar.Margin = new System.Windows.Forms.Padding(4);
-            this.pboxAvatar.Name = "pboxAvatar";
-            this.pboxAvatar.Size = new System.Drawing.Size(379, 294);
-            this.pboxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboxAvatar.TabIndex = 128;
-            this.pboxAvatar.TabStop = false;
-            // 
-            // guna2PictureBox10
-            // 
-            this.guna2PictureBox10.Image = global::DoAnCuoiKy.Properties.Resources.globe3;
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(864, 250);
-            this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox10.TabIndex = 126;
-            this.guna2PictureBox10.TabStop = false;
-            // 
-            // guna2PictureBox9
-            // 
-            this.guna2PictureBox9.Image = global::DoAnCuoiKy.Properties.Resources.pin2;
-            this.guna2PictureBox9.ImageRotate = 0F;
-            this.guna2PictureBox9.Location = new System.Drawing.Point(469, 250);
-            this.guna2PictureBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox9.Name = "guna2PictureBox9";
-            this.guna2PictureBox9.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox9.TabIndex = 125;
-            this.guna2PictureBox9.TabStop = false;
-            // 
-            // guna2PictureBox8
-            // 
-            this.guna2PictureBox8.Image = global::DoAnCuoiKy.Properties.Resources.gender3;
-            this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(864, 204);
-            this.guna2PictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox8.Name = "guna2PictureBox8";
-            this.guna2PictureBox8.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox8.TabIndex = 124;
-            this.guna2PictureBox8.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.Image = global::DoAnCuoiKy.Properties.Resources.telephone2;
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(864, 160);
-            this.guna2PictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox7.TabIndex = 123;
-            this.guna2PictureBox7.TabStop = false;
-            // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(864, 247);
-            this.guna2PictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox6.TabIndex = 121;
-            this.guna2PictureBox6.TabStop = false;
-            // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(469, 247);
-            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox5.TabIndex = 119;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(864, 199);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 117;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(864, 160);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 115;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources.birthday3;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(469, 204);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 113;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::DoAnCuoiKy.Properties.Resources.mail3;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(469, 160);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(23, 21);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 107;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(27, 18);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(157, 134);
-            this.guna2CirclePictureBox1.TabIndex = 99;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // btnAddAboutMe
-            // 
-            this.btnAddAboutMe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddAboutMe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddAboutMe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddAboutMe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddAboutMe.FillColor = System.Drawing.Color.White;
-            this.btnAddAboutMe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddAboutMe.ForeColor = System.Drawing.Color.White;
-            this.btnAddAboutMe.Image = global::DoAnCuoiKy.Properties.Resources.add;
-            this.btnAddAboutMe.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnAddAboutMe.Location = new System.Drawing.Point(1372, 17);
-            this.btnAddAboutMe.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddAboutMe.Name = "btnAddAboutMe";
-            this.btnAddAboutMe.Size = new System.Drawing.Size(59, 49);
-            this.btnAddAboutMe.TabIndex = 131;
-            this.btnAddAboutMe.Click += new System.EventHandler(this.btnAddAboutMe_Click_1);
-            // 
-            // btnaAddWorkExp
-            // 
-            this.btnaAddWorkExp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnaAddWorkExp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnaAddWorkExp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnaAddWorkExp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnaAddWorkExp.FillColor = System.Drawing.Color.White;
-            this.btnaAddWorkExp.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnaAddWorkExp.ForeColor = System.Drawing.Color.White;
-            this.btnaAddWorkExp.Image = global::DoAnCuoiKy.Properties.Resources.add;
-            this.btnaAddWorkExp.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnaAddWorkExp.Location = new System.Drawing.Point(1372, 17);
-            this.btnaAddWorkExp.Margin = new System.Windows.Forms.Padding(4);
-            this.btnaAddWorkExp.Name = "btnaAddWorkExp";
-            this.btnaAddWorkExp.Size = new System.Drawing.Size(59, 49);
-            this.btnaAddWorkExp.TabIndex = 131;
-            this.btnaAddWorkExp.Click += new System.EventHandler(this.btnaAddWorkExp_Click);
-            // 
-            // btnAddEducation
-            // 
-            this.btnAddEducation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddEducation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddEducation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddEducation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddEducation.FillColor = System.Drawing.Color.White;
-            this.btnAddEducation.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddEducation.ForeColor = System.Drawing.Color.White;
-            this.btnAddEducation.Image = global::DoAnCuoiKy.Properties.Resources.add;
-            this.btnAddEducation.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnAddEducation.Location = new System.Drawing.Point(1372, 17);
-            this.btnAddEducation.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddEducation.Name = "btnAddEducation";
-            this.btnAddEducation.Size = new System.Drawing.Size(59, 49);
-            this.btnAddEducation.TabIndex = 131;
-            this.btnAddEducation.Click += new System.EventHandler(this.btnAddEducation_Click);
-            // 
-            // btnAddSkill
-            // 
-            this.btnAddSkill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddSkill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddSkill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddSkill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddSkill.FillColor = System.Drawing.Color.White;
-            this.btnAddSkill.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddSkill.ForeColor = System.Drawing.Color.White;
-            this.btnAddSkill.Image = global::DoAnCuoiKy.Properties.Resources.add;
-            this.btnAddSkill.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnAddSkill.Location = new System.Drawing.Point(1372, 16);
-            this.btnAddSkill.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddSkill.Name = "btnAddSkill";
-            this.btnAddSkill.Size = new System.Drawing.Size(59, 49);
-            this.btnAddSkill.TabIndex = 131;
-            this.btnAddSkill.Click += new System.EventHandler(this.btnAddSkill_Click);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(32, 32);
+            this.guna2ControlBox1.TabIndex = 11;
             // 
             // FProfileApplicant
             // 
@@ -739,7 +728,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(1556, 762);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -751,6 +739,18 @@
             this.pnlMain.ResumeLayout(false);
             this.pnlBasicInfo.ResumeLayout(false);
             this.pnlBasicInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.pnlAboutMe.ResumeLayout(false);
             this.pnlAboutMe.PerformLayout();
             this.pnlListOfAboutMe.ResumeLayout(false);
@@ -767,18 +767,6 @@
             this.pnlSkill.PerformLayout();
             this.pnlListOfSkills.ResumeLayout(false);
             this.pnlListOfSkills.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -837,7 +825,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        public Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

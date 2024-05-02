@@ -53,7 +53,9 @@ namespace DoAnCuoiKy
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            OpenForm(new FProfileApplicant());
+            FProfileApplicant fProfileApplicant = new FProfileApplicant();
+            fProfileApplicant.guna2ControlBox1.Hide();
+            OpenForm(fProfileApplicant);
 
         }
 

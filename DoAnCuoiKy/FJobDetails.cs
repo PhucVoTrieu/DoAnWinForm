@@ -26,20 +26,26 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.jobInfo = j1;
-            var inforCompany = from c in db.Companies where c.CompanyID == j1.CompanyID select c;
+            LoadDanhSach();
+        }
+        public void LoadDanhSach()
+        {
+            var inforCompany = from c in db.Companies where c.CompanyID == jobInfo.CompanyID select c;
             var result = inforCompany.First();
-            this.lblJobTitle.Text = j1.JobTitle.ToString();
+            this.lblJobTitle.Text = jobInfo.JobTitle.ToString();
             this.lblCompanyName.Text = result.CompanyName.ToString();
             this.labelCompanyName2.Text = result.CompanyName.ToString();
             this.lblCompanySize.Text = result.CompanySize.ToString();
             this.lblCompanyType.Text = result.CompanyType.ToString();
             this.lblCountry.Text = result.CompanyCountry.ToString();
             this.lblWorkingday.Text = result.CompanyWorkingDays.ToString();
-            this.lblSalary.Text = j1.JobSalary.ToString();
-            this.lblJobDescription.Text = j1.JobDescription.ToString();
-            this.lblJobBenefit.Text = j1.JobBenefit.ToString();
-            this.lblJobRequirement.Text = j1.JobRequirement.ToString();
-            this.pnlDetails.Size = new Size(this.pnlDetails.Width, this.lblJobBenefit.Location.Y-this.pnlJobDetails.Location.Y+30);
+            this.lblSalary.Text = jobInfo.JobSalary.ToString();
+            this.lblJobDescription.Text = jobInfo.JobDescription.ToString();
+            this.lblJobBenefit.Text = jobInfo.JobBenefit.ToString();
+            this.lblJobRequirement.Text = jobInfo.JobRequirement.ToString();
+            this.pnlDetails.Size = new Size(this.pnlDetails.Width, this.lblJobBenefit.Height+lblJobDescription.Height+lblJobRequirement.Height+lblReasonToJoinUs.Height
+                + 450);
+
         }
         private void btnCompanyName_Click(object sender, EventArgs e)
         {
