@@ -56,7 +56,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtJobTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -95,7 +95,7 @@
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1238, 2);
@@ -108,7 +108,7 @@
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox2.Location = new System.Drawing.Point(1187, 2);
@@ -172,7 +172,6 @@
             this.guna2Panel4.Controls.Add(this.label4);
             this.guna2Panel4.Controls.Add(this.txtJobTitle);
             this.guna2Panel4.Controls.Add(this.label2);
-            this.guna2Panel4.Controls.Add(this.guna2Button1);
             this.guna2Panel4.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(1253, 1046);
@@ -260,13 +259,13 @@
             this.txtJobSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtJobSalary.ForeColor = System.Drawing.Color.Black;
             this.txtJobSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobSalary.Location = new System.Drawing.Point(317, 242);
+            this.txtJobSalary.Location = new System.Drawing.Point(52, 242);
             this.txtJobSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobSalary.Name = "txtJobSalary";
             this.txtJobSalary.PasswordChar = '\0';
             this.txtJobSalary.PlaceholderText = "Enter expected salary";
             this.txtJobSalary.SelectedText = "";
-            this.txtJobSalary.Size = new System.Drawing.Size(426, 62);
+            this.txtJobSalary.Size = new System.Drawing.Size(565, 62);
             this.txtJobSalary.TabIndex = 62;
             this.txtJobSalary.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -318,13 +317,13 @@
             this.txtJobExperiencesInYears.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtJobExperiencesInYears.ForeColor = System.Drawing.Color.Black;
             this.txtJobExperiencesInYears.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobExperiencesInYears.Location = new System.Drawing.Point(802, 361);
+            this.txtJobExperiencesInYears.Location = new System.Drawing.Point(664, 361);
             this.txtJobExperiencesInYears.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobExperiencesInYears.Name = "txtJobExperiencesInYears";
             this.txtJobExperiencesInYears.PasswordChar = '\0';
             this.txtJobExperiencesInYears.PlaceholderText = "Enter experiences in years";
             this.txtJobExperiencesInYears.SelectedText = "";
-            this.txtJobExperiencesInYears.Size = new System.Drawing.Size(425, 62);
+            this.txtJobExperiencesInYears.Size = new System.Drawing.Size(565, 62);
             this.txtJobExperiencesInYears.TabIndex = 63;
             // 
             // cbLocation
@@ -343,10 +342,10 @@
             "Ho Chi Minh",
             "Ha Noi",
             "Hai Phong"});
-            this.cbLocation.Location = new System.Drawing.Point(802, 242);
+            this.cbLocation.Location = new System.Drawing.Point(664, 242);
             this.cbLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLocation.Name = "cbLocation";
-            this.cbLocation.Size = new System.Drawing.Size(426, 62);
+            this.cbLocation.Size = new System.Drawing.Size(565, 62);
             this.cbLocation.StartIndex = 0;
             this.cbLocation.TabIndex = 65;
             this.cbLocation.TextOffset = new System.Drawing.Point(10, 0);
@@ -355,7 +354,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(798, 328);
+            this.label7.Location = new System.Drawing.Point(660, 328);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(261, 29);
             this.label7.TabIndex = 71;
@@ -365,7 +364,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(798, 211);
+            this.label8.Location = new System.Drawing.Point(660, 211);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(112, 29);
             this.label8.TabIndex = 70;
@@ -385,20 +384,20 @@
             this.txtRecruitmentQuota.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRecruitmentQuota.ForeColor = System.Drawing.Color.Black;
             this.txtRecruitmentQuota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRecruitmentQuota.Location = new System.Drawing.Point(319, 361);
+            this.txtRecruitmentQuota.Location = new System.Drawing.Point(52, 361);
             this.txtRecruitmentQuota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRecruitmentQuota.Name = "txtRecruitmentQuota";
             this.txtRecruitmentQuota.PasswordChar = '\0';
             this.txtRecruitmentQuota.PlaceholderText = "Enter recruitment quota";
             this.txtRecruitmentQuota.SelectedText = "";
-            this.txtRecruitmentQuota.Size = new System.Drawing.Size(426, 62);
+            this.txtRecruitmentQuota.Size = new System.Drawing.Size(565, 62);
             this.txtRecruitmentQuota.TabIndex = 61;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(312, 209);
+            this.label5.Location = new System.Drawing.Point(45, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 29);
             this.label5.TabIndex = 67;
@@ -408,7 +407,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(314, 328);
+            this.label6.Location = new System.Drawing.Point(47, 328);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(230, 29);
             this.label6.TabIndex = 64;
@@ -431,10 +430,10 @@
             "Part-time",
             "Temporary"});
             this.cbJobType.ItemsAppearance.ForeColor = System.Drawing.Color.Black;
-            this.cbJobType.Location = new System.Drawing.Point(801, 123);
+            this.cbJobType.Location = new System.Drawing.Point(663, 123);
             this.cbJobType.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
             this.cbJobType.Name = "cbJobType";
-            this.cbJobType.Size = new System.Drawing.Size(426, 62);
+            this.cbJobType.Size = new System.Drawing.Size(565, 62);
             this.cbJobType.StartIndex = 0;
             this.cbJobType.TabIndex = 59;
             this.cbJobType.TextOffset = new System.Drawing.Point(10, 0);
@@ -443,7 +442,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(796, 90);
+            this.label4.Location = new System.Drawing.Point(660, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 29);
             this.label4.TabIndex = 60;
@@ -463,13 +462,13 @@
             this.txtJobTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtJobTitle.ForeColor = System.Drawing.Color.Black;
             this.txtJobTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJobTitle.Location = new System.Drawing.Point(317, 123);
+            this.txtJobTitle.Location = new System.Drawing.Point(50, 123);
             this.txtJobTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobTitle.Name = "txtJobTitle";
             this.txtJobTitle.PasswordChar = '\0';
             this.txtJobTitle.PlaceholderText = "Enter job title";
             this.txtJobTitle.SelectedText = "";
-            this.txtJobTitle.Size = new System.Drawing.Size(426, 62);
+            this.txtJobTitle.Size = new System.Drawing.Size(565, 62);
             this.txtJobTitle.TabIndex = 58;
             this.txtJobTitle.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -477,31 +476,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(312, 90);
+            this.label2.Location = new System.Drawing.Point(45, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 29);
             this.label2.TabIndex = 57;
             this.label2.Text = "Job Title";
             // 
-            // guna2Button1
+            // guna2Elipse1
             // 
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
-            this.guna2Button1.Image = global::DoAnCuoiKy.Properties.Resources._9;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(50, 93);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(229, 330);
-            this.guna2Button1.TabIndex = 56;
-            this.guna2Button1.Text = "Add Header Image";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // FPostAJob
             // 
@@ -556,6 +540,6 @@
         public System.Windows.Forms.Label label4;
         public Guna.UI2.WinForms.Guna2TextBox txtJobTitle;
         public System.Windows.Forms.Label label2;
-        public Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

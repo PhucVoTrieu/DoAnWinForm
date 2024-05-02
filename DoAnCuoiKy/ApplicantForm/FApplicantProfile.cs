@@ -41,22 +41,8 @@ namespace DoAnCuoiKy
             applicantsDAO.LoadThongTinWorkExp(this);
             applicantsDAO.LoadThongTinEducation(this);
             applicantsDAO.LoadThongTinSkill(this);
-        }
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            foreach (Control c in pnlAboutMe.Controls)  // pnlBasicinfo.controls not this.controls boi vi this.controls la form va cac txtbox ko nam trong form maf trong panel
-            {
-                if (c.GetType() == typeof(Guna.UI2.WinForms.Guna2TextBox))
-                {
-                    c.Enabled = false;
-                }
-            }
-        }
-        private void btnAddAboutMe_Click(object sender, EventArgs e)
-        {
 
         }
-
         private void btnAddAboutMe_Click_1(object sender, EventArgs e)
         {
             FAboutMe f1 = new FAboutMe(this);
@@ -68,7 +54,6 @@ namespace DoAnCuoiKy
         {
             FWorkExperience f1 = new FWorkExperience(null, this);
             f1.Show();
-            //  applicantsDAO.LoadThongTinWorkExp(this);
         }
 
 

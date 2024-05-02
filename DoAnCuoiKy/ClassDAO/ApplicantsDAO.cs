@@ -156,6 +156,7 @@ namespace DoAnCuoiKy
                     if (query.First() != "")
                     {
                         f1.lblAboutMePlaceHolder.Text = query.First();
+                        f1.lblAboutMePlaceHolder.ForeColor = Color.Black;
                         f1.pnlAboutMe.Size = new System.Drawing.Size(f1.pnlAboutMe.Size.Width, 100 + f1.lblAboutMePlaceHolder.Size.Height);
                     }
                     else

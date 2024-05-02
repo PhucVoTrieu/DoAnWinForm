@@ -1,5 +1,6 @@
 ﻿using DoAnCuoiKy.Class;
 using DoAnCuoiKy.EmployerForm;
+using DoAnCuoiKy.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,8 +52,40 @@ namespace DoAnCuoiKy
 
         private void btnPostAJob_Click(object sender, EventArgs e)
         {
-            FPostAJob fp1 = new FPostAJob(CompanyInformation);
-            fp1.ShowDialog();
+            Form formBackground = new Form();
+            try
+            {
+                using (FPostAJob f1 = new FPostAJob(CompanyInformation))
+                {
+
+
+                    formBackground.StartPosition = FormStartPosition.Manual;
+                    formBackground.FormBorderStyle = FormBorderStyle.None;
+                    formBackground.Opacity = .50d;
+                    formBackground.BackColor = Color.Black;
+                    formBackground.WindowState = FormWindowState.Maximized;
+                    formBackground.TopMost = false;
+                    formBackground.Location = this.Location;
+                    formBackground.ShowInTaskbar = false;
+                    formBackground.Show();
+
+                    f1.Owner = formBackground;
+                    f1.ShowDialog();
+
+                    formBackground.Dispose();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                formBackground.Dispose();
+
+            }
+
 
         }
         private void btnJobs_Click(object sender, EventArgs e)

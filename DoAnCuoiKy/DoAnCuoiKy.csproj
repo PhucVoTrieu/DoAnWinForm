@@ -297,12 +297,6 @@
     <Compile Include="UC\UCApplicantInformation.Designer.cs">
       <DependentUpon>UCApplicantInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCApplicantPersonalSkill.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UCApplicantPersonalSkill.Designer.cs">
-      <DependentUpon>UCApplicantPersonalSkill.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC\UCApplicants.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -432,9 +426,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCApplicantInformation.resx">
       <DependentUpon>UCApplicantInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCApplicantPersonalSkill.resx">
-      <DependentUpon>UCApplicantPersonalSkill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCApplicants.resx">
       <DependentUpon>UCApplicants.cs</DependentUpon>
