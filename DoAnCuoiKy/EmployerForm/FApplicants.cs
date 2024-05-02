@@ -17,9 +17,6 @@ namespace DoAnCuoiKy
     {
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
         public Company companyInfo;
-        public FApplicants()
-        {
-        }
         public FApplicants(Company e1)
         {
             InitializeComponent();
@@ -29,7 +26,7 @@ namespace DoAnCuoiKy
         private void btnDelete_Click(object sender, EventArgs e)
         {
             List<UCApplicants> list = new List<UCApplicants>();
-            foreach (Control c in pnlAllApplicant.Controls)
+            foreach (Control c in pnlDeveLoperApplicant.Controls)
             {
                 if (c.GetType() == typeof(UCApplicants))
                 {
@@ -43,7 +40,7 @@ namespace DoAnCuoiKy
             }
             foreach (UCApplicants c in list)
             {
-                this.pnlAllApplicant.Controls.Remove(c);
+                this.pnlDeveLoperApplicant.Controls.Remove(c);
                 applicantsDAO.xoaUC(c);
             }
         }

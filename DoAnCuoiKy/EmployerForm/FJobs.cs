@@ -87,7 +87,8 @@ namespace DoAnCuoiKy
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            var result = from c in db.Jobs where c.JobTitle.Contains(this.txtJobName.Text) && c.Location.Contains(this.cbxLocation.SelectedItem.ToString()) select c;
+            var result = from c in db.Jobs 
+                         where c.JobTitle.Contains(this.txtJobName.Text) && c.Location.Contains(this.cbxLocation.SelectedItem.ToString()) && c.CompanyID == Constant.CompanyID select c;
             int expInYearsAsInt;
             List<Job> resultList = new List<Job>();
             List<Job> jobFilter = new List<Job>();
