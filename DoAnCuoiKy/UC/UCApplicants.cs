@@ -20,6 +20,7 @@ namespace DoAnCuoiKy
         public Applicant applicantInfo;
         public FApplicants fApplicants;
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
+        JobsDAO jobsDAO = new JobsDAO();
         public UCApplicants()
         {
             InitializeComponent();
@@ -27,27 +28,30 @@ namespace DoAnCuoiKy
         public UCApplicants(Applicant applicant)
         {
             InitializeComponent();
-            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             this.applicantInfo = applicant;
             this.lblCandidateName.Text = applicant.ApplicantName;
-            this.txtExpYears.Text = applicant.ApplicantSkills.Skip(1).First().Skill.SkillName;
             this.lblCandidateApplyPos.Text = applicant.ApplicantTitle;
-
-            this.txtSkill.Text = applicant.ApplicantSkills.First().Skill.SkillName;
+            // 2 dòng skill này phải được add nếu không hàm khởi tạo UC sẽ bị lỗi và sẽ không tạo được UC khiến cho không có UC để add vào panel 
+            // mỗi ứng viên có trên 2 skill mới load lên được 
+            //this.txtSkill2.Text = applicant.ApplicantSkills.Skip(1).First().Skill.SkillName;
+            //this.txtSkill.Text = applicant.ApplicantSkills.First().Skill.SkillName;
             if (applicant.ApplicantAvatar != null)
             {
                 this.pBoxAvatar.Image = Image.FromFile(Path.Combine(Constant.appDirectory, applicant.ApplicantAvatar));
-
             }
         }
         public UCApplicants(Applicant applicant, FApplicants f1)
         {
             InitializeComponent();
-            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             this.applicantInfo = applicant;
             this.lblCandidateName.Text = applicant.ApplicantName;
-            this.txtExpYears.Text = applicant.ApplicantExpYears;
             this.lblCandidateApplyPos.Text = applicant.ApplicantTitle;
+            //this.txtSkill2.Text = applicant.ApplicantSkills.Skip(1).First().Skill.SkillName;
+            //this.txtSkill.Text = applicant.ApplicantSkills.First().Skill.SkillName;
+            if (applicant.ApplicantAvatar != null)
+            {
+                this.pBoxAvatar.Image = Image.FromFile(Path.Combine(Constant.appDirectory, applicant.ApplicantAvatar));
+            }
             this.fApplicants = f1;
         }
         private void btnCandidateDetails_Click_1(object sender, EventArgs e)
@@ -140,7 +144,7 @@ namespace DoAnCuoiKy
 
         private void btnInviteCanidate_Click(object sender, EventArgs e)
         {
-            applicantsDAO.Invite(this);
+            applicantsDAO.Invite(this, fApplicants);
         }
     }
 }

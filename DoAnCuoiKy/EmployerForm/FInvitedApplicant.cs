@@ -20,11 +20,6 @@ namespace DoAnCuoiKy.EmployerForm
         {
             this.e1 = company;
             InitializeComponent();
-            this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
-            LoadDanhSach();
-        }
-        private void LoadDanhSach()
-        {
             applicantsDAO.LoadDanhSachUngVienTiemNang(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }
@@ -44,12 +39,16 @@ namespace DoAnCuoiKy.EmployerForm
                 }
 
             }
-            foreach (UCApplicants c in list)
+            if (list.Count() > 0)
             {
-                this.pnlPotentialApplicant.Controls.Remove(c);
-                this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
-                applicantsDAO.xoaUC3(c);
+                foreach (UCApplicants c in list)
+                {
+                    this.pnlPotentialApplicant.Controls.Remove(c);
+                    this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
+                    applicantsDAO.xoaUC3(c);
+                }
             }
+            else MessageBox.Show("không thể xóa");
 
         }
         public int CountFavoriteApplicants()
@@ -67,18 +66,7 @@ namespace DoAnCuoiKy.EmployerForm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            var result = from c in db.ApplicantsOfCompanies
-                         where c.CompanyID == Constant.CompanyID && c.IsAccepted == true
-                         select c.ApplicantID into query
-                         from b in db.Applicants
-                         where b.ApplicantID == query
-                         select b;
-            var result2 = from c in result where c.ApplicantTitle.Contains(this.txtJobName.Text) && c.ApplicantNationality.Contains(this.cbxLocation.SelectedItem.ToString()) select c;
-
-            var applicantFilter = result2.ToList();
-            this.pnlPotentialApplicant.Controls.Clear();
-            applicantsDAO.LoadDanhSachUngVienTiemNang(this, applicantFilter);
+            applicantsDAO.searchInvitedApp(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }
     }

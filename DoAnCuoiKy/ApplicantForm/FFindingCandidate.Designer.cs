@@ -139,7 +139,6 @@
             this.cbxLocation.Size = new System.Drawing.Size(197, 45);
             this.cbxLocation.StartIndex = 0;
             this.cbxLocation.TabIndex = 6;
-            this.cbxLocation.SelectedIndexChanged += new System.EventHandler(this.cbxLocation_SelectedIndexChanged);
             // 
             // txtJobName
             // 
@@ -165,7 +164,6 @@
             this.txtJobName.SelectedText = "";
             this.txtJobName.Size = new System.Drawing.Size(476, 54);
             this.txtJobName.TabIndex = 1;
-            this.txtJobName.TextChanged += new System.EventHandler(this.txtJobName_TextChanged);
             // 
             // guna2CircleButton1
             // 
@@ -573,7 +571,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FFindingCandidate";
             this.Text = "FFindingCandidate";
-            this.Load += new System.EventHandler(this.FFindingCandidate_Load);
             this.PnlFinding.ResumeLayout(false);
             this.PnlFinding.PerformLayout();
             this.pnlJobFilter.ResumeLayout(false);
@@ -589,39 +586,39 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btnSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtJobName;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Panel PnlFinding;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnViewProfile;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Panel pnlJobFilter;
-        public System.Windows.Forms.FlowLayoutPanel PnlRecommendJobs;
-        private Guna.UI2.WinForms.Guna2Panel pnlViewProfile;
-        private Guna.UI2.WinForms.Guna2Elipse FormFindingCandidateElipse;
-        private Guna.UI2.WinForms.Guna2Elipse FindingBoxElipse;
-        private Guna.UI2.WinForms.Guna2Elipse ViewProfileElipse;
-        private Guna.UI2.WinForms.Guna2Elipse JobFilterElipse;
-        private Guna.UI2.WinForms.Guna2Elipse RecommendJobsElipse;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxLessThan3;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxTemporary;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxFullTime;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPartTime;
-        private Guna.UI2.WinForms.Guna2CheckBox checkbox5To10;
-        private Guna.UI2.WinForms.Guna2CheckBox checkbox3To5;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2TrackBar trackbarSalary;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2VScrollBar ScrollBar1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbxLocation;
+       public  Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+       public  Guna.UI2.WinForms.Guna2Button btnSearch;
+       public  Guna.UI2.WinForms.Guna2TextBox txtJobName;
+       public  System.Windows.Forms.Label label1;
+       public  Guna.UI2.WinForms.Guna2Panel PnlFinding;
+       public  Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+       public  System.Windows.Forms.Label label3;
+       public  Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+       public  System.Windows.Forms.Label label2;
+       public  Guna.UI2.WinForms.Guna2Button btnViewProfile;
+       public  System.Windows.Forms.Label label5;
+       public  System.Windows.Forms.Label label4;
+       public  Guna.UI2.WinForms.Guna2Panel pnlJobFilter;
+       public System.Windows.Forms.FlowLayoutPanel PnlRecommendJobs;
+       public  Guna.UI2.WinForms.Guna2Panel pnlViewProfile;
+       public  Guna.UI2.WinForms.Guna2Elipse FormFindingCandidateElipse;
+       public  Guna.UI2.WinForms.Guna2Elipse FindingBoxElipse;
+       public  Guna.UI2.WinForms.Guna2Elipse ViewProfileElipse;
+       public  Guna.UI2.WinForms.Guna2Elipse JobFilterElipse;
+       public  Guna.UI2.WinForms.Guna2Elipse RecommendJobsElipse;
+       public  System.Windows.Forms.Label label6;
+       public  Guna.UI2.WinForms.Guna2CheckBox checkboxLessThan3;
+       public  Guna.UI2.WinForms.Guna2CheckBox checkboxTemporary;
+       public  Guna.UI2.WinForms.Guna2CheckBox checkboxFullTime;
+       public  System.Windows.Forms.Label label7;
+       public  Guna.UI2.WinForms.Guna2CheckBox checkboxPartTime;
+       public  Guna.UI2.WinForms.Guna2CheckBox checkbox5To10;
+       public  Guna.UI2.WinForms.Guna2CheckBox checkbox3To5;
+       public  System.Windows.Forms.Label label13;
+       public  System.Windows.Forms.Label label12;
+       public  Guna.UI2.WinForms.Guna2TrackBar trackbarSalary;
+       public  System.Windows.Forms.Label label8;
+       public  Guna.UI2.WinForms.Guna2VScrollBar ScrollBar1;
+       public  Guna.UI2.WinForms.Guna2ComboBox cbxLocation;
     }
 }

@@ -14,30 +14,77 @@ namespace DoAnCuoiKy
     internal class JobsDAO
     {
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+        #region Hàm Load
         public void LoadDanhSachJobYeuThich(FormFavoriteJobs f)
         {
             var favJob = from a in db.JobStatus where a.IsFavorite == true && a.ApplicantID == Constant.ApplicantID select a;
-            
+
             var allJob = from job in db.Jobs
-                              join jobStatus in favJob on job.JobID equals jobStatus.JobID
-                              where jobStatus.IsFavorite == true 
-                              select job;
+                         join jobStatus in favJob on job.JobID equals jobStatus.JobID
+                         where jobStatus.IsFavorite == true
+                         select job;
             var result = allJob.ToList();
             foreach (var job in result)
             {
-
                 UCJobUI uCJob = new UCJobUI(job);
-
-               // uCJob.CBoxSelected.Visible = false;
                 f.pnlFavJobs.Controls.Add(uCJob);
             }
         }
-        public void HuyYeuThich(Job job)
+        public void LoadDanhSach(FFindingCandidate f)
         {
-            var query = (from a in db.JobStatus where job.JobID == a.JobID && a.ApplicantID == Constant.ApplicantID select a).First();
-            db.JobStatus.Remove(query);
-            db.SaveChanges();
+
+            var allJob = from c in db.Jobs select c;
+
+            foreach (var job in allJob)
+            {
+                UCJobUI uCJob = new UCJobUI(job);
+                uCJob.CBoxSelected.Visible = false;
+                f.PnlRecommendJobs.Controls.Add(uCJob);
+            }
         }
+        public void LoadDanhSach2(FFindingCandidate f, List<Job> jobs)
+        {
+            foreach (var job in jobs)
+            {
+                UCJobUI ucJob = new UCJobUI(job);
+                ucJob.CBoxSelected.Visible = false;
+                f.PnlRecommendJobs.Controls.Add(ucJob);
+            }
+        }
+        public void LoadDanhSach3(FJobs f, List<Job> jobs)
+        {
+            foreach (var job in jobs)
+            {
+                UCJobUI ucJob = new UCJobUI(job);
+                ucJob.CBoxSelected.Visible = false;
+                f.pnlCreatedJob.Controls.Add(ucJob);
+            }
+        }
+        public void LoadDanhSach(FJobs f)
+        {
+
+            try
+            {
+                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                f.pnlCreatedJob.Controls.Clear();
+                var jobsOfCompany = from c in db.Jobs where c.CompanyID == Constant.CompanyID select c;
+
+                foreach (var job in jobsOfCompany)
+                {
+                    UCJobUI uCJob = new UCJobUI(job);
+                    uCJob.btnApplyNow.Visible = false;
+                    f.pnlCreatedJob.Controls.Add(uCJob);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+
+        }
+        #endregion
+
+        #region Hàm Thêm
         public void YeuThich(Job job)
         {
             if (checkedFav(job) == true)
@@ -52,12 +99,6 @@ namespace DoAnCuoiKy
                 db.SaveChanges();
             }
             else MessageBox.Show("Job has available in favoriteList");
-        }
-        public bool checkedFav(Job job)
-        {
-            var result = from c in db.JobStatus where c.JobID == job.JobID && c.ApplicantID == Constant.ApplicantID select c;
-            if(result.Count() == 0) return true;
-            return false;
         }
         public void Them(FPostAJob f)
         {
@@ -78,60 +119,22 @@ namespace DoAnCuoiKy
             });
             db.SaveChanges();
         }
-        public void laydulieuCoDieuKien(List<JobDetails> list, string conditionText)
+        //public void them(Job job)
+        //{
+        //    db.Jobs.Add(job);
+
+        //    db.SaveChanges();
+
+        //}
+
+        #endregion
+
+        #region Hàm Xóa
+        public void HuyYeuThich(Job job)
         {
-
-
-        }
-        public void LoadDanhSach(FFindingCandidate f)
-        {
-
-            var allJob = from c in db.Jobs select c;
-
-            foreach (var job in allJob)
-            {
-                UCJobUI uCJob = new UCJobUI(job);
-
-                //if (CheckApply(job, f.applicant.ApplicantID))
-                //{
-                //    uCJob.btnApplyNow.Enabled = false;
-                //    uCJob.btnApplyNow.Text = "Applied";
-                //}
-                uCJob.CBoxSelected.Visible = false;
-                f.PnlRecommendJobs.Controls.Add(uCJob);
-            }
-
-        }
-        public void LoadDanhSach2(FFindingCandidate f , List<Job> jobs)
-        {
-            foreach (var job in jobs)
-            {
-                UCJobUI ucJob = new UCJobUI(job);
-                ucJob.CBoxSelected.Visible = false;
-                f.PnlRecommendJobs.Controls.Add(ucJob);
-            }    
-        }
-        public void LoadDanhSach3(FJobs f, List<Job> jobs)
-        {
-            foreach (var job in jobs)
-            {
-                UCJobUI ucJob = new UCJobUI(job);
-                ucJob.CBoxSelected.Visible = false;
-                f.pnlCreatedJob.Controls.Add(ucJob);
-            }
-        }
-        public bool CheckApply(Job job1, int ApplicantID)
-        {
-            var query = from a in db.JobStatus where a.JobID == job1.JobID && a.ApplicantID == ApplicantID select a;
-            return query.First().IsApplied == true;
-        }
-
-        public void them(Job job)
-        {
-            db.Jobs.Add(job);
-
+            var query = (from a in db.JobStatus where job.JobID == a.JobID && a.ApplicantID == Constant.ApplicantID select a).First();
+            db.JobStatus.Remove(query);
             db.SaveChanges();
-
         }
         public void XoaJob(Job job)
         {
@@ -141,27 +144,7 @@ namespace DoAnCuoiKy
                 db.Jobs.Remove(applicant);
                 db.SaveChanges();
             }
-
         }
-        //public void LoadDanhSach(FormFavoriteJobs f)
-        //{
-        //    try
-        //    {
-        //        DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-        //        var job = from c in db.Jobs select c;
-
-        //        foreach (var c in job)
-        //        {
-        //            UCJobUI uCApplicants = new UCJobUI(c);
-
-        //            f.pnlFavJobs.Controls.Add(uCApplicants);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("Lỗi truy vấnFavojob: " + ex.Message);
-        //    }
-        //}
         public void xoaUCfav(UCJobUI uCJobUI)
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
@@ -172,15 +155,173 @@ namespace DoAnCuoiKy
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             var query = (from a in db.JobStatus where a.JobID == uCJobUI.job.JobID select a);
-            foreach (var a in query) 
+            foreach (var a in query)
             {
                 db.JobStatus.Remove(a);
             }
             db.SaveChanges();
-            var result = from c in db.Jobs where c.JobID ==  uCJobUI.job.JobID select c;
+            var result = from c in db.Jobs where c.JobID == uCJobUI.job.JobID select c;
             var deletedJob = result.First();
             db.Jobs.Remove(deletedJob);
             db.SaveChanges();
         }
+        #endregion
+
+        #region Hàm Check
+        public bool checkedFav(Job job)
+        {
+            var result = from c in db.JobStatus where c.JobID == job.JobID && c.ApplicantID == Constant.ApplicantID select c;
+            if (result.Count() == 0) return true;
+            return false;
+        }
+        public bool CheckApply(Job job1, int ApplicantID)
+        {
+            var query = from a in db.JobStatus where a.JobID == job1.JobID && a.ApplicantID == ApplicantID select a;
+            return query.First().IsApplied == true;
+        }
+        #endregion
+
+        #region Hàm Search
+        public void searchJobs(FFindingCandidate f)
+        {
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            var result = from c in db.Jobs where c.JobTitle.Contains(f.txtJobName.Text) && c.Location.Contains(f.cbxLocation.SelectedItem.ToString()) select c;
+            int expInYearsAsInt;
+            List<Job> resultList = new List<Job>();
+            List<Job> jobFilter = new List<Job>();
+            if (f.checkboxFullTime.Checked)
+            {
+                var fullTime = from c in result where c.JobType.Contains("Full") select c;
+                if (f.checkboxPartTime.Checked)
+                {
+                    result = result.Union(fullTime);
+                }
+                else result = fullTime;
+            }
+            if (f.checkboxPartTime.Checked)
+            {
+                var partTime = from c in result where c.JobType.Contains("Part") select c;
+                if (f.checkboxFullTime.Checked)
+                {
+                    result = result.Union(partTime);
+                }
+                else result = partTime;
+            }
+            if (f.checkboxLessThan3.Checked)
+            {
+
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt < 3)
+                    {
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+
+            }
+            if (f.checkbox3To5.Checked)
+            {
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt >= 3 && expInYearsAsInt <= 5)
+                    {
+
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+            }
+            if (f.checkbox5To10.Checked)
+            {
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt > 5 && expInYearsAsInt <= 10)
+                    {
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+            }
+            if (jobFilter != resultList)
+                jobFilter = result.ToList();
+            f.PnlRecommendJobs.Controls.Clear();
+            LoadDanhSach2(f, jobFilter);
+        }
+        public void searchCreatedJobs(FJobs f)
+        {
+            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+            var result = from c in db.Jobs
+                         where c.JobTitle.Contains(f.txtJobName.Text) && c.Location.Contains(f.cbxLocation.SelectedItem.ToString()) && c.CompanyID == Constant.CompanyID
+                         select c;
+            int expInYearsAsInt;
+            List<Job> resultList = new List<Job>();
+            List<Job> jobFilter = new List<Job>();
+            if (f.checkboxFullTime.Checked)
+            {
+                var fullTime = from c in result where c.JobType.Contains("Full") select c;
+                if (f.checkboxPartTime.Checked)
+                {
+                    result = result.Union(fullTime);
+                }
+                else result = fullTime;
+            }
+            if (f.checkboxPartTime.Checked)
+            {
+                var partTime = from c in result where c.JobType.Contains("Part") select c;
+                if (f.checkboxFullTime.Checked)
+                {
+                    result = result.Union(partTime);
+                }
+                else result = partTime;
+            }
+            if (f.checkboxLessThan3.Checked)
+            {
+
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt < 3)
+                    {
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+
+            }
+            if (f.checkbox3To5.Checked)
+            {
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt >= 3 && expInYearsAsInt <= 5)
+                    {
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+            }
+            if (f.checkbox5To10.Checked)
+            {
+                foreach (var job in result)
+                {
+                    expInYearsAsInt = int.Parse(job.ExpInYears);
+                    if (expInYearsAsInt > 5 && expInYearsAsInt <= 10)
+                    {
+                        resultList.Add(job);
+                    }
+                }
+                jobFilter = resultList;
+            }
+            if (jobFilter != resultList)
+                jobFilter = result.ToList();
+            f.pnlCreatedJob.Controls.Clear();
+            LoadDanhSach3(f, jobFilter);
+        }
+        #endregion
+
     }
 }

@@ -38,7 +38,7 @@
             this.btnApplicantDetails = new Guna.UI2.WinForms.Guna2Button();
             this.pBoxAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnInviteCanidate = new Guna.UI2.WinForms.Guna2Button();
-            this.txtExpYears = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSkill2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSkill = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCandidateName = new System.Windows.Forms.Label();
             this.lblCandidateApplyPos = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             this.pnlUCJob.Controls.Add(this.btnApplicantDetails);
             this.pnlUCJob.Controls.Add(this.pBoxAvatar);
             this.pnlUCJob.Controls.Add(this.btnInviteCanidate);
-            this.pnlUCJob.Controls.Add(this.txtExpYears);
+            this.pnlUCJob.Controls.Add(this.txtSkill2);
             this.pnlUCJob.Controls.Add(this.txtSkill);
             this.pnlUCJob.Controls.Add(this.lblCandidateName);
             this.pnlUCJob.Controls.Add(this.lblCandidateApplyPos);
@@ -113,7 +113,7 @@
             this.btnFavorite.ForeColor = System.Drawing.Color.White;
             this.btnFavorite.Image = global::DoAnCuoiKy.Properties.Resources._92;
             this.btnFavorite.Location = new System.Drawing.Point(293, 28);
-            this.btnFavorite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFavorite.Margin = new System.Windows.Forms.Padding(4);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.ShadowDecoration.BorderRadius = 15;
             this.btnFavorite.ShadowDecoration.Depth = 15;
@@ -126,7 +126,7 @@
             // guna2Separator1
             // 
             this.guna2Separator1.Location = new System.Drawing.Point(19, 224);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(301, 12);
             this.guna2Separator1.TabIndex = 30;
@@ -145,7 +145,7 @@
             this.btnApplicantDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnApplicantDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnApplicantDetails.Location = new System.Drawing.Point(179, 247);
-            this.btnApplicantDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnApplicantDetails.Margin = new System.Windows.Forms.Padding(4);
             this.btnApplicantDetails.Name = "btnApplicantDetails";
             this.btnApplicantDetails.Size = new System.Drawing.Size(153, 46);
             this.btnApplicantDetails.TabIndex = 29;
@@ -185,33 +185,33 @@
             this.btnInviteCanidate.Text = "Invite";
             this.btnInviteCanidate.Click += new System.EventHandler(this.btnInviteCanidate_Click);
             // 
-            // txtExpYears
+            // txtSkill2
             // 
-            this.txtExpYears.AutoRoundedCorners = true;
-            this.txtExpYears.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.txtExpYears.BorderColor = System.Drawing.Color.Black;
-            this.txtExpYears.BorderRadius = 16;
-            this.txtExpYears.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExpYears.DefaultText = "5 Experience Years";
-            this.txtExpYears.DisabledState.BorderColor = System.Drawing.Color.Black;
-            this.txtExpYears.DisabledState.FillColor = System.Drawing.Color.White;
-            this.txtExpYears.DisabledState.ForeColor = System.Drawing.Color.Black;
-            this.txtExpYears.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExpYears.Enabled = false;
-            this.txtExpYears.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(246)))), ((int)(((byte)(237)))));
-            this.txtExpYears.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpYears.Font = new System.Drawing.Font("Segoe UI", 7.8F);
-            this.txtExpYears.ForeColor = System.Drawing.Color.Black;
-            this.txtExpYears.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpYears.Location = new System.Drawing.Point(19, 185);
-            this.txtExpYears.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtExpYears.Name = "txtExpYears";
-            this.txtExpYears.PasswordChar = '\0';
-            this.txtExpYears.PlaceholderText = "";
-            this.txtExpYears.SelectedText = "";
-            this.txtExpYears.Size = new System.Drawing.Size(139, 34);
-            this.txtExpYears.TabIndex = 32;
-            this.txtExpYears.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSkill2.AutoRoundedCorners = true;
+            this.txtSkill2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.txtSkill2.BorderColor = System.Drawing.Color.Black;
+            this.txtSkill2.BorderRadius = 16;
+            this.txtSkill2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSkill2.DefaultText = "5 Experience Years";
+            this.txtSkill2.DisabledState.BorderColor = System.Drawing.Color.Black;
+            this.txtSkill2.DisabledState.FillColor = System.Drawing.Color.White;
+            this.txtSkill2.DisabledState.ForeColor = System.Drawing.Color.Black;
+            this.txtSkill2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSkill2.Enabled = false;
+            this.txtSkill2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(246)))), ((int)(((byte)(237)))));
+            this.txtSkill2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSkill2.Font = new System.Drawing.Font("Segoe UI", 7.8F);
+            this.txtSkill2.ForeColor = System.Drawing.Color.Black;
+            this.txtSkill2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSkill2.Location = new System.Drawing.Point(19, 185);
+            this.txtSkill2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSkill2.Name = "txtSkill2";
+            this.txtSkill2.PasswordChar = '\0';
+            this.txtSkill2.PlaceholderText = "";
+            this.txtSkill2.SelectedText = "";
+            this.txtSkill2.Size = new System.Drawing.Size(139, 34);
+            this.txtSkill2.TabIndex = 32;
+            this.txtSkill2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSkill
             // 
@@ -268,7 +268,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.Controls.Add(this.pnlUCJob);
             this.Controls.Add(this.CBoxSelected);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCApplicants";
             this.Size = new System.Drawing.Size(405, 368);
             this.pnlUCJob.ResumeLayout(false);
@@ -288,7 +288,7 @@
         public Guna.UI2.WinForms.Guna2Button btnApplicantDetails;
         public Guna.UI2.WinForms.Guna2PictureBox pBoxAvatar;
         public Guna.UI2.WinForms.Guna2Button btnInviteCanidate;
-        public Guna.UI2.WinForms.Guna2TextBox txtExpYears;
+        public Guna.UI2.WinForms.Guna2TextBox txtSkill2;
         public Guna.UI2.WinForms.Guna2TextBox txtSkill;
         public System.Windows.Forms.Label lblCandidateName;
         public System.Windows.Forms.Label lblCandidateApplyPos;

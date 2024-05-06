@@ -22,6 +22,7 @@ namespace DoAnCuoiKy
             InitializeComponent();
             this.companyInfo = e1;
             applicantsDAO.LoadDanhSachUngVien(this);
+            applicantsDAO.LoadDanhSachNgayPhongVan(this);
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -38,10 +39,35 @@ namespace DoAnCuoiKy
                     }
                 }
             }
-            foreach (UCApplicants c in list)
+            if (list.Count > 0) 
             {
-                this.pnlDeveLoperApplicant.Controls.Remove(c);
-                applicantsDAO.xoaUC(c);
+                foreach (UCApplicants c in list)
+                {
+                    this.pnlDeveLoperApplicant.Controls.Remove(c);
+                    applicantsDAO.xoaUC(c);
+                }
+            }
+           
+            List<UCApplicants> list2 = new List<UCApplicants>();
+            foreach (Control c in pnlDesignerApplicant.Controls)
+            {
+                if (c.GetType() == typeof(UCApplicants))
+                {
+                    UCApplicants A = (UCApplicants)(c);
+
+                    if (A.CBoxSelected.Checked)
+                    {
+                        list2.Add(A);
+                    }
+                }
+            }
+            if (list2.Count > 0)
+            {
+                foreach (UCApplicants c in list2)
+                {
+                    this.pnlDesignerApplicant.Controls.Remove(c);
+                    applicantsDAO.xoaUC(c);
+                }
             }
         }
     }

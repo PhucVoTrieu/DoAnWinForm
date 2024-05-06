@@ -324,6 +324,12 @@
     <Compile Include="UC\UCBasicApplicantInfor.Designer.cs">
       <DependentUpon>UCBasicApplicantInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCDateInterview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCDateInterview.Designer.cs">
+      <DependentUpon>UCDateInterview.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCJobUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -441,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCBasicApplicantInfor.resx">
       <DependentUpon>UCBasicApplicantInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCDateInterview.resx">
+      <DependentUpon>UCDateInterview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCJobUI.resx">
       <DependentUpon>UCJobUI.cs</DependentUpon>

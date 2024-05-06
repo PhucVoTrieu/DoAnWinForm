@@ -21,31 +21,10 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.employerInfor = e1;
-            LoadDanhSach();
-         //   this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
+            jobDetailsDAO.LoadDanhSach(this);
+            this.btnCountCreatedJobs.Text = CountCreatedJob().ToString();
         }
-        public void LoadDanhSach()
-        {
-
-            try
-            {
-                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-                this.pnlCreatedJob.Controls.Clear();
-                var jobsOfCompany = from c in db.Jobs where c.CompanyID == Constant.CompanyID select c;
-
-                foreach (var job in jobsOfCompany)
-                {
-                    UCJobUI uCJob = new UCJobUI(job);
-                   uCJob.btnApplyNow.Visible = false;
-                    this.pnlCreatedJob.Controls.Add(uCJob);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
-            }
-
-        }
+        
         public int CountCreatedJob()
         {
             int count = 0;
@@ -79,99 +58,15 @@ namespace DoAnCuoiKy
             foreach (UCJobUI c in list)
             {
                 this.pnlCreatedJob.Controls.Remove(c);
-                //this.btnCountCreatedJob.Text = CountCreatedJob().ToString();
                 jobDetailsDAO.xoaUC(c);
+                this.btnCountCreatedJobs.Text = CountCreatedJob().ToString();
             }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            var result = from c in db.Jobs 
-                         where c.JobTitle.Contains(this.txtJobName.Text) && c.Location.Contains(this.cbxLocation.SelectedItem.ToString()) && c.CompanyID == Constant.CompanyID select c;
-            int expInYearsAsInt;
-            List<Job> resultList = new List<Job>();
-            List<Job> jobFilter = new List<Job>();
-            if (this.checkboxFullTime.Checked)
-            {
-                var fullTime = from c in result where c.JobType.Contains("Full") select c;
-                if (this.checkboxPartTime.Checked)
-                {
-                    result = result.Union(fullTime);
-                }
-                else result = fullTime;
-            }
-            if (this.checkboxPartTime.Checked)
-            {
-                var partTime = from c in result where c.JobType.Contains("Part") select c;
-                if (this.checkboxFullTime.Checked)
-                {
-                    result = result.Union(partTime);
-                }
-                else result = partTime;
-            }
-            if (this.checkboxLessThan3.Checked)
-            {
-
-                foreach (var job in result)
-                {
-                    expInYearsAsInt = int.Parse(job.ExpInYears);
-                    if (expInYearsAsInt < 3)
-                    {
-                        resultList.Add(job);
-                    }
-                }
-                jobFilter = resultList;
-
-            }
-            if (this.checkbox3To5.Checked)
-            {
-                foreach (var job in result)
-                {
-                    expInYearsAsInt = int.Parse(job.ExpInYears);
-                    if (expInYearsAsInt >= 3 && expInYearsAsInt <= 5)
-                    {
-                        resultList.Add(job);
-                    }
-                }
-                jobFilter = resultList;
-            }
-            if (this.checkbox5To10.Checked)
-            {
-                foreach (var job in result)
-                {
-                    expInYearsAsInt = int.Parse(job.ExpInYears);
-                    if (expInYearsAsInt > 5 && expInYearsAsInt <= 10)
-                    {
-                        resultList.Add(job);
-                    }
-                }
-                jobFilter = resultList;
-            }
-            if (jobFilter != resultList)
-                jobFilter = result.ToList();
-            //int val = trackbarSalary.Value;
-            //List<Job> salaryFilter = new List<Job>();
-            //foreach(var c in jobFilter)
-            //{
-            //    if(int.Parse(c.JobSalary) < val)
-            //    { salaryFilter.Add(c); }
-            //}   
-            this.pnlCreatedJob.Controls.Clear();
-            jobDetailsDAO.LoadDanhSach3(this, jobFilter);
+            jobDetailsDAO.searchCreatedJobs(this);
+            this.btnCountCreatedJobs.Text = CountCreatedJob().ToString();
         }
-
-        //private void btnDelete_Click_1(object sender, EventArgs e)
-        //{
-        //    JobsDAO jobsDAO = new JobsDAO();
-        //    foreach ( UCJobUI uCJobUI in pnlCreatedJob.Controls)
-        //    {
-        //        if (uCJobUI.CBoxSelected.Checked)
-        //        {
-        //            jobsDAO.XoaJob(uCJobUI.job);
-        //        }
-        //    }
-        //    LoadDanhSach();
-        //}
     }
 }
