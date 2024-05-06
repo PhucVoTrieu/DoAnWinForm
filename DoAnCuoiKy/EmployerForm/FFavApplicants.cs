@@ -21,11 +21,6 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.employerInfor = e1;
-            this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
-            LoadDanhSach();
-        }
-        private void LoadDanhSach()
-        {
             applicantsDAO.LoadDanhSachUngVienYeuThich(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }
@@ -70,14 +65,7 @@ namespace DoAnCuoiKy
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-            var result = from c in db.ApplicantsOfCompanies where c.CompanyID == Constant.CompanyID && c.IsFavorite == true select c.ApplicantID into query
-                         from b in db.Applicants where b.ApplicantID == query select b;
-            var result2 = from c in result where c.ApplicantTitle.Contains(this.txtJobName.Text) && c.ApplicantNationality.Contains(this.cbxLocation.SelectedItem.ToString()) select c;
-
-            var applicantFilter = result2.ToList();
-            this.pnlFavApplicants.Controls.Clear();
-            applicantsDAO.LoadDanhSachUngVienYeuThich(this, applicantFilter);
+            applicantsDAO.searchFavApplicant(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }
     }

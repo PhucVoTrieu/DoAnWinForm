@@ -10,9 +10,6 @@ namespace DoAnCuoiKy
     internal class CompanyDAO
     {
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-        public CompanyDAO() { 
-
-        }
         public void ThemApplicant(int applicantID,int companyID)
         {
             if (checkApplied(applicantID, companyID))
