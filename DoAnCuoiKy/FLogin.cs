@@ -39,10 +39,19 @@ namespace DoAnCuoiKy
                     DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
                     var employerAccount = from account in db.Companies where account.CompanyEmail == this.txtEmail.Text 
                                               && account.CompanyPassword == this.txtPassword.Text select account;
-                    Constant.CompanyID = employerAccount.SingleOrDefault().CompanyID;
+                    if (employerAccount.Any()) 
+                    {
+                        Constant.CompanyID = employerAccount.SingleOrDefault().CompanyID;
 
-                    FTrangChuCongTy fTrang = new FTrangChuCongTy(employerAccount.SingleOrDefault());
-                       fTrang.Show();
+                        FTrangChuCongTy fTrang = new FTrangChuCongTy(employerAccount.SingleOrDefault());
+                        fTrang.Show();
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Wrong Password", "Help?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        FLogin fLogin = new FLogin();
+                        fLogin.Show();
+                    }
                     
                 }
                 catch (Exception ex)
@@ -65,18 +74,26 @@ namespace DoAnCuoiKy
                                             where account.ApplicantEmail == this.txtEmail.Text
                                                 && account.ApplicantPassword == this.txtPassword.Text
                                             select account);
-                    Applicant applicant = applicantAccount.SingleOrDefault();
-      
-                    Constant.ApplicantID = applicantAccount.FirstOrDefault().ApplicantID;
+                   if(applicantAccount.Any()) 
+                    {
+                        Applicant applicant = applicantAccount.SingleOrDefault();
+                        Constant.ApplicantID = applicantAccount.FirstOrDefault().ApplicantID;
+                        FApplicantHomePage fTrang = new FApplicantHomePage(applicant);
+                        fTrang.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Password", "Help?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        FLogin fLogin = new FLogin();
+                        fLogin.Show();
+                    }
 
-                    FApplicantHomePage fTrang = new FApplicantHomePage();
-                    fTrang.Show(); 
                 }
                 catch (Exception ex)
                 {
-                   // MessageBox.Show("Loi o Flogin");
                     Console.WriteLine("Lỗi truy vấn1312312: " + ex.Message);
                 }
+
 
             }
         }

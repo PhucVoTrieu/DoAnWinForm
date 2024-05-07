@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FInformation));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -62,7 +63,6 @@
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlJobOpenings = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -90,6 +90,19 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1195, 211);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Silver;
+            this.guna2ControlBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1160, 1);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
+            this.guna2ControlBox1.TabIndex = 55;
+            // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(166)))));
@@ -113,7 +126,7 @@
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(270, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 18);
+            this.label3.Size = new System.Drawing.Size(112, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "jobs opening";
             // 
@@ -140,7 +153,7 @@
             this.lblAddress.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblAddress.Location = new System.Drawing.Point(270, 87);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(121, 18);
+            this.lblAddress.Size = new System.Drawing.Size(146, 22);
             this.lblAddress.TabIndex = 2;
             this.lblAddress.Text = "Đống Đa, Hà Nội";
             // 
@@ -152,7 +165,7 @@
             this.lblCompanyName.ForeColor = System.Drawing.Color.White;
             this.lblCompanyName.Location = new System.Drawing.Point(231, 16);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(483, 60);
+            this.lblCompanyName.Size = new System.Drawing.Size(615, 76);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = "Mcredit - Công ty Tài chính TNHH MB Shinsei\r\n\r\n";
             // 
@@ -209,7 +222,7 @@
             this.lblWorkingDays.ForeColor = System.Drawing.Color.Black;
             this.lblWorkingDays.Location = new System.Drawing.Point(474, 140);
             this.lblWorkingDays.Name = "lblWorkingDays";
-            this.lblWorkingDays.Size = new System.Drawing.Size(128, 21);
+            this.lblWorkingDays.Size = new System.Drawing.Size(160, 28);
             this.lblWorkingDays.TabIndex = 11;
             this.lblWorkingDays.Text = "Monday - Friday";
             // 
@@ -220,7 +233,7 @@
             this.label8.ForeColor = System.Drawing.Color.Gray;
             this.label8.Location = new System.Drawing.Point(476, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 19);
+            this.label8.Size = new System.Drawing.Size(123, 23);
             this.label8.TabIndex = 10;
             this.label8.Text = "Working Days";
             // 
@@ -231,7 +244,7 @@
             this.lblCountry.ForeColor = System.Drawing.Color.Black;
             this.lblCountry.Location = new System.Drawing.Point(359, 140);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(70, 21);
+            this.lblCountry.Size = new System.Drawing.Size(88, 28);
             this.lblCountry.TabIndex = 9;
             this.lblCountry.Text = "Vietnam";
             // 
@@ -242,7 +255,7 @@
             this.lblCompanySize.ForeColor = System.Drawing.Color.Black;
             this.lblCompanySize.Location = new System.Drawing.Point(172, 140);
             this.lblCompanySize.Name = "lblCompanySize";
-            this.lblCompanySize.Size = new System.Drawing.Size(138, 21);
+            this.lblCompanySize.Size = new System.Drawing.Size(172, 28);
             this.lblCompanySize.TabIndex = 8;
             this.lblCompanySize.Text = "1000+ employees";
             // 
@@ -253,7 +266,7 @@
             this.label10.ForeColor = System.Drawing.Color.Gray;
             this.label10.Location = new System.Drawing.Point(359, 105);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 19);
+            this.label10.Size = new System.Drawing.Size(75, 23);
             this.label10.TabIndex = 7;
             this.label10.Text = "Country";
             // 
@@ -264,7 +277,7 @@
             this.label7.ForeColor = System.Drawing.Color.Gray;
             this.label7.Location = new System.Drawing.Point(173, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 19);
+            this.label7.Size = new System.Drawing.Size(120, 23);
             this.label7.TabIndex = 4;
             this.label7.Text = "Company size";
             // 
@@ -275,7 +288,7 @@
             this.lblCompanyType.ForeColor = System.Drawing.Color.Black;
             this.lblCompanyType.Location = new System.Drawing.Point(17, 140);
             this.lblCompanyType.Name = "lblCompanyType";
-            this.lblCompanyType.Size = new System.Drawing.Size(86, 21);
+            this.lblCompanyType.Size = new System.Drawing.Size(106, 28);
             this.lblCompanyType.TabIndex = 3;
             this.lblCompanyType.Text = "IT Product";
             // 
@@ -286,7 +299,7 @@
             this.label5.ForeColor = System.Drawing.Color.Gray;
             this.label5.Location = new System.Drawing.Point(18, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 19);
+            this.label5.Size = new System.Drawing.Size(127, 23);
             this.label5.TabIndex = 2;
             this.label5.Text = "Company type";
             // 
@@ -296,7 +309,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(10, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(247, 32);
+            this.label4.Size = new System.Drawing.Size(304, 41);
             this.label4.TabIndex = 1;
             this.label4.Text = "General Information";
             // 
@@ -316,7 +329,7 @@
             this.label13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(780, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(182, 32);
+            this.label13.Size = new System.Drawing.Size(223, 41);
             this.label13.TabIndex = 37;
             this.label13.Text = " jobs openings\r\n";
             // 
@@ -353,7 +366,7 @@
             this.lblBenefit.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBenefit.Location = new System.Drawing.Point(15, 346);
             this.lblBenefit.Name = "lblBenefit";
-            this.lblBenefit.Size = new System.Drawing.Size(348, 32);
+            this.lblBenefit.Size = new System.Drawing.Size(430, 41);
             this.lblBenefit.TabIndex = 8;
             this.lblBenefit.Text = "Why you\'ll love working here";
             // 
@@ -385,7 +398,7 @@
             this.label21.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(16, 17);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(236, 32);
+            this.label21.Size = new System.Drawing.Size(292, 41);
             this.label21.TabIndex = 1;
             this.label21.Text = "Company Overview";
             // 
@@ -435,25 +448,12 @@
             this.pnlJobOpenings.AutoScroll = true;
             this.pnlJobOpenings.Location = new System.Drawing.Point(785, 288);
             this.pnlJobOpenings.Name = "pnlJobOpenings";
-            this.pnlJobOpenings.Size = new System.Drawing.Size(381, 444);
+            this.pnlJobOpenings.Size = new System.Drawing.Size(381, 520);
             this.pnlJobOpenings.TabIndex = 38;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Silver;
-            this.guna2ControlBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1160, 1);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
-            this.guna2ControlBox1.TabIndex = 55;
             // 
             // FInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 831);
             this.Controls.Add(this.pnlJobOpenings);

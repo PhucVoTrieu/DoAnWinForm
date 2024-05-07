@@ -73,7 +73,7 @@
           <Property Name="DateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ApplicantID" Type="int" />
           <Property Name="CompanyID" Type="int" />
-          <Property Name="DateInterview" Type="date" />
+          <Property Name="DateInterview" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="Education">
           <Key>
@@ -220,7 +220,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DateInter__Appli__44952D46">
+        <Association Name="FK__DateInter__Appli__54CB950F">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="DateInterview" Type="Self.DateInterview" Multiplicity="*" />
           <ReferentialConstraint>
@@ -232,7 +232,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DateInter__Compa__4589517F">
+        <Association Name="FK__DateInter__Compa__55BFB948">
           <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
           <End Role="DateInterview" Type="Self.DateInterview" Multiplicity="*" />
           <ReferentialConstraint>
@@ -374,11 +374,11 @@
             <End Role="Skills" EntitySet="Skills" />
             <End Role="ApplicantSkill" EntitySet="ApplicantSkill" />
           </AssociationSet>
-          <AssociationSet Name="FK__DateInter__Appli__44952D46" Association="Self.FK__DateInter__Appli__44952D46">
+          <AssociationSet Name="FK__DateInter__Appli__54CB950F" Association="Self.FK__DateInter__Appli__54CB950F">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="DateInterview" EntitySet="DateInterview" />
           </AssociationSet>
-          <AssociationSet Name="FK__DateInter__Compa__4589517F" Association="Self.FK__DateInter__Compa__4589517F">
+          <AssociationSet Name="FK__DateInter__Compa__55BFB948" Association="Self.FK__DateInter__Compa__55BFB948">
             <End Role="Company" EntitySet="Company" />
             <End Role="DateInterview" EntitySet="DateInterview" />
           </AssociationSet>
@@ -452,7 +452,7 @@
           <NavigationProperty Name="PersonalProjects" Relationship="Self.FK__PersonalP__Appli__1BC821DD" FromRole="Applicant" ToRole="PersonalProject" />
           <NavigationProperty Name="WorkExperiences" Relationship="Self.FK__WorkExper__Appli__18EBB532" FromRole="Applicant" ToRole="WorkExperience" />
           <Property Name="ApplicantAvatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Appli__44952D46" FromRole="Applicant" ToRole="DateInterview" />
+          <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Appli__54CB950F" FromRole="Applicant" ToRole="DateInterview" />
         </EntityType>
         <EntityType Name="ApplicantSkill">
           <Key>
@@ -494,7 +494,7 @@
           <Property Name="CompanyCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ApplicantsOfCompanies" Relationship="Self.FK__Applicant__Compa__6FE99F9F" FromRole="Company" ToRole="ApplicantsOfCompany" />
           <NavigationProperty Name="Jobs" Relationship="Self.FK__Jobs__CompanyID__60A75C0F" FromRole="Company" ToRole="Jobs" />
-          <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__4589517F" FromRole="Company" ToRole="DateInterview" />
+          <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__55BFB948" FromRole="Company" ToRole="DateInterview" />
         </EntityType>
         <EntityType Name="Education">
           <Key>
@@ -815,11 +815,11 @@
             <End Role="JobSkill" EntitySet="JobSkills" />
           </AssociationSet>
           <EntitySet Name="DateInterviews" EntityType="DoAnCuoiKyModel.DateInterview" />
-          <AssociationSet Name="FK__DateInter__Appli__44952D46" Association="DoAnCuoiKyModel.FK__DateInter__Appli__44952D46">
+          <AssociationSet Name="FK__DateInter__Appli__54CB950F" Association="DoAnCuoiKyModel.FK__DateInter__Appli__54CB950F">
             <End Role="Applicant" EntitySet="Applicants" />
             <End Role="DateInterview" EntitySet="DateInterviews" />
           </AssociationSet>
-          <AssociationSet Name="FK__DateInter__Compa__4589517F" Association="DoAnCuoiKyModel.FK__DateInter__Compa__4589517F">
+          <AssociationSet Name="FK__DateInter__Compa__55BFB948" Association="DoAnCuoiKyModel.FK__DateInter__Compa__55BFB948">
             <End Role="Company" EntitySet="Companies" />
             <End Role="DateInterview" EntitySet="DateInterviews" />
           </AssociationSet>
@@ -831,11 +831,11 @@
           <Property Name="DateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ApplicantID" Type="Int32" />
           <Property Name="CompanyID" Type="Int32" />
-          <Property Name="DateInterview1" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__DateInter__Appli__44952D46" FromRole="DateInterview" ToRole="Applicant" />
-          <NavigationProperty Name="Company" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__4589517F" FromRole="DateInterview" ToRole="Company" />
+          <Property Name="DateInterview1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__DateInter__Appli__54CB950F" FromRole="DateInterview" ToRole="Applicant" />
+          <NavigationProperty Name="Company" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__55BFB948" FromRole="DateInterview" ToRole="Company" />
         </EntityType>
-        <Association Name="FK__DateInter__Appli__44952D46">
+        <Association Name="FK__DateInter__Appli__54CB950F">
           <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="0..1" />
           <End Type="DoAnCuoiKyModel.DateInterview" Role="DateInterview" Multiplicity="*" />
           <ReferentialConstraint>
@@ -847,7 +847,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DateInter__Compa__4589517F">
+        <Association Name="FK__DateInter__Compa__55BFB948">
           <End Type="DoAnCuoiKyModel.Company" Role="Company" Multiplicity="0..1" />
           <End Type="DoAnCuoiKyModel.DateInterview" Role="DateInterview" Multiplicity="*" />
           <ReferentialConstraint>
