@@ -17,7 +17,8 @@ namespace DoAnCuoiKy
     public partial class FJobDetails : Form
     {
         Job jobInfo;
-        DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+        JobsDAO jobsDAO = new JobsDAO();
+        CompanyDAO companyDAO = new CompanyDAO();
         public FJobDetails()
         {
             InitializeComponent();
@@ -26,27 +27,9 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.jobInfo = j1;
-            LoadDanhSach();
+            jobsDAO.LoadDanhSach5(j1,this);
         }
-        public void LoadDanhSach()
-        {
-            var inforCompany = from c in db.Companies where c.CompanyID == jobInfo.CompanyID select c;
-            var result = inforCompany.First();
-            this.lblJobTitle.Text = jobInfo.JobTitle.ToString();
-            this.lblCompanyName.Text = result.CompanyName.ToString();
-            this.labelCompanyName2.Text = result.CompanyName.ToString();
-            this.lblCompanySize.Text = result.CompanySize.ToString();
-            this.lblCompanyType.Text = result.CompanyType.ToString();
-            this.lblCountry.Text = result.CompanyCountry.ToString();
-            this.lblWorkingday.Text = result.CompanyWorkingDays.ToString();
-            this.lblSalary.Text = jobInfo.JobSalary.ToString();
-            this.lblJobDescription.Text = jobInfo.JobDescription.ToString();
-            this.lblJobBenefit.Text = jobInfo.JobBenefit.ToString();
-            this.lblJobRequirement.Text = jobInfo.JobRequirement.ToString();
-            this.pnlDetails.Size = new Size(this.pnlDetails.Width, this.lblJobBenefit.Height+lblJobDescription.Height+lblJobRequirement.Height+lblReasonToJoinUs.Height
-                + 450);
-
-        }
+    
         private void btnCompanyName_Click(object sender, EventArgs e)
         {
             
@@ -60,8 +43,7 @@ namespace DoAnCuoiKy
 
         private void btnViewCompany_Click(object sender, EventArgs e)
         {
-            FInformation f1 = new FInformation();
-            f1.Show();
+            companyDAO.LoadInforJobOfCompany(this.jobInfo);
         }
 
         private void btnApplyNow_Click_1(object sender, EventArgs e)

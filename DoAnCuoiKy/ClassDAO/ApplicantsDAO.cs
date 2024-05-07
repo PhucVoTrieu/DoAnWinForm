@@ -66,6 +66,7 @@ namespace DoAnCuoiKy
                 foreach (var applicant in result)
                 {
                     UCApplicants uCApplicants = new UCApplicants(applicant, f);
+                    uCApplicants.btnInviteCanidate.Enabled = true;
                     if (applicant.ApplicantTitle.ToLower().Contains("developer"))
                         f.pnlDeveLoperApplicant.Controls.Add(uCApplicants);
                     else
@@ -216,7 +217,7 @@ namespace DoAnCuoiKy
                 {
                     UCApplicants uCApplicants = new UCApplicants(c);
                     uCApplicants.btnFavorite.Hide();
-                    uCApplicants.btnInviteCanidate.Hide();
+                    uCApplicants.btnInviteCanidate.Text = "Invited";
                     f.pnlPotentialApplicant.Controls.Add(uCApplicants);
                 }
             }
@@ -232,6 +233,7 @@ namespace DoAnCuoiKy
             {
                 UCApplicants uCApplicants = new UCApplicants(a);
                 uCApplicants.btnFavorite.Hide();
+                uCApplicants.btnInviteCanidate.Text = "Invited"; 
                 f.pnlPotentialApplicant.Controls.Add(uCApplicants);
             }
         }

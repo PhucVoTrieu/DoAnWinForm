@@ -1,4 +1,4 @@
-﻿namespace DoAnCuoiKy.UC
+﻿namespace DoAnCuoiKy
 {
     partial class UCNote
     {
@@ -38,6 +38,7 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.btnDetails = new Guna.UI2.WinForms.Guna2Button();
             this.btnApplyNow = new Guna.UI2.WinForms.Guna2Button();
+            this.CBoxSelected = new Guna.UI2.WinForms.Guna2CheckBox();
             this.pnlUCJob.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.pnlUCJob.Controls.Add(this.btnDetails);
             this.pnlUCJob.Controls.Add(this.btnApplyNow);
             this.pnlUCJob.Location = new System.Drawing.Point(13, 12);
-            this.pnlUCJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlUCJob.Margin = new System.Windows.Forms.Padding(2);
             this.pnlUCJob.Name = "pnlUCJob";
             this.pnlUCJob.Size = new System.Drawing.Size(1136, 143);
             this.pnlUCJob.TabIndex = 14;
@@ -192,24 +193,43 @@
             this.btnApplyNow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApplyNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.btnApplyNow.Location = new System.Drawing.Point(22, 200);
-            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(2);
             this.btnApplyNow.Name = "btnApplyNow";
             this.btnApplyNow.Size = new System.Drawing.Size(115, 37);
             this.btnApplyNow.TabIndex = 23;
             this.btnApplyNow.Text = "Apply Now";
+            // 
+            // CBoxSelected
+            // 
+            this.CBoxSelected.AutoSize = true;
+            this.CBoxSelected.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBoxSelected.CheckedState.BorderRadius = 0;
+            this.CBoxSelected.CheckedState.BorderThickness = 0;
+            this.CBoxSelected.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBoxSelected.Location = new System.Drawing.Point(2, 2);
+            this.CBoxSelected.Margin = new System.Windows.Forms.Padding(2);
+            this.CBoxSelected.Name = "CBoxSelected";
+            this.CBoxSelected.Size = new System.Drawing.Size(15, 14);
+            this.CBoxSelected.TabIndex = 21;
+            this.CBoxSelected.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CBoxSelected.UncheckedState.BorderRadius = 0;
+            this.CBoxSelected.UncheckedState.BorderThickness = 0;
+            this.CBoxSelected.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // UCNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.Controls.Add(this.CBoxSelected);
             this.Controls.Add(this.pnlUCJob);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCNote";
             this.Size = new System.Drawing.Size(1158, 167);
             this.pnlUCJob.ResumeLayout(false);
             this.pnlUCJob.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -225,5 +245,6 @@
         public System.Windows.Forms.Label lblNameCom;
         public System.Windows.Forms.Label lblNameApp;
         public Guna.UI2.WinForms.Guna2Button btnApplicantDetails;
+        public Guna.UI2.WinForms.Guna2CheckBox CBoxSelected;
     }
 }
