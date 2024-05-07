@@ -347,8 +347,9 @@ namespace DoAnCuoiKy
         }
         public void Invite(UCApplicants u , FApplicants f)
         {
-            var check = from c in db.DateInterviews where c.DateInterview1 == u.fApplicants.dtpInvite.Value.Date && c.CompanyID == Constant.CompanyID select c;
-            if (check.Count() > 0)
+            var dtpDate = u.fApplicants.dtpInvite.Value.ToString("dd/MM/yyyy");
+            var check = from c in db.DateInterviews where c.DateInterview1 == dtpDate && c.CompanyID == Constant.CompanyID select c;
+            if (check.Any())
             {
                 MessageBox.Show("Date already has an interview scheduled");
             }
@@ -356,7 +357,7 @@ namespace DoAnCuoiKy
             {
                 db.DateInterviews.Add(new DateInterview
                 {
-                    DateInterview1 = u.fApplicants.dtpInvite.Value.Date,
+                    DateInterview1 = u.fApplicants.dtpInvite.Value.ToString("dd/MM/yyyy"),
                     CompanyID = Constant.CompanyID,
                     ApplicantID = u.applicantInfo.ApplicantID
                 });

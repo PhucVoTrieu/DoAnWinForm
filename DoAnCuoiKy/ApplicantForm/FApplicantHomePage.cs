@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DoAnCuoiKy.ApplicantForm;
+using DoAnCuoiKy.Class;
+using DoAnCuoiKy.UC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,6 +73,11 @@ namespace DoAnCuoiKy
             this.Hide();
             FLogin f1 = new FLogin();
             f1.Show();
+        }
+
+        private void btnNote_Click(object sender, EventArgs e)
+        {
+           OpenForm(new FNotification(this.Applicant));  
         }
     }
 }

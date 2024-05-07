@@ -17,7 +17,7 @@ namespace DoAnCuoiKy
         public int DateID { get; set; }
         public Nullable<int> ApplicantID { get; set; }
         public Nullable<int> CompanyID { get; set; }
-        public Nullable<System.DateTime> DateInterview1 { get; set; }
+        public string DateInterview1 { get; set; }
     
         public virtual Applicant Applicant { get; set; }
         public virtual Company Company { get; set; }
