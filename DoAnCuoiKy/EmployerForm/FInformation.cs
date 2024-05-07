@@ -16,11 +16,12 @@ namespace DoAnCuoiKy
     public partial class FInformation : Form
     {
         Company employerInfo;
+        JobsDAO jobsDAO = new JobsDAO();
         public FInformation()
         {
             InitializeComponent();
         }
-        public FInformation(Company e1)
+        public FInformation(Company e1 )
         {
             InitializeComponent();
             this.employerInfo = e1;
@@ -32,32 +33,7 @@ namespace DoAnCuoiKy
             this.lblCountry.Text = e1.CompanyCountry;
             this.lblWorkingDays.Text = e1.CompanyWorkingDays;
             this.txtCompanyOverview.Text = e1.CompanyOverview;
-            LoadDanhSach();
-        }
-        private void FInformation_Load(object sender, EventArgs e)
-        {
-
-        }
-        public void LoadDanhSach()
-        {
-          
-            try
-            {
-                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-                var jobsOfCompany = from c in db.Jobs where c.CompanyID == this.employerInfo.CompanyID select c;
-                
-                foreach(var job in  jobsOfCompany)
-                {
-                    UCJobUI uCJob = new UCJobUI(job);
-                    uCJob.CBoxSelected.Hide();
-                    this.pnlJobOpenings.Controls.Add(uCJob);
-                }  
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
-            } 
-           
+            jobsDAO.LoadDanhSach6( employerInfo ,this);
         }
         private void pnlInformation_MouseEnter(object sender, EventArgs e)
         {

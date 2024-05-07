@@ -59,6 +59,14 @@ namespace DoAnCuoiKy
                 Console.WriteLine("Lỗi truy vấn:LoadTHongBaoPhongVan" + ex.Message);
             }
         }
+        
+        public void LoadInforJobOfCompany(Job j)
+        {
+            var inforCompany = from c in db.Companies where j.CompanyID == c.CompanyID select c;
+            var result = inforCompany.FirstOrDefault();
+            FInformation f1 = new FInformation(result);
+            f1.Show();
+        }
     }
 
 }

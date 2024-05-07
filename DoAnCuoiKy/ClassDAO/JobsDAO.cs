@@ -1,8 +1,10 @@
 ﻿using DoAnCuoiKy.Class;
+using DoAnCuoiKy.UC;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -57,10 +59,12 @@ namespace DoAnCuoiKy
             {
                 UCJobUI ucJob = new UCJobUI(job);
                 ucJob.CBoxSelected.Visible = false;
+                ucJob.btnApplyNow.Enabled = false;
+                ucJob.btnApplyNow.Text = "Posted";
                 f.pnlCreatedJob.Controls.Add(ucJob);
             }
         }
-        public void LoadDanhSach(FJobs f)
+        public void LoadDanhSach4(FJobs f)
         {
 
             try
@@ -72,8 +76,52 @@ namespace DoAnCuoiKy
                 foreach (var job in jobsOfCompany)
                 {
                     UCJobUI uCJob = new UCJobUI(job);
-                    uCJob.btnApplyNow.Visible = false;
+                    uCJob.btnApplyNow.Enabled = false;
+                    uCJob.btnApplyNow.Text = "Posted";
                     f.pnlCreatedJob.Controls.Add(uCJob);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+
+        }
+        public void LoadDanhSach5(Job jobInfo , FJobDetails f)
+        {
+            var inforCompany = from c in db.Companies where c.CompanyID == jobInfo.CompanyID select c;
+            var result = inforCompany.First();
+            f.lblJobTitle.Text = jobInfo.JobTitle.ToString();
+            f.lblCompanyName.Text = result.CompanyName.ToString();
+            f.labelCompanyName2.Text = result.CompanyName.ToString();
+            f.lblCompanySize.Text = result.CompanySize.ToString();
+            f.lblCompanyType.Text = result.CompanyType.ToString();
+            f.lblCountry.Text = result.CompanyCountry.ToString();
+            f.lblWorkingday.Text = result.CompanyWorkingDays.ToString();
+            f.lblSalary.Text = jobInfo.JobSalary.ToString();
+            f.lblJobDescription.Text = jobInfo.JobDescription.ToString();
+            f.lblJobBenefit.Text = jobInfo.JobBenefit.ToString();
+            f.lblJobRequirement.Text = jobInfo.JobRequirement.ToString();
+            f.pnlDetails.Size = new Size(f.pnlDetails.Width, f.lblJobBenefit.Height + f.lblJobDescription.Height + f.lblJobRequirement.Height + f.lblReasonToJoinUs.Height
+                + 450);
+            f.txtJobtype.Text = jobInfo.JobType;
+
+        }
+        public void LoadDanhSach6(Company employerInfo, FInformation f)
+        {
+
+            try
+            {
+                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                var jobsOfCompany = from c in db.Jobs where c.CompanyID == employerInfo.CompanyID select c;
+
+                foreach (var job in jobsOfCompany)
+                {
+                    UCJobUI uCJob = new UCJobUI(job);
+                    uCJob.CBoxSelected.Hide();
+                    uCJob.btnApplyNow.Enabled = false;
+                    uCJob.btnApplyNow.Text = "Posted";
+                    f.pnlJobOpenings.Controls.Add(uCJob);
                 }
             }
             catch (Exception ex)
@@ -164,6 +212,18 @@ namespace DoAnCuoiKy
             var deletedJob = result.First();
             db.Jobs.Remove(deletedJob);
             db.SaveChanges();
+        }
+        public void xoaUC2(UCNote uCNote)
+        {
+            var dateInterview = from c in db.DateInterviews 
+                                where c.ApplicantID == Constant.ApplicantID && c.CompanyID == uCNote.company1.CompanyID && c.DateInterview1 == uCNote.date1.DateInterview1
+                                select c;
+            foreach (var a in dateInterview)
+            {
+                db.DateInterviews.Remove(a);
+            }
+            db.SaveChanges();
+
         }
         #endregion
 

@@ -465,7 +465,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FInformation";
             this.Text = "FInformation";
-            this.Load += new System.EventHandler(this.FInformation_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
@@ -514,7 +513,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.FlowLayoutPanel pnlJobOpenings;
+        public System.Windows.Forms.FlowLayoutPanel pnlJobOpenings;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

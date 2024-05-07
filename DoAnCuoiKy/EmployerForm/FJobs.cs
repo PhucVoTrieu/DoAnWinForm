@@ -21,7 +21,7 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.employerInfor = e1;
-            jobDetailsDAO.LoadDanhSach(this);
+            jobDetailsDAO.LoadDanhSach4(this);
             this.btnCountCreatedJobs.Text = CountCreatedJob().ToString();
         }
         
