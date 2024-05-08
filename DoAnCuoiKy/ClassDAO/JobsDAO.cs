@@ -193,13 +193,13 @@ namespace DoAnCuoiKy
                 db.SaveChanges();
             }
         }
-        public void xoaUCfav(UCJobUI uCJobUI)
+        public void XoaUCfav(UCJobUI uCJobUI)
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             HuyYeuThich(uCJobUI.job);
             db.SaveChanges();
         }
-        public void xoaUC(UCJobUI uCJobUI)
+        public void XoaUC(UCJobUI uCJobUI)
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             var query = (from a in db.JobStatus where a.JobID == uCJobUI.job.JobID select a);
@@ -213,7 +213,7 @@ namespace DoAnCuoiKy
             db.Jobs.Remove(deletedJob);
             db.SaveChanges();
         }
-        public void xoaUC2(UCNote uCNote)
+        public void XoaUC2(UCNote uCNote)
         {
             var dateInterview = from c in db.DateInterviews 
                                 where c.ApplicantID == Constant.ApplicantID && c.CompanyID == uCNote.company1.CompanyID && c.DateInterview1 == uCNote.date1.DateInterview1

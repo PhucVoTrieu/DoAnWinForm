@@ -58,7 +58,7 @@ namespace DoAnCuoiKy
             foreach (UCJobUI c in list)
             {
                 this.pnlCreatedJob.Controls.Remove(c);
-                jobDetailsDAO.xoaUC(c);
+                jobDetailsDAO.XoaUC(c);
                 this.btnCountCreatedJobs.Text = CountCreatedJob().ToString();
             }
         }

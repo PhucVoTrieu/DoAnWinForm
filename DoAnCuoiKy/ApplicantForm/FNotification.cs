@@ -56,7 +56,7 @@ namespace DoAnCuoiKy.ApplicantForm
             {
                 this.pnlNote.Controls.Remove(c);
                 this.btnCountNote.Text = CountNotification().ToString();
-                jobsDAO.xoaUC2(c);
+                jobsDAO.XoaUC2(c);
             }
         }
     }
