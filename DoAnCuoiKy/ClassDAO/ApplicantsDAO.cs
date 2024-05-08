@@ -55,22 +55,12 @@ namespace DoAnCuoiKy
         {
             try
             {
-                var applicantsOfCompanies = from c in db.ApplicantsOfCompanies
-                                            where c.CompanyID == f.companyInfo.CompanyID
-                                            select c.ApplicantID into query
-                                            from a in db.Applicants
-                                            where a.ApplicantID == query
-                                            select a;
-
-                var result = applicantsOfCompanies.ToList();
-                foreach (var applicant in result)
+                var inforJob = from a in db.Jobs where a.CompanyID == f.companyInfo.CompanyID select a;
+                var result = inforJob.ToList();
+                foreach (var allListJob in result)
                 {
-                    UCApplicants uCApplicants = new UCApplicants(applicant, f);
-                    uCApplicants.btnInviteCanidate.Enabled = true;
-                    if (applicant.ApplicantTitle.ToLower().Contains("developer"))
-                        f.pnlDeveLoperApplicant.Controls.Add(uCApplicants);
-                    else
-                        f.pnlDesignerApplicant.Controls.Add(uCApplicants);
+                    UCListApplicant uc = new UCListApplicant(allListJob, f);
+                    f.pnlListOfApplicant.Controls.Add(uc);
                 }
             }
             catch (Exception ex)
@@ -317,6 +307,28 @@ namespace DoAnCuoiKy
                 Console.WriteLine("Lỗi truy vấn: " + ex.Message);
             }
         }
+        public void LoadDanhSachUngVienGroup(Job job , FApplicants f , UCListApplicant u1)
+        {
+             var allApplicantOnJob = from c in db.ApplicantsOfCompanies where c.JobID == job.JobID && c.CompanyID == job.CompanyID 
+                                    select c.ApplicantID into query
+                                    from a in db.Applicants
+                                    where a.ApplicantID == query
+                                    select a;
+            var result = allApplicantOnJob.ToList();
+            if(allApplicantOnJob.Any())
+            {
+                //u1.pnlJobTitle.Size = new System.Drawing.Size(u1.pnlJobTitle.Size.Width, 65);
+                //u1.pnlJobCreated.Controls.Clear();
+                foreach (var allApplicant in result)
+                {
+                    UCApplicants uCApplicants = new UCApplicants(allApplicant, f);
+                    uCApplicants.btnInviteCanidate.Enabled = true;
+                    u1.pnlJobCreated.Controls.Add(uCApplicants);
+                    //f1.pnlWorkExp.Size = new System.Drawing.Size(f1.pnlWorkExp.Size.Width, f1.pnlWorkExp.Size.Height + uc1.Size.Height);
+                }
+            }
+            
+        }
         #endregion
 
         #region Hàm Thêm
@@ -388,7 +400,7 @@ namespace DoAnCuoiKy
             LoadThongTinEducation(f1.fProfile);
 
         }
-        public void themThongTinSkill(FAddSkill f1)
+        public void ThemThongTinSkill(FAddSkill f1)
         {
 
             //if(f1.Skill == null)
@@ -526,24 +538,27 @@ namespace DoAnCuoiKy
             query.First().ApplicantAvatar = null;
             db.SaveChanges();
         }
-        public void xoaUC(UCApplicants uCApplicants)
+        public void XoaUC(UCApplicants uCApplicants)
         {
             var deletedApplicant = from c in db.ApplicantsOfCompanies where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
             db.ApplicantsOfCompanies.Remove(deletedApplicant.First());
             db.SaveChanges();
         }
-        public void xoaUC2(UCApplicants uCApplicants)
+        public void XoaUC2(UCApplicants uCApplicants)
         {
             var deletedApplicant = from c in db.ApplicantsOfCompanies where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
             deletedApplicant.First().IsFavorite = false;
             db.SaveChanges();
         }
-        public void xoaUC3(UCApplicants uCApplicants)
+        public void XoaUC3(UCApplicants uCApplicants)
         {
             var deletedApplicant = from c in db.ApplicantsOfCompanies where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
             deletedApplicant.First().IsAccepted = false;
             var deletedDate = from c in db.DateInterviews where c.ApplicantID == uCApplicants.applicantInfo.ApplicantID && c.CompanyID == Constant.CompanyID select c;
-            db.DateInterviews.Remove(deletedDate.First());
+            if(deletedDate.Any())
+            {
+                db.DateInterviews.Remove(deletedDate.First());
+            }    
             db.SaveChanges();
         }
         public void HuyYeuThich(Applicant applicant)
@@ -552,7 +567,7 @@ namespace DoAnCuoiKy
             entity.SingleOrDefault().IsFavorite = false;
             db.SaveChanges();
         }
-        public void xoa(Applicant applicant)
+        public void Xoa(Applicant applicant)
         {
             var applicant1 = db.Applicants.Find(applicant.ApplicantID);
             if (applicant1 != null)
@@ -606,7 +621,7 @@ namespace DoAnCuoiKy
         #endregion
 
         #region Hàm Search
-        public void searchFavApplicant(FFavoriteApplicants f)
+        public void SearchFavApplicant(FFavoriteApplicants f)
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             var result = from c in db.ApplicantsOfCompanies
@@ -621,7 +636,7 @@ namespace DoAnCuoiKy
             f.pnlFavApplicants.Controls.Clear();
             LoadDanhSachUngVienYeuThich(f, applicantFilter);
         }
-        public void searchInvitedApp(FInvitedApplicant f)
+        public void SearchInvitedApp(FInvitedApplicant f)
         {
             DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
             var result = from c in db.ApplicantsOfCompanies

@@ -342,6 +342,12 @@
     <Compile Include="UC\UCJobUI.Designer.cs">
       <DependentUpon>UCJobUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCListApplicant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCListApplicant.Designer.cs">
+      <DependentUpon>UCListApplicant.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCNote.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -468,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCJobUI.resx">
       <DependentUpon>UCJobUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCListApplicant.resx">
+      <DependentUpon>UCListApplicant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCNote.resx">
       <DependentUpon>UCNote.cs</DependentUpon>

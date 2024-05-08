@@ -58,14 +58,14 @@ namespace DoAnCuoiKy
             {
                 this.pnlFavApplicants.Controls.Remove(c);
                 this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
-                applicantsDAO.xoaUC2(c);
+                applicantsDAO.XoaUC2(c);
             }
 
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            applicantsDAO.searchFavApplicant(this);
+            applicantsDAO.SearchFavApplicant(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }
     }

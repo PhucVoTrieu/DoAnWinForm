@@ -49,6 +49,7 @@
           <Property Name="ApplicantID" Type="int" Nullable="false" />
           <Property Name="IsFavorite" Type="bit" />
           <Property Name="IsAccepted" Type="bit" />
+          <Property Name="JobID" Type="int" />
         </EntityType>
         <EntityType Name="Company">
           <Key>
@@ -476,6 +477,7 @@
           <Property Name="IsAccepted" Type="Boolean" />
           <NavigationProperty Name="Applicant" Relationship="Self.FK__Applicant__Appli__70DDC3D8" FromRole="ApplicantsOfCompany" ToRole="Applicant" />
           <NavigationProperty Name="Company" Relationship="Self.FK__Applicant__Compa__6FE99F9F" FromRole="ApplicantsOfCompany" ToRole="Company" />
+          <Property Name="JobID" Type="Int32" />
         </EntityType>
         <EntityType Name="Company">
           <Key>
@@ -905,6 +907,7 @@
           <EntitySetMapping Name="ApplicantsOfCompanies">
             <EntityTypeMapping TypeName="DoAnCuoiKyModel.ApplicantsOfCompany">
               <MappingFragment StoreEntitySet="ApplicantsOfCompany">
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
                 <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
                 <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
                 <ScalarProperty Name="IsFavorite" ColumnName="IsFavorite" />

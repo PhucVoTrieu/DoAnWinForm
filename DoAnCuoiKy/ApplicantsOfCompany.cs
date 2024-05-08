@@ -18,6 +18,7 @@ namespace DoAnCuoiKy
         public int ApplicantID { get; set; }
         public Nullable<bool> IsFavorite { get; set; }
         public Nullable<bool> IsAccepted { get; set; }
+        public Nullable<int> JobID { get; set; }
     
         public virtual Applicant Applicant { get; set; }
         public virtual Company Company { get; set; }

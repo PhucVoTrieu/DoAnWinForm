@@ -32,7 +32,7 @@ namespace DoAnCuoiKy.ApplicantForm
         private void btnSave_Click(object sender, EventArgs e)
         {
             ApplicantsDAO applicantsDAO = new ApplicantsDAO();
-            applicantsDAO.themThongTinSkill(this);
+            applicantsDAO.ThemThongTinSkill(this);
             this.Close();
         }
     }

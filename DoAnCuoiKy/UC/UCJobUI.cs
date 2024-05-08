@@ -75,7 +75,7 @@ namespace DoAnCuoiKy
             this.btnApplyNow.Enabled= false;
             this.btnApplyNow.Text = "Applied";
             CompanyDAO companyDAO = new CompanyDAO();
-            companyDAO.ThemApplicant(Constant.ApplicantID, (int)this.job.CompanyID);
+            companyDAO.ThemApplicant(Constant.ApplicantID, this.job);
 
         }
 

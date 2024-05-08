@@ -13,24 +13,26 @@ namespace DoAnCuoiKy
     internal class CompanyDAO
     {
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-        public void ThemApplicant(int applicantID,int companyID)
+        public void ThemApplicant(int applicantID,Job job)
         {
-            if (checkApplied(applicantID, companyID))
+            if (checkApplied(applicantID, job))
             {
+                var companyID = job.CompanyID;
                 db.ApplicantsOfCompanies.Add(new ApplicantsOfCompany
                 {
-                    CompanyID = companyID,
+                    CompanyID = (int)companyID,
                     ApplicantID = applicantID,
                     IsAccepted = false,
                     IsFavorite = false,
+                    JobID = job.JobID
                 });
                 db.SaveChanges();
             }
             else MessageBox.Show("You have already applied for this job");
         }
-        public bool checkApplied(int applicantID,int companyID) 
+        public bool checkApplied(int applicantID,Job job) 
         {
-            var result = from c in db.ApplicantsOfCompanies where c.ApplicantID==applicantID && c.CompanyID == companyID select c;
+            var result = from c in db.ApplicantsOfCompanies where c.ApplicantID==applicantID && c.CompanyID == job.CompanyID && c.JobID == job.JobID select c;
             if (result.Count() == 0) return true;
             return false;
         }

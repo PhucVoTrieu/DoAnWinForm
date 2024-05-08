@@ -49,7 +49,7 @@ namespace DoAnCuoiKy
         private void btnApplyNow_Click_1(object sender, EventArgs e)
         {
             CompanyDAO companyDAO = new CompanyDAO();
-            companyDAO.ThemApplicant(Constant.ApplicantID,(int)this.jobInfo.CompanyID);
+            companyDAO.ThemApplicant(Constant.ApplicantID,this.jobInfo);
         }
     }
 }

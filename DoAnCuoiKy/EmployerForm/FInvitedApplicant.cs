@@ -45,7 +45,7 @@ namespace DoAnCuoiKy.EmployerForm
                 {
                     this.pnlPotentialApplicant.Controls.Remove(c);
                     this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
-                    applicantsDAO.xoaUC3(c);
+                    applicantsDAO.XoaUC3(c);
                 }
             }
             else MessageBox.Show("không thể xóa");
@@ -66,7 +66,7 @@ namespace DoAnCuoiKy.EmployerForm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            applicantsDAO.searchInvitedApp(this);
+            applicantsDAO.SearchInvitedApp(this);
             this.btnCountFavApplicants.Text = CountFavoriteApplicants().ToString();
         }
     }
