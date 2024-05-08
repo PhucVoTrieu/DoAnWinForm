@@ -19,6 +19,7 @@ namespace DoAnCuoiKy
         {
             this.JobSkills = new HashSet<JobSkill>();
             this.JobStatus = new HashSet<JobStatu>();
+            this.ApplicantsOfCompanies = new HashSet<ApplicantsOfCompany>();
         }
     
         public int JobID { get; set; }
@@ -38,5 +39,7 @@ namespace DoAnCuoiKy
         public virtual ICollection<JobSkill> JobSkills { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<JobStatu> JobStatus { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ApplicantsOfCompany> ApplicantsOfCompanies { get; set; }
     }
 }

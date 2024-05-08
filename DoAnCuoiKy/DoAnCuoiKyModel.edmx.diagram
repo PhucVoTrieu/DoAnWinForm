@@ -33,6 +33,7 @@
         <EntityTypeShape EntityType="DoAnCuoiKyModel.DateInterview" Width="1.5" PointX="10" PointY="8" FillColor="Red" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Appli__54CB950F" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Compa__55BFB948" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__Applicant__JobID__7EC1CEDB" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

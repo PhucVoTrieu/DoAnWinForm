@@ -37,6 +37,7 @@
             // 
             // pnlJobCreated
             // 
+            this.pnlJobCreated.AutoScroll = true;
             this.pnlJobCreated.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlJobCreated.Controls.Add(this.pnlJobTitle);
             this.pnlJobCreated.Dock = System.Windows.Forms.DockStyle.Fill;
