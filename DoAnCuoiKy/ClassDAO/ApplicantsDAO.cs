@@ -451,7 +451,7 @@ namespace DoAnCuoiKy
         }
         public void Invite(UCApplicants u , FApplicants f)
         {
-            var dtpDate = u.fApplicants.dtpInvite.Value; //.ToString("dd/MM/yyyy")
+            var dtpDate = u.fApplicants.dtpInvite.Value.ToString("dd/MM/yyyy");
             var check = from c in db.DateInterviews where c.DateInterview1 == dtpDate && c.CompanyID == Constant.CompanyID select c;
             if (check.Any())
             {
@@ -461,7 +461,7 @@ namespace DoAnCuoiKy
             {
                 db.DateInterviews.Add(new DateInterview
                 {
-                    DateInterview1 = u.fApplicants.dtpInvite.Value,  // .ToString("dd/MM/yyyy")
+                    DateInterview1 = u.fApplicants.dtpInvite.Value.ToString("dd/MM/yyyy"),
                     CompanyID = Constant.CompanyID,
                     ApplicantID = u.applicantInfo.ApplicantID
                 });
@@ -492,27 +492,25 @@ namespace DoAnCuoiKy
         }
         public void ThemThongTinSkill(FAddSkill f1)
         {
-
-            //if(f1.Skill == null)
-            //{
-            db.Skills.Add(new Skill
+            var check = from c in db.Skills where c.SkillName == f1.txtYourSkill.Text select c;
+            if(check.Count() == 0)
             {
-                SkillName = f1.txtYourSkill.Text
-            });
-            // tìm theo tên lấy ID của những skill vừa thêm
-            var result = from c in db.Skills where c.SkillName == f1.txtYourSkill.Text select c;
-
-            db.SaveChanges();
-            if (result.Any())
-            {
-                // thêm vào ApplicantSkill theo ID 
-                db.ApplicantSkills.Add(new ApplicantSkill
+                db.Skills.Add(new Skill
                 {
-                    SkillID = result.Single().SkillID,
-                    ApplicantID = Constant.ApplicantID
+                    SkillName = f1.txtYourSkill.Text
                 });
                 db.SaveChanges();
             }
+            // tìm theo tên lấy ID của những skill vừa thêm
+            var result = from c in db.Skills where c.SkillName == f1.txtYourSkill.Text select c;
+            // thêm vào ApplicantSkill theo ID 
+            db.ApplicantSkills.Add(new ApplicantSkill
+            {
+                SkillID = result.First().SkillID,
+                ApplicantID = Constant.ApplicantID
+            });
+            db.SaveChanges();
+            
             LoadThongTinSkill(f1.fprofile);
             //}
         }

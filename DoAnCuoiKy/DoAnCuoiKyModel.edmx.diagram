@@ -34,8 +34,8 @@
         <EntityTypeShape EntityType="DoAnCuoiKyModel.Post" Width="1.5" PointX="3" PointY="18.125" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__Post__ApplicantI__3C34F16F" />
         <EntityTypeShape EntityType="DoAnCuoiKyModel.DateInterview" Width="1.5" PointX="8.75" PointY="7.25" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Appli__4F47C5E3" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Compa__503BEA1C" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Appli__25DB9BFC" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Compa__26CFC035" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

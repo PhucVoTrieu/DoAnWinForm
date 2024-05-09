@@ -49,7 +49,7 @@
             this.pnlFavApplicants.AutoScroll = true;
             this.pnlFavApplicants.Location = new System.Drawing.Point(22, 204);
             this.pnlFavApplicants.Name = "pnlFavApplicants";
-            this.pnlFavApplicants.Size = new System.Drawing.Size(963, 652);
+            this.pnlFavApplicants.Size = new System.Drawing.Size(944, 514);
             this.pnlFavApplicants.TabIndex = 37;
             // 
             // RecommendJobsElipse
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1019, 718);
+            this.ClientSize = new System.Drawing.Size(990, 718);
             this.Controls.Add(this.cbxLocation);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtJobName);
@@ -221,7 +221,7 @@
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.lblFavApplicants);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FFavoriteApplicants";
             this.Text = "FFavApplicants";
             this.ResumeLayout(false);

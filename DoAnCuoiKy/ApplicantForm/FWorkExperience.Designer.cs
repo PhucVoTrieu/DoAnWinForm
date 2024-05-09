@@ -452,7 +452,7 @@
             // 
             // guna2Panel4
             // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.guna2Panel4.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.Controls.Add(this.guna2ControlBox2);
             this.guna2Panel4.Controls.Add(this.label9);
@@ -492,7 +492,7 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.guna2Panel3.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.Controls.Add(this.btnSave);
             this.guna2Panel3.Controls.Add(this.btnCancel);

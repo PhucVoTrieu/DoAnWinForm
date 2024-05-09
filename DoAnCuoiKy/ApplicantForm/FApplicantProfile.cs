@@ -67,7 +67,7 @@ namespace DoAnCuoiKy
         {
             FAddSkill f1 = new FAddSkill(this);
             f1.Show();
-            applicantsDAO.LoadThongTinSkill(this);
+            //applicantsDAO.LoadThongTinSkill(this);
         }
 
         private void btnEditBasicInfo_Click(object sender, EventArgs e)

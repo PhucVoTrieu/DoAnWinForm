@@ -67,20 +67,18 @@
             this.ScrollBar1.BorderRadius = 8;
             this.ScrollBar1.InUpdate = false;
             this.ScrollBar1.LargeChange = 10;
-            this.ScrollBar1.Location = new System.Drawing.Point(1203, 235);
-            this.ScrollBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.ScrollBar1.Location = new System.Drawing.Point(938, 192);
             this.ScrollBar1.Name = "ScrollBar1";
             this.ScrollBar1.ScrollbarSize = 18;
-            this.ScrollBar1.Size = new System.Drawing.Size(18, 633);
+            this.ScrollBar1.Size = new System.Drawing.Size(18, 514);
             this.ScrollBar1.TabIndex = 26;
             // 
             // pnlCreatedJob
             // 
             this.pnlCreatedJob.AutoScroll = true;
-            this.pnlCreatedJob.Location = new System.Drawing.Point(44, 235);
-            this.pnlCreatedJob.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlCreatedJob.Location = new System.Drawing.Point(12, 192);
             this.pnlCreatedJob.Name = "pnlCreatedJob";
-            this.pnlCreatedJob.Size = new System.Drawing.Size(1177, 633);
+            this.pnlCreatedJob.Size = new System.Drawing.Size(944, 514);
             this.pnlCreatedJob.TabIndex = 32;
             // 
             // RecommendJobsElipse
@@ -108,10 +106,9 @@
             this.pnlJobFilter.Controls.Add(this.checkboxLessThan3);
             this.pnlJobFilter.Controls.Add(this.checkbox3To5);
             this.pnlJobFilter.Controls.Add(this.label6);
-            this.pnlJobFilter.Location = new System.Drawing.Point(1283, 235);
-            this.pnlJobFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlJobFilter.Location = new System.Drawing.Point(962, 191);
             this.pnlJobFilter.Name = "pnlJobFilter";
-            this.pnlJobFilter.Size = new System.Drawing.Size(277, 633);
+            this.pnlJobFilter.Size = new System.Drawing.Size(208, 514);
             this.pnlJobFilter.TabIndex = 33;
             // 
             // label8
@@ -119,40 +116,36 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(33, 300);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(25, 244);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 32);
+            this.label8.Size = new System.Drawing.Size(128, 25);
             this.label8.TabIndex = 36;
             this.label8.Text = "Salary Range";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(188, 354);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(141, 288);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 16);
+            this.label13.Size = new System.Drawing.Size(37, 13);
             this.label13.TabIndex = 35;
             this.label13.Text = "5000$";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(36, 354);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(27, 288);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(21, 16);
+            this.label12.Size = new System.Drawing.Size(19, 13);
             this.label12.TabIndex = 34;
             this.label12.Text = "0$";
             // 
             // trackbarSalary
             // 
             this.trackbarSalary.FillColor = System.Drawing.Color.White;
-            this.trackbarSalary.Location = new System.Drawing.Point(40, 362);
-            this.trackbarSalary.Margin = new System.Windows.Forms.Padding(4);
+            this.trackbarSalary.Location = new System.Drawing.Point(30, 294);
             this.trackbarSalary.Name = "trackbarSalary";
-            this.trackbarSalary.Size = new System.Drawing.Size(197, 38);
+            this.trackbarSalary.Size = new System.Drawing.Size(148, 31);
             this.trackbarSalary.TabIndex = 33;
             this.trackbarSalary.ThumbColor = System.Drawing.Color.Black;
             // 
@@ -165,10 +158,9 @@
             this.checkboxTemporary.CheckedState.FillColor = System.Drawing.Color.White;
             this.checkboxTemporary.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             this.checkboxTemporary.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.checkboxTemporary.Location = new System.Drawing.Point(40, 267);
-            this.checkboxTemporary.Margin = new System.Windows.Forms.Padding(4);
+            this.checkboxTemporary.Location = new System.Drawing.Point(30, 217);
             this.checkboxTemporary.Name = "checkboxTemporary";
-            this.checkboxTemporary.Size = new System.Drawing.Size(112, 27);
+            this.checkboxTemporary.Size = new System.Drawing.Size(90, 21);
             this.checkboxTemporary.TabIndex = 32;
             this.checkboxTemporary.Text = "Temporary";
             this.checkboxTemporary.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -185,10 +177,9 @@
             this.checkboxFullTime.CheckedState.FillColor = System.Drawing.Color.White;
             this.checkboxFullTime.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             this.checkboxFullTime.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.checkboxFullTime.Location = new System.Drawing.Point(40, 234);
-            this.checkboxFullTime.Margin = new System.Windows.Forms.Padding(4);
+            this.checkboxFullTime.Location = new System.Drawing.Point(30, 190);
             this.checkboxFullTime.Name = "checkboxFullTime";
-            this.checkboxFullTime.Size = new System.Drawing.Size(99, 27);
+            this.checkboxFullTime.Size = new System.Drawing.Size(76, 21);
             this.checkboxFullTime.TabIndex = 31;
             this.checkboxFullTime.Text = "Full-time";
             this.checkboxFullTime.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -201,10 +192,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(24, 162);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(18, 132);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 32);
+            this.label7.Size = new System.Drawing.Size(88, 25);
             this.label7.TabIndex = 30;
             this.label7.Text = "Job type";
             // 
@@ -217,10 +207,9 @@
             this.checkboxPartTime.CheckedState.FillColor = System.Drawing.Color.White;
             this.checkboxPartTime.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             this.checkboxPartTime.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.checkboxPartTime.Location = new System.Drawing.Point(40, 201);
-            this.checkboxPartTime.Margin = new System.Windows.Forms.Padding(4);
+            this.checkboxPartTime.Location = new System.Drawing.Point(30, 163);
             this.checkboxPartTime.Name = "checkboxPartTime";
-            this.checkboxPartTime.Size = new System.Drawing.Size(103, 27);
+            this.checkboxPartTime.Size = new System.Drawing.Size(80, 21);
             this.checkboxPartTime.TabIndex = 29;
             this.checkboxPartTime.Text = "Part-time";
             this.checkboxPartTime.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -237,10 +226,9 @@
             this.checkbox5To10.CheckedState.FillColor = System.Drawing.Color.White;
             this.checkbox5To10.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             this.checkbox5To10.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.checkbox5To10.Location = new System.Drawing.Point(40, 129);
-            this.checkbox5To10.Margin = new System.Windows.Forms.Padding(4);
+            this.checkbox5To10.Location = new System.Drawing.Point(30, 105);
             this.checkbox5To10.Name = "checkbox5To10";
-            this.checkbox5To10.Size = new System.Drawing.Size(76, 27);
+            this.checkbox5To10.Size = new System.Drawing.Size(61, 21);
             this.checkbox5To10.TabIndex = 28;
             this.checkbox5To10.Text = "5 - 10";
             this.checkbox5To10.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -257,10 +245,9 @@
             this.checkboxLessThan3.CheckedState.FillColor = System.Drawing.Color.White;
             this.checkboxLessThan3.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             this.checkboxLessThan3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.checkboxLessThan3.Location = new System.Drawing.Point(40, 63);
-            this.checkboxLessThan3.Margin = new System.Windows.Forms.Padding(4);
+            this.checkboxLessThan3.Location = new System.Drawing.Point(30, 51);
             this.checkboxLessThan3.Name = "checkboxLessThan3";
-            this.checkboxLessThan3.Size = new System.Drawing.Size(117, 27);
+            this.checkboxLessThan3.Size = new System.Drawing.Size(92, 21);
             this.checkboxLessThan3.TabIndex = 0;
             this.checkboxLessThan3.Text = "Less than 3";
             this.checkboxLessThan3.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -277,10 +264,9 @@
             this.checkbox3To5.CheckedState.FillColor = System.Drawing.Color.White;
             this.checkbox3To5.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(114)))), ((int)(((byte)(137)))));
             this.checkbox3To5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.checkbox3To5.Location = new System.Drawing.Point(40, 96);
-            this.checkbox3To5.Margin = new System.Windows.Forms.Padding(4);
+            this.checkbox3To5.Location = new System.Drawing.Point(30, 78);
             this.checkbox3To5.Name = "checkbox3To5";
-            this.checkbox3To5.Size = new System.Drawing.Size(67, 27);
+            this.checkbox3To5.Size = new System.Drawing.Size(54, 21);
             this.checkbox3To5.TabIndex = 27;
             this.checkbox3To5.Text = "3 - 5";
             this.checkbox3To5.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -293,10 +279,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(24, 25);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(18, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(205, 32);
+            this.label6.Size = new System.Drawing.Size(160, 25);
             this.label6.TabIndex = 26;
             this.label6.Text = "Experience Years";
             // 
@@ -317,10 +302,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.label5.Location = new System.Drawing.Point(1331, 182);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(998, 148);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 41);
+            this.label5.Size = new System.Drawing.Size(120, 32);
             this.label5.TabIndex = 35;
             this.label5.Text = "Job Filter";
             // 
@@ -329,10 +313,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
-            this.label4.Location = new System.Drawing.Point(33, 182);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(25, 148);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 41);
+            this.label4.Size = new System.Drawing.Size(161, 32);
             this.label4.TabIndex = 34;
             this.label4.Text = "Created Jobs";
             // 
@@ -353,10 +336,9 @@
             "Ha Noi",
             "Ho Chi Minh",
             "Hai Phong"});
-            this.cbxLocation.Location = new System.Drawing.Point(208, 42);
-            this.cbxLocation.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxLocation.Location = new System.Drawing.Point(156, 34);
             this.cbxLocation.Name = "cbxLocation";
-            this.cbxLocation.Size = new System.Drawing.Size(260, 52);
+            this.cbxLocation.Size = new System.Drawing.Size(196, 52);
             this.cbxLocation.StartIndex = 0;
             this.cbxLocation.TabIndex = 38;
             // 
@@ -373,10 +355,9 @@
             this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnSearch.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(1164, 42);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(873, 34);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(220, 64);
+            this.btnSearch.Size = new System.Drawing.Size(165, 52);
             this.btnSearch.TabIndex = 37;
             this.btnSearch.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -396,13 +377,13 @@
             this.txtJobName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobName.IconLeft = global::DoAnCuoiKy.Properties.Resources._871;
             this.txtJobName.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtJobName.Location = new System.Drawing.Point(477, 42);
-            this.txtJobName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtJobName.Location = new System.Drawing.Point(358, 34);
+            this.txtJobName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobName.Name = "txtJobName";
             this.txtJobName.PasswordChar = '\0';
             this.txtJobName.PlaceholderText = "Search jobs by name and location";
             this.txtJobName.SelectedText = "";
-            this.txtJobName.Size = new System.Drawing.Size(677, 64);
+            this.txtJobName.Size = new System.Drawing.Size(508, 52);
             this.txtJobName.TabIndex = 36;
             // 
             // btnDelete
@@ -418,10 +399,9 @@
             this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnDelete.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(1081, 188);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Location = new System.Drawing.Point(811, 153);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 39);
+            this.btnDelete.Size = new System.Drawing.Size(105, 32);
             this.btnDelete.TabIndex = 39;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextOffset = new System.Drawing.Point(0, -2);
@@ -430,7 +410,7 @@
             // btnCountCreatedJobs
             // 
             this.btnCountCreatedJobs.AutoRoundedCorners = true;
-            this.btnCountCreatedJobs.BorderRadius = 22;
+            this.btnCountCreatedJobs.BorderRadius = 17;
             this.btnCountCreatedJobs.BorderThickness = 1;
             this.btnCountCreatedJobs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCountCreatedJobs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -440,21 +420,20 @@
             this.btnCountCreatedJobs.FillColor = System.Drawing.Color.Transparent;
             this.btnCountCreatedJobs.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCountCreatedJobs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.btnCountCreatedJobs.Location = new System.Drawing.Point(285, 181);
-            this.btnCountCreatedJobs.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCountCreatedJobs.Location = new System.Drawing.Point(214, 147);
             this.btnCountCreatedJobs.Name = "btnCountCreatedJobs";
-            this.btnCountCreatedJobs.Size = new System.Drawing.Size(108, 46);
+            this.btnCountCreatedJobs.Size = new System.Drawing.Size(81, 37);
             this.btnCountCreatedJobs.TabIndex = 49;
             this.btnCountCreatedJobs.Text = "3";
             // 
             // FJobs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1556, 884);
-            this.Controls.Add(this.btnCountCreatedJobs);
+            this.ClientSize = new System.Drawing.Size(1167, 718);
             this.Controls.Add(this.ScrollBar1);
+            this.Controls.Add(this.btnCountCreatedJobs);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbxLocation);
             this.Controls.Add(this.btnSearch);
@@ -464,7 +443,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FJobs";
             this.Text = "FJobs";
             this.pnlJobFilter.ResumeLayout(false);
