@@ -46,10 +46,10 @@
             this.btnPost.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnPost.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnPost.ForeColor = System.Drawing.Color.White;
-            this.btnPost.Location = new System.Drawing.Point(101, 33);
-            this.btnPost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPost.Location = new System.Drawing.Point(76, 27);
+            this.btnPost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPost.Name = "btnPost";
-            this.btnPost.Size = new System.Drawing.Size(175, 46);
+            this.btnPost.Size = new System.Drawing.Size(131, 37);
             this.btnPost.TabIndex = 30;
             this.btnPost.Text = "Post";
             this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
@@ -62,24 +62,22 @@
             // pnlPostsOfUser
             // 
             this.pnlPostsOfUser.AutoScroll = true;
-            this.pnlPostsOfUser.BackColor = System.Drawing.Color.RosyBrown;
-            this.pnlPostsOfUser.Location = new System.Drawing.Point(101, 130);
-            this.pnlPostsOfUser.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlPostsOfUser.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPostsOfUser.Location = new System.Drawing.Point(76, 85);
             this.pnlPostsOfUser.Name = "pnlPostsOfUser";
-            this.pnlPostsOfUser.Size = new System.Drawing.Size(1360, 228);
+            this.pnlPostsOfUser.Size = new System.Drawing.Size(1020, 610);
             this.pnlPostsOfUser.TabIndex = 31;
             // 
             // JobSeekerForum
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.ClientSize = new System.Drawing.Size(1621, 884);
+            this.ClientSize = new System.Drawing.Size(1208, 736);
             this.Controls.Add(this.pnlPostsOfUser);
             this.Controls.Add(this.btnPost);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "JobSeekerForum";
             this.Text = "JobSeekerForum";
             this.ResumeLayout(false);

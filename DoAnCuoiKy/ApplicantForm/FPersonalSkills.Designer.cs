@@ -208,7 +208,7 @@
             this.label5.Location = new System.Drawing.Point(11, 37);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(467, 16);
+            this.label5.Size = new System.Drawing.Size(451, 16);
             this.label5.TabIndex = 21;
             this.label5.Text = "Tips: Share the project that relates to your skills and capabilities";
             // 
@@ -457,7 +457,7 @@
             this.label2.Location = new System.Drawing.Point(12, 198);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
+            this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "From*";
             // 

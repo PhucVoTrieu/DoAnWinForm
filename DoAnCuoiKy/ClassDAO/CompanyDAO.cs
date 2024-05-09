@@ -35,8 +35,14 @@ namespace DoAnCuoiKy
                     {
                         ApplicantID = applicantID,
                         JobID = job.JobID,
-                        IsApplied = true
+                        IsApplied = true,
+                        IsFavorite = false
                     });
+                }
+                else 
+                {
+                    if (checkedJob.FirstOrDefault().IsApplied == false)
+                        checkedJob.FirstOrDefault().IsApplied = true;
                 }
                 db.SaveChanges();
             }

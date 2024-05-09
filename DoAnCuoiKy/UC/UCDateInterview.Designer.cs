@@ -88,9 +88,9 @@
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 66);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(301, 1);
+            this.guna2Panel1.Size = new System.Drawing.Size(460, 1);
             this.guna2Panel1.TabIndex = 39;
             // 
             // guna2Panel2
@@ -98,7 +98,7 @@
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1, 66);
             this.guna2Panel2.TabIndex = 40;
@@ -107,8 +107,8 @@
             // 
             this.guna2Panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel3.Location = new System.Drawing.Point(300, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Location = new System.Drawing.Point(459, 0);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1, 66);
             this.guna2Panel3.TabIndex = 41;
@@ -118,9 +118,9 @@
             this.guna2Panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel4.Location = new System.Drawing.Point(1, 0);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(299, 1);
+            this.guna2Panel4.Size = new System.Drawing.Size(458, 1);
             this.guna2Panel4.TabIndex = 42;
             // 
             // btnSearch
@@ -136,11 +136,11 @@
             this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnSearch.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(220, 43);
+            this.btnSearch.Location = new System.Drawing.Point(373, 41);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(68, 21);
             this.btnSearch.TabIndex = 43;
-            this.btnSearch.Text = "Search";
+            this.btnSearch.Text = "Details";
             // 
             // UCDateInterview
             // 
@@ -155,9 +155,9 @@
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCDateInterview";
-            this.Size = new System.Drawing.Size(301, 67);
+            this.Size = new System.Drawing.Size(460, 67);
             this.ResumeLayout(false);
             this.PerformLayout();
 

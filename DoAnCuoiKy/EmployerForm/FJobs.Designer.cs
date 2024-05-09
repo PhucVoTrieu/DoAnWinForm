@@ -70,7 +70,7 @@
             this.ScrollBar1.Location = new System.Drawing.Point(938, 192);
             this.ScrollBar1.Name = "ScrollBar1";
             this.ScrollBar1.ScrollbarSize = 18;
-            this.ScrollBar1.Size = new System.Drawing.Size(18, 514);
+            this.ScrollBar1.Size = new System.Drawing.Size(18, 595);
             this.ScrollBar1.TabIndex = 26;
             // 
             // pnlCreatedJob
@@ -78,7 +78,7 @@
             this.pnlCreatedJob.AutoScroll = true;
             this.pnlCreatedJob.Location = new System.Drawing.Point(12, 192);
             this.pnlCreatedJob.Name = "pnlCreatedJob";
-            this.pnlCreatedJob.Size = new System.Drawing.Size(944, 514);
+            this.pnlCreatedJob.Size = new System.Drawing.Size(944, 595);
             this.pnlCreatedJob.TabIndex = 32;
             // 
             // RecommendJobsElipse
@@ -108,7 +108,7 @@
             this.pnlJobFilter.Controls.Add(this.label6);
             this.pnlJobFilter.Location = new System.Drawing.Point(962, 191);
             this.pnlJobFilter.Name = "pnlJobFilter";
-            this.pnlJobFilter.Size = new System.Drawing.Size(208, 514);
+            this.pnlJobFilter.Size = new System.Drawing.Size(208, 595);
             this.pnlJobFilter.TabIndex = 33;
             // 
             // label8
@@ -431,7 +431,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1167, 718);
+            this.ClientSize = new System.Drawing.Size(1167, 800);
             this.Controls.Add(this.ScrollBar1);
             this.Controls.Add(this.btnCountCreatedJobs);
             this.Controls.Add(this.btnDelete);
@@ -443,7 +443,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FJobs";
             this.Text = "FJobs";
             this.pnlJobFilter.ResumeLayout(false);
@@ -455,32 +455,32 @@
 
         #endregion
 
-      public  Guna.UI2.WinForms.Guna2VScrollBar ScrollBar1;
-      public  System.Windows.Forms.FlowLayoutPanel pnlCreatedJob;
-      public  Guna.UI2.WinForms.Guna2Elipse RecommendJobsElipse;
-      public  Guna.UI2.WinForms.Guna2Elipse JobFilterElipse;
-      public  Guna.UI2.WinForms.Guna2Panel pnlJobFilter;
-      public  System.Windows.Forms.Label label8;
-      public  System.Windows.Forms.Label label13;
-      public  System.Windows.Forms.Label label12;
-      public  Guna.UI2.WinForms.Guna2TrackBar trackbarSalary;
-      public  Guna.UI2.WinForms.Guna2CheckBox checkboxTemporary;
-      public  Guna.UI2.WinForms.Guna2CheckBox checkboxFullTime;
-      public  System.Windows.Forms.Label label7;
-      public  Guna.UI2.WinForms.Guna2CheckBox checkboxPartTime;
-      public  Guna.UI2.WinForms.Guna2CheckBox checkbox5To10;
-      public  Guna.UI2.WinForms.Guna2CheckBox checkboxLessThan3;
-      public  Guna.UI2.WinForms.Guna2CheckBox checkbox3To5;
-      public  System.Windows.Forms.Label label6;
-      public  Guna.UI2.WinForms.Guna2Elipse ViewProfileElipse;
-      public  Guna.UI2.WinForms.Guna2Elipse FindingBoxElipse;
-      public  Guna.UI2.WinForms.Guna2Elipse FormFindingCandidateElipse;
-      public  System.Windows.Forms.Label label5;
-      public  System.Windows.Forms.Label label4;
-      public  Guna.UI2.WinForms.Guna2ComboBox cbxLocation;
-      public  Guna.UI2.WinForms.Guna2Button btnSearch;
-      public  Guna.UI2.WinForms.Guna2TextBox txtJobName;
-      public  Guna.UI2.WinForms.Guna2Button btnDelete;
-      public  Guna.UI2.WinForms.Guna2Button btnCountCreatedJobs;
+        public Guna.UI2.WinForms.Guna2VScrollBar ScrollBar1;
+        public System.Windows.Forms.FlowLayoutPanel pnlCreatedJob;
+        public Guna.UI2.WinForms.Guna2Elipse RecommendJobsElipse;
+        public Guna.UI2.WinForms.Guna2Elipse JobFilterElipse;
+        public Guna.UI2.WinForms.Guna2Panel pnlJobFilter;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label12;
+        public Guna.UI2.WinForms.Guna2TrackBar trackbarSalary;
+        public Guna.UI2.WinForms.Guna2CheckBox checkboxTemporary;
+        public Guna.UI2.WinForms.Guna2CheckBox checkboxFullTime;
+        public System.Windows.Forms.Label label7;
+        public Guna.UI2.WinForms.Guna2CheckBox checkboxPartTime;
+        public Guna.UI2.WinForms.Guna2CheckBox checkbox5To10;
+        public Guna.UI2.WinForms.Guna2CheckBox checkboxLessThan3;
+        public Guna.UI2.WinForms.Guna2CheckBox checkbox3To5;
+        public System.Windows.Forms.Label label6;
+        public Guna.UI2.WinForms.Guna2Elipse ViewProfileElipse;
+        public Guna.UI2.WinForms.Guna2Elipse FindingBoxElipse;
+        public Guna.UI2.WinForms.Guna2Elipse FormFindingCandidateElipse;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public Guna.UI2.WinForms.Guna2ComboBox cbxLocation;
+        public Guna.UI2.WinForms.Guna2Button btnSearch;
+        public Guna.UI2.WinForms.Guna2TextBox txtJobName;
+        public Guna.UI2.WinForms.Guna2Button btnDelete;
+        public Guna.UI2.WinForms.Guna2Button btnCountCreatedJobs;
     }
 }

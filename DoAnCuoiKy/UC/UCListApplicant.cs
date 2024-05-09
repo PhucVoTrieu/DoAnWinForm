@@ -16,7 +16,7 @@ namespace DoAnCuoiKy.UC
         public FApplicants fApplicants;
         ApplicantsDAO applicantsDAO = new ApplicantsDAO();
         public Job job;
-        public UCListApplicant(Job a , FApplicants f)
+        public UCListApplicant(Job a, FApplicants f)
         {
             InitializeComponent();
             this.job = a;
@@ -27,7 +27,7 @@ namespace DoAnCuoiKy.UC
         }
         private void btnJobTitle_Click(object sender, EventArgs e)
         {
-            
+
         }
         public void LoadDanhSach()
         {
@@ -35,16 +35,17 @@ namespace DoAnCuoiKy.UC
         }
         private void btnJobTitle_CheckedChanged(object sender, EventArgs e)
         {
-            if(this.btnJobTitle.Checked)
+            if (this.btnJobTitle.Checked)
             {
-
-                this.Size = new Size(this.Width, this.pnlJobTitle.Height+325);
+                this.pnlJobCreated.AutoScroll = true;
+                this.Size = new Size(this.Width, this.pnlJobTitle.Height + 325);
             }
             else
             {
-                this.Size = new Size(this.Width, this.pnlJobTitle.Height+20);
+                this.pnlJobCreated.AutoScroll = false;
+                this.Size = new Size(this.Width, this.pnlJobTitle.Height + 3);
             }
-            
+
         }
     }
 }

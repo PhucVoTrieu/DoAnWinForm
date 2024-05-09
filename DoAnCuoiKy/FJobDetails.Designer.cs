@@ -563,7 +563,7 @@
             this.btnApplyNow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnApplyNow.DisabledState.FillColor = System.Drawing.Color.Silver;
             this.btnApplyNow.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnApplyNow.DisabledState.Image = global::DoAnCuoiKy.Properties.Resources._133;
+//            this.btnApplyNow.DisabledState.Image = global::DoAnCuoiKy.Properties.Resources._133;
             this.btnApplyNow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(60)))), ((int)(((byte)(89)))));
             this.btnApplyNow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnApplyNow.ForeColor = System.Drawing.Color.White;

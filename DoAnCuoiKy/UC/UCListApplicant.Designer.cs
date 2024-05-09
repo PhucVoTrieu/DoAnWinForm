@@ -37,14 +37,13 @@
             // 
             // pnlJobCreated
             // 
-            this.pnlJobCreated.AutoScroll = true;
             this.pnlJobCreated.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlJobCreated.Controls.Add(this.pnlJobTitle);
             this.pnlJobCreated.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlJobCreated.Location = new System.Drawing.Point(0, 0);
-            this.pnlJobCreated.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlJobCreated.Margin = new System.Windows.Forms.Padding(2);
             this.pnlJobCreated.Name = "pnlJobCreated";
-            this.pnlJobCreated.Size = new System.Drawing.Size(677, 59);
+            this.pnlJobCreated.Size = new System.Drawing.Size(675, 47);
             this.pnlJobCreated.TabIndex = 2;
             // 
             // pnlJobTitle
@@ -52,9 +51,9 @@
             this.pnlJobTitle.BackColor = System.Drawing.Color.LightGray;
             this.pnlJobTitle.Controls.Add(this.btnJobTitle);
             this.pnlJobTitle.Location = new System.Drawing.Point(2, 2);
-            this.pnlJobTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlJobTitle.Margin = new System.Windows.Forms.Padding(2);
             this.pnlJobTitle.Name = "pnlJobTitle";
-            this.pnlJobTitle.Size = new System.Drawing.Size(672, 43);
+            this.pnlJobTitle.Size = new System.Drawing.Size(670, 43);
             this.pnlJobTitle.TabIndex = 1;
             // 
             // btnJobTitle
@@ -71,11 +70,12 @@
             this.btnJobTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnJobTitle.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobTitle.ForeColor = System.Drawing.Color.White;
-            this.btnJobTitle.Location = new System.Drawing.Point(8, 5);
+            this.btnJobTitle.Location = new System.Drawing.Point(11, 5);
             this.btnJobTitle.Name = "btnJobTitle";
-            this.btnJobTitle.Size = new System.Drawing.Size(308, 32);
+            this.btnJobTitle.Size = new System.Drawing.Size(645, 32);
             this.btnJobTitle.TabIndex = 101;
             this.btnJobTitle.Text = "JobTitle";
+            this.btnJobTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnJobTitle.TextOffset = new System.Drawing.Point(0, -2);
             this.btnJobTitle.CheckedChanged += new System.EventHandler(this.btnJobTitle_CheckedChanged);
             this.btnJobTitle.Click += new System.EventHandler(this.btnJobTitle_Click);
@@ -85,9 +85,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlJobCreated);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCListApplicant";
-            this.Size = new System.Drawing.Size(677, 59);
+            this.Size = new System.Drawing.Size(675, 47);
             this.pnlJobCreated.ResumeLayout(false);
             this.pnlJobTitle.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -56,10 +56,9 @@
             "Hai Phong",
             "London",
             "Berlin"});
-            this.cbxLocation.Location = new System.Drawing.Point(29, 37);
-            this.cbxLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxLocation.Location = new System.Drawing.Point(22, 30);
             this.cbxLocation.Name = "cbxLocation";
-            this.cbxLocation.Size = new System.Drawing.Size(261, 52);
+            this.cbxLocation.Size = new System.Drawing.Size(197, 52);
             this.cbxLocation.StartIndex = 0;
             this.cbxLocation.TabIndex = 46;
             // 
@@ -76,10 +75,9 @@
             this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnSearch.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(1015, 37);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Location = new System.Drawing.Point(761, 30);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(220, 64);
+            this.btnSearch.Size = new System.Drawing.Size(165, 52);
             this.btnSearch.TabIndex = 45;
             this.btnSearch.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -87,7 +85,7 @@
             // btnDelete
             // 
             this.btnDelete.AutoRoundedCorners = true;
-            this.btnDelete.BorderRadius = 22;
+            this.btnDelete.BorderRadius = 18;
             this.btnDelete.BorderThickness = 1;
             this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -96,10 +94,9 @@
             this.btnDelete.FillColor = System.Drawing.Color.Transparent;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.btnDelete.Location = new System.Drawing.Point(1015, 158);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(970, 113);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(197, 47);
+            this.btnDelete.Size = new System.Drawing.Size(148, 38);
             this.btnDelete.TabIndex = 49;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -107,7 +104,7 @@
             // btnCountFavApplicants
             // 
             this.btnCountFavApplicants.AutoRoundedCorners = true;
-            this.btnCountFavApplicants.BorderRadius = 22;
+            this.btnCountFavApplicants.BorderRadius = 17;
             this.btnCountFavApplicants.BorderThickness = 1;
             this.btnCountFavApplicants.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCountFavApplicants.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -117,10 +114,9 @@
             this.btnCountFavApplicants.FillColor = System.Drawing.Color.Transparent;
             this.btnCountFavApplicants.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCountFavApplicants.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.btnCountFavApplicants.Location = new System.Drawing.Point(440, 153);
-            this.btnCountFavApplicants.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCountFavApplicants.Location = new System.Drawing.Point(338, 113);
             this.btnCountFavApplicants.Name = "btnCountFavApplicants";
-            this.btnCountFavApplicants.Size = new System.Drawing.Size(108, 46);
+            this.btnCountFavApplicants.Size = new System.Drawing.Size(81, 37);
             this.btnCountFavApplicants.TabIndex = 48;
             this.btnCountFavApplicants.Text = "3";
             // 
@@ -129,20 +125,18 @@
             this.lblFavApplicants.AutoSize = true;
             this.lblFavApplicants.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFavApplicants.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.lblFavApplicants.Location = new System.Drawing.Point(21, 159);
-            this.lblFavApplicants.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFavApplicants.Location = new System.Drawing.Point(16, 113);
             this.lblFavApplicants.Name = "lblFavApplicants";
-            this.lblFavApplicants.Size = new System.Drawing.Size(374, 41);
+            this.lblFavApplicants.Size = new System.Drawing.Size(304, 32);
             this.lblFavApplicants.TabIndex = 47;
             this.lblFavApplicants.Text = "Your Potential Applicants";
             // 
             // pnlPotentialApplicant
             // 
             this.pnlPotentialApplicant.AutoScroll = true;
-            this.pnlPotentialApplicant.Location = new System.Drawing.Point(29, 228);
-            this.pnlPotentialApplicant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPotentialApplicant.Location = new System.Drawing.Point(22, 164);
             this.pnlPotentialApplicant.Name = "pnlPotentialApplicant";
-            this.pnlPotentialApplicant.Size = new System.Drawing.Size(1284, 594);
+            this.pnlPotentialApplicant.Size = new System.Drawing.Size(1135, 595);
             this.pnlPotentialApplicant.TabIndex = 50;
             // 
             // txtJobName
@@ -160,20 +154,20 @@
             this.txtJobName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobName.IconLeft = global::DoAnCuoiKy.Properties.Resources._871;
             this.txtJobName.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtJobName.Location = new System.Drawing.Point(297, 37);
-            this.txtJobName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtJobName.Location = new System.Drawing.Point(223, 30);
+            this.txtJobName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJobName.Name = "txtJobName";
             this.txtJobName.PasswordChar = '\0';
             this.txtJobName.PlaceholderText = "Search jobs by name and location";
             this.txtJobName.SelectedText = "";
-            this.txtJobName.Size = new System.Drawing.Size(677, 64);
+            this.txtJobName.Size = new System.Drawing.Size(508, 52);
             this.txtJobName.TabIndex = 44;
             // 
             // FInvitedApplicant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1343, 669);
+            this.ClientSize = new System.Drawing.Size(1169, 761);
             this.ControlBox = false;
             this.Controls.Add(this.pnlPotentialApplicant);
             this.Controls.Add(this.btnDelete);
@@ -182,7 +176,7 @@
             this.Controls.Add(this.cbxLocation);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtJobName);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FInvitedApplicant";

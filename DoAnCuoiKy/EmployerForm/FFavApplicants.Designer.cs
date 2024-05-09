@@ -47,9 +47,9 @@
             // pnlFavApplicants
             // 
             this.pnlFavApplicants.AutoScroll = true;
-            this.pnlFavApplicants.Location = new System.Drawing.Point(22, 204);
+            this.pnlFavApplicants.Location = new System.Drawing.Point(22, 198);
             this.pnlFavApplicants.Name = "pnlFavApplicants";
-            this.pnlFavApplicants.Size = new System.Drawing.Size(944, 514);
+            this.pnlFavApplicants.Size = new System.Drawing.Size(1151, 595);
             this.pnlFavApplicants.TabIndex = 37;
             // 
             // RecommendJobsElipse
@@ -85,7 +85,7 @@
             this.btnDelete.FillColor = System.Drawing.Color.Transparent;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.btnDelete.Location = new System.Drawing.Point(804, 154);
+            this.btnDelete.Location = new System.Drawing.Point(969, 149);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(148, 38);
             this.btnDelete.TabIndex = 40;
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(990, 718);
+            this.ClientSize = new System.Drawing.Size(1185, 800);
             this.Controls.Add(this.cbxLocation);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtJobName);

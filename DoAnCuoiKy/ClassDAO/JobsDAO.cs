@@ -125,7 +125,7 @@ namespace DoAnCuoiKy
         #region Hàm Thêm
         public void YeuThich(Job job)
         {
-            if (checkedFav(job) == true)
+            if (checkedNotFav(job) == true )
             {
                 db.JobStatus.Add(new JobStatu
                 {
@@ -136,7 +136,22 @@ namespace DoAnCuoiKy
                 });
                 db.SaveChanges();
             }
-            else MessageBox.Show("Job has available in favoriteList");
+            else 
+            {
+                var result2 = from c in db.JobStatus where c.JobID == job.JobID && c.ApplicantID == Constant.ApplicantID && c.IsFavorite ==true select c;
+                if (result2.Any())
+                {
+                    MessageBox.Show("Job has available in favoriteList");
+                }
+                else 
+                {
+                    var result3 = from c in db.JobStatus where c.JobID == job.JobID && c.ApplicantID == Constant.ApplicantID  select c;
+                    result3.FirstOrDefault().IsFavorite = true;
+                    db.SaveChanges();
+                } 
+                    
+            }
+            
         }
         public void Them(FPostAJob f)
         {
@@ -221,9 +236,9 @@ namespace DoAnCuoiKy
         #endregion
 
         #region Hàm Check
-        public bool checkedFav(Job job)
+        public Boolean checkedNotFav(Job job)
         {
-            var result = from c in db.JobStatus where c.JobID == job.JobID && c.ApplicantID == Constant.ApplicantID select c;
+            var result = from c in db.JobStatus where c.JobID == job.JobID && c.ApplicantID == Constant.ApplicantID select c ;
             if (result.Count() == 0) return true;
             return false;
         }
