@@ -245,12 +245,6 @@
     <Compile Include="ApplicantForm\FApplicantProfile.Designer.cs">
       <DependentUpon>FApplicantProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployerForm\FStatistic.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployerForm\FStatistic.Designer.cs">
-      <DependentUpon>FStatistic.cs</DependentUpon>
-    </Compile>
     <Compile Include="EmployerForm\FTrangChuCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -440,9 +434,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FApplicantProfile.resx">
       <DependentUpon>FApplicantProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmployerForm\FStatistic.resx">
-      <DependentUpon>FStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployerForm\FTrangChuCongTy.resx">
       <DependentUpon>FTrangChuCongTy.cs</DependentUpon>
@@ -806,6 +797,9 @@
       <DependentUpon>DoAnCuoiKyModel.edmx</DependentUpon>
       <LastGenOutput>DoAnCuoiKyModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\chat.png" />
+    <None Include="Resources\community.png" />
+    <None Include="Resources\bookmark.png" />
     <None Include="Resources\ss.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
