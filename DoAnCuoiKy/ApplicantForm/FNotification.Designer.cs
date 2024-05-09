@@ -103,7 +103,8 @@
             this.Controls.Add(this.btnCountNote);
             this.Controls.Add(this.pnlNote);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FNotification";
             this.Text = "FNotification";
             this.ResumeLayout(false);

@@ -22,7 +22,8 @@ namespace DoAnCuoiKy
             this.company1 = c;
             this.lblNameApp.Text = a.ApplicantName;
             this.lblNameCom.Text = c.CompanyName;
-            this.lblDateInterview.Text = d.DateInterview1;
+            DateTime s = (DateTime)(d.DateInterview1);
+            this.lblDateInterview.Text = s.ToString("ddMMMyyy");
         }
     }
 }

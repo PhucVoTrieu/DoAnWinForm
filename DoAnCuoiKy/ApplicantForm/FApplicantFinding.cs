@@ -32,12 +32,6 @@ namespace DoAnCuoiKy
 
 
         }
-        private void btnViewProfile_Click(object sender, EventArgs e)
-        {
-            FProfileApplicant fProfile1 = new FProfileApplicant();
-            fProfile1.Show();
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             jobDetailsDAO.searchJobs(this);
@@ -51,6 +45,8 @@ namespace DoAnCuoiKy
         {
             this.PnlRecommendJobs.Focus();
         }
+
+        
     }
    }
 
