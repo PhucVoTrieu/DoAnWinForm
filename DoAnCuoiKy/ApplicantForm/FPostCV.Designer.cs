@@ -44,7 +44,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Bisque;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -55,7 +55,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Bisque;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.panel5.Controls.Add(this.btnPost);
             this.panel5.Controls.Add(this.btnCancel);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -74,8 +74,8 @@
             this.btnPost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPost.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.btnPost.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.btnPost.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.btnPost.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
             this.btnPost.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnPost.ForeColor = System.Drawing.Color.White;
             this.btnPost.Location = new System.Drawing.Point(639, 9);
@@ -104,6 +104,7 @@
             this.btnCancel.Size = new System.Drawing.Size(131, 37);
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtPostContent
             // 
@@ -124,6 +125,7 @@
             this.txtPostContent.Multiline = true;
             this.txtPostContent.Name = "txtPostContent";
             this.txtPostContent.PasswordChar = '\0';
+            this.txtPostContent.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtPostContent.PlaceholderText = "Write something for your post";
             this.txtPostContent.SelectedText = "";
             this.txtPostContent.Size = new System.Drawing.Size(777, 304);

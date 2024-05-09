@@ -274,12 +274,12 @@ namespace DoAnCuoiKy
             {
                 var query = from c in db.Aboutmes
                             where c.ApplicantID == f1.applicantInfo.ApplicantID
-                            select c.AboutmeDetails;
-                if (query.Count() > 0)
+                            select c;
+                if (query.Any())
                 {
-                    if (query.First() != "")
+                    if (query.First().AboutmeDetails != "")
                     {
-                        f1.lblAboutMePlaceHolder.Text = query.First();
+                        f1.lblAboutMePlaceHolder.Text = query.First().AboutmeDetails;
                         f1.lblAboutMePlaceHolder.ForeColor = Color.Black;
                         f1.pnlAboutMe.Size = new System.Drawing.Size(f1.pnlAboutMe.Size.Width, 100 + f1.lblAboutMePlaceHolder.Size.Height);
                     }
@@ -288,9 +288,12 @@ namespace DoAnCuoiKy
                         f1.lblAboutMePlaceHolder.Text = "Introduce your strengths and years of experience";
                         f1.pnlAboutMe.Size = new System.Drawing.Size(f1.pnlAboutMe.Size.Width, 100 + f1.lblAboutMePlaceHolder.Size.Height);
                     }
-
                 }
-
+                else
+                {
+                    f1.lblAboutMePlaceHolder.Text = "Introduce your strengths and years of experience";
+                    f1.pnlAboutMe.Size = new System.Drawing.Size(f1.pnlAboutMe.Size.Width, 100 + f1.lblAboutMePlaceHolder.Size.Height);
+                }
 
             }
             catch (Exception ex)
@@ -569,11 +572,12 @@ namespace DoAnCuoiKy
                 db.Aboutmes.Add(new Aboutme
                 {
                     AboutmeDetails = f1.txtAboutMe.Text,
-                    AboutmeID = Constant.ApplicantID
+                    ApplicantID = Constant.ApplicantID
 
                 });
                 db.SaveChanges();
             }
+            LoadThongTinAboutMe(f1.profileApplicantInfo);
         }
         public void SuaThongTinEducation(FAddEducation f1)
         {

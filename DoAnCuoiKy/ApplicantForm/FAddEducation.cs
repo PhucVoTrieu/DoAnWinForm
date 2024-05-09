@@ -40,8 +40,7 @@ namespace DoAnCuoiKy.ApplicantForm
         {
             this.Close();
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             ApplicantsDAO applicantsDAO = new ApplicantsDAO();
             applicantsDAO.SuaThongTinEducation(this);

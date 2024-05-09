@@ -67,6 +67,7 @@
           <Property Name="CompanyWorkingDays" Type="varchar" MaxLength="50" />
           <Property Name="CompanySize" Type="varchar" MaxLength="100" />
           <Property Name="CompanyCountry" Type="varchar" MaxLength="100" />
+          <Property Name="CompanyAvatar" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="DateInterview">
           <Key>
@@ -542,6 +543,7 @@
           <NavigationProperty Name="ApplicantsOfCompanies" Relationship="Self.FK__Applicant__Compa__6FE99F9F" FromRole="Company" ToRole="ApplicantsOfCompany" />
           <NavigationProperty Name="Jobs" Relationship="Self.FK__Jobs__CompanyID__60A75C0F" FromRole="Company" ToRole="Jobs" />
           <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__503BEA1C" FromRole="Company" ToRole="DateInterview" />
+          <Property Name="CompanyAvatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Education">
           <Key>
@@ -1006,6 +1008,7 @@
           <EntitySetMapping Name="Companies">
             <EntityTypeMapping TypeName="DoAnCuoiKyModel.Company">
               <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="CompanyAvatar" ColumnName="CompanyAvatar" />
                 <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
                 <ScalarProperty Name="CompanyEmail" ColumnName="CompanyEmail" />
                 <ScalarProperty Name="CompanyPassword" ColumnName="CompanyPassword" />

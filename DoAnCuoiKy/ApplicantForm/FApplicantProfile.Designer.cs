@@ -116,11 +116,11 @@
             this.pnlMain.Controls.Add(this.pnlWorkExp);
             this.pnlMain.Controls.Add(this.pnlEducation);
             this.pnlMain.Controls.Add(this.pnlSkill);
-            this.pnlMain.Location = new System.Drawing.Point(2, 6);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlMain.Location = new System.Drawing.Point(2, 31);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.pnlMain.Size = new System.Drawing.Size(1204, 704);
+            this.pnlMain.Size = new System.Drawing.Size(1201, 679);
             this.pnlMain.TabIndex = 0;
             // 
             // pnlBasicInfo
@@ -574,7 +574,7 @@
             this.pnlListOfEducation.Controls.Add(this.lblEducationPlaceholder);
             this.pnlListOfEducation.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlListOfEducation.Location = new System.Drawing.Point(0, 99);
-            this.pnlListOfEducation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlListOfEducation.Margin = new System.Windows.Forms.Padding(2);
             this.pnlListOfEducation.Name = "pnlListOfEducation";
             this.pnlListOfEducation.Size = new System.Drawing.Size(1095, 43);
             this.pnlListOfEducation.TabIndex = 97;
@@ -606,7 +606,7 @@
             // guna2Separator1
             // 
             this.guna2Separator1.Location = new System.Drawing.Point(20, 62);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(1033, 15);
             this.guna2Separator1.TabIndex = 133;
@@ -618,9 +618,9 @@
             this.pnlListOfSkills.Controls.Add(this.label4);
             this.pnlListOfSkills.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlListOfSkills.Location = new System.Drawing.Point(0, 75);
-            this.pnlListOfSkills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlListOfSkills.Margin = new System.Windows.Forms.Padding(2);
             this.pnlListOfSkills.Name = "pnlListOfSkills";
-            this.pnlListOfSkills.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlListOfSkills.Padding = new System.Windows.Forms.Padding(4);
             this.pnlListOfSkills.Size = new System.Drawing.Size(1095, 93);
             this.pnlListOfSkills.TabIndex = 132;
             // 
@@ -716,7 +716,7 @@
             this.guna2ControlBox1.CustomizableEdges.TopLeft = false;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1393, 1);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1145, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(24, 26);
             this.guna2ControlBox1.TabIndex = 11;
@@ -731,7 +731,7 @@
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FProfileApplicant";
             this.Padding = new System.Windows.Forms.Padding(0, 30, 0, 24);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

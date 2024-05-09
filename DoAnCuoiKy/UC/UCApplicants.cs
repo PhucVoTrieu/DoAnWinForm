@@ -115,7 +115,7 @@ namespace DoAnCuoiKy
                         }
                     }
 
-
+                    
 
                     applicant.btnaAddWorkExp.Hide();
                     applicant.btnAddEducation.Hide();

@@ -63,7 +63,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(805, 60);
             this.panel2.TabIndex = 4;
@@ -86,7 +86,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.panel1.Location = new System.Drawing.Point(0, 60);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(805, 1);
             this.panel1.TabIndex = 5;
@@ -113,7 +113,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Location = new System.Drawing.Point(0, 61);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(805, 573);
             this.panel3.TabIndex = 7;
@@ -160,7 +160,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel6.Location = new System.Drawing.Point(0, 571);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(805, 1);
             this.panel6.TabIndex = 26;
@@ -171,7 +171,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(805, 1);
             this.panel4.TabIndex = 25;
@@ -230,7 +230,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel5.Location = new System.Drawing.Point(0, 572);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(805, 1);
             this.panel5.TabIndex = 19;
@@ -284,7 +284,7 @@
             "2023",
             "2024"});
             this.cbWorkYearTo.Location = new System.Drawing.Point(615, 225);
-            this.cbWorkYearTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkYearTo.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkYearTo.MaxDropDownItems = 4;
             this.cbWorkYearTo.Name = "cbWorkYearTo";
             this.cbWorkYearTo.Size = new System.Drawing.Size(156, 36);
@@ -317,7 +317,7 @@
             "11",
             "12"});
             this.cbWorkMonthTo.Location = new System.Drawing.Point(415, 225);
-            this.cbWorkMonthTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkMonthTo.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkMonthTo.MaxDropDownItems = 4;
             this.cbWorkMonthTo.Name = "cbWorkMonthTo";
             this.cbWorkMonthTo.Size = new System.Drawing.Size(156, 36);
@@ -373,7 +373,7 @@
             "2023",
             "2024"});
             this.cbWorkYearFrom.Location = new System.Drawing.Point(214, 225);
-            this.cbWorkYearFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkYearFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkYearFrom.MaxDropDownItems = 4;
             this.cbWorkYearFrom.Name = "cbWorkYearFrom";
             this.cbWorkYearFrom.Size = new System.Drawing.Size(156, 36);
@@ -406,7 +406,7 @@
             "11",
             "12"});
             this.cbWorkMonthFrom.Location = new System.Drawing.Point(14, 225);
-            this.cbWorkMonthFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkMonthFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkMonthFrom.MaxDropDownItems = 4;
             this.cbWorkMonthFrom.Name = "cbWorkMonthFrom";
             this.cbWorkMonthFrom.Size = new System.Drawing.Size(156, 36);
@@ -472,7 +472,7 @@
             this.CheckWork.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckWork.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CheckWork.Location = new System.Drawing.Point(14, 161);
-            this.CheckWork.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckWork.Margin = new System.Windows.Forms.Padding(2);
             this.CheckWork.Name = "CheckWork";
             this.CheckWork.Size = new System.Drawing.Size(252, 22);
             this.CheckWork.TabIndex = 6;
@@ -490,7 +490,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel7.Location = new System.Drawing.Point(0, 634);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(805, 55);
             this.panel7.TabIndex = 19;
@@ -507,7 +507,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(690, 9);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 37);
             this.btnSave.TabIndex = 29;
@@ -526,7 +526,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(592, 9);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 37);
             this.btnCancel.TabIndex = 28;
@@ -542,7 +542,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FPersonalSkills";
             this.Text = "FPersonalSkills";
             this.panel2.ResumeLayout(false);

@@ -21,7 +21,10 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.CompanyInformation = e1;
-            OpenForm(new FInformation(e1));
+
+            FInformation fInformation = new FInformation(CompanyInformation);
+            fInformation.guna2ControlBox1.Hide();
+            OpenForm(fInformation);
         }
         private Form currentFormChild;
 
@@ -42,7 +45,9 @@ namespace DoAnCuoiKy
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenForm(new FInformation(CompanyInformation));
+            FInformation fInformation = new FInformation(CompanyInformation);
+            fInformation.guna2ControlBox1.Hide();
+            OpenForm(fInformation);
         }
         private void btnApplicants_Click(object sender, EventArgs e)
         {

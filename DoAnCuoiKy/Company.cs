@@ -33,6 +33,7 @@ namespace DoAnCuoiKy
         public string CompanyWorkingDays { get; set; }
         public string CompanySize { get; set; }
         public string CompanyCountry { get; set; }
+        public string CompanyAvatar { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ApplicantsOfCompany> ApplicantsOfCompanies { get; set; }
