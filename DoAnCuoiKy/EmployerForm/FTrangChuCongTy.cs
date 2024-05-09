@@ -1,4 +1,5 @@
-﻿using DoAnCuoiKy.Class;
+﻿using DoAnCuoiKy.ApplicantForm;
+using DoAnCuoiKy.Class;
 using DoAnCuoiKy.EmployerForm;
 using DoAnCuoiKy.UC;
 using System;
@@ -102,12 +103,6 @@ namespace DoAnCuoiKy
         {
             OpenForm(new FFavoriteApplicants(CompanyInformation));
         }
-
-        private void btnStatistic_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FStatistic());
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -118,6 +113,11 @@ namespace DoAnCuoiKy
         private void btnInvitedApp_Click(object sender, EventArgs e)
         {
             OpenForm(new FInvitedApplicant(CompanyInformation));
+        }
+
+        private void btnForum_Click(object sender, EventArgs e)
+        {
+            OpenForm(new JobSeekerForum());
         }
     }
 }
