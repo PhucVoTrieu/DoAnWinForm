@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnPost = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlPostsOfUser = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
@@ -52,13 +54,19 @@
             this.btnPost.Text = "Post";
             this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.pnlPostsOfUser;
+            // 
             // pnlPostsOfUser
             // 
             this.pnlPostsOfUser.AutoScroll = true;
+            this.pnlPostsOfUser.BackColor = System.Drawing.Color.RosyBrown;
             this.pnlPostsOfUser.Location = new System.Drawing.Point(101, 130);
-            this.pnlPostsOfUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPostsOfUser.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPostsOfUser.Name = "pnlPostsOfUser";
-            this.pnlPostsOfUser.Size = new System.Drawing.Size(1360, 199);
+            this.pnlPostsOfUser.Size = new System.Drawing.Size(1360, 228);
             this.pnlPostsOfUser.TabIndex = 31;
             // 
             // JobSeekerForum
@@ -71,7 +79,7 @@
             this.Controls.Add(this.pnlPostsOfUser);
             this.Controls.Add(this.btnPost);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "JobSeekerForum";
             this.Text = "JobSeekerForum";
             this.ResumeLayout(false);
@@ -81,6 +89,7 @@
         #endregion
 
         public Guna.UI2.WinForms.Guna2GradientButton btnPost;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public System.Windows.Forms.FlowLayoutPanel pnlPostsOfUser;
     }
 }

@@ -14,7 +14,7 @@ namespace DoAnCuoiKy
     internal class CompanyDAO
     {
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-        public void ThemApplicant(int applicantID,Job job)
+        public void ThemApplicant(int applicantID, Job job)
         {
             if (CheckNotApplied(applicantID, job))
             {
@@ -28,21 +28,23 @@ namespace DoAnCuoiKy
                     JobID = job.JobID
                 });
                 db.SaveChanges();
-                db.JobStatus.Add(new JobStatu
+                var checkedJob = from c in db.JobStatus where c.JobID == job.JobID && applicantID == c.ApplicantID select c;
+                if (checkedJob.Count() == 0)
                 {
-                    ApplicantID = applicantID,
-                    JobID = job.JobID,
-                    IsApplied = true
-                });
-                
-                
+                    db.JobStatus.Add(new JobStatu
+                    {
+                        ApplicantID = applicantID,
+                        JobID = job.JobID,
+                        IsApplied = true
+                    });
+                }
                 db.SaveChanges();
             }
             else MessageBox.Show("You have already applied for this job");
         }
-        public bool CheckNotApplied(int applicantID,Job job) 
+        public bool CheckNotApplied(int applicantID, Job job)
         {
-            var result = from c in db.ApplicantsOfCompanies where c.ApplicantID==applicantID && c.CompanyID == job.CompanyID && c.JobID == job.JobID select c;
+            var result = from c in db.ApplicantsOfCompanies where c.ApplicantID == applicantID && c.CompanyID == job.CompanyID && c.JobID == job.JobID select c;
             if (result.Count() == 0) return true;
             return false;
         }
