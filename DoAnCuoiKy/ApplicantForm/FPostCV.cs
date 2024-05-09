@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnCuoiKy.ApplicantForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,23 @@ namespace DoAnCuoiKy
 {
     public partial class FPostCV : Form
     {
+        public JobSeekerForum JobSeekerForum;
         public FPostCV()
+
         {
             InitializeComponent();
+        }
+        public FPostCV(JobSeekerForum jobSeekerForum)
+        {
+            InitializeComponent();
+            this.JobSeekerForum = jobSeekerForum;
+        }
+        ApplicantsDAO applicantsDAO = new ApplicantsDAO();
+        private void btnPost_Click_1(object sender, EventArgs e)
+        {
+            applicantsDAO.DangBai(this);
+            applicantsDAO.LoadDanhSachBaiDang(this.JobSeekerForum);
+            this.Close();
         }
     }
 }

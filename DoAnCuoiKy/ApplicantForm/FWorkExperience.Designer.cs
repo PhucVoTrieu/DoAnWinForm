@@ -31,8 +31,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlDetail = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.txtProjectAddDetails = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,7 +61,7 @@
             this.guna2Panel1.AutoScroll = true;
             this.guna2Panel1.Controls.Add(this.pnlDetail);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 75);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1036, 382);
             this.guna2Panel1.TabIndex = 0;
@@ -72,8 +70,6 @@
             // 
             this.pnlDetail.BackColor = System.Drawing.SystemColors.Menu;
             this.pnlDetail.Controls.Add(this.label6);
-            this.pnlDetail.Controls.Add(this.label8);
-            this.pnlDetail.Controls.Add(this.guna2CustomCheckBox1);
             this.pnlDetail.Controls.Add(this.txtProjectAddDetails);
             this.pnlDetail.Controls.Add(this.label7);
             this.pnlDetail.Controls.Add(this.label5);
@@ -88,7 +84,7 @@
             this.pnlDetail.Controls.Add(this.txtCompany);
             this.pnlDetail.Controls.Add(this.txtJobTitle);
             this.pnlDetail.Location = new System.Drawing.Point(2, 2);
-            this.pnlDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlDetail.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDetail.Name = "pnlDetail";
             this.pnlDetail.Size = new System.Drawing.Size(1016, 887);
             this.pnlDetail.TabIndex = 18;
@@ -103,35 +99,6 @@
             this.label6.Size = new System.Drawing.Size(762, 19);
             this.label6.TabIndex = 44;
             this.label6.Text = "Tips: Include project details, your role, technologies and team size.";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(57, 228);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(249, 25);
-            this.label8.TabIndex = 43;
-            this.label8.Text = " I am currently working here";
-            // 
-            // guna2CustomCheckBox1
-            // 
-            this.guna2CustomCheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomCheckBox1.CheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.guna2CustomCheckBox1.Location = new System.Drawing.Point(22, 228);
-            this.guna2CustomCheckBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
-            this.guna2CustomCheckBox1.Size = new System.Drawing.Size(30, 25);
-            this.guna2CustomCheckBox1.TabIndex = 42;
-            this.guna2CustomCheckBox1.Text = "I am currently working here";
-            this.guna2CustomCheckBox1.UncheckedState.BorderColor = System.Drawing.Color.Black;
-            this.guna2CustomCheckBox1.UncheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.UncheckedState.BorderThickness = 1;
-            this.guna2CustomCheckBox1.UncheckedState.FillColor = System.Drawing.Color.White;
             // 
             // txtProjectAddDetails
             // 
@@ -245,7 +212,7 @@
             "2023",
             "2024"});
             this.cbWorkYearTo.Location = new System.Drawing.Point(790, 316);
-            this.cbWorkYearTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkYearTo.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkYearTo.MaxDropDownItems = 4;
             this.cbWorkYearTo.Name = "cbWorkYearTo";
             this.cbWorkYearTo.Size = new System.Drawing.Size(215, 61);
@@ -282,7 +249,7 @@
             "11",
             "12"});
             this.cbWorkMonthTo.Location = new System.Drawing.Point(552, 316);
-            this.cbWorkMonthTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkMonthTo.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkMonthTo.MaxDropDownItems = 4;
             this.cbWorkMonthTo.Name = "cbWorkMonthTo";
             this.cbWorkMonthTo.Size = new System.Drawing.Size(215, 61);
@@ -342,7 +309,7 @@
             "2023",
             "2024"});
             this.cbWorkYearFrom.Location = new System.Drawing.Point(258, 316);
-            this.cbWorkYearFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkYearFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkYearFrom.MaxDropDownItems = 4;
             this.cbWorkYearFrom.Name = "cbWorkYearFrom";
             this.cbWorkYearFrom.Size = new System.Drawing.Size(215, 61);
@@ -379,7 +346,7 @@
             "11",
             "12"});
             this.cbWorkMonthFrom.Location = new System.Drawing.Point(22, 316);
-            this.cbWorkMonthFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWorkMonthFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cbWorkMonthFrom.MaxDropDownItems = 4;
             this.cbWorkMonthFrom.Name = "cbWorkMonthFrom";
             this.cbWorkMonthFrom.Size = new System.Drawing.Size(215, 61);
@@ -492,7 +459,7 @@
             this.guna2Panel4.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel4.Location = new System.Drawing.Point(0, 1);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(1036, 70);
             this.guna2Panel4.TabIndex = 14;
@@ -506,7 +473,7 @@
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Gray;
             this.guna2ControlBox2.Location = new System.Drawing.Point(980, 17);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(44, 37);
             this.guna2ControlBox2.TabIndex = 4;
@@ -532,7 +499,7 @@
             this.guna2Panel3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.guna2Panel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.guna2Panel3.Location = new System.Drawing.Point(0, 461);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1036, 62);
             this.guna2Panel3.TabIndex = 15;
@@ -550,7 +517,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(875, 14);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(131, 37);
             this.btnSave.TabIndex = 31;
@@ -570,7 +537,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(731, 12);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(131, 37);
             this.btnCancel.TabIndex = 30;
@@ -586,7 +553,7 @@
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FWorkExperience";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FWorkExperience";
@@ -611,8 +578,6 @@
         public Guna.UI2.WinForms.Guna2GradientButton btnCancel;
         private Guna.UI2.WinForms.Guna2Panel pnlDetail;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox1;
         public Guna.UI2.WinForms.Guna2TextBox txtProjectAddDetails;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label5;

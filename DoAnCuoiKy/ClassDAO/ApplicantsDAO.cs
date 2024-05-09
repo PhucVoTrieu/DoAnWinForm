@@ -24,6 +24,32 @@ namespace DoAnCuoiKy
 
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
         #region Hàm Load
+        public void LoadDanhSachBaiDang(JobSeekerForum f1) 
+        {
+           
+             try
+            {
+                var query = from p in db.Posts
+                            where p.ApplicantID == f1.Applicant.ApplicantID
+                            select p;
+                if (query.Any())
+                {
+                    f1.pnlPostsOfUser.Controls.Clear();
+                    f1.pnlPostsOfUser.Size = new System.Drawing.Size(f1.pnlPostsOfUser.Width, 0);
+                    foreach (var post in query)
+                    {
+                        UCForumPost uc1 = new UCForumPost(post.Applicant, post.PostContent);
+                        f1.pnlPostsOfUser.Controls.Add(uc1);
+                       f1.pnlPostsOfUser.Size = new System.Drawing.Size(f1.pnlPostsOfUser.Width, f1.pnlPostsOfUser.Width+uc1.Height);
+                    }
+}
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+        }
         public void LoadThongTinWorkExp(FProfileApplicant f1)
         {
             try
@@ -227,13 +253,19 @@ namespace DoAnCuoiKy
                 f.pnlPotentialApplicant.Controls.Add(uCApplicants);
             }
         }
+        
         public void LoadDanhSachUngVienYeuThich(FFavoriteApplicants f, List<Applicant> applicants)
         {
+            int tmpID = 0;
             foreach (var a in applicants)
             {
-                UCApplicants uCApplicants = new UCApplicants(a);
-                uCApplicants.btnFavorite.Hide();
-                f.pnlFavApplicants.Controls.Add(uCApplicants);
+                if (tmpID != a.ApplicantID)
+                {
+                    UCApplicants uCApplicants = new UCApplicants(a);
+                    uCApplicants.btnFavorite.Hide();
+                    f.pnlFavApplicants.Controls.Add(uCApplicants);
+                    tmpID = a.ApplicantID;
+                }
             }
         }
         public void LoadThongTinAboutMe(FProfileApplicant f1)
@@ -370,6 +402,20 @@ namespace DoAnCuoiKy
         #endregion
 
         #region Hàm Thêm
+        public void DangBai(FPostCV fPost)
+        {
+            if (fPost.txtPostContent.Text != "")
+            {
+                db.Posts.Add(new Post
+                {
+                    ApplicantID = fPost.JobSeekerForum.Applicant.ApplicantID,
+                    PostContent = fPost.txtPostContent.Text
+
+                });
+                db.SaveChanges();
+            }
+            
+        }
         public void ThemThongTinWorkExp(FWorkExperience f1)  //thieu check null
         {
             db.WorkExperiences.Add(new WorkExperience
@@ -402,7 +448,7 @@ namespace DoAnCuoiKy
         }
         public void Invite(UCApplicants u , FApplicants f)
         {
-            var dtpDate = u.fApplicants.dtpInvite.Value.ToString("dd/MM/yyyy");
+            var dtpDate = u.fApplicants.dtpInvite.Value; //.ToString("dd/MM/yyyy")
             var check = from c in db.DateInterviews where c.DateInterview1 == dtpDate && c.CompanyID == Constant.CompanyID select c;
             if (check.Any())
             {
@@ -412,7 +458,7 @@ namespace DoAnCuoiKy
             {
                 db.DateInterviews.Add(new DateInterview
                 {
-                    DateInterview1 = u.fApplicants.dtpInvite.Value.ToString("dd/MM/yyyy"),
+                    DateInterview1 = u.fApplicants.dtpInvite.Value,  // .ToString("dd/MM/yyyy")
                     CompanyID = Constant.CompanyID,
                     ApplicantID = u.applicantInfo.ApplicantID
                 });

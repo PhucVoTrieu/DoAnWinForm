@@ -30,11 +30,13 @@
         <AssociationConnector Association="DoAnCuoiKyModel.FK__JobSkill__JobID__656C112C" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__JobStatus__JobID__6A30C649" ManuallyRouted="false" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__JobSkill__SkillI__6477ECF3" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="DoAnCuoiKyModel.DateInterview" Width="1.5" PointX="10" PointY="8" FillColor="Red" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Appli__54CB950F" />
-        <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Compa__55BFB948" />
         <AssociationConnector Association="DoAnCuoiKyModel.FK__Applicant__JobID__7EC1CEDB" />
-      </Diagram>
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.Post" Width="1.5" PointX="3" PointY="18.125" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__Post__ApplicantI__3C34F16F" />
+        <EntityTypeShape EntityType="DoAnCuoiKyModel.DateInterview" Width="1.5" PointX="8.75" PointY="7.25" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Appli__4F47C5E3" />
+        <AssociationConnector Association="DoAnCuoiKyModel.FK__DateInter__Compa__503BEA1C" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

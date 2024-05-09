@@ -120,6 +120,12 @@
     <Compile Include="ApplicantForm\FWorkExperience.Designer.cs">
       <DependentUpon>FWorkExperience.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicantForm\JobSeekerForum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicantForm\JobSeekerForum.Designer.cs">
+      <DependentUpon>JobSeekerForum.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicantSkill.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
@@ -283,6 +289,9 @@
     <Compile Include="PersonalProject.cs">
       <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Post.cs">
+      <DependentUpon>DoAnCuoiKyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skill.cs">
@@ -336,6 +345,12 @@
     <Compile Include="UC\UCDateInterview.Designer.cs">
       <DependentUpon>UCDateInterview.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCForumPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCForumPost.Designer.cs">
+      <DependentUpon>UCForumPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCJobUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -383,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicantForm\FWorkExperience.resx">
       <DependentUpon>FWorkExperience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicantForm\JobSeekerForum.resx">
+      <DependentUpon>JobSeekerForum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployerForm\FApplicants.resx">
       <DependentUpon>FApplicants.cs</DependentUpon>
@@ -471,6 +489,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCDateInterview.resx">
       <DependentUpon>UCDateInterview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCForumPost.resx">
+      <DependentUpon>UCForumPost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCJobUI.resx">
       <DependentUpon>UCJobUI.cs</DependentUpon>

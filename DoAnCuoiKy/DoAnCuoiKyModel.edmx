@@ -75,7 +75,7 @@
           <Property Name="DateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ApplicantID" Type="int" />
           <Property Name="CompanyID" Type="int" />
-          <Property Name="DateInterview" Type="varchar" MaxLength="200" />
+          <Property Name="DateInterview" Type="date" />
         </EntityType>
         <EntityType Name="Education">
           <Key>
@@ -140,6 +140,14 @@
           <Property Name="ProjectURL" Type="nvarchar" MaxLength="200" />
           <Property Name="ApplicantID" Type="int" />
         </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="PostID" />
+          </Key>
+          <Property Name="PostID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicantID" Type="int" />
+          <Property Name="PostContent" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="Skills">
           <Key>
             <PropertyRef Name="SkillID" />
@@ -162,7 +170,7 @@
           <Property Name="ProjectDetails" Type="nvarchar" MaxLength="2000" />
           <Property Name="ApplicantID" Type="int" />
         </EntityType>
-        <Association Name="FK__Aboutme__Applica__7B264821">
+        <Association Name="FK__Aboutme__Applica__75A278F5">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="Aboutme" Type="Self.Aboutme" Multiplicity="*" />
           <ReferentialConstraint>
@@ -174,7 +182,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Appli__7BE56230">
+        <Association Name="FK__Applicant__Appli__2A164134">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
           <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
           <ReferentialConstraint>
@@ -186,7 +194,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Appli__7EF6D905">
+        <Association Name="FK__Applicant__Appli__797309D9">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
           <End Role="ApplicantSkill" Type="Self.ApplicantSkill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -198,7 +206,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Compa__7AF13DF7">
+        <Association Name="FK__Applicant__Compa__29221CFB">
           <End Role="Company" Type="Self.Company" Multiplicity="1" />
           <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
           <ReferentialConstraint>
@@ -210,7 +218,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__JobID__7EC1CEDB">
+        <Association Name="FK__Applicant__JobID__2CF2ADDF">
           <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
           <End Role="ApplicantsOfCompany" Type="Self.ApplicantsOfCompany" Multiplicity="*" />
           <ReferentialConstraint>
@@ -222,7 +230,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Applicant__Skill__7E02B4CC">
+        <Association Name="FK__Applicant__Skill__787EE5A0">
           <End Role="Skills" Type="Self.Skills" Multiplicity="1" />
           <End Role="ApplicantSkill" Type="Self.ApplicantSkill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -234,7 +242,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DateInter__Appli__54CB950F">
+        <Association Name="FK__DateInter__Appli__4F47C5E3">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="DateInterview" Type="Self.DateInterview" Multiplicity="*" />
           <ReferentialConstraint>
@@ -246,7 +254,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DateInter__Compa__55BFB948">
+        <Association Name="FK__DateInter__Compa__503BEA1C">
           <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
           <End Role="DateInterview" Type="Self.DateInterview" Multiplicity="*" />
           <ReferentialConstraint>
@@ -258,7 +266,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Education__Appli__1B9317B3">
+        <Association Name="FK__Education__Appli__160F4887">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="Education" Type="Self.Education" Multiplicity="*" />
           <ReferentialConstraint>
@@ -270,7 +278,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Jobs__CompanyID__662B2B3B">
+        <Association Name="FK__Jobs__CompanyID__60A75C0F">
           <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
           <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -282,7 +290,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__JobSkill__JobID__6AEFE058">
+        <Association Name="FK__JobSkill__JobID__656C112C">
           <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
           <End Role="JobSkill" Type="Self.JobSkill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -294,7 +302,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__JobSkill__SkillI__69FBBC1F">
+        <Association Name="FK__JobSkill__SkillI__6477ECF3">
           <End Role="Skills" Type="Self.Skills" Multiplicity="1" />
           <End Role="JobSkill" Type="Self.JobSkill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -306,7 +314,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__JobStatus__Appli__2F9A1060">
+        <Association Name="FK__JobStatus__Appli__6B24EA82">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="1" />
           <End Role="JobStatus" Type="Self.JobStatus" Multiplicity="*" />
           <ReferentialConstraint>
@@ -318,7 +326,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__JobStatus__JobID__2EA5EC27">
+        <Association Name="FK__JobStatus__JobID__6A30C649">
           <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
           <End Role="JobStatus" Type="Self.JobStatus" Multiplicity="*" />
           <ReferentialConstraint>
@@ -330,7 +338,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PersonalP__Appli__214BF109">
+        <Association Name="FK__PersonalP__Appli__1BC821DD">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="PersonalProject" Type="Self.PersonalProject" Multiplicity="*" />
           <ReferentialConstraint>
@@ -342,7 +350,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__WorkExper__Appli__1E6F845E">
+        <Association Name="FK__Post__ApplicantI__3C34F16F">
+          <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
+          <End Role="Post" Type="Self.Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="Post">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__WorkExper__Appli__18EBB532">
           <End Role="Applicant" Type="Self.Applicant" Multiplicity="0..1" />
           <End Role="WorkExperience" Type="Self.WorkExperience" Multiplicity="*" />
           <ReferentialConstraint>
@@ -366,69 +386,74 @@
           <EntitySet Name="JobSkill" EntityType="Self.JobSkill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="JobStatus" EntityType="Self.JobStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PersonalProject" EntityType="Self.PersonalProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Skills" EntityType="Self.Skills" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WorkExperience" EntityType="Self.WorkExperience" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Aboutme__Applica__7B264821" Association="Self.FK__Aboutme__Applica__7B264821">
+          <AssociationSet Name="FK__Aboutme__Applica__75A278F5" Association="Self.FK__Aboutme__Applica__75A278F5">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="Aboutme" EntitySet="Aboutme" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Appli__7BE56230" Association="Self.FK__Applicant__Appli__7BE56230">
+          <AssociationSet Name="FK__Applicant__Appli__2A164134" Association="Self.FK__Applicant__Appli__2A164134">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompany" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Appli__7EF6D905" Association="Self.FK__Applicant__Appli__7EF6D905">
+          <AssociationSet Name="FK__Applicant__Appli__797309D9" Association="Self.FK__Applicant__Appli__797309D9">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="ApplicantSkill" EntitySet="ApplicantSkill" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Compa__7AF13DF7" Association="Self.FK__Applicant__Compa__7AF13DF7">
+          <AssociationSet Name="FK__Applicant__Compa__29221CFB" Association="Self.FK__Applicant__Compa__29221CFB">
             <End Role="Company" EntitySet="Company" />
             <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompany" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__JobID__7EC1CEDB" Association="Self.FK__Applicant__JobID__7EC1CEDB">
+          <AssociationSet Name="FK__Applicant__JobID__2CF2ADDF" Association="Self.FK__Applicant__JobID__2CF2ADDF">
             <End Role="Jobs" EntitySet="Jobs" />
             <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompany" />
           </AssociationSet>
-          <AssociationSet Name="FK__Applicant__Skill__7E02B4CC" Association="Self.FK__Applicant__Skill__7E02B4CC">
+          <AssociationSet Name="FK__Applicant__Skill__787EE5A0" Association="Self.FK__Applicant__Skill__787EE5A0">
             <End Role="Skills" EntitySet="Skills" />
             <End Role="ApplicantSkill" EntitySet="ApplicantSkill" />
           </AssociationSet>
-          <AssociationSet Name="FK__DateInter__Appli__54CB950F" Association="Self.FK__DateInter__Appli__54CB950F">
+          <AssociationSet Name="FK__DateInter__Appli__4F47C5E3" Association="Self.FK__DateInter__Appli__4F47C5E3">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="DateInterview" EntitySet="DateInterview" />
           </AssociationSet>
-          <AssociationSet Name="FK__DateInter__Compa__55BFB948" Association="Self.FK__DateInter__Compa__55BFB948">
+          <AssociationSet Name="FK__DateInter__Compa__503BEA1C" Association="Self.FK__DateInter__Compa__503BEA1C">
             <End Role="Company" EntitySet="Company" />
             <End Role="DateInterview" EntitySet="DateInterview" />
           </AssociationSet>
-          <AssociationSet Name="FK__Education__Appli__1B9317B3" Association="Self.FK__Education__Appli__1B9317B3">
+          <AssociationSet Name="FK__Education__Appli__160F4887" Association="Self.FK__Education__Appli__160F4887">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="Education" EntitySet="Education" />
           </AssociationSet>
-          <AssociationSet Name="FK__Jobs__CompanyID__662B2B3B" Association="Self.FK__Jobs__CompanyID__662B2B3B">
+          <AssociationSet Name="FK__Jobs__CompanyID__60A75C0F" Association="Self.FK__Jobs__CompanyID__60A75C0F">
             <End Role="Company" EntitySet="Company" />
             <End Role="Jobs" EntitySet="Jobs" />
           </AssociationSet>
-          <AssociationSet Name="FK__JobSkill__JobID__6AEFE058" Association="Self.FK__JobSkill__JobID__6AEFE058">
+          <AssociationSet Name="FK__JobSkill__JobID__656C112C" Association="Self.FK__JobSkill__JobID__656C112C">
             <End Role="Jobs" EntitySet="Jobs" />
             <End Role="JobSkill" EntitySet="JobSkill" />
           </AssociationSet>
-          <AssociationSet Name="FK__JobSkill__SkillI__69FBBC1F" Association="Self.FK__JobSkill__SkillI__69FBBC1F">
+          <AssociationSet Name="FK__JobSkill__SkillI__6477ECF3" Association="Self.FK__JobSkill__SkillI__6477ECF3">
             <End Role="Skills" EntitySet="Skills" />
             <End Role="JobSkill" EntitySet="JobSkill" />
           </AssociationSet>
-          <AssociationSet Name="FK__JobStatus__Appli__2F9A1060" Association="Self.FK__JobStatus__Appli__2F9A1060">
+          <AssociationSet Name="FK__JobStatus__Appli__6B24EA82" Association="Self.FK__JobStatus__Appli__6B24EA82">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="JobStatus" EntitySet="JobStatus" />
           </AssociationSet>
-          <AssociationSet Name="FK__JobStatus__JobID__2EA5EC27" Association="Self.FK__JobStatus__JobID__2EA5EC27">
+          <AssociationSet Name="FK__JobStatus__JobID__6A30C649" Association="Self.FK__JobStatus__JobID__6A30C649">
             <End Role="Jobs" EntitySet="Jobs" />
             <End Role="JobStatus" EntitySet="JobStatus" />
           </AssociationSet>
-          <AssociationSet Name="FK__PersonalP__Appli__214BF109" Association="Self.FK__PersonalP__Appli__214BF109">
+          <AssociationSet Name="FK__PersonalP__Appli__1BC821DD" Association="Self.FK__PersonalP__Appli__1BC821DD">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="PersonalProject" EntitySet="PersonalProject" />
           </AssociationSet>
-          <AssociationSet Name="FK__WorkExper__Appli__1E6F845E" Association="Self.FK__WorkExper__Appli__1E6F845E">
+          <AssociationSet Name="FK__Post__ApplicantI__3C34F16F" Association="Self.FK__Post__ApplicantI__3C34F16F">
+            <End Role="Applicant" EntitySet="Applicant" />
+            <End Role="Post" EntitySet="Post" />
+          </AssociationSet>
+          <AssociationSet Name="FK__WorkExper__Appli__18EBB532" Association="Self.FK__WorkExper__Appli__18EBB532">
             <End Role="Applicant" EntitySet="Applicant" />
             <End Role="WorkExperience" EntitySet="WorkExperience" />
           </AssociationSet>
@@ -470,7 +495,8 @@
           <NavigationProperty Name="PersonalProjects" Relationship="Self.FK__PersonalP__Appli__1BC821DD" FromRole="Applicant" ToRole="PersonalProject" />
           <NavigationProperty Name="WorkExperiences" Relationship="Self.FK__WorkExper__Appli__18EBB532" FromRole="Applicant" ToRole="WorkExperience" />
           <Property Name="ApplicantAvatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Appli__54CB950F" FromRole="Applicant" ToRole="DateInterview" />
+          <NavigationProperty Name="Posts" Relationship="DoAnCuoiKyModel.FK__Post__ApplicantI__3C34F16F" FromRole="Applicant" ToRole="Post" />
+          <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Appli__4F47C5E3" FromRole="Applicant" ToRole="DateInterview" />
         </EntityType>
         <EntityType Name="ApplicantSkill">
           <Key>
@@ -515,7 +541,7 @@
           <Property Name="CompanyCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ApplicantsOfCompanies" Relationship="Self.FK__Applicant__Compa__6FE99F9F" FromRole="Company" ToRole="ApplicantsOfCompany" />
           <NavigationProperty Name="Jobs" Relationship="Self.FK__Jobs__CompanyID__60A75C0F" FromRole="Company" ToRole="Jobs" />
-          <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__55BFB948" FromRole="Company" ToRole="DateInterview" />
+          <NavigationProperty Name="DateInterviews" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__503BEA1C" FromRole="Company" ToRole="DateInterview" />
         </EntityType>
         <EntityType Name="Education">
           <Key>
@@ -836,55 +862,25 @@
             <End Role="Skills" EntitySet="Skills" />
             <End Role="JobSkill" EntitySet="JobSkills" />
           </AssociationSet>
-          <EntitySet Name="DateInterviews" EntityType="DoAnCuoiKyModel.DateInterview" />
-          <AssociationSet Name="FK__DateInter__Appli__54CB950F" Association="DoAnCuoiKyModel.FK__DateInter__Appli__54CB950F">
-            <End Role="Applicant" EntitySet="Applicants" />
-            <End Role="DateInterview" EntitySet="DateInterviews" />
-          </AssociationSet>
-          <AssociationSet Name="FK__DateInter__Compa__55BFB948" Association="DoAnCuoiKyModel.FK__DateInter__Compa__55BFB948">
-            <End Role="Company" EntitySet="Companies" />
-            <End Role="DateInterview" EntitySet="DateInterviews" />
-          </AssociationSet>
           <AssociationSet Name="FK__Applicant__JobID__7EC1CEDB" Association="DoAnCuoiKyModel.FK__Applicant__JobID__7EC1CEDB">
             <End Role="Job" EntitySet="Jobs" />
             <End Role="ApplicantsOfCompany" EntitySet="ApplicantsOfCompanies" />
           </AssociationSet>
-        </EntityContainer>
-        <EntityType Name="DateInterview">
-          <Key>
-            <PropertyRef Name="DateID" />
-          </Key>
-          <Property Name="DateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ApplicantID" Type="Int32" />
-          <Property Name="CompanyID" Type="Int32" />
-          <Property Name="DateInterview1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__DateInter__Appli__54CB950F" FromRole="DateInterview" ToRole="Applicant" />
-          <NavigationProperty Name="Company" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__55BFB948" FromRole="DateInterview" ToRole="Company" />
-        </EntityType>
-        <Association Name="FK__DateInter__Appli__54CB950F">
-          <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="0..1" />
-          <End Type="DoAnCuoiKyModel.DateInterview" Role="DateInterview" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Applicant">
-              <PropertyRef Name="ApplicantID" />
-            </Principal>
-            <Dependent Role="DateInterview">
-              <PropertyRef Name="ApplicantID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__DateInter__Compa__55BFB948">
-          <End Type="DoAnCuoiKyModel.Company" Role="Company" Multiplicity="0..1" />
-          <End Type="DoAnCuoiKyModel.DateInterview" Role="DateInterview" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Company">
-              <PropertyRef Name="CompanyID" />
-            </Principal>
-            <Dependent Role="DateInterview">
-              <PropertyRef Name="CompanyID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+          <EntitySet Name="Posts" EntityType="DoAnCuoiKyModel.Post" />
+          <AssociationSet Name="FK__Post__ApplicantI__3C34F16F" Association="DoAnCuoiKyModel.FK__Post__ApplicantI__3C34F16F">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="Post" EntitySet="Posts" />
+          </AssociationSet>
+          <EntitySet Name="DateInterviews" EntityType="DoAnCuoiKyModel.DateInterview" />
+          <AssociationSet Name="FK__DateInter__Appli__4F47C5E3" Association="DoAnCuoiKyModel.FK__DateInter__Appli__4F47C5E3">
+            <End Role="Applicant" EntitySet="Applicants" />
+            <End Role="DateInterview" EntitySet="DateInterviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DateInter__Compa__503BEA1C" Association="DoAnCuoiKyModel.FK__DateInter__Compa__503BEA1C">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="DateInterview" EntitySet="DateInterviews" />
+          </AssociationSet>
+          </EntityContainer>
         <Association Name="FK__Applicant__JobID__7EC1CEDB">
           <End Type="DoAnCuoiKyModel.Job" Role="Job" Multiplicity="1" />
           <End Type="DoAnCuoiKyModel.ApplicantsOfCompany" Role="ApplicantsOfCompany" Multiplicity="*" />
@@ -897,7 +893,63 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="PostID" />
+          </Key>
+          <Property Name="PostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicantID" Type="Int32" />
+          <Property Name="PostContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__Post__ApplicantI__3C34F16F" FromRole="Post" ToRole="Applicant" />
+        </EntityType>
+        <Association Name="FK__Post__ApplicantI__3C34F16F">
+          <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="0..1" />
+          <End Type="DoAnCuoiKyModel.Post" Role="Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="Post">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DateInterview">
+          <Key>
+            <PropertyRef Name="DateID" />
+          </Key>
+          <Property Name="DateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicantID" Type="Int32" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="DateInterview1" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Applicant" Relationship="DoAnCuoiKyModel.FK__DateInter__Appli__4F47C5E3" FromRole="DateInterview" ToRole="Applicant" />
+          <NavigationProperty Name="Company" Relationship="DoAnCuoiKyModel.FK__DateInter__Compa__503BEA1C" FromRole="DateInterview" ToRole="Company" />
+        </EntityType>
+        <Association Name="FK__DateInter__Appli__4F47C5E3">
+          <End Type="DoAnCuoiKyModel.Applicant" Role="Applicant" Multiplicity="0..1" />
+          <End Type="DoAnCuoiKyModel.DateInterview" Role="DateInterview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Applicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="DateInterview">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DateInter__Compa__503BEA1C">
+          <End Type="DoAnCuoiKyModel.Company" Role="Company" Multiplicity="0..1" />
+          <End Type="DoAnCuoiKyModel.DateInterview" Role="DateInterview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="DateInterview">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1055,6 +1107,15 @@
                 <ScalarProperty Name="WorkDetails" ColumnName="WorkDetails" />
                 <ScalarProperty Name="ProjectDetails" ColumnName="ProjectDetails" />
                 <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posts">
+            <EntityTypeMapping TypeName="DoAnCuoiKyModel.Post">
+              <MappingFragment StoreEntitySet="Post">
+                <ScalarProperty Name="PostContent" ColumnName="PostContent" />
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+                <ScalarProperty Name="PostID" ColumnName="PostID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

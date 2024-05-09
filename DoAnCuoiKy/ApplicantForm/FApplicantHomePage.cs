@@ -28,8 +28,8 @@ namespace DoAnCuoiKy
             OpenForm(new FFindingCandidate(this.Applicant));
             
         }
-        private Form currentFormChild;
-        private void OpenForm(Form form)
+        public Form currentFormChild;
+        public void OpenForm(Form form)
         {
             if (currentFormChild != null)
             {
@@ -64,7 +64,7 @@ namespace DoAnCuoiKy
 
         private void btnPostJobFinding_Click(object sender, EventArgs e)
         {
-            OpenForm(new FPostCV());
+            OpenForm(new JobSeekerForum(this.Applicant));
 
         }
 

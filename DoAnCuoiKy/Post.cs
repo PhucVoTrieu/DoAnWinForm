@@ -12,14 +12,12 @@ namespace DoAnCuoiKy
     using System;
     using System.Collections.Generic;
     
-    public partial class DateInterview
+    public partial class Post
     {
-        public int DateID { get; set; }
+        public int PostID { get; set; }
         public Nullable<int> ApplicantID { get; set; }
-        public Nullable<int> CompanyID { get; set; }
-        public Nullable<System.DateTime> DateInterview1 { get; set; }
+        public string PostContent { get; set; }
     
         public virtual Applicant Applicant { get; set; }
-        public virtual Company Company { get; set; }
     }
 }
