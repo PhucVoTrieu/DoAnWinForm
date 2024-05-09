@@ -32,7 +32,7 @@ namespace DoAnCuoiKy
            
             if (rbtnEmployer.Checked)
             {
-               
+                Constant.isEmployer = true;
                 this.Hide();           
                 try
                 {
@@ -66,6 +66,7 @@ namespace DoAnCuoiKy
 
             else if (rbtnApplicant.Checked)
             {
+                Constant.isApplicant = true;
                 this.Hide();
                 try
                 {

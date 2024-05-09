@@ -36,7 +36,7 @@
             this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
             this.btnDetails = new Guna.UI2.WinForms.Guna2Button();
             this.btnApplyNow = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pboxCompanyLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtExpYear = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.txtJobtype = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlUCJob.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxCompanyLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -60,7 +60,7 @@
             this.CBoxSelected.CheckedState.BorderThickness = 0;
             this.CBoxSelected.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CBoxSelected.Location = new System.Drawing.Point(13, 3);
-            this.CBoxSelected.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CBoxSelected.Margin = new System.Windows.Forms.Padding(2);
             this.CBoxSelected.Name = "CBoxSelected";
             this.CBoxSelected.Size = new System.Drawing.Size(15, 14);
             this.CBoxSelected.TabIndex = 12;
@@ -79,14 +79,14 @@
             this.pnlUCJob.Controls.Add(this.btnFavorite);
             this.pnlUCJob.Controls.Add(this.btnDetails);
             this.pnlUCJob.Controls.Add(this.btnApplyNow);
-            this.pnlUCJob.Controls.Add(this.guna2PictureBox1);
+            this.pnlUCJob.Controls.Add(this.pboxCompanyLogo);
             this.pnlUCJob.Controls.Add(this.txtExpYear);
             this.pnlUCJob.Controls.Add(this.lblLocation);
             this.pnlUCJob.Controls.Add(this.lblSalary);
             this.pnlUCJob.Controls.Add(this.lblJobTitle);
             this.pnlUCJob.Controls.Add(this.txtJobtype);
             this.pnlUCJob.Location = new System.Drawing.Point(13, 21);
-            this.pnlUCJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlUCJob.Margin = new System.Windows.Forms.Padding(2);
             this.pnlUCJob.Name = "pnlUCJob";
             this.pnlUCJob.Size = new System.Drawing.Size(278, 257);
             this.pnlUCJob.TabIndex = 13;
@@ -161,25 +161,25 @@
             this.btnApplyNow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApplyNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.btnApplyNow.Location = new System.Drawing.Point(22, 200);
-            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApplyNow.Margin = new System.Windows.Forms.Padding(2);
             this.btnApplyNow.Name = "btnApplyNow";
             this.btnApplyNow.Size = new System.Drawing.Size(115, 37);
             this.btnApplyNow.TabIndex = 23;
             this.btnApplyNow.Text = "Apply Now";
             this.btnApplyNow.Click += new System.EventHandler(this.btnApplyNow_Click_1);
             // 
-            // guna2PictureBox1
+            // pboxCompanyLogo
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
-            this.guna2PictureBox1.Image = global::DoAnCuoiKy.Properties.Resources._311;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(6, 20);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(87, 57);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 22;
-            this.guna2PictureBox1.TabStop = false;
+            this.pboxCompanyLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.pboxCompanyLogo.Image = global::DoAnCuoiKy.Properties.Resources._311;
+            this.pboxCompanyLogo.ImageRotate = 0F;
+            this.pboxCompanyLogo.Location = new System.Drawing.Point(6, 20);
+            this.pboxCompanyLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxCompanyLogo.Name = "pboxCompanyLogo";
+            this.pboxCompanyLogo.Size = new System.Drawing.Size(87, 57);
+            this.pboxCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxCompanyLogo.TabIndex = 22;
+            this.pboxCompanyLogo.TabStop = false;
             // 
             // txtExpYear
             // 
@@ -200,7 +200,7 @@
             this.txtExpYear.ForeColor = System.Drawing.Color.Black;
             this.txtExpYear.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExpYear.Location = new System.Drawing.Point(84, 118);
-            this.txtExpYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExpYear.Margin = new System.Windows.Forms.Padding(2);
             this.txtExpYear.Name = "txtExpYear";
             this.txtExpYear.PasswordChar = '\0';
             this.txtExpYear.PlaceholderText = "";
@@ -266,7 +266,7 @@
             this.txtJobtype.ForeColor = System.Drawing.Color.Black;
             this.txtJobtype.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJobtype.Location = new System.Drawing.Point(18, 118);
-            this.txtJobtype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJobtype.Margin = new System.Windows.Forms.Padding(2);
             this.txtJobtype.Name = "txtJobtype";
             this.txtJobtype.PasswordChar = '\0';
             this.txtJobtype.PlaceholderText = "";
@@ -287,12 +287,12 @@
             this.Controls.Add(this.pnlUCJob);
             this.Controls.Add(this.CBoxSelected);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCJobUI";
             this.Size = new System.Drawing.Size(304, 299);
             this.pnlUCJob.ResumeLayout(false);
             this.pnlUCJob.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxCompanyLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,7 +307,7 @@
         public Guna.UI2.WinForms.Guna2Button btnFavorite;
         public Guna.UI2.WinForms.Guna2Button btnDetails;
         public Guna.UI2.WinForms.Guna2Button btnApplyNow;
-        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        public Guna.UI2.WinForms.Guna2PictureBox pboxCompanyLogo;
         public Guna.UI2.WinForms.Guna2TextBox txtExpYear;
         public System.Windows.Forms.Label lblLocation;
         public System.Windows.Forms.Label lblSalary;

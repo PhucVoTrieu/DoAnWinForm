@@ -22,10 +22,29 @@ namespace DoAnCuoiKy.UC
             this.job = a;
             this.fApplicants = f;
             this.btnJobTitle.Text = a.JobTitle;
+
+            LoadDanhSach();
         }
         private void btnJobTitle_Click(object sender, EventArgs e)
         {
+            
+        }
+        public void LoadDanhSach()
+        {
             applicantsDAO.LoadDanhSachUngVienGroup(this.job, this.fApplicants, this);
+        }
+        private void btnJobTitle_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.btnJobTitle.Checked)
+            {
+
+                this.Size = new Size(this.Width, this.pnlJobTitle.Height+325);
+            }
+            else
+            {
+                this.Size = new Size(this.Width, this.pnlJobTitle.Height+20);
+            }
+            
         }
     }
 }

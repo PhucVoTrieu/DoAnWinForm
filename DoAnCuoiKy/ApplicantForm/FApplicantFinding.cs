@@ -22,15 +22,12 @@ namespace DoAnCuoiKy
         public FFindingCandidate()
         {
             InitializeComponent();
-            jobDetailsDAO.LoadDanhSach(this);
         }
         public FFindingCandidate(Applicant applicant)
         {
             InitializeComponent();
             this.applicant = applicant;
             jobDetailsDAO.LoadDanhSach(this);
-
-
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {

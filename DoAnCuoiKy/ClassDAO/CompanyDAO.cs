@@ -3,6 +3,7 @@ using DoAnCuoiKy.Class;
 using DoAnCuoiKy.UC;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace DoAnCuoiKy
         DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
         public void ThemApplicant(int applicantID,Job job)
         {
-            if (checkApplied(applicantID, job))
+            if (CheckNotApplied(applicantID, job))
             {
                 var companyID = job.CompanyID;
                 db.ApplicantsOfCompanies.Add(new ApplicantsOfCompany
@@ -27,10 +28,19 @@ namespace DoAnCuoiKy
                     JobID = job.JobID
                 });
                 db.SaveChanges();
+                db.JobStatus.Add(new JobStatu
+                {
+                    ApplicantID = applicantID,
+                    JobID = job.JobID,
+                    IsApplied = true
+                });
+                
+                
+                db.SaveChanges();
             }
             else MessageBox.Show("You have already applied for this job");
         }
-        public bool checkApplied(int applicantID,Job job) 
+        public bool CheckNotApplied(int applicantID,Job job) 
         {
             var result = from c in db.ApplicantsOfCompanies where c.ApplicantID==applicantID && c.CompanyID == job.CompanyID && c.JobID == job.JobID select c;
             if (result.Count() == 0) return true;
@@ -68,6 +78,58 @@ namespace DoAnCuoiKy
             var result = inforCompany.FirstOrDefault();
             FInformation f1 = new FInformation(result);
             f1.Show();
+        }
+
+
+        public void LoadCompanyDetail(Company employerInfo, FInformation f)
+        {
+            try
+            {
+                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                f.lblBenefit.Text = employerInfo.CompanyBenefit;
+                f.lblAddress.Text = employerInfo.CompanyAddress;
+                f.lblCompanyName.Text = employerInfo.CompanyName;
+                f.lblCompanySize.Text = employerInfo.CompanySize;
+                f.lblCompanyType.Text = employerInfo.CompanyType;
+                f.lblCountry.Text = employerInfo.CompanyCountry;
+                f.lblWorkingDays.Text = employerInfo.CompanyWorkingDays;
+                f.lblCompanyOverviewContent.Text = employerInfo.CompanyOverview;
+
+                f.pnlOverview.Size = new Size(f.pnlOverview.Width, 200 + f.lblCompanyOverviewContent.Height + f.lblBenefit.Height);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+
+        }
+
+
+        public void LoadJobCreatedByCompany(Company employerInfo, FInformation f)
+        {
+
+            try
+            {
+                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
+                var jobsOfCompany = from c in db.Jobs where c.CompanyID == employerInfo.CompanyID select c;
+                int jobCreatedQuanity = 0;
+                foreach (var job in jobsOfCompany)
+                {
+                    UCJobUI uCJob = new UCJobUI(job);
+                    uCJob.CBoxSelected.Hide();
+                    uCJob.btnApplyNow.Enabled = false;
+                    uCJob.btnApplyNow.Text = "Posted";
+                    f.pnlJobOpenings.Controls.Add(uCJob);
+                    ++jobCreatedQuanity;
+                }
+                f.lblJobsOpenings.Text = jobCreatedQuanity.ToString() + f.lblJobsOpenings.Text;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+            }
+
         }
     }
 

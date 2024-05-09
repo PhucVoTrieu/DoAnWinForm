@@ -41,13 +41,14 @@
             this.btnApplicants = new Guna.UI2.WinForms.Guna2Button();
             this.btnJobs = new Guna.UI2.WinForms.Guna2Button();
             this.btnPostAJob = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.pnlContent;
+            this.guna2DragControl1.TargetControl = this;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // pnlContent
@@ -56,7 +57,7 @@
             this.pnlContent.Location = new System.Drawing.Point(148, 0);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1195, 831);
+            this.pnlContent.Size = new System.Drawing.Size(1208, 884);
             this.pnlContent.TabIndex = 22;
             // 
             // guna2ShadowForm1
@@ -78,7 +79,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(148, 831);
+            this.guna2Panel2.Size = new System.Drawing.Size(148, 884);
             this.guna2Panel2.TabIndex = 19;
             // 
             // btnStatistic
@@ -297,12 +298,16 @@
             this.btnPostAJob.Text = "Post a job";
             this.btnPostAJob.Click += new System.EventHandler(this.btnPostAJob_Click);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            // 
             // FTrangChuCongTy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1343, 831);
+            this.ClientSize = new System.Drawing.Size(1356, 884);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -329,5 +334,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnStatistic;
         private Guna.UI2.WinForms.Guna2Button btnInvitedApp;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

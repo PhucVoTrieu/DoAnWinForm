@@ -12,6 +12,7 @@ using static Guna.UI2.WinForms.Helpers.GraphicsHelper;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Runtime.CompilerServices;
 using DoAnCuoiKy.Class;
+using System.IO;
 
 namespace DoAnCuoiKy
 {
@@ -34,6 +35,11 @@ namespace DoAnCuoiKy
             this.lblSalary.Text = j1.JobSalary;
             this.lblLocation.Text = j1.Location;
             this.txtExpYear.Text = j1.ExpInYears;
+
+            if (job.Company.CompanyAvatar != null)
+            {
+                this.pboxCompanyLogo.Image = Image.FromFile(Path.Combine(Constant.appDirectory, job.Company.CompanyAvatar));
+            }
 
         }
         private void btnDetails_Click(object sender, EventArgs e)
@@ -72,11 +78,11 @@ namespace DoAnCuoiKy
    
         private void btnApplyNow_Click_1(object sender, EventArgs e)
         {
-            this.btnApplyNow.Enabled= false;
-            this.btnApplyNow.Text = "Applied";
+            
             CompanyDAO companyDAO = new CompanyDAO();
             companyDAO.ThemApplicant(Constant.ApplicantID, this.job);
-
+            this.btnApplyNow.Enabled = false;
+            this.btnApplyNow.Text = "Applied";
         }
 
         private void btnFavorite_Click(object sender, EventArgs e)

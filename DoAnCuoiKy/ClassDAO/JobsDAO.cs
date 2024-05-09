@@ -40,15 +40,23 @@ namespace DoAnCuoiKy
             foreach (var job in allJob)
             {
                 UCJobUI uCJob = new UCJobUI(job);
+
+                if (job.JobStatus.FirstOrDefault()!=null && job.JobStatus.FirstOrDefault().IsApplied == true)
+                {
+                    uCJob.btnApplyNow.Enabled = false;
+                    uCJob.btnApplyNow.Text = "Applied";
+                }
                 uCJob.CBoxSelected.Visible = false;
                 f.PnlRecommendJobs.Controls.Add(uCJob);
             }
+
         }
         public void LoadDanhSach2(FFindingCandidate f, List<Job> jobs)
         {
             foreach (var job in jobs)
             {
                 UCJobUI ucJob = new UCJobUI(job);
+                
                 ucJob.CBoxSelected.Visible = false;
                 f.PnlRecommendJobs.Controls.Add(ucJob);
             }
@@ -87,7 +95,11 @@ namespace DoAnCuoiKy
             }
 
         }
-        public void LoadDanhSach5(Job jobInfo , FJobDetails f)
+        public void LoadCompanyDetail(Company company,FInformation fInformation)
+        {
+
+        }
+        public void LoadJobDetail(Job jobInfo , FJobDetails f)
         {
             var inforCompany = from c in db.Companies where c.CompanyID == jobInfo.CompanyID select c;
             var result = inforCompany.First();
@@ -107,29 +119,7 @@ namespace DoAnCuoiKy
             f.txtJobtype.Text = jobInfo.JobType;
 
         }
-        public void LoadDanhSach6(Company employerInfo, FInformation f)
-        {
-
-            try
-            {
-                DoAnCuoiKyEntities db = new DoAnCuoiKyEntities();
-                var jobsOfCompany = from c in db.Jobs where c.CompanyID == employerInfo.CompanyID select c;
-
-                foreach (var job in jobsOfCompany)
-                {
-                    UCJobUI uCJob = new UCJobUI(job);
-                    uCJob.CBoxSelected.Hide();
-                    uCJob.btnApplyNow.Enabled = false;
-                    uCJob.btnApplyNow.Text = "Posted";
-                    f.pnlJobOpenings.Controls.Add(uCJob);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
-            }
-
-        }
+        
         #endregion
 
         #region Hàm Thêm

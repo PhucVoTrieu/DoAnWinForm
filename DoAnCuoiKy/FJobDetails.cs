@@ -27,7 +27,7 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.jobInfo = j1;
-            jobsDAO.LoadDanhSach5(j1,this);
+            jobsDAO.LoadJobDetail(j1,this);
         }
     
         private void btnCompanyName_Click(object sender, EventArgs e)

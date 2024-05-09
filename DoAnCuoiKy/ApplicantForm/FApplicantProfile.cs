@@ -46,7 +46,7 @@ namespace DoAnCuoiKy
         private void btnAddAboutMe_Click_1(object sender, EventArgs e)
         {
             FAboutMe f1 = new FAboutMe(this);
-            f1.ShowDialog();
+            f1.Show();
             applicantsDAO.LoadThongTinAboutMe(this);
         }
 

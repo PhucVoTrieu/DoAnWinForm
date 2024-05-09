@@ -16,7 +16,7 @@ namespace DoAnCuoiKy
     public partial class FInformation : Form
     {
         Company employerInfo;
-        JobsDAO jobsDAO = new JobsDAO();
+        CompanyDAO companyDAO = new CompanyDAO();
         public FInformation()
         {
             InitializeComponent();
@@ -25,19 +25,24 @@ namespace DoAnCuoiKy
         {
             InitializeComponent();
             this.employerInfo = e1;
-            this.txtBenefit.Text = e1.CompanyBenefit;
-            this.lblAddress.Text = e1.CompanyAddress;
-            this.lblCompanyName.Text = e1.CompanyName;
-            this.lblCompanySize.Text = e1.CompanySize;
-            this.lblCompanyType.Text = e1.CompanyType;
-            this.lblCountry.Text = e1.CompanyCountry;
-            this.lblWorkingDays.Text = e1.CompanyWorkingDays;
-            this.txtCompanyOverview.Text = e1.CompanyOverview;
-            jobsDAO.LoadDanhSach6( employerInfo ,this);
+            LoadInformation();
         }
-        private void pnlInformation_MouseEnter(object sender, EventArgs e)
+        public void LoadInformation()
         {
-            this.pnlInformation.Focus();
+
+            //this.lblBenefit.Text = employerInfo.CompanyBenefit;
+            //this.lblAddress.Text = employerInfo.CompanyAddress;
+            //this.lblCompanyName.Text = employerInfo.CompanyName;
+            //this.lblCompanySize.Text = employerInfo.CompanySize;
+            //this.lblCompanyType.Text = employerInfo.CompanyType;
+            //this.lblCountry.Text = employerInfo.CompanyCountry;
+            //this.lblWorkingDays.Text = employerInfo.CompanyWorkingDays;
+            //this.lblCompanyOverviewContent.Text = employerInfo.CompanyOverview;
+
+            companyDAO.LoadCompanyDetail(employerInfo, this);
+            companyDAO.LoadJobCreatedByCompany(employerInfo, this);
         }
+
+ 
     }
 }

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cbEducationYearTo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbEducationMonthTo = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -45,6 +45,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMajorApplicant = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSchoolApplicant = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -64,12 +67,13 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
+            this.panel2.Controls.Add(this.guna2ControlBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(782, 60);
             this.panel2.TabIndex = 3;
@@ -80,7 +84,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.panel1.Location = new System.Drawing.Point(0, 60);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(782, 1);
             this.panel1.TabIndex = 4;
@@ -102,7 +106,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Location = new System.Drawing.Point(0, 61);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(782, 405);
             this.panel3.TabIndex = 5;
@@ -113,43 +117,23 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.Location = new System.Drawing.Point(0, 349);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(782, 1);
             this.panel4.TabIndex = 19;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(99)))), ((int)(((byte)(124)))));
             this.panel5.Controls.Add(this.btnSave);
             this.panel5.Controls.Add(this.btnCancel);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel5.Location = new System.Drawing.Point(0, 350);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(782, 55);
             this.panel5.TabIndex = 18;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BorderRadius = 10;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.btnSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(690, 9);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 37);
-            this.btnSave.TabIndex = 29;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -163,10 +147,10 @@
             this.btnCancel.FillColor2 = System.Drawing.Color.Transparent;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(592, 9);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(506, 7);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(80, 37);
+            this.btnCancel.Size = new System.Drawing.Size(131, 37);
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -219,8 +203,8 @@
             "2022",
             "2023",
             "2024"});
-            this.cbEducationYearTo.Location = new System.Drawing.Point(615, 219);
-            this.cbEducationYearTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEducationYearTo.Location = new System.Drawing.Point(615, 179);
+            this.cbEducationYearTo.Margin = new System.Windows.Forms.Padding(2);
             this.cbEducationYearTo.MaxDropDownItems = 4;
             this.cbEducationYearTo.Name = "cbEducationYearTo";
             this.cbEducationYearTo.Size = new System.Drawing.Size(156, 36);
@@ -252,8 +236,8 @@
             "10",
             "11",
             "12"});
-            this.cbEducationMonthTo.Location = new System.Drawing.Point(415, 219);
-            this.cbEducationMonthTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEducationMonthTo.Location = new System.Drawing.Point(415, 179);
+            this.cbEducationMonthTo.Margin = new System.Windows.Forms.Padding(2);
             this.cbEducationMonthTo.MaxDropDownItems = 4;
             this.cbEducationMonthTo.Name = "cbEducationMonthTo";
             this.cbEducationMonthTo.Size = new System.Drawing.Size(156, 36);
@@ -308,8 +292,8 @@
             "2022",
             "2023",
             "2024"});
-            this.cbEducationYearFrom.Location = new System.Drawing.Point(214, 219);
-            this.cbEducationYearFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEducationYearFrom.Location = new System.Drawing.Point(214, 179);
+            this.cbEducationYearFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cbEducationYearFrom.MaxDropDownItems = 4;
             this.cbEducationYearFrom.Name = "cbEducationYearFrom";
             this.cbEducationYearFrom.Size = new System.Drawing.Size(156, 36);
@@ -341,8 +325,8 @@
             "10",
             "11",
             "12"});
-            this.cbEducationMonthFrom.Location = new System.Drawing.Point(14, 219);
-            this.cbEducationMonthFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEducationMonthFrom.Location = new System.Drawing.Point(14, 179);
+            this.cbEducationMonthFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cbEducationMonthFrom.MaxDropDownItems = 4;
             this.cbEducationMonthFrom.Name = "cbEducationMonthFrom";
             this.cbEducationMonthFrom.Size = new System.Drawing.Size(156, 36);
@@ -363,13 +347,14 @@
             this.txtEducationAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEducationAdd.ForeColor = System.Drawing.Color.Black;
             this.txtEducationAdd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEducationAdd.Location = new System.Drawing.Point(14, 273);
+            this.txtEducationAdd.Location = new System.Drawing.Point(11, 233);
             this.txtEducationAdd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEducationAdd.Name = "txtEducationAdd";
             this.txtEducationAdd.PasswordChar = '\0';
+            this.txtEducationAdd.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEducationAdd.PlaceholderText = "Additional Details";
             this.txtEducationAdd.SelectedText = "";
-            this.txtEducationAdd.Size = new System.Drawing.Size(758, 50);
+            this.txtEducationAdd.Size = new System.Drawing.Size(760, 100);
             this.txtEducationAdd.TabIndex = 13;
             // 
             // label3
@@ -377,7 +362,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(412, 193);
+            this.label3.Location = new System.Drawing.Point(412, 153);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 16);
@@ -389,7 +374,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 193);
+            this.label2.Location = new System.Drawing.Point(12, 153);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
@@ -414,6 +399,7 @@
             this.txtMajorApplicant.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMajorApplicant.Name = "txtMajorApplicant";
             this.txtMajorApplicant.PasswordChar = '\0';
+            this.txtMajorApplicant.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMajorApplicant.PlaceholderText = "Major";
             this.txtMajorApplicant.SelectedText = "";
             this.txtMajorApplicant.Size = new System.Drawing.Size(758, 50);
@@ -437,10 +423,48 @@
             this.txtSchoolApplicant.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSchoolApplicant.Name = "txtSchoolApplicant";
             this.txtSchoolApplicant.PasswordChar = '\0';
+            this.txtSchoolApplicant.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSchoolApplicant.PlaceholderText = "School";
             this.txtSchoolApplicant.SelectedText = "";
             this.txtSchoolApplicant.Size = new System.Drawing.Size(758, 50);
             this.txtSchoolApplicant.TabIndex = 4;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BorderRadius = 10;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.btnSave.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(237)))), ((int)(((byte)(142)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(641, 7);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(131, 37);
+            this.btnSave.TabIndex = 30;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.panel2;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(737, 3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 2;
             // 
             // FAddEducation
             // 
@@ -450,7 +474,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FAddEducation";
             this.Text = "FAddEducation";
             this.panel2.ResumeLayout(false);
@@ -479,7 +504,9 @@
         public Guna.UI2.WinForms.Guna2ComboBox cbEducationYearFrom;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        public Guna.UI2.WinForms.Guna2GradientButton btnSave;
         public Guna.UI2.WinForms.Guna2GradientButton btnCancel;
+        public Guna.UI2.WinForms.Guna2GradientButton btnSave;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

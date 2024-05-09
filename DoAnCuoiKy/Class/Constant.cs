@@ -13,5 +13,7 @@ namespace DoAnCuoiKy.Class
         public static int CompanyID ;
         public static int ApplicantID;
         public static string  appDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+        public static bool isEmployer = false;
+        public static bool isApplicant = false; 
     }
 }

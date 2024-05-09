@@ -15,17 +15,16 @@ namespace DoAnCuoiKy
 {
     public partial class FApplicantHomePage : Form
     {
-        public Applicant Applicant;
+        public Applicant applicant;
         public FApplicantHomePage()
         {
             InitializeComponent();
-            OpenForm(new FFindingCandidate(this.Applicant));
         }
         public FApplicantHomePage(Applicant applicant)
         {
-            this.Applicant = applicant;
+            this.applicant = applicant;
             InitializeComponent();
-            OpenForm(new FFindingCandidate(this.Applicant));
+            OpenForm(new FFindingCandidate(this.applicant));
             
         }
         public Form currentFormChild;
@@ -46,7 +45,7 @@ namespace DoAnCuoiKy
         }
         private void btnFindding_Click(object sender, EventArgs e)
         {
-            OpenForm(new FFindingCandidate(this.Applicant));
+            OpenForm(new FFindingCandidate(this.applicant));
         }
 
         private void btnFavorite_Click(object sender, EventArgs e)
@@ -64,7 +63,7 @@ namespace DoAnCuoiKy
 
         private void btnPostJobFinding_Click(object sender, EventArgs e)
         {
-            OpenForm(new JobSeekerForum(this.Applicant));
+            OpenForm(new JobSeekerForum(this.applicant));
 
         }
 
@@ -77,7 +76,7 @@ namespace DoAnCuoiKy
 
         private void btnNote_Click(object sender, EventArgs e)
         {
-           OpenForm(new FNotification(this.Applicant));  
+           OpenForm(new FNotification(this.applicant));  
         }
     }
 }

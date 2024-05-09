@@ -39,6 +39,13 @@
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlInformation = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlOverview = new System.Windows.Forms.FlowLayoutPanel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.lblCompanyOverviewContent = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            this.lblBenefit = new System.Windows.Forms.Label();
             this.pnlGeneralInformation = new Guna.UI2.WinForms.Guna2Panel();
             this.lblWorkingDays = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,26 +57,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pnlOverview = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtBenefit = new System.Windows.Forms.TextBox();
-            this.lblBenefit = new System.Windows.Forms.Label();
-            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtCompanyOverview = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.lblJobsOpenings = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlJobOpenings = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlInformation.SuspendLayout();
-            this.pnlGeneralInformation.SuspendLayout();
             this.pnlOverview.SuspendLayout();
+            this.pnlGeneralInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -126,7 +128,7 @@
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(270, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 22);
+            this.label3.Size = new System.Drawing.Size(92, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "jobs opening";
             // 
@@ -153,7 +155,7 @@
             this.lblAddress.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblAddress.Location = new System.Drawing.Point(270, 87);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(146, 22);
+            this.lblAddress.Size = new System.Drawing.Size(121, 18);
             this.lblAddress.TabIndex = 2;
             this.lblAddress.Text = "Đống Đa, Hà Nội";
             // 
@@ -165,7 +167,7 @@
             this.lblCompanyName.ForeColor = System.Drawing.Color.White;
             this.lblCompanyName.Location = new System.Drawing.Point(231, 16);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(615, 76);
+            this.lblCompanyName.Size = new System.Drawing.Size(483, 60);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = "Mcredit - Công ty Tài chính TNHH MB Shinsei\r\n\r\n";
             // 
@@ -187,14 +189,87 @@
             // pnlInformation
             // 
             this.pnlInformation.AutoScroll = true;
-            this.pnlInformation.Controls.Add(this.pnlGeneralInformation);
-            this.pnlInformation.Controls.Add(this.label13);
             this.pnlInformation.Controls.Add(this.pnlOverview);
-            this.pnlInformation.Location = new System.Drawing.Point(12, 235);
+            this.pnlInformation.Controls.Add(this.pnlGeneralInformation);
+            this.pnlInformation.Location = new System.Drawing.Point(11, 224);
             this.pnlInformation.Name = "pnlInformation";
             this.pnlInformation.Size = new System.Drawing.Size(1183, 584);
             this.pnlInformation.TabIndex = 32;
-            this.pnlInformation.MouseEnter += new System.EventHandler(this.pnlInformation_MouseEnter);
+            // 
+            // pnlOverview
+            // 
+            this.pnlOverview.AutoScroll = true;
+            this.pnlOverview.BackColor = System.Drawing.Color.White;
+            this.pnlOverview.Controls.Add(this.label21);
+            this.pnlOverview.Controls.Add(this.guna2Separator2);
+            this.pnlOverview.Controls.Add(this.lblCompanyOverviewContent);
+            this.pnlOverview.Controls.Add(this.label1);
+            this.pnlOverview.Controls.Add(this.guna2Separator3);
+            this.pnlOverview.Controls.Add(this.lblBenefit);
+            this.pnlOverview.Location = new System.Drawing.Point(35, 252);
+            this.pnlOverview.Name = "pnlOverview";
+            this.pnlOverview.Padding = new System.Windows.Forms.Padding(15, 10, 15, 0);
+            this.pnlOverview.Size = new System.Drawing.Size(717, 751);
+            this.pnlOverview.TabIndex = 41;
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(18, 10);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(681, 32);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Company Overview";
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.guna2Separator2.FillThickness = 2;
+            this.guna2Separator2.Location = new System.Drawing.Point(18, 46);
+            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(683, 31);
+            this.guna2Separator2.TabIndex = 0;
+            // 
+            // lblCompanyOverviewContent
+            // 
+            this.lblCompanyOverviewContent.AutoSize = true;
+            this.lblCompanyOverviewContent.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyOverviewContent.Location = new System.Drawing.Point(18, 81);
+            this.lblCompanyOverviewContent.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.lblCompanyOverviewContent.Name = "lblCompanyOverviewContent";
+            this.lblCompanyOverviewContent.Size = new System.Drawing.Size(663, 315);
+            this.lblCompanyOverviewContent.TabIndex = 4;
+            this.lblCompanyOverviewContent.Text = resources.GetString("lblCompanyOverviewContent.Text");
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 416);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(668, 32);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Why you\'ll love working here";
+            // 
+            // guna2Separator3
+            // 
+            this.guna2Separator3.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.guna2Separator3.FillThickness = 2;
+            this.guna2Separator3.Location = new System.Drawing.Point(18, 452);
+            this.guna2Separator3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2Separator3.Name = "guna2Separator3";
+            this.guna2Separator3.Size = new System.Drawing.Size(683, 31);
+            this.guna2Separator3.TabIndex = 5;
+            // 
+            // lblBenefit
+            // 
+            this.lblBenefit.AutoSize = true;
+            this.lblBenefit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBenefit.Location = new System.Drawing.Point(18, 487);
+            this.lblBenefit.Name = "lblBenefit";
+            this.lblBenefit.Size = new System.Drawing.Size(663, 294);
+            this.lblBenefit.TabIndex = 7;
+            this.lblBenefit.Text = resources.GetString("lblBenefit.Text");
             // 
             // pnlGeneralInformation
             // 
@@ -220,9 +295,9 @@
             this.lblWorkingDays.AutoSize = true;
             this.lblWorkingDays.Font = new System.Drawing.Font("Segoe UI Semibold", 11.8F, System.Drawing.FontStyle.Bold);
             this.lblWorkingDays.ForeColor = System.Drawing.Color.Black;
-            this.lblWorkingDays.Location = new System.Drawing.Point(474, 140);
+            this.lblWorkingDays.Location = new System.Drawing.Point(485, 140);
             this.lblWorkingDays.Name = "lblWorkingDays";
-            this.lblWorkingDays.Size = new System.Drawing.Size(160, 28);
+            this.lblWorkingDays.Size = new System.Drawing.Size(128, 21);
             this.lblWorkingDays.TabIndex = 11;
             this.lblWorkingDays.Text = "Monday - Friday";
             // 
@@ -231,9 +306,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(476, 105);
+            this.label8.Location = new System.Drawing.Point(487, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 23);
+            this.label8.Size = new System.Drawing.Size(103, 19);
             this.label8.TabIndex = 10;
             this.label8.Text = "Working Days";
             // 
@@ -242,9 +317,9 @@
             this.lblCountry.AutoSize = true;
             this.lblCountry.Font = new System.Drawing.Font("Segoe UI Semibold", 11.8F, System.Drawing.FontStyle.Bold);
             this.lblCountry.ForeColor = System.Drawing.Color.Black;
-            this.lblCountry.Location = new System.Drawing.Point(359, 140);
+            this.lblCountry.Location = new System.Drawing.Point(370, 140);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(88, 28);
+            this.lblCountry.Size = new System.Drawing.Size(70, 21);
             this.lblCountry.TabIndex = 9;
             this.lblCountry.Text = "Vietnam";
             // 
@@ -253,9 +328,9 @@
             this.lblCompanySize.AutoSize = true;
             this.lblCompanySize.Font = new System.Drawing.Font("Segoe UI Semibold", 11.8F, System.Drawing.FontStyle.Bold);
             this.lblCompanySize.ForeColor = System.Drawing.Color.Black;
-            this.lblCompanySize.Location = new System.Drawing.Point(172, 140);
+            this.lblCompanySize.Location = new System.Drawing.Point(183, 140);
             this.lblCompanySize.Name = "lblCompanySize";
-            this.lblCompanySize.Size = new System.Drawing.Size(172, 28);
+            this.lblCompanySize.Size = new System.Drawing.Size(138, 21);
             this.lblCompanySize.TabIndex = 8;
             this.lblCompanySize.Text = "1000+ employees";
             // 
@@ -264,9 +339,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(359, 105);
+            this.label10.Location = new System.Drawing.Point(370, 105);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 23);
+            this.label10.Size = new System.Drawing.Size(63, 19);
             this.label10.TabIndex = 7;
             this.label10.Text = "Country";
             // 
@@ -275,9 +350,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(173, 105);
+            this.label7.Location = new System.Drawing.Point(184, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 23);
+            this.label7.Size = new System.Drawing.Size(102, 19);
             this.label7.TabIndex = 4;
             this.label7.Text = "Company size";
             // 
@@ -286,9 +361,9 @@
             this.lblCompanyType.AutoSize = true;
             this.lblCompanyType.Font = new System.Drawing.Font("Segoe UI Semibold", 11.8F, System.Drawing.FontStyle.Bold);
             this.lblCompanyType.ForeColor = System.Drawing.Color.Black;
-            this.lblCompanyType.Location = new System.Drawing.Point(17, 140);
+            this.lblCompanyType.Location = new System.Drawing.Point(28, 140);
             this.lblCompanyType.Name = "lblCompanyType";
-            this.lblCompanyType.Size = new System.Drawing.Size(106, 28);
+            this.lblCompanyType.Size = new System.Drawing.Size(86, 21);
             this.lblCompanyType.TabIndex = 3;
             this.lblCompanyType.Text = "IT Product";
             // 
@@ -297,9 +372,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(18, 105);
+            this.label5.Location = new System.Drawing.Point(29, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 23);
+            this.label5.Size = new System.Drawing.Size(107, 19);
             this.label5.TabIndex = 2;
             this.label5.Text = "Company type";
             // 
@@ -307,9 +382,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 15);
+            this.label4.Location = new System.Drawing.Point(19, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(304, 41);
+            this.label4.Size = new System.Drawing.Size(247, 32);
             this.label4.TabIndex = 1;
             this.label4.Text = "General Information";
             // 
@@ -317,100 +392,21 @@
             // 
             this.guna2Separator1.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(33, 70);
+            this.guna2Separator1.Location = new System.Drawing.Point(25, 70);
             this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(627, 31);
+            this.guna2Separator1.Size = new System.Drawing.Size(662, 31);
             this.guna2Separator1.TabIndex = 0;
             // 
-            // label13
+            // lblJobsOpenings
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(780, 4);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(223, 41);
-            this.label13.TabIndex = 37;
-            this.label13.Text = " jobs openings\r\n";
-            // 
-            // pnlOverview
-            // 
-            this.pnlOverview.BackColor = System.Drawing.Color.White;
-            this.pnlOverview.Controls.Add(this.txtBenefit);
-            this.pnlOverview.Controls.Add(this.lblBenefit);
-            this.pnlOverview.Controls.Add(this.guna2Separator3);
-            this.pnlOverview.Controls.Add(this.txtCompanyOverview);
-            this.pnlOverview.Controls.Add(this.label21);
-            this.pnlOverview.Controls.Add(this.guna2Separator2);
-            this.pnlOverview.Location = new System.Drawing.Point(34, 241);
-            this.pnlOverview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlOverview.Name = "pnlOverview";
-            this.pnlOverview.Size = new System.Drawing.Size(719, 604);
-            this.pnlOverview.TabIndex = 40;
-            // 
-            // txtBenefit
-            // 
-            this.txtBenefit.BackColor = System.Drawing.Color.White;
-            this.txtBenefit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBenefit.Enabled = false;
-            this.txtBenefit.Location = new System.Drawing.Point(13, 429);
-            this.txtBenefit.Multiline = true;
-            this.txtBenefit.Name = "txtBenefit";
-            this.txtBenefit.Size = new System.Drawing.Size(672, 249);
-            this.txtBenefit.TabIndex = 9;
-            this.txtBenefit.Text = resources.GetString("txtBenefit.Text");
-            // 
-            // lblBenefit
-            // 
-            this.lblBenefit.AutoSize = true;
-            this.lblBenefit.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBenefit.Location = new System.Drawing.Point(15, 346);
-            this.lblBenefit.Name = "lblBenefit";
-            this.lblBenefit.Size = new System.Drawing.Size(430, 41);
-            this.lblBenefit.TabIndex = 8;
-            this.lblBenefit.Text = "Why you\'ll love working here";
-            // 
-            // guna2Separator3
-            // 
-            this.guna2Separator3.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.guna2Separator3.FillThickness = 2;
-            this.guna2Separator3.Location = new System.Drawing.Point(22, 391);
-            this.guna2Separator3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2Separator3.Name = "guna2Separator3";
-            this.guna2Separator3.Size = new System.Drawing.Size(658, 31);
-            this.guna2Separator3.TabIndex = 7;
-            // 
-            // txtCompanyOverview
-            // 
-            this.txtCompanyOverview.BackColor = System.Drawing.Color.White;
-            this.txtCompanyOverview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCompanyOverview.Enabled = false;
-            this.txtCompanyOverview.Location = new System.Drawing.Point(9, 100);
-            this.txtCompanyOverview.Multiline = true;
-            this.txtCompanyOverview.Name = "txtCompanyOverview";
-            this.txtCompanyOverview.Size = new System.Drawing.Size(695, 243);
-            this.txtCompanyOverview.TabIndex = 3;
-            this.txtCompanyOverview.Text = resources.GetString("txtCompanyOverview.Text");
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(16, 17);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(292, 41);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Company Overview";
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.FillStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.guna2Separator2.FillThickness = 2;
-            this.guna2Separator2.Location = new System.Drawing.Point(23, 62);
-            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(662, 31);
-            this.guna2Separator2.TabIndex = 0;
+            this.lblJobsOpenings.AutoSize = true;
+            this.lblJobsOpenings.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobsOpenings.Location = new System.Drawing.Point(778, 232);
+            this.lblJobsOpenings.Name = "lblJobsOpenings";
+            this.lblJobsOpenings.Size = new System.Drawing.Size(182, 32);
+            this.lblJobsOpenings.TabIndex = 37;
+            this.lblJobsOpenings.Text = " jobs openings\r\n";
             // 
             // guna2Elipse1
             // 
@@ -419,25 +415,6 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.guna2PictureBox1;
-            // 
-            // guna2GradientButton3
-            // 
-            this.guna2GradientButton3.BorderRadius = 10;
-            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(166)))));
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(166)))));
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(15, 912);
-            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(180, 46);
-            this.guna2GradientButton3.TabIndex = 31;
-            this.guna2GradientButton3.Text = "Edit";
             // 
             // guna2Elipse3
             // 
@@ -451,13 +428,27 @@
             this.pnlJobOpenings.Size = new System.Drawing.Size(381, 520);
             this.pnlJobOpenings.TabIndex = 38;
             // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 15;
+            this.guna2Elipse4.TargetControl = this.pnlGeneralInformation;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 15;
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.BorderRadius = 15;
+            this.guna2Elipse6.TargetControl = this.pnlOverview;
+            // 
             // FInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 831);
             this.Controls.Add(this.pnlJobOpenings);
-            this.Controls.Add(this.guna2GradientButton3);
+            this.Controls.Add(this.lblJobsOpenings);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.pnlInformation);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -471,49 +462,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlInformation.ResumeLayout(false);
-            this.pnlInformation.PerformLayout();
-            this.pnlGeneralInformation.ResumeLayout(false);
-            this.pnlGeneralInformation.PerformLayout();
             this.pnlOverview.ResumeLayout(false);
             this.pnlOverview.PerformLayout();
+            this.pnlGeneralInformation.ResumeLayout(false);
+            this.pnlGeneralInformation.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblCompanyName;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Panel pnlInformation;
-        private Guna.UI2.WinForms.Guna2Panel pnlGeneralInformation;
-        private System.Windows.Forms.Label lblWorkingDays;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblCountry;
-        private System.Windows.Forms.Label lblCompanySize;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblCompanyType;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2Panel pnlOverview;
-        private System.Windows.Forms.TextBox txtBenefit;
-        private System.Windows.Forms.Label lblBenefit;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
-        private System.Windows.Forms.TextBox txtCompanyOverview;
-        private System.Windows.Forms.Label label21;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private System.Windows.Forms.Label label13;
+        public  Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        public  Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        public  System.Windows.Forms.Label label3;
+        public  Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        public  System.Windows.Forms.Label lblAddress;
+        public  System.Windows.Forms.Label lblCompanyName;
+        public  Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        public  Guna.UI2.WinForms.Guna2Panel pnlInformation;
+        public  Guna.UI2.WinForms.Guna2Panel pnlGeneralInformation;
+        public  System.Windows.Forms.Label lblWorkingDays;
+        public  System.Windows.Forms.Label label8;
+        public  System.Windows.Forms.Label lblCountry;
+        public  System.Windows.Forms.Label lblCompanySize;
+        public  System.Windows.Forms.Label label10;
+        public  System.Windows.Forms.Label label7;
+        public  System.Windows.Forms.Label lblCompanyType;
+        public  System.Windows.Forms.Label label5;
+        public  System.Windows.Forms.Label label4;
+        public  Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        public  Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        public  Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        public  Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        public System.Windows.Forms.Label lblJobsOpenings;
         public System.Windows.Forms.FlowLayoutPanel pnlJobOpenings;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        public Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        public  Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        public  Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        public  System.Windows.Forms.FlowLayoutPanel pnlOverview;
+        public System.Windows.Forms.Label label21;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        public  Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        public  System.Windows.Forms.Label lblCompanyOverviewContent;
+        public System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator3;
+        public  System.Windows.Forms.Label lblBenefit;
     }
 }
