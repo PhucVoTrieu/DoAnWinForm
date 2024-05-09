@@ -26,28 +26,55 @@ namespace DoAnCuoiKy
         #region Hàm Load
         public void LoadDanhSachBaiDang(JobSeekerForum f1) 
         {
-           
-             try
+            if (Constant.isApplicant)
             {
-                var query = from p in db.Posts
-                            where p.ApplicantID == f1.Applicant.ApplicantID
-                            select p;
-                if (query.Any())
+                try
                 {
-                    f1.pnlPostsOfUser.Controls.Clear();
-                    f1.pnlPostsOfUser.Size = new System.Drawing.Size(f1.pnlPostsOfUser.Width, 0);
-                    foreach (var post in query)
+                    var query = from p in db.Posts
+                                where p.ApplicantID == f1.Applicant.ApplicantID
+                                select p;
+                    if (query.Any())
                     {
-                        UCForumPost uc1 = new UCForumPost(post.Applicant, post.PostContent);
-                        f1.pnlPostsOfUser.Controls.Add(uc1);
-                       f1.pnlPostsOfUser.Size = new System.Drawing.Size(f1.pnlPostsOfUser.Width, f1.pnlPostsOfUser.Width+uc1.Height);
+                        f1.pnlPostsOfUser.Controls.Clear();
+                        f1.pnlPostsOfUser.Size = new System.Drawing.Size(f1.pnlPostsOfUser.Width, 0);
+                        foreach (var post in query)
+                        {
+                            UCForumPost uc1 = new UCForumPost(post, f1);
+                            uc1.btnInvite.Hide();
+                            f1.pnlPostsOfUser.Controls.Add(uc1);
+                            f1.pnlPostsOfUser.Size = new System.Drawing.Size(f1.pnlPostsOfUser.Width, f1.pnlPostsOfUser.Height + uc1.Height);
+                        }
                     }
-}
 
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else if (Constant.isEmployer)
             {
-                Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+                f1.btnPost.Hide();
+                try
+                {
+                    var query = from p in db.Posts select p;
+                    if (query.Any())
+                    {
+                        f1.pnlPostsOfUser.Controls.Clear();
+                        f1.pnlPostsOfUser.Size = new System.Drawing.Size(f1.pnlPostsOfUser.Width, 0);
+                        foreach (var post in query)
+                        {
+                            UCForumPost uc1 = new UCForumPost(post, f1);
+                            f1.pnlPostsOfUser.Controls.Add(uc1);
+                            f1.pnlPostsOfUser.Size = new System.Drawing.Size(f1.pnlPostsOfUser.Width, f1.pnlPostsOfUser.Height + uc1.Height);
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi truy vấn: " + ex.Message);
+                }
             }
         }
         public void LoadThongTinWorkExp(FProfileApplicant f1)
@@ -621,6 +648,28 @@ namespace DoAnCuoiKy
         #endregion
 
         #region Hàm Xóa
+        public void XoaBaiDang(Post post,JobSeekerForum jobSeekerForum)
+        {
+            
+                using (DoAnCuoiKyEntities db = new DoAnCuoiKyEntities())
+                {
+                    var query = from p in db.Posts where p.PostID == post.PostID select p;
+
+
+                    if (query.First().ApplicantID == jobSeekerForum.Applicant.ApplicantID)
+                    {
+                        db.Posts.Remove(query.First());
+                    }
+                    db.SaveChanges();
+                }
+                LoadDanhSachBaiDang(jobSeekerForum);
+
+            }
+          
+                    
+                
+                
+            
         public void XoaAvatar(Applicant app)
         {
             var query = from a in db.Applicants where app.ApplicantID == a.ApplicantID select a;

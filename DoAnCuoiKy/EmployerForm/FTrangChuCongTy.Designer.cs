@@ -33,7 +33,6 @@
             this.pnlContent = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnForum = new Guna.UI2.WinForms.Guna2Button();
             this.btnInvitedApp = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -42,6 +41,7 @@
             this.btnApplicants = new Guna.UI2.WinForms.Guna2Button();
             this.btnJobs = new Guna.UI2.WinForms.Guna2Button();
             this.btnPostAJob = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,10 +82,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(197, 1088);
             this.guna2Panel2.TabIndex = 19;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 15;
-            // 
             // btnForum
             // 
             this.btnForum.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -104,7 +100,7 @@
             this.btnForum.ForeColor = System.Drawing.Color.Black;
             this.btnForum.Image = global::DoAnCuoiKy.Properties.Resources.chat;
             this.btnForum.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnForum.Location = new System.Drawing.Point(1, 513);
+            this.btnForum.Location = new System.Drawing.Point(2, 504);
             this.btnForum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnForum.Name = "btnForum";
             this.btnForum.Size = new System.Drawing.Size(195, 62);
@@ -301,6 +297,10 @@
             this.btnPostAJob.TabIndex = 20;
             this.btnPostAJob.Text = "Post a job";
             this.btnPostAJob.Click += new System.EventHandler(this.btnPostAJob_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
             // 
             // FTrangChuCongTy
             // 

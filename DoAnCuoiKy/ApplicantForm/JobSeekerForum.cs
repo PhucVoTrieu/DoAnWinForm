@@ -17,6 +17,7 @@ namespace DoAnCuoiKy.ApplicantForm
         public JobSeekerForum()
         {
             InitializeComponent();
+            applicantsDAO.LoadDanhSachBaiDang(this);
         }
         public JobSeekerForum(Applicant applicant)
         {

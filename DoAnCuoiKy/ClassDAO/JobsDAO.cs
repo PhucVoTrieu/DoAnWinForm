@@ -40,8 +40,8 @@ namespace DoAnCuoiKy
             foreach (var job in allJob)
             {
                 UCJobUI uCJob = new UCJobUI(job);
-
-                if (job.JobStatus.FirstOrDefault()!=null && job.JobStatus.FirstOrDefault().IsApplied == true)
+                var checkStatus = from c in db.JobStatus where f.applicant.ApplicantID == c.ApplicantID && c.JobID == job.JobID && c.IsApplied == true select c;
+                if (checkStatus.Any())
                 {
                     uCJob.btnApplyNow.Enabled = false;
                     uCJob.btnApplyNow.Text = "Applied";
@@ -171,9 +171,12 @@ namespace DoAnCuoiKy
         public void HuyYeuThich(Job job)
         {
             var query = (from a in db.JobStatus where job.JobID == a.JobID && a.ApplicantID == Constant.ApplicantID select a).First();
-            db.JobStatus.Remove(query);
+            if (query.IsApplied == false)
+                db.JobStatus.Remove(query);
+            else query.IsFavorite = false;
             db.SaveChanges();
         }
+        
         public void XoaJob(Job job)
         {
             var applicant = db.Jobs.Find(job.JobID);
